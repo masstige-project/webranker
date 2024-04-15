@@ -4,7 +4,7 @@ $site_title = ""; // 사이트명
 
 $P_lang = "ko"; // html language
 
-$P_company_name = ""; // 회사명
+$P_company_name = "매스티지"; // 회사명
 
 $P_addr1 = ""; // 주소1
 $P_addr2 = ""; // 주소2
@@ -18,19 +18,17 @@ $P_fax2 = "";
 $P_email1 = "";
 $P_email2 = "";
 
-$P_business_no = ""; // 사업자등록번호
+$P_business_no = "123-12-12345"; // 사업자등록번호
 
 $P_sales_no = ""; // 통신판매업신고번호
 
 // 네비게이션 메뉴명
-$nav_1 = "Template";
-$nav_1_1 = "Template";
-$nav_1_2 = "Board List";
-$nav_1_3 = "Calendar";
-$nav_1_4 = "Location";
-$nav_1_5 = "Find Account";
-$nav_1_6 = "SNS Login";
-$nav_1_7 = "Hover Effects";
+$nav_1 = "사용자 투표 랭킹";
+$nav_2 = "심사위원 평가작";
+$nav_3 = "심사위원 되기";
+$nav_4 = "메이커";
+$nav_5 = "커뮤니티";
+$nav_6 = "커뮤니티";
 // $nav_1_2 = "dp3-test";
 // $nav_1_2_1 = "Template";
 // $nav_1_2_2 = "dp3-test-bravo";

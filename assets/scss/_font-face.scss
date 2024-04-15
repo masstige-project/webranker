@@ -141,52 +141,67 @@
 	src: local(''), url('../fonts/montserrat-v18-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/montserrat-v18-latin-900.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/montserrat-v18-latin-900.woff') format('woff'), /* Modern Browsers */ url('../fonts/montserrat-v18-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/montserrat-v18-latin-900.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
 
-// SUIT 폰트
+
+/* Pretendard */
 @font-face {
-	font-family: 'SUIT';
-	font-style: normal;
-	font-weight: 100;
-	src: local('SUIT'), url('../fonts/SUIT-Thin.woff2') format('woff2');
-}
-@font-face {
-	font-family: 'SUIT';
-	font-style: normal;
-	font-weight: 300;
-	src: local('SUIT'), url('../fonts/SUIT-Light.woff2') format('woff2');
-}
-@font-face {
-	font-family: 'SUIT';
-	font-style: normal;
-	font-weight: 400;
-	src: local('SUIT'), url('../fonts/SUIT-Regular.woff2') format('woff2');
-}
-@font-face {
-	font-family: 'SUIT';
-	font-style: normal;
-	font-weight: 500;
-	src: local('SUIT'), url('../fonts/SUIT-Medium.woff2') format('woff2');
-}
-@font-face {
-	font-family: 'SUIT';
-	font-style: normal;
-	font-weight: 600;
-	src: local('SUIT'), url('../fonts/SUIT-SemiBold.woff2') format('woff2');
-}
-@font-face {
-	font-family: 'SUIT';
-	font-style: normal;
-	font-weight: 700;
-	src: local('SUIT'), url('../fonts/SUIT-Bold.woff2') format('woff2');
-}
-@font-face {
-	font-family: 'SUIT';
-	font-style: normal;
-	font-weight: 800;
-	src: local('SUIT'), url('../fonts/SUIT-ExtraBold.woff2') format('woff2');
-}
-@font-face {
-	font-family: 'SUIT';
-	font-style: normal;
+	font-family: 'Pretendard';
 	font-weight: 900;
-	src: local('SUIT'), url('../fonts/SUIT-Heavy.woff2') format('woff2');
+	font-display: swap;
+	src: local('Pretendard Black'), url(../../assets/fonts/Pretendard-Black.woff2) format('woff2'), url(../../assets/woff/Pretendard-Black.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url(../../assets/woff2/Pretendard-ExtraBold.woff2) format('woff2'), url(../../assets/woff/Pretendard-ExtraBold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(../../assets/woff2/Pretendard-Bold.woff2) format('woff2'), url(../../assets/woff/Pretendard-Bold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url(../../assets/woff2/Pretendard-SemiBold.woff2) format('woff2'), url(../../assets/woff/Pretendard-SemiBold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url(../../assets/woff2/Pretendard-Medium.woff2) format('woff2'), url(../../assets/woff/Pretendard-Medium.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../../assets/woff2/Pretendard-Regular.woff2) format('woff2'), url(../../assets/woff/Pretendard-Regular.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url(../../assets/woff2/Pretendard-Light.woff2) format('woff2'), url(../../assets/woff/Pretendard-Light.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), url(../../assets/woff2/Pretendard-ExtraLight.woff2) format('woff2'), url(../../assets/woff/Pretendard-ExtraLight.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), url(../../assets/woff2/Pretendard-Thin.woff2) format('woff2'), url(../../assets/woff/Pretendard-Thin.woff) format('woff');
 }

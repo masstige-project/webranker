@@ -32,7 +32,7 @@ $(window).on('load', function(){
 
 
 /* GNB */
-/*
+
 var gnbdrop = {
   init: function () {
     // this.gnbdrop_all(); //모든 2depth+배경 노출
@@ -129,9 +129,10 @@ var gnbdrop = {
     });
   },
 };
-*/
+
 
 /* 모바일 네비게이션 */
+
 var navMobile = {
   init: function () {
     this.nav_mobile_btn(); // 모바일네비 토글
@@ -217,6 +218,7 @@ var navMobile = {
 };
 
 /* 서브 네비게이션 */
+
 var subNav = {
   init: function () {
     this.depth_clone();
@@ -284,7 +286,9 @@ var subNav = {
   },
 };
 
+
 /* 서브네비게이션 스크롤 형태 */
+
 var subNavScroll = {
   init: function () {
     this.sticky_nav();
@@ -316,6 +320,7 @@ var subNavScroll = {
     }
   },
 };
+
 
 /* Magnific 팝업 */
 var magnificPop = {
@@ -396,6 +401,7 @@ $(document).ready(function () {
   });
 
   /* HEADER GNB Drop */
+  /*
   $('.header').navDrop({
     type: 'all', // 기본값 udnefiend, 선언하지 않거나 없는 값을 선언할 경우 콘솔창에 경고문구 출력
     background: true, // 기본값 true, 배경 엘리먼트가 없을 경우 콘솔창에 경고문구 출력
@@ -405,6 +411,7 @@ $(document).ready(function () {
     delay: 200, // 출력시 delay
     callback: function () {}, // 콜백 함수
   });
+  */
 
   /* 
     이미지맵 제작 추천 : https://www.image-map.net/
@@ -703,3 +710,20 @@ function DaumPostcode(uzip = '', uaddr1 = '', uaddr2 = '') {
     }).open();
   });
 }
+
+
+$(document).ready(function(){
+  $('.popup-link').on('click',function(){
+    $('body').addClass('body-fixed');
+  })
+  $(document).on('click','.mfp-close',function(){
+    $('body').removeClass('body-fixed');
+  })
+  // ESC 키 눌렀을 때 팝업이 열려있는 경우
+  $(document).keyup(function(e) {
+    if (e.key === "Escape" && $.magnificPopup.instance.isOpen) {
+      $.magnificPopup.close();
+      $('body').removeClass('body-fixed'); // ESC 키 눌렀을 때 body-fixed 클래스 제거
+    }
+  });
+})

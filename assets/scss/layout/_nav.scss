@@ -3,9 +3,6 @@
 // HEADER
 .header .nav {
 	text-align: center;
-	@include mdq-max(lg) {
-		display: none;
-	}
 	.nav-list--depth1 {
 		align-items: center;
 		display: flex;
@@ -26,13 +23,13 @@
 		> .link {
 			position: relative;
 			height: $nav-height;
-			padding: 0 em(30, 20);
+			padding: 0 0.75rem;
 			display: flex;
 			align-items: center;
 			text-align: center;
-			color: #333;
-			font-size: em(20);
-			font-weight: 500;
+			color: $black;
+			font-size: em(16);
+			font-weight: 600;
 			line-height: 1.2;
 			&::after {
 				content: '';
@@ -48,7 +45,7 @@
 
 			&:hover,
 			&.on {
-				color: $color-1;
+				text-shadow: 1px 4px 5px #cfcfcf;
 			}
 
 			&.on {

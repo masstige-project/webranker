@@ -19,6 +19,9 @@
 }
 
 .main-visual {
+	background: url(../images/main/main_vis.png)no-repeat center/cover;
+	height:400px;
+	position: relative;
 	.item {
 		position: relative;
 	}
@@ -27,28 +30,29 @@
 		@include img-to-bg(percentage(800/1920));
 	}
 
-	.txt-bx {
+	.main-title {
 		//영역의 중앙 노출
 		position: absolute;
 		width: 100%;
-		top: 50%;
+		top: 52%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		color: #fff;
 		text-shadow: 0 0 1em rgba(#000, 0.1);
 		letter-spacing: letterSpacing(-50);
 		line-height: 1.3;
-
+		text-align: center;
 		.title {
-			font-size: em(80);
+			font-size: em(48);
 		}
 
 		.text {
 			margin-top: 1em;
-			font-size: em(30);
+			font-size: em(20);
 			font-weight: 300;
 			transition-delay: 300ms !important;
 		}
+
 	}
 
 	.swiper-slide {

@@ -31979,53 +31979,60 @@ html {
   src: url("../fonts/montserrat-v18-latin-900.eot"); /* IE9 Compat Modes */
   src: local(""), url("../fonts/montserrat-v18-latin-900.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v18-latin-900.woff2") format("woff2"), url("../fonts/montserrat-v18-latin-900.woff") format("woff"), url("../fonts/montserrat-v18-latin-900.ttf") format("truetype"), url("../fonts/montserrat-v18-latin-900.svg#Montserrat") format("svg"); /* Legacy iOS */
 }
+/* Pretendard */
 @font-face {
-  font-family: "SUIT";
-  font-style: normal;
-  font-weight: 100;
-  src: local("SUIT"), url("../fonts/SUIT-Thin.woff2") format("woff2");
-}
-@font-face {
-  font-family: "SUIT";
-  font-style: normal;
-  font-weight: 300;
-  src: local("SUIT"), url("../fonts/SUIT-Light.woff2") format("woff2");
-}
-@font-face {
-  font-family: "SUIT";
-  font-style: normal;
-  font-weight: 400;
-  src: local("SUIT"), url("../fonts/SUIT-Regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "SUIT";
-  font-style: normal;
-  font-weight: 500;
-  src: local("SUIT"), url("../fonts/SUIT-Medium.woff2") format("woff2");
-}
-@font-face {
-  font-family: "SUIT";
-  font-style: normal;
-  font-weight: 600;
-  src: local("SUIT"), url("../fonts/SUIT-SemiBold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "SUIT";
-  font-style: normal;
-  font-weight: 700;
-  src: local("SUIT"), url("../fonts/SUIT-Bold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "SUIT";
-  font-style: normal;
-  font-weight: 800;
-  src: local("SUIT"), url("../fonts/SUIT-ExtraBold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "SUIT";
-  font-style: normal;
+  font-family: "Pretendard";
   font-weight: 900;
-  src: local("SUIT"), url("../fonts/SUIT-Heavy.woff2") format("woff2");
+  font-display: swap;
+  src: local("Pretendard Black"), url(../../assets/fonts/Pretendard-Black.woff2) format("woff2"), url(../../assets/woff/Pretendard-Black.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Pretendard ExtraBold"), url(../../assets/woff2/Pretendard-ExtraBold.woff2) format("woff2"), url(../../assets/woff/Pretendard-ExtraBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"), url(../../assets/woff2/Pretendard-Bold.woff2) format("woff2"), url(../../assets/woff/Pretendard-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"), url(../../assets/woff2/Pretendard-SemiBold.woff2) format("woff2"), url(../../assets/woff/Pretendard-SemiBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"), url(../../assets/woff2/Pretendard-Medium.woff2) format("woff2"), url(../../assets/woff/Pretendard-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"), url(../../assets/woff2/Pretendard-Regular.woff2) format("woff2"), url(../../assets/woff/Pretendard-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"), url(../../assets/woff2/Pretendard-Light.woff2) format("woff2"), url(../../assets/woff/Pretendard-Light.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src: local("Pretendard ExtraLight"), url(../../assets/woff2/Pretendard-ExtraLight.woff2) format("woff2"), url(../../assets/woff/Pretendard-ExtraLight.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Pretendard Thin"), url(../../assets/woff2/Pretendard-Thin.woff2) format("woff2"), url(../../assets/woff/Pretendard-Thin.woff) format("woff");
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -32039,7 +32046,7 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
   min-width: 320px;
   word-break: keep-all;
-  font-family: "SUIT", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "SUIT", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #111;
 }
 
@@ -32591,6 +32598,15 @@ button:focus {
 
 input:focus {
   outline: none !important;
+}
+
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
 }
 
 /*!
@@ -35816,7 +35832,8 @@ button.swiper-pagination-bullet {
   margin: 0;
   padding: 0;
   box-shadow: none;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
@@ -38440,6 +38457,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
 }
 
 .header {
+  font-family: Pretendard, sans-serif;
+  letter-spacing: -0.05em;
   border-bottom: 1px solid #ddd;
   background-color: #fff;
   width: 100%;
@@ -38449,7 +38468,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   left: 0;
 }
 html {
-  scroll-padding-top: 120px;
+  scroll-padding-top: 130px;
 }
 
 @media all and (max-width: 1024px) {
@@ -38458,26 +38477,24 @@ html {
   }
 }
 .header .header-wrap {
-  height: 100px;
+  position: relative;
+  height: 110px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-@media all and (max-width: 1024px) {
-  .header .header-wrap {
-    height: 60px;
-  }
+  gap: 60px;
+  max-width: 1640px;
+  width: 1640px;
 }
 .header .header-wrap .logo {
   flex: 0 0 auto;
 }
 .header .header-wrap .logo img {
-  width: 8.75em;
+  width: 13.125em;
 }
 
 .main-body,
 .sub-body {
-  padding-top: 100px;
+  padding-top: 110px;
 }
 @media all and (max-width: 1024px) {
   .main-body,
@@ -38509,34 +38526,179 @@ html {
   border-radius: 10px;
 }
 
+.member {
+  position: absolute;
+  top: 35px;
+  right: 0;
+}
+.member .in {
+  display: none;
+}
+.member .out {
+  display: block;
+}
+.member .member-wrap {
+  display: flex;
+  align-items: center;
+}
+.member .member-wrap .alram {
+  height: 31px;
+  font-weight: 600;
+  color: #222;
+}
+.member .member-wrap .alram span {
+  line-height: 30px;
+}
+.member .member-wrap .alram .btn_notify {
+  margin-left: 20px;
+  margin-right: 13px;
+  position: relative;
+}
+.member .member-wrap .alram .btn_notify::before {
+  content: "";
+  position: absolute;
+  right: 2px;
+  top: 4px;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #FB483D;
+  border-radius: 10px;
+  border: 3px solid #fff;
+}
+.member .member-wrap .alram .btn_notify .xi-bell-o {
+  font-size: 1.875em;
+}
+.member .member-wrap a {
+  display: inline-block;
+  line-height: 40px;
+  padding: 0 13px;
+  border-radius: 40px;
+  font-weight: 400;
+}
+.member .member-wrap a.login_btn {
+  border: 1px solid #EAEAEC;
+  margin-right: 8px;
+}
+.member .member-wrap a.join_btn {
+  background-color: #FB483D;
+  color: #fff;
+}
+.member.login .in {
+  display: block;
+}
+.member.login .in .profile_wrap {
+  display: flex;
+}
+.member.login .in .profile_wrap span {
+  line-height: 40px;
+}
+.member.login .in .profile_wrap .gnb_profile_img {
+  background-color: #F6F6F6;
+  border: 1px solid #AEAEAE;
+  border-radius: 40px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.member.login .in .profile_wrap .gnb_profile_img img {
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.member.login .in .profile_wrap .name {
+  padding: 0 15px;
+  font-weight: 700;
+  position: relative;
+}
+.member.login .in .profile_wrap .name::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 16px;
+  height: 8px;
+  background: url(../../../assets/images/main/gnb_my_arrow.png) no-repeat center/cover;
+  z-index: 10;
+}
+.member.login .out {
+  display: none;
+}
+
 .footer {
   padding: 3.125rem 0;
-  background: #333;
-  color: #eee;
+  background: #fff;
+  color: #000;
   font-size: 0.8125rem;
   font-weight: 100;
+  font-family: Pretendard, sans-serif;
+}
+.footer .container {
+  max-width: 1640px;
+  width: 1640px;
+}
+.footer__logo {
+  justify-content: space-between;
 }
 .footer__logo img {
-  width: 8.75em;
+  width: 13.3125em;
+}
+.footer__logo .youtube_link {
+  display: inline-block;
+  width: 20px;
+  height: 30px;
+  background: url(../images/main/youtub_ico.png) no-repeat center/100%;
+}
+.footer__logo .insta_link {
+  display: inline-block;
+  width: 20px;
+  height: 30px;
+  background: url(../images/main/insta_ico.png) no-repeat center/100%;
+}
+.footer__logo .blog_link {
+  display: inline-block;
+  width: 20px;
+  height: 30px;
+  background: url(../images/main/blog_ico.png) no-repeat center/100%;
 }
 .footer__txt {
   position: relative;
   overflow: hidden;
   left: -0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.footer__txt .txt {
+  font-weight: 500;
 }
 .footer__txt .txt span {
   position: relative;
   display: inline-block;
   padding: 0 0.5em;
 }
-.footer__txt .txt span:before {
-  content: "";
-  left: -1px;
-  height: 0.8em;
-  top: 50%;
-  margin-top: -0.4em;
-  position: absolute;
-  border-left: 1px solid #b3b3b3;
+.footer__txt .txt span em {
+  color: #000;
+  opacity: 0.4;
+  font-style: normal;
+}
+.footer__txt .txt .service {
+  font-weight: 500;
+}
+.footer__txt .txt + .txt {
+  margin-top: 10px;
+}
+.footer__txt .right_txt {
+  text-align: right;
+}
+.footer__txt .right_txt .txt {
+  margin-bottom: 10px;
+}
+.footer__txt .right_txt .txt span:last-child {
+  padding-right: 0;
 }
 .footer .created-masstige .masstige {
   font-weight: 500;
@@ -38547,11 +38709,6 @@ html {
 
 .header .nav {
   text-align: center;
-}
-@media all and (max-width: 1024px) {
-  .header .nav {
-    display: none;
-  }
 }
 .header .nav .nav-list--depth1 {
   align-items: center;
@@ -38573,14 +38730,14 @@ html {
 }
 .header .nav .depth-1 > .link {
   position: relative;
-  height: 100px;
-  padding: 0 1.5em;
+  height: 110px;
+  padding: 0 0.75rem;
   display: flex;
   align-items: center;
   text-align: center;
-  color: #333;
-  font-size: 1.25em;
-  font-weight: 500;
+  color: #000;
+  font-size: 1em;
+  font-weight: 600;
   line-height: 1.2;
 }
 .header .nav .depth-1 > .link::after {
@@ -38595,7 +38752,7 @@ html {
   display: block;
 }
 .header .nav .depth-1 > .link:hover, .header .nav .depth-1 > .link.on {
-  color: #007bff;
+  text-shadow: 1px 4px 5px #cfcfcf;
 }
 .header .nav .depth-1 > .link.on::after {
   width: 100%;
@@ -39178,7 +39335,7 @@ html {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "SUIT", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "SUIT", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -42555,7 +42712,7 @@ input[type=password] {
   font-family: "Noto Sans KR", sans-serif;
 }
 input[type=password]:placeholder-shown {
-  font-family: "SUIT", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "SUIT", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 input[type=checkbox],
@@ -44189,7 +44346,8 @@ table td.text_left {
 .board-search-02 .btn-color-01 {
   flex: 0 0 5em;
   width: 5em;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   border: 0;
   background-color: #f6f6f6;
   border: 1px solid #ddd;
