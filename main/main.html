@@ -1,1534 +1,212 @@
 <? include "../include/head.html" ?>
 <!DOCTYPE html>
 <html lang="<?=$P_lang?>">
-	<head>
-		<?
+
+<head>
+	<?
     $P_dp0 = 'main';
     include "../include/meta.html" 
     ?>
-		<link rel="stylesheet" href="../assets/css/main.min.css" />
-	</head>
-	<body class="main-body">
-		<? include "../include/header.html" ?>
+	<link rel="stylesheet" href="../assets/css/main.min.css" />
+</head>
 
-		<main class="main" id="contents">
-			<!-- S : main-visual -->
-			<section class="main-visual">
-				<h1 class="sr-only">메인비주얼 영역</h1>
-				<div class="main-title">
-					<div class="container">
-						<h2 class="title" data-aos="zoom-in-up" data-aos-easing="ease-in-out-cubic">프로젝트가 주목받는 순간, 웹랭커에서 시작됩니다.</h2>
-						<p class="text" data-aos="zoom-in-up" data-aos-easing="ease-in-out-cubic" data-aos-delay="50">당신의 웹사이트와 모바일 앱이 전 세계와 만나는 무대. 최신 트렌드 발견부터 폭넓은 인지도 획득까지, 모든것이 가능합니다.</p>
-					</div>
-				</div>
-			</section>
-			<!-- E : main-visual -->
+<body class="main-body">
+	<? include "../include/header.html" ?>
 
-			<!-- S : section -->
-			<section class="section main-thumnail-list">
+	<main class="main" id="contents">
+		<!-- S : main-visual -->
+		<section class="main-visual">
+			<h1 class="sr-only">메인비주얼 영역</h1>
+			<div class="main-title">
 				<div class="container">
-					<div class="thumnail-list">
-						<div class="title-box">
-							<div class="title">이번 주 웹 최고 투표</div>
-							<div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')"><p>더보기</p></a></div>
-						</div>
-						<ul class="thumnail d-flex justify-content-between">
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/thumnail_img.png" alt="랭킹 1위 00000"></a>
-										<div class="like_info">
-											<p class="rank">1</p>
-											<span class="count">367</span>
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-												<button class="share-btn"><span class="blind">공유하기</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업일반</li>
-										<li>대기업종합</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt">카카오페이</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="200">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/thumnail_img.png" alt="랭킹 1위 00000"></a>
-										<div class="like_info">
-											<p class="rank">2</p>
-											<span class="count">367</span>
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-												<button class="share-btn"><span class="blind">공유하기</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업일반</li>
-										<li>대기업종합</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt">카카오페이</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="300">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/thumnail_img.png" alt="랭킹 1위 00000"></a>
-										<div class="like_info">
-											<p class="rank">3</p>
-											<span class="count">367</span>
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-												<button class="share-btn"><span class="blind">공유하기</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업일반</li>
-										<li>대기업종합</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt">카카오페이</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="400">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/thumnail_img.png" alt="랭킹 1위 00000"></a>
-										<div class="like_info">
-											<span class="count">367</span>
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-												<button class="share-btn"><span class="blind">공유하기</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업일반</li>
-										<li>대기업종합</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt">카카오페이</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
+					<h2 class="title" data-aos="fade-up">프로젝트가 주목받는 순간, 웹랭커에서
+						시작됩니다.</h2>
+					<p class="text" data-aos="fade-up" data-aos-delay="50">당신의
+						웹사이트와 모바일 앱이 전 세계와 만나는 무대. 최신 트렌드 발견부터 폭넓은 인지도 획득까지, 모든것이 가능합니다.</p>
+				</div>
+			</div>
+		</section>
+		<!-- E : main-visual -->
 
-					<div class="thumnail-list mt-10">
-						<div class="title-box">
-							<div class="title">이번 주 모바일 최고 투표</div>
-							<div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')"><p>더보기</p></a></div>
+		<!-- S : section -->
+		<section class="section main-thumnail-list">
+			<div class="container">
+				<div class="thumnail-list">
+					<div class="title-box">
+						<div class="title">이번 주 웹 최고 투표</div>
+						<div class="more">
+							<a href="javascript:void(0)" onclick="alert('준비중입니다.')">
+								<p>더보기</p>
+							</a>
 						</div>
-						<ul class="thumnail d-flex justify-content-between">
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/thumnail_img.png" alt="랭킹 1위 00000"></a>
-										<div class="like_info">
-											<p class="rank">1</p>
-											<span class="count">367</span>
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-												<button class="share-btn"><span class="blind">공유하기</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업일반</li>
-										<li>대기업종합</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt">카카오페이</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="200">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/thumnail_img.png" alt="랭킹 1위 00000"></a>
-										<div class="like_info">
-											<p class="rank">2</p>
-											<span class="count">367</span>
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-												<button class="share-btn"><span class="blind">공유하기</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업일반</li>
-										<li>대기업종합</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt">카카오페이</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="300">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/thumnail_img.png" alt="랭킹 1위 00000"></a>
-										<div class="like_info">
-											<p class="rank">3</p>
-											<span class="count">367</span>
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-												<button class="share-btn"><span class="blind">공유하기</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업일반</li>
-										<li>대기업종합</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt">카카오페이</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="400">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/thumnail_img.png" alt="랭킹 1위 00000"></a>
-										<div class="like_info">
-											<span class="count">367</span>
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-												<button class="share-btn"><span class="blind">공유하기</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업일반</li>
-										<li>대기업종합</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt">카카오페이</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
 					</div>
-
-					<div class="thumnail-list mt-10">
-						<div class="title-box">
-							<div class="title">이번 달 진행중 웹 평가</div>
-							<div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')"><p>더보기</p></a></div>
-						</div>
-						<ul class="thumnail d-flex justify-content-between">
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/thumnail_img.png" alt="랭킹 1위 00000"></a>
-										<div class="like_info">
-											<p class="rank">1</p>
-											<ul class="follow">
-												<li class="check">99+명</li>
-												<li class="scope">9.45</li>
-											</ul>
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-												<button class="share-btn"><span class="blind">공유하기</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업일반</li>
-										<li>대기업종합</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt">카카오페이</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="200">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/thumnail_img.png" alt="랭킹 1위 00000"></a>
-										<div class="like_info">
-											<p class="rank">2</p>
-											<ul class="follow">
-												<li class="check">99+명</li>
-												<li class="scope">9.45</li>
-											</ul>
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-												<button class="share-btn"><span class="blind">공유하기</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업일반</li>
-										<li>대기업종합</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt">카카오페이</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="300">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/thumnail_img.png" alt="랭킹 1위 00000"></a>
-										<div class="like_info">
-											<p class="rank">3</p>
-											<ul class="follow">
-												<li class="check">99+명</li>
-												<li class="scope">9.45</li>
-											</ul>
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-												<button class="share-btn"><span class="blind">공유하기</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업일반</li>
-										<li>대기업종합</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt">카카오페이</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="400">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/thumnail_img.png" alt="랭킹 1위 00000"></a>
-										<div class="like_info">
-											<ul class="follow">
-												<li class="check">99+명</li>
-												<li class="scope">9.45</li>
-											</ul>
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-												<button class="share-btn"><span class="blind">공유하기</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업일반</li>
-										<li>대기업종합</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt">카카오페이</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-
-					<div class="thumnail-list mt-10">
-						<div class="title-box">
-							<div class="title">이번 달 진행중 모바일 평가</div>
-							<div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')"><p>더보기</p></a></div>
-						</div>
-						<ul class="thumnail d-flex justify-content-between">
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/thumnail_img.png" alt="랭킹 1위 00000"></a>
-										<div class="like_info">
-											<p class="rank">1</p>
-											<ul class="follow">
-												<li class="check">99+명</li>
-												<li class="scope">9.45</li>
-											</ul>
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-												<button class="share-btn"><span class="blind">공유하기</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업일반</li>
-										<li>대기업종합</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt">카카오페이</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="200">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/thumnail_img.png" alt="랭킹 1위 00000"></a>
-										<div class="like_info">
-											<p class="rank">2</p>
-											<ul class="follow">
-												<li class="check">99+명</li>
-												<li class="scope">9.45</li>
-											</ul>
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-												<button class="share-btn"><span class="blind">공유하기</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업일반</li>
-										<li>대기업종합</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt">카카오페이</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="300">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/thumnail_img.png" alt="랭킹 1위 00000"></a>
-										<div class="like_info">
-											<p class="rank">3</p>
-											<ul class="follow">
-												<li class="check">99+명</li>
-												<li class="scope">9.45</li>
-											</ul>
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-												<button class="share-btn"><span class="blind">공유하기</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업일반</li>
-										<li>대기업종합</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt">카카오페이</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="400">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/thumnail_img.png" alt="랭킹 1위 00000"></a>
-										<div class="like_info">
-											<ul class="follow">
-												<li class="check">99+명</li>
-												<li class="scope">9.45</li>
-											</ul>
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-												<button class="share-btn"><span class="blind">공유하기</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업일반</li>
-										<li>대기업종합</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt">카카오페이</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
+					<div class="swiper-container m-thumbnail">
+						<? include "./thumbnail__01.html" ?>
 					</div>
 				</div>
-			</section>
-			<!-- E : section -->
 
-			<!-- S : section -->
-			<section class="section swiper">
-				<div class="container">
-					<div class="comment_swiper1">
-							<div class="title-box">
-								<div class="title">사용자 투표 인기 댓글</div>
-								<div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')"><p>더보기</p></a></div>
-							</div>
-							<div class="comment_swiper1 mt-5">
-								<div class="swiper-container">
-									<div class="swiper-wrapper">
-										<!-- 
-											pc: 1920x800
-											m: 1440x1200 
-										-->
-										<div class="swiper-slide item">
-											<div class="reply-box">
-												<p class="reply_txt">
-													홈페이지 심플하고 이쁘게 바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다. 홈페이지 심플하고 이쁘게 바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다.
-												</p>
-												<div class="reply_title">
-													<a href="javascript:void(0)" onclick="alert('준비중입니다.')">
-													<div class="title_box">
-														<span class="reply_count">367</span>
-														<p class="title">카카오페이</p>
-													</div>
-													<ul class="reply_info">
-														<li class="count_list">
-															<ul class="view_wrap">
-																<li class="view">212</li>
-																<li class="conut">503</li>
-															</ul>
-														</li>
-														<li class="type">
-														 <ul class="type_list">
-															<li class="info">기업일반</li>
-															<li class="info">대기업종합</li>
-														 </ul>
-														</li>
-													</ul>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide item">
-											<div class="reply-box">
-												<p class="reply_txt">
-													홈페이지 심플하고 이쁘게 바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다. 홈페이지 심플하고 이쁘게 바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다.
-												</p>
-												<div class="reply_title">
-													<a href="javascript:void(0)" onclick="alert('준비중입니다.')">
-													<div class="title_box">
-														<span class="reply_count">367</span>
-														<p class="title">카카오페이</p>
-													</div>
-													<ul class="reply_info">
-														<li class="count_list">
-															<ul class="view_wrap">
-																<li class="view">212</li>
-																<li class="conut">503</li>
-															</ul>
-														</li>
-														<li class="type">
-														 <ul class="type_list">
-															<li class="info">기업일반</li>
-															<li class="info">대기업종합</li>
-														 </ul>
-														</li>
-													</ul>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide item">
-											<div class="reply-box">
-												<p class="reply_txt">
-													홈페이지 심플하고 이쁘게 바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다. 홈페이지 심플하고 이쁘게 바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다.
-												</p>
-												<div class="reply_title">
-													<a href="javascript:void(0)" onclick="alert('준비중입니다.')">
-													<div class="title_box">
-														<span class="reply_count">367</span>
-														<p class="title">카카오페이</p>
-													</div>
-													<ul class="reply_info">
-														<li class="count_list">
-															<ul class="view_wrap">
-																<li class="view">212</li>
-																<li class="conut">503</li>
-															</ul>
-														</li>
-														<li class="type">
-														 <ul class="type_list">
-															<li class="info">기업일반</li>
-															<li class="info">대기업종합</li>
-														 </ul>
-														</li>
-													</ul>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide item">
-											<div class="reply-box">
-												<p class="reply_txt">
-													홈페이지 심플하고 이쁘게 바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다. 홈페이지 심플하고 이쁘게 바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다.
-												</p>
-												<div class="reply_title">
-													<a href="javascript:void(0)" onclick="alert('준비중입니다.')">
-													<div class="title_box">
-														<span class="reply_count">367</span>
-														<p class="title">카카오페이</p>
-													</div>
-													<ul class="reply_info">
-														<li class="count_list">
-															<ul class="view_wrap">
-																<li class="view">212</li>
-																<li class="conut">503</li>
-															</ul>
-														</li>
-														<li class="type">
-														 <ul class="type_list">
-															<li class="info">기업일반</li>
-															<li class="info">대기업종합</li>
-														 </ul>
-														</li>
-													</ul>
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-				
-									<!--
-										TODO: 퍼블 작업 시 가이드
-										TODO: .swiper-control 엘리먼트에 각각 추가 클래스 부여하여 스타일 변경.
-										TODO: .swiper-control 만 선언 시 기본 형태 유지
-										TODO: .swiper-control--progress = 기본 프로그레스 바 형태 ( * scss만 변경 )
-										TODO: .swiper-control--progress-no = 숫자 포함 프로그레스 바 ( * script 커스텀 필요 )
-									-->
-									<div class="swiper-control">
-										<div class="container">
-											<!-- S : Swiper Pagination -->
-											<!-- <div class="swiper-pagination"></div> -->
-											<!-- E : Swiper Pagination -->
-				
-											<!--
-											TODO: 재생버튼 필요 시에만 주석 해제
-											<div class="swiper-play on">
-												<i class="xi-play"></i>
-												<i class="xi-pause"></i>
-											</div>
-											-->
-				
-											<!--
-												S : Swiper Navigation
-												TODO: 기본 형태 외 다른 형태 사용 시 .swiper-control에 absolute가 적용되기 때문에 위치 커스텀 필요.
-											-->
-											<button type="button" class="swiper-button swiper-button--prev">
-												<i class="xi-angle-left"></i>
-											</button>
-											<button type="button" class="swiper-button swiper-button--next">
-												<i class="xi-angle-right"></i>
-											</button>
-											<!-- E : Swiper Navigation -->
-										</div>
-									</div>
-								</div>
-							</div>
+				<div class="thumnail-list mt-10">
+					<div class="title-box">
+						<div class="title">이번 주 모바일 최고 투표</div>
+						<div class="more">
+							<a href="javascript:void(0)" onclick="alert('준비중입니다.')">
+								<p>더보기</p>
+							</a>
+						</div>
 					</div>
-					
-					<div class="comment_swiper2 mt-10">
-						<div class="title-box">
-							<div class="title">심사위원 평가 인기 댓글</div>
-							<div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')"><p>더보기</p></a></div>
-						</div>
-						<div class="comment_swiper2 mt-5">
-							<div class="swiper-container">
-								<div class="swiper-wrapper">
-									<!-- 
-										pc: 1920x800
-										m: 1440x1200 
-									-->
-									<div class="swiper-slide item">
-										<div class="reply-box">
-											<p class="reply_txt">
-												홈페이지 심플하고 이쁘게 바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다. 홈페이지 심플하고 이쁘게 바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다.
-											</p>
-											<div class="reply_title">
-												<a href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<div class="title_box">
-													<span class="reply_count">367</span>
-													<p class="title">카카오페이</p>
-												</div>
-												<ul class="reply_info">
-													<li class="count_list">
-														<ul class="view_wrap">
-															<li class="view">212</li>
-															<li class="conut">503</li>
-														</ul>
-													</li>
-													<li class="type">
-													 <ul class="type_list">
-														<li class="info">기업일반</li>
-														<li class="info">대기업종합</li>
-													 </ul>
-													</li>
-												</ul>
-												</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide item">
-										<div class="reply-box">
-											<p class="reply_txt">
-												홈페이지 심플하고 이쁘게 바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다. 홈페이지 심플하고 이쁘게 바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다.
-											</p>
-											<div class="reply_title">
-												<a href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<div class="title_box">
-													<span class="reply_count">367</span>
-													<p class="title">카카오페이</p>
-												</div>
-												<ul class="reply_info">
-													<li class="count_list">
-														<ul class="view_wrap">
-															<li class="view">212</li>
-															<li class="conut">503</li>
-														</ul>
-													</li>
-													<li class="type">
-													 <ul class="type_list">
-														<li class="info">기업일반</li>
-														<li class="info">대기업종합</li>
-													 </ul>
-													</li>
-												</ul>
-												</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide item">
-										<div class="reply-box">
-											<p class="reply_txt">
-												홈페이지 심플하고 이쁘게 바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다. 홈페이지 심플하고 이쁘게 바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다.
-											</p>
-											<div class="reply_title">
-												<a href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<div class="title_box">
-													<span class="reply_count">367</span>
-													<p class="title">카카오페이</p>
-												</div>
-												<ul class="reply_info">
-													<li class="count_list">
-														<ul class="view_wrap">
-															<li class="view">212</li>
-															<li class="conut">503</li>
-														</ul>
-													</li>
-													<li class="type">
-													 <ul class="type_list">
-														<li class="info">기업일반</li>
-														<li class="info">대기업종합</li>
-													 </ul>
-													</li>
-												</ul>
-												</a>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide item">
-										<div class="reply-box">
-											<p class="reply_txt">
-												홈페이지 심플하고 이쁘게 바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다. 홈페이지 심플하고 이쁘게 바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다.
-											</p>
-											<div class="reply_title">
-												<a href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<div class="title_box">
-													<span class="reply_count">367</span>
-													<p class="title">카카오페이</p>
-												</div>
-												<ul class="reply_info">
-													<li class="count_list">
-														<ul class="view_wrap">
-															<li class="view">212</li>
-															<li class="conut">503</li>
-														</ul>
-													</li>
-													<li class="type">
-													 <ul class="type_list">
-														<li class="info">기업일반</li>
-														<li class="info">대기업종합</li>
-													 </ul>
-													</li>
-												</ul>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-			
-								<!--
-									TODO: 퍼블 작업 시 가이드
-									TODO: .swiper-control 엘리먼트에 각각 추가 클래스 부여하여 스타일 변경.
-									TODO: .swiper-control 만 선언 시 기본 형태 유지
-									TODO: .swiper-control--progress = 기본 프로그레스 바 형태 ( * scss만 변경 )
-									TODO: .swiper-control--progress-no = 숫자 포함 프로그레스 바 ( * script 커스텀 필요 )
-								-->
-								<div class="swiper-control">
-									<div class="container">
-										<!-- S : Swiper Pagination -->
-										<!-- <div class="swiper-pagination"></div> -->
-										<!-- E : Swiper Pagination -->
-			
-										<!--
-										TODO: 재생버튼 필요 시에만 주석 해제
-										<div class="swiper-play on">
-											<i class="xi-play"></i>
-											<i class="xi-pause"></i>
-										</div>
-										-->
-			
-										<!--
-											S : Swiper Navigation
-											TODO: 기본 형태 외 다른 형태 사용 시 .swiper-control에 absolute가 적용되기 때문에 위치 커스텀 필요.
-										-->
-										<button type="button" class="swiper-button swiper-button--prev">
-											<i class="xi-angle-left"></i>
-										</button>
-										<button type="button" class="swiper-button swiper-button--next">
-											<i class="xi-angle-right"></i>
-										</button>
-										<!-- E : Swiper Navigation -->
-									</div>
-								</div>
-							</div>
-						</div>
-				</div>
-					
-				</div>
-			</section>
-			<!-- E : section -->
-
-			<!-- S : section -->
-			<section class="section main-thumnail-list question_list">
-				<div class="container">
-					<div class="thumnail-list">
-						<div class="title-box">
-							<div class="title">Q&A</div>
-							<div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')"><p>더보기</p></a></div>
-						</div>
-						<ul class="thumnail d-flex justify-content-between">
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img01.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="200">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img02.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="300">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img03.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="400">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img04.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-
-					<div class="thumnail-list mt-10">
-						<div class="title-box">
-							<div class="title">자유</div>
-							<div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')"><p>더보기</p></a></div>
-						</div>
-						<ul class="thumnail d-flex justify-content-between">
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img03.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="200">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img02.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="300">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img04.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="400">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img01.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-
-					<div class="thumnail-list mt-10">
-						<div class="title-box">
-							<div class="title">익명</div>
-							<div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')"><p>더보기</p></a></div>
-						</div>
-						<ul class="thumnail d-flex justify-content-between">
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img01.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="200">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img03.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="300">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img04.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="400">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img02.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-
-					<div class="thumnail-list mt-10">
-						<div class="title-box">
-							<div class="title">튜토리얼</div>
-							<div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')"><p>더보기</p></a></div>
-						</div>
-						<ul class="thumnail d-flex justify-content-between">
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img04.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="200">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img01.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="300">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img03.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="400">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img02.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-
-					<div class="thumnail-list mt-10">
-						<div class="title-box">
-							<div class="title">리소스</div>
-							<div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')"><p>더보기</p></a></div>
-						</div>
-						<ul class="thumnail d-flex justify-content-between">
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img03.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="200">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img04.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="300">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img02.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="item" data-aos="fade-up" data-aos-easing="ease-in-out-sine" data-aos-delay="400">
-								<div class="thumnail-box">
-									<div class="img-box">
-										<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img src="../assets/images/main/question_img01.jpg" alt="질문 이미지"></a>
-										<div class="like_info">
-											<div class="like-wrap">
-												<button class="like-btn" onclick="toggle_like()"><span class="blind">좋아요</span></button>
-											</div>
-										</div>
-									</div>
-									<ul class="subject-box">
-										<li>기업</li>
-									</ul>
-									<div class="button-box">
-										<div class="btn">
-											<a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-												<p class="link_txt_sub">개발자로서의 워라밸을 유지하는 팀 공유해요 개발자로서의 워라밸을 유지하는 팀 공유해요</p>
-											</a>
-										</div>
-										<div class="count_box">
-											<p class="view">212</p>
-											<p class="read">503</p>
-											<p class="like">418</p>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
+					<div class="swiper-container m-thumbnail">
+						<? include "./thumbnail__01.html" ?>
 					</div>
 				</div>
-			</section>
-			<!-- E : section -->
 
-			<!-- S : section -->
-			<section class="section bottom_banner">
-				<div class="banner_wrap">
-						<div class="banner_left">
-							<div class="txt">
-								<h4>당신의 프로젝트,<br> 전세계에 빛나게 할 차례입니다.</h4>
-								<a class="project_link" href="javascript:void(0)" onclick="alert('준비중입니다.')">프로젝트 등록하기</a>
-							</div>
+				<div class="thumnail-list mt-10">
+					<div class="title-box">
+						<div class="title">이번 달 진행중 웹 평가</div>
+						<div class="more">
+							<a href="javascript:void(0)" onclick="alert('준비중입니다.')">
+								<p>더보기</p>
+							</a>
 						</div>
-						<div class="banner_right">
-							<div class="txt">
-								<h4>전문가의 시선으로 웹과 앱의 미래를<br> 함께 만들어갈 준비가 되셨나요?</h4>
-								<a class="judge_link" href="javascript:void(0)" onclick="alert('준비중입니다.')">심사위원 지원하기</a>
-							</div>
-						</div>
+					</div>
+					<div class="swiper-container m-thumbnail">
+						<? include "./thumbnail__01.html" ?>
+					</div>
 				</div>
-			</section>
-			<!-- E : section -->
 
-			<button id="chat-btn" style="display: block;">
-				<p class="blind">채팅 문의하기 버튼</p>
-			</button>
+				<div class="thumnail-list mt-10">
+					<div class="title-box">
+						<div class="title">이번 달 진행중 모바일 평가</div>
+						<div class="more">
+							<a href="javascript:void(0)" onclick="alert('준비중입니다.')">
+								<p>더보기</p>
+							</a>
+						</div>
+					</div>
+					<div class="swiper-container m-thumbnail">
+						<? include "./thumbnail__01.html" ?>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- E : section -->
 
-		</main>
+		<!-- S : section -->
+		<section class="section swiper">
+			<div class="container">
+				<div class="comment_swiper1" data-aos="fade-up">
+					<div class="title-box">
+						<div class="title">사용자 투표 인기 댓글</div>
+						<div class="more">
+							<a href="javascript:void(0)" onclick="alert('준비중입니다.')">
+								<p>더보기</p>
+							</a>
+						</div>
+					</div>
+					<div class="comment_swiper1 mt-5">
+						<? include "./use__slide.html" ?>
+					</div>
+				</div>
 
-		<? include "../include/footer.html" ?>
-		<? include "../include/js.html" ?>
-		<script>
-			
+				<div class="comment_swiper2 mt-10" data-aos="fade-up">
+					<div class="title-box">
+						<div class="title">심사위원 평가 인기 댓글</div>
+						<div class="more">
+							<a href="javascript:void(0)" onclick="alert('준비중입니다.')">
+								<p>더보기</p>
+							</a>
+						</div>
+					</div>
+					<div class="comment_swiper2 mt-5">
+						<? include "./use__slide.html" ?>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- E : section -->
+
+		<!-- S : section -->
+		<section class="section main-thumnail-list question_list">
+			<div class="container">
+				<div class="thumnail-list">
+					<div class="title-box">
+						<div class="title">Q&A</div>
+						<div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')">
+								<p>더보기</p>
+							</a></div>
+					</div>
+					<? include "./thumbnail__02.html" ?>
+				</div>
+
+				<div class="thumnail-list mt-10">
+					<div class="title-box">
+						<div class="title">자유</div>
+						<div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')">
+								<p>더보기</p>
+							</a></div>
+					</div>
+					<? include "./thumbnail__02.html" ?>
+				</div>
+
+				<div class="thumnail-list mt-10">
+					<div class="title-box">
+						<div class="title">익명</div>
+						<div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')">
+								<p>더보기</p>
+							</a></div>
+					</div>
+					<? include "./thumbnail__02.html" ?>
+				</div>
+
+				<div class="thumnail-list mt-10">
+					<div class="title-box">
+						<div class="title">튜토리얼</div>
+						<div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')">
+								<p>더보기</p>
+							</a></div>
+					</div>
+					<? include "./thumbnail__02.html" ?>
+				</div>
+
+				<div class="thumnail-list mt-10">
+					<div class="title-box">
+						<div class="title">리소스</div>
+						<div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')">
+								<p>더보기</p>
+							</a></div>
+					</div>
+					<? include "./thumbnail__02.html" ?>
+				</div>
+			</div>
+		</section>
+		<!-- E : section -->
+
+		<!-- S : section -->
+		<section class="section bottom_banner">
+			<div class="banner_wrap">
+				<div class="banner_left">
+					<div class="txt">
+						<h4>당신의 프로젝트,<br> 전세계에 빛나게 할 차례입니다.</h4>
+						<a class="project_link" href="javascript:void(0)" onclick="alert('준비중입니다.')">프로젝트 등록하기</a>
+					</div>
+				</div>
+				<div class="banner_right">
+					<div class="txt">
+						<h4>전문가의 시선으로 웹과 앱의 미래를<br> 함께 만들어갈 준비가 되셨나요?</h4>
+						<a class="judge_link" href="javascript:void(0)" onclick="alert('준비중입니다.')">심사위원 지원하기</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- E : section -->
+
+	</main>
+
+	<? include "../include/footer.html" ?>
+	<? include "../include/js.html" ?>
+	<script src="../assets/js/add.js"></script>
+	<script>
+		$(document).ready(function () {
 			var firSwiper = new Swiper('.comment_swiper1 .swiper-container', {
 				loop: true,
 				slidesPerView: 4,
@@ -1568,35 +246,57 @@
 				},
 			});
 
-			
+			//mobile-slide
 
-			// 모든 like 버튼 요소를 선택
-			const likeButtons = document.querySelectorAll('.like-btn');
+			var thdSwiper = null;
 
-			// 각 like 버튼에 대해 이벤트 리스너를 추가
-			likeButtons.forEach((button, index) => {
-				button.addEventListener('click', function() {
-					toggleLike(index + 1); // index는 0부터 시작하므로 1을 더해줍니다.
-				});
-			});
+			function initSwiper() {
+				var screenWidth = $(window).width();
 
-			// 각 like 버튼의 상태를 저장하는 배열
-			let liked = Array.from({ length: likeButtons.length }, () => false);
-
-			// 좋아요 버튼을 토글하는 함수
-			function toggleLike(buttonIndex) {
-				liked[buttonIndex - 1] = !liked[buttonIndex - 1]; // 버튼 인덱스는 1부터 시작하므로 1을 빼줍니다.
-				const likeButton = likeButtons[buttonIndex - 1];
-				const likeStatus = likeButton.parentElement.querySelector('.like_status'); // 각 like 버튼과 연관된 좋아요 상태 요소를 선택합니다.
-				
-				if (liked[buttonIndex - 1]) {
-					likeButton.classList.add("clicked");
+				if (screenWidth < 768) {
+					thdSwiper = new Swiper('.m-thumbnail', {
+						loop: true,
+						loopedSlides: 10,
+						observer: true,
+						observeParents: true,
+						fadeEffect: {
+							crossFade: true,
+						},
+						breakpoints: {
+							320: {
+								slidesPerView: 1.6,
+								spaceBetween: 20,
+							},
+							576: {
+								slidesPerView: 1.6,
+								spaceBetween: 20,
+							},
+							768: {
+								slidesPerView: 1.6,
+								spaceBetween: 20,
+							},
+						}
+					});
+					thdSwiper.update();
 				} else {
-					likeButton.classList.remove("clicked");
+					if (thdSwiper !== null) {
+						thdSwiper.destroy();
+						thdSwiper = null;
+					}
 				}
 			}
 
+			initSwiper();
 
-		</script>
-	</body>
+			var resizeTimer;
+			$(window).on('resize', function () {
+				clearTimeout(resizeTimer);
+				resizeTimer = setTimeout(function () {
+					initSwiper();
+				}, 250);
+			});
+		})
+	</script>
+</body>
+
 </html>

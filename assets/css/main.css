@@ -386,13 +386,14 @@ body.body-fixed {
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
+  transition: all 0.3s;
   opacity: 0.4;
 }
 .main-thumnail-list .container .thumnail-list .thumnail .item .thumnail-box .img-box .like_info .like-wrap .like-btn:hover {
   opacity: 1;
 }
 .main-thumnail-list .container .thumnail-list .thumnail .item .thumnail-box .img-box .like_info .like-wrap .like-btn.clicked {
-  opacity: 0.4;
+  opacity: 1;
   background-image: url(../images/main/like_ico_02.png);
 }
 .main-thumnail-list .container .thumnail-list .thumnail .item .thumnail-box .img-box .like_info .like-wrap .like-btn.clicked:hover {

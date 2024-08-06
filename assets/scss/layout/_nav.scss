@@ -22,30 +22,33 @@
 		position: relative;
 		> .link {
 			position: relative;
-			height: $nav-height;
-			padding: 0 0.75rem;
+			padding: 0 rem(20);
 			display: flex;
 			align-items: center;
 			text-align: center;
 			color: $black;
-			font-size: em(16);
-			font-weight: 600;
-			line-height: 1.2;
+			font-size: rem(18);
+			font-weight: 500;
+			line-height: 1;
 			&::after {
 				content: '';
 				position: absolute;
 				left: 50%;
-				bottom: 0;
+				bottom: -5px;
 				width: 0;
-				height: 3px;
+				height: 10px;
 				background: $color-1;
 				transition: 0.3s;
 				display: block;
+				opacity: 0.3;
 			}
 
 			&:hover,
 			&.on {
-				text-shadow: 1px 4px 5px #cfcfcf;
+				&::after{
+					width: 90%;
+					left: 0;
+				}
 			}
 
 			&.on {

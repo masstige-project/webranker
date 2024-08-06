@@ -7,6 +7,63 @@
 	margin: 0 auto;
 	padding: rem(40) rem(20);
 	background-color: #fff;
+	border-radius: 30px;
+
+	.popup-title-bx {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: rem(20);
+		border-bottom: 1px solid #ddd;
+		margin-bottom: rem(20);
+
+		@include mdq-max(md) {
+			margin-bottom: rem(20);
+		}
+
+		.title {
+			font-size: rem(24);
+			font-weight: bold;
+			line-height: 1;
+			letter-spacing: normal;
+
+			@include mdq-max(md) {
+				font-size: rem(20);
+			}
+		}
+
+		.mfp-close {
+			width: fit-content;
+			height: fit-content;
+			line-height: 1;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: rem(40);
+		}
+	}
+
+	.text-bx {
+		overflow-y: scroll;
+		max-height: 400px;
+
+		&::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			width: 10px;
+			background: $color-2;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: transparent;
+			box-shadow: inset 0 0 5px $color-2;
+			border-left: 4.5px solid transparent;
+			border-right: 4.5px solid transparent;
+		}
+	}
 
 	&.popup--lg {
 		max-width: 1200px;

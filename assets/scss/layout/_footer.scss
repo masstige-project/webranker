@@ -37,7 +37,6 @@
 		}
 	}
 
-	// 푸터 텍스트 구분선 스타일 샘플
 	&__txt {
 		position: relative;
 		overflow: hidden;
@@ -81,6 +80,62 @@
 		}
 		&:hover {
 			color: #7d67ff;
+		}
+	}
+}
+
+//quick-menu
+.quick-menu {
+	position: fixed;
+	right: rem(60);
+	bottom: rem(320);
+	z-index: 99;
+	color: $white;
+
+	.chat-btn {
+		background-color: #4A26FF;
+		border: none;
+		border-radius: 10px;
+		width: 60px;
+		height: 60px;
+		cursor: pointer;
+		&::before{
+		  content: '';
+		  width: 40px;
+		  height: 40px;
+		  display: inline-block;
+		  background: url(../images/main/chat_img.png)no-repeat center;
+		}
+	  }
+
+	li+li {
+		margin-top: rem(10);
+	}
+	.top-btn {
+		transition: transform 0.5s ease;
+		width: rem(60);
+		height: rem(60);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $color-1;
+		i {
+			color: $white;
+			font-size: rem(36);
+			transition: transform 0.5s ease;
+		}
+
+		&.up {
+			i {
+				transform: rotate(0);
+			}
+		}
+
+		&.down {
+			i {
+				transform: rotate(180deg);
+			}
 		}
 	}
 }
