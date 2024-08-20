@@ -1,0 +1,38 @@
+@charset "UTF-8";
+.section--login{
+    .member-tit{
+        .tit{
+            font-size: rem(42);
+            font-weight: 700;
+            color: #222;
+        }
+    }
+    .intro-bx{
+        margin-top: rem(111);
+        a{
+            height: rem(80);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            font-size: rem(28);
+            font-weight: 700;
+            &.kakao-btn{
+                background: #F9E000;
+                color: #3C1E1E;
+                padding: 0 20px;
+                gap: rem(80);
+            }
+            &.email-btn{
+                background: #E11960;
+                color: $white;
+                justify-content: center;
+            }
+        }
+        p{
+            font-size: rem(20);
+            color: #666;
+            margin: rem(40) 0;
+            text-align: center;
+        }
+    }
+}

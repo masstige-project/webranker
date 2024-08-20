@@ -158,6 +158,8 @@ $grid-breakpoints: (
 	xl: 1200px,
 	xxl: 1400px,
 	xxxl: 1600px,
+	xxxhl: 1750px,
+	xxxxl: 1800px,
 ) !default;
 
 @include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
@@ -325,7 +327,7 @@ $tooltip-arrow-height: 0.4rem !default;
 $tooltip-arrow-color: $tooltip-bg !default;
 
 // Header Layout
-$nav-height: 110px; //네비 높이
+$nav-height: 100px; //네비 높이
 $nav-height-lg: 60px; //네비 높이(lg미만)
 
 // Modals

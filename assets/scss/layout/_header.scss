@@ -2,38 +2,180 @@
 $header-fix: true; //true: 헤더가 상단 고정일 경우입니다.
 
 .header {
-	font-family: Pretendard, sans-serif;
-	letter-spacing: -0.05em;
-	border-bottom: 1px solid #ddd;
-	background-color: #fff;
 	width: 100%;
-	z-index: 500;
-	@if ($header-fix == true) {
+	z-index: 50;
+	transition: all 0.3s;
+	background: $white;
+
+	@if ($header-fix ==true) {
 		position: fixed;
 		top: 0;
 		left: 0;
+
 		@at-root html {
 			scroll-padding-top: $nav-height + $container-gutter-width/2; //input required 브라우저 메시지 포커싱 위치를 맞춰줍니다.
 		}
 	}
+
 	@include mdq-max(lg) {
 		@at-root html {
 			scroll-padding-top: $nav-height-lg + $container-gutter-width/2; //input required 브라우저 메시지 포커싱 위치를 맞춰줍니다.
 		}
 	}
 
-	.header-wrap {
-		position: relative;
+	&__wrap {
 		height: $nav-height;
 		display: flex;
 		align-items: center;
-		gap: 60px;
-		max-width: 1640px;
-		width: 1640px;
+		justify-content: space-between;
+
+		@include mdq-max(lg) {
+			height: $nav-height-lg;
+		}
+
 		.logo {
-			flex: 0 0 auto;
 			img {
-				width: em(210);
+				width: em(190);
+			}
+		}
+	}
+
+	&__left {
+		display: flex;
+		align-items: center;
+		gap: rem(60);
+		@include mdq-max(xl){
+			gap: rem(40);
+		}
+		@include mdq-max(lg){
+			width: 100%;
+			justify-content: space-between;
+		}
+	}
+	&__txt{
+		font-weight: 600;
+		font-size: rem(16);
+		@include mdq-max(xxl){
+			display: none;
+		}
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+		gap: rem(20);
+		@include mdq-max(lg){
+			display: none;
+		}
+		
+		.login_off {
+			display: flex;
+			align-items: center;
+			gap: rem(20);
+			@include mdq-max(lg){
+				justify-content: flex-end;
+			}
+
+			.membership {
+				display: flex;
+				align-items: center;
+				gap: rem(10);
+
+				> a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 8px 16px;
+					border-radius: 50px;
+					&.login{
+						border: 1px solid #EEEEEE;
+						color: $black;
+					}
+
+					&.join {
+						background: $color-1;
+						color: $white;
+					}
+				}
+			}
+		}
+
+		.login_on {
+			display: flex;
+			align-items: center;
+			gap: rem(20);
+			.membership {
+				display: flex;
+				align-items: center;
+				gap: rem(10);
+
+				> .profile {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 8px;
+					border-radius: 50%;
+					border: 1px solid #AEAEAE;
+				}
+			}
+			.dropdown{
+				position: relative;
+				cursor: pointer;
+				.name-bx{
+					display: flex;
+					align-items: center;
+					gap: rem(15);
+				}
+				.dropmenu{
+					position: absolute;
+					min-width: rem(120);
+					top: 30px;
+					left: 0;
+					text-align: center;
+					z-index: 1;
+					display: none;
+					padding: rem(10) rem(20);
+					border: 1px solid rgba(#000, 0.1);
+					background: $white;
+					border-radius: 1em;
+					li{
+						&+li{
+							margin-top: rem(10);
+						}
+						> a{
+							display: flex;
+							align-items: center;
+							gap: rem(10);
+							transition: all 0.5s;
+							font-weight: 500;
+							font-size: rem(16);
+							&:hover{
+								color: $color-1;
+								.default-img{
+									display: none;
+								}
+								.active-img{
+									display: block;
+								}
+							}
+						}
+					}
+				}
+				img{
+					width: 20px;
+					height: 20px;
+					object-fit: scale-down;
+					transition: all 0.5s;
+				}
+				.active-img{
+					display: none;
+				}
+				i{
+					transition: all 0.5s; 
+					&.rotate{
+						transform: rotate(180deg);
+					} 
+				}
 			}
 		}
 	}
@@ -57,120 +199,13 @@ $header-fix: true; //true: 헤더가 상단 고정일 경우입니다.
 .sub-body {
 	overflow-y: auto;
 	&::-webkit-scrollbar {
-		width: 7px;
+		width: 5px;
 	}
 	&::-webkit-scrollbar-thumb {
 		background: $color-1;
-		border-radius: 7px;
 	}
 
 	&::-webkit-scrollbar-track {
-		background-color: #eeeeee;
-		border-radius: 10px;
+		background-color: #eee;
 	}
 }
-
-.member{
-	position: absolute;
-	top: 35px;
-	right: 0;
-	& .in{
-		display: none;
-	}
-	& .out{
-		display: block;
-	}
-	& .member-wrap{
-		display: flex;
-		align-items: center;
-		& .alram{
-			height: 31px;
-			font-weight: 600;
-			color: $gray-2;
-			& span{
-				line-height: 30px;
-			}
-			& .btn_notify{
-				margin-left: 20px;
-				margin-right: 13px;
-				position: relative;
-				&::before{
-					content: '';
-					position: absolute;
-					right: 2px;
-					top: 4px;
-					display: inline-block;
-					width: 6px;
-					height: 6px;
-					background-color: #FB483D;
-					border-radius: 10px;
-					border: 3px solid #fff;
-				}
-				& .xi-bell-o{
-					font-size: em(30);
-				}
-			}
-		}
-		& a{
-			display: inline-block;
-			line-height: 40px;
-			padding: 0 13px;
-			border-radius: 40px;
-			font-weight: 400;
-			&.login_btn{
-				border: 1px solid #EAEAEC;
-				margin-right: 8px;
-			}
-			&.join_btn{
-				background-color: #FB483D;
-				color: #fff;
-			}
-		}
-	}
-	&.login{
-		& .in{
-			display: block;
-			& .profile_wrap{
-				display: flex;
-				& span{
-					line-height: 40px;
-				}
-				& .gnb_profile_img{
-					background-color: #F6F6F6;
-					border: 1px solid #AEAEAE;
-					border-radius: 40px;
-					width: 40px;
-					height: 40px;
-					position: relative;
-					& img{
-						vertical-align: middle;
-						width: 24px;
-						height: 24px;
-						position: absolute;
-						top: 50%;
-						left: 50%;
-						transform: translate(-50%, -50%);
-					}
-				}
-				& .name{
-					padding:0 15px;
-					font-weight: 700;
-					position: relative;
-					&::before{
-						content: '';
-						position: absolute;
-						display: inline-block;
-						width: 16px;
-						height: 8px;
-						background: url(../../../assets/images/main/gnb_my_arrow.png) no-repeat center/cover;
-						z-index: 10;
-					}
-				}
-			}
-		}
-		& .out{
-			display: none;
-		}
-	}
-}
-

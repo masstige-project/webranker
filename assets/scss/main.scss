@@ -17,10 +17,8 @@ body {
   }
 }
 
-.swiper-wrapper{
-  @include mdq-max(md){
-    height: auto;
-  }
+main{
+  overflow: hidden;
 }
 
 .main-thumnail-list {
@@ -34,12 +32,12 @@ body {
         margin-bottom: 20px;
 
         & .title {
-          font-size: em(24);
+          font-size: rem(24);
           font-weight: bold;
         }
 
         & .more {
-          font-size: em(18);
+          font-size: rem(18);
           width: 107px;
           padding: 0 16px;
           line-height: 44px;
@@ -57,35 +55,34 @@ body {
             display: inline-block;
             width: 20px;
             height: 20px;
-            background: url(../images/main/more_arrow.png)no-repeat center;
+            background: url(../images/main/icon/more_arrow.png)no-repeat center;
           }
         }
       }
 
       & .thumnail {
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        @include mdq-max(lg){
+          align-items: unset;
+          gap: unset;
+        }
+
         & .item {
-          width: 360px;
+          width: calc(25% - rem(10));
+          @include mdq-max(lg){
+            width: auto;
+          }
 
           & .thumnail-box {
             & .img-box {
+              position: relative;
+
               & .link {
                 display: block;
-              }
-
-              position: relative;
-              width: 360px;
-              height: 240px;
-              border-radius: 16px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              @include mdq-max(md){
-                width: auto;
-              }
-              img{
-                width: 100%;
-                height: 100%;
-                object-fit: scale-down;
+                @include img-to-bg(percentage(200/360));
+                border-radius: 16px;
               }
 
               & .like_info {
@@ -107,9 +104,9 @@ body {
                   text-align: right;
                   padding: 0 8px;
                   border-radius: 10px;
-                  background-color: #fff;
+                  background-color: $white;
                   color: #FE8642;
-                  background: #fff url(../images/main/ranking_ico.png)no-repeat 8px 46%;
+                  background: #fff url(../images/main/icon/ranking_ico.png)no-repeat 8px 46%;
                 }
 
                 & .count {
@@ -119,17 +116,17 @@ body {
                   height: 30px;
                   border-radius: 10px;
                   line-height: 31px;
-                  color: #fff;
-                  background: #FE4742 url(../images/main/count_arrow.png)no-repeat 42px 46%;
+                  color: $white;
+                  background: #FE4742 url(../images/main/icon/count_arrow.png)no-repeat 42px 46%;
                 }
 
                 & .follow {
                   display: flex;
-                  background-color: #FE4742;
+                  background-color: $color-1;
                   border-radius: 10px;
                   padding: 0 8px;
                   line-height: 30px;
-                  color: #fff;
+                  color: $white;
 
                   & li {
                     +li {
@@ -164,7 +161,7 @@ body {
                         height: 21px;
                         display: inline-block;
                         margin-right: 2px;
-                        background: url(../images/main/scope.png)no-repeat center 40%;
+                        background: url(../images/main/icon/scope.png)no-repeat center 40%;
                       }
                     }
                   }
@@ -180,7 +177,7 @@ body {
                   & .like-btn {
                     width: 45px;
                     height: 45px;
-                    background-image: url(../images/main/like_ico_01.png);
+                    background-image: url(../images/main/icon/like_ico_01.png);
                     background-size: cover;
                     background-repeat: no-repeat;
                     border: none;
@@ -194,7 +191,7 @@ body {
 
                     &.clicked {
                       opacity: 1;
-                      background-image: url(../images/main/like_ico_02.png);
+                      background-image: url(../images/main/icon/like_ico_02.png);
 
                       &:hover {
                         opacity: 1;
@@ -206,7 +203,7 @@ body {
                     width: 45px;
                     height: 45px;
                     margin-top: 6px;
-                    background-image: url(../images/main/share_ico.png);
+                    background-image: url(../images/main/icon/share_ico.png);
                     background-size: cover;
                     background-repeat: no-repeat;
                     border: none;
@@ -218,7 +215,7 @@ body {
 
             & .subject-box {
               display: flex;
-              font-size: em(15);
+              font-size: rem(15);
               color: $gray-6;
               margin-top: 20px;
 
@@ -246,7 +243,7 @@ body {
             & .button-box {
               & .btn {
                 margin-top: 4px;
-                font-size: em(24);
+                font-size: rem(24);
 
                 & .link_txt {
                   display: flex;
@@ -259,7 +256,7 @@ body {
                     height: 24px;
                     margin-left: 6px;
                     display: inline-block;
-                    background: url(../images/main/link_ico_03.png)no-repeat center;
+                    background: url(../images/main/icon/link_ico_03.png)no-repeat center;
                   }
                 }
               }
@@ -280,7 +277,7 @@ body {
                       display: inline-block;
                       width: 20px;
                       height: 30px;
-                      background: url(../images/main/view_ico.png)no-repeat center;
+                      background: url(../images/main/icon/view_ico.png)no-repeat center;
                     }
                   }
 
@@ -291,7 +288,7 @@ body {
                       display: inline-block;
                       width: 20px;
                       height: 30px;
-                      background: url(../images/main/read_ico.png)no-repeat center;
+                      background: url(../images/main/icon/read_ico.png)no-repeat center;
                     }
                   }
 
@@ -302,7 +299,7 @@ body {
                       display: inline-block;
                       width: 20px;
                       height: 30px;
-                      background: url(../images/main/like_ico_04_g.png)no-repeat center;
+                      background: url(../images/main/icon/like_ico_04_g.png)no-repeat center;
                     }
                   }
                 }
@@ -339,10 +336,22 @@ body {
   & .container {
     max-width: 1730px;
     width: 1730px;
+    margin: 0 auto;
+    @include mdq-max(xxxhl){
+      max-width: 100%;
+      width: 100%;
+    }
 
     & .swiper-container {
       position: relative;
       padding: 0 95px;
+      @include mdq-max(xxxhl){
+        padding: 0 60px;
+        &::before,
+        &::after{
+          width: 60px !important;
+        }
+      }
 
       &::after {
         content: '';
@@ -352,7 +361,7 @@ body {
         display: inline-block;
         width: 95px;
         height: 251px;
-        background-color: #fff;
+        background-color: $white;
         z-index: 2;
       }
 
@@ -364,7 +373,7 @@ body {
         display: inline-block;
         width: 95px;
         height: 251px;
-        background-color: #fff;
+        background-color: $white;
         z-index: 2;
       }
     }
@@ -375,14 +384,18 @@ body {
       max-width: 1500px;
       width: 1500px;
       margin: 0 auto;
+      @include mdq-max(xxxhl){
+        max-width: 100%;
+        width: 100%;
+      }
 
       & .title {
-        font-size: em(24);
+        font-size: rem(24);
         font-weight: bold;
       }
 
       & .more {
-        font-size: em(18);
+        font-size: rem(18);
         width: 107px;
         padding: 0 16px;
         line-height: 44px;
@@ -400,7 +413,7 @@ body {
           display: inline-block;
           width: 20px;
           height: 20px;
-          background: url(../images/main/more_arrow.png)no-repeat center;
+          background: url(../images/main/icon/more_arrow.png)no-repeat center;
         }
       }
     }
@@ -411,11 +424,10 @@ body {
 
       & .swiper-slide {
         & .reply-box {
-          width: 360px;
           height: 251px;
           padding: 30px;
           background-color: #F5F5F5;
-          border-radius: 20px;
+          border-radius: var(--border-rd);
 
           & .reply_txt {
             @include text-truncate(3);
@@ -447,7 +459,7 @@ body {
               & .reply_count {
                 background-color: #aaa;
                 border-radius: 8px;
-                color: #fff;
+                color: $white;
                 line-height: 24px;
                 height: 24px;
                 width: 58px;
@@ -461,14 +473,14 @@ body {
                   width: 16px;
                   height: 24px;
                   display: inline-block;
-                  background: url(../images/main/count_arrow.png)no-repeat center;
+                  background: url(../images/main/icon/count_arrow.png)no-repeat center;
                 }
               }
 
               & .title {
                 display: flex;
                 align-items: center;
-                font-size: em(22);
+                font-size: rem(22);
                 font-weight: 600;
 
                 &::after {
@@ -476,7 +488,7 @@ body {
                   display: inline-block;
                   width: 24px;
                   height: 36px;
-                  background: url(../images/main/title_arrow.png)no-repeat center;
+                  background: url(../images/main/icon/title_arrow.png)no-repeat center;
                 }
               }
             }
@@ -503,7 +515,7 @@ body {
                     display: inline-block;
                     width: 20px;
                     height: 15px;
-                    background: url(../images/main/view_ico.png) no-repeat 50% 60%;
+                    background: url(../images/main/icon/view_ico.png) no-repeat 50% 60%;
                   }
                 }
 
@@ -518,7 +530,7 @@ body {
                     display: inline-block;
                     width: 20px;
                     height: 15px;
-                    background: url(../images/main/read_ico.png) no-repeat 50% 60%;
+                    background: url(../images/main/icon/read_ico.png) no-repeat 50% 60%;
                   }
                 }
               }
@@ -578,7 +590,7 @@ body {
 
           &:hover {
             background-color: #AAAAAA;
-            color: #fff;
+            color: $white;
           }
 
           &.swiper-button--prev {
@@ -599,49 +611,74 @@ body {
 .banner_wrap {
   display: flex;
   height: 480px;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  @include mdq-max(lg) {
+    flex-direction: column;
+    height: auto;
+  }
 
   & .banner_left,
   .banner_right {
-    width: 50%;
-    color: #fff;
+    color: $white;
+    flex: 1;
+    @include mdq-max(lg){
+      flex: unset;
+      width: 100%;
+      height: rem(310);
+    }
 
+    & .txt {
+      position: absolute;
+      top: 50%;
+      left: 100px;
+      transform: translateY(-50%);
+
+      @include mdq-max(lg) {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+      }
+    }
     & h4 {
       font-size: 36px;
+
+      @include mdq-max(xxl) {
+        font-size: rem(24);
+      }
     }
 
     & a {
       display: inline-block;
-      background-color: #FE4742;
+      background-color: $color-1;
       line-height: 47px;
       font-size: 18px;
       width: 182px;
       margin-top: 40px;
       text-align: center;
       border-radius: 10px;
+      font-weight: 500;
+
+      @include mdq-max(lg) {
+        margin-top: rem(30);
+        width: rem(162);
+        height: rem(48);
+        font-size: rem(15);
+        font-weight: 500;
+      }
     }
   }
 
   & .banner_left {
     position: relative;
     background: url(../images/main/bg_01.png)no-repeat center;
-
-    & .txt {
-      position: absolute;
-      top: 50%;
-      left: 100px;
-      transform: translateY(-50%);
-    }
   }
 
   & .banner_right {
     position: relative;
     background: url(../images/main/bg_02.png)no-repeat center;
-
-    & .txt {
-      position: absolute;
-      top: 50%;
-      left: 100px;
-      transform: translateY(-50%);
-    }
   }
 }

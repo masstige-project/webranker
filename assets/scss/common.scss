@@ -3,33 +3,42 @@
 @import 'functions';
 @import 'variables';
 
-// Mixins
 @import 'mixins';
-
-// Utilities
 @import 'utilities';
-
-// Font-face
 @import 'font-face';
-
-// Reset
 @import 'reset';
-
-// Library
 @import 'library';
-
-// Layout
 @import 'layout';
-
-// Components
 @import 'components';
-
-// Grid
 @import 'grid';
-
-// Board Template
-// @import 'board';
-
-// Board Template Old Version
+@import 'board';
 @import 'board.old';
-// @import "board";
+
+:root {
+    --border-rd: 20px;
+}
+
+.lg-container {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1600px;
+}
+
+.membership-container{
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 500px;
+}
+
+.section{
+    padding: rem(160) 0;
+    @include mdq-max(lg){
+        padding: rem(80) 0;
+    }
+}

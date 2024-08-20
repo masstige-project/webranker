@@ -5,38 +5,81 @@
 </ul>
 
 <header id="header" class="header">
-	<div class="container header-wrap">
-		<a href="../main/main.html" class="logo d-inline-flex align-items-center h-100" title="메인으로">
-			<img src="../assets/images/main/logo.png" alt="<?=$SS[sitename]?>" />
-		</a>
-		<div class="nav__bg"></div>
-		<!-- S : navigation -->
-		<nav class="nav">
-			<? include "../include/nav.html" ?>
-		</nav>
-		<!-- E : navigation -->
+	<div class="lg-container header__wrap">
+		<div class="header__left">
+			<a href="../main/main.html" class="logo" title="메인으로">
+				<img src="../assets/images/main/logo.png" alt="<?=$SS[sitename]?>" />
+			</a>
+			<!-- nav -->
+			<nav class="nav">
+				<? include "../include/nav.html" ?>
+			</nav>
+			<!-- mobile-nav -->
+			<div class="btn-wrap">
+				<a href="">
+					<span class="blind">알림</span>
+					<img src="../assets/images/main/icon/alert_off.png" alt="alert_off">
+					<img src="../assets/images/main/icon/alret_on.png" alt="alert_on">
+				</a>
+				<button class="nav-mobile__btn" type="button">
+					<i class="xi-bars"></i>
+				</button>
+			</div>
+		</div>
 
-		<div class="member">
-			<ul class="member-wrap">
-				<li class="alram"><span>당신의 웹과 앱을 선보여보세요.</span><button type="button" class="btn_notify" aria-haspopup="menu" aria-expanded="false"><i class="xi-bell-o"></i><span class="blind">알림</span></button></li>
-				<li class="out"><a href="javascript:void(0)" class="login_btn" onclick="alert('준비중입니다.')">로그인</a></li>
-				<li class="out"><a href="javascript:void(0)" class="join_btn" onclick="alert('준비중입니다.')">회원가입</a></li>	
-				<!-- <li class="in">
-					<a href="javascript:void(0)" class="gnb_my" onclick="alert('준비중입니다.')">
-						<div class="profile_wrap">
-							<div class="gnb_profile_img">
-								<img src="../assets/images/main/gnb_profile_img.png" alt="프로필 이미지">
-							</div>
-							<span class="blind">마이페이지</span>
-							<span class="name">홍길동님</span>
-						</div>
+		<div class="header__right"> 
+			<p class="header__txt">당신의 웹과 앱을 선보여보세요.</p>
+			<!-- 로그인 전 -->
+			<ul class="login_off">
+				<li class="alert">
+					<a href="">
+						<span class="blind">알림</span>
+						<img src="../assets/images/main/icon/alert_off.png" alt="alert_off">
 					</a>
-				</li> -->
+				</li>
+				<li class="membership">
+					<a href="../membership/login__intro.html" class="login">로그인</a>
+					<a href="" class="join">회원가입</a>
+				</li>
+			</ul>
+			<!-- 로그인 후 d-none 해제 -->
+			<ul class="login_on d-none">
+				<li class="alert">
+					<a href="">
+						<span class="blind">알림</span>
+						<img src="../assets/images/main/icon/alret_on.png" alt="alert_on">
+					</a>
+				</li>
+				<li class="membership">
+					<a href="" onclick="alert('준비중입니다.')" class="profile">
+						<img src="../assets/images/main/icon/gnb_profile_img.png" alt="login_img">
+					</a>
+					<div class="dropdown">
+						<div class="name-bx">
+							<p class="name">홍길동님</p>
+							<i class="xi-angle-up"></i>
+						</div>
+						<ul class="dropmenu">
+							<li>
+								<a href="" class="active">
+									<p>프로필</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<p>알림 설정</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<p>로그아웃</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
 			</ul>
 		</div>
-		<!-- <button class="nav-mobile__btn" type="button">
-			<i class="xi-bars"></i>
-		</button> -->
 	</div>
 </header>
 
@@ -49,3 +92,18 @@
 	<img src="../assets/images/icon/loading.svg" alt="loading" />
 </div>
 <!-- E : loading image -->
+
+<script>
+	$(document).ready(function () {
+		$('.dropdown').click(function () {
+			var dropMenu = $('.dropmenu');
+			if (dropMenu.is(":visible")) {
+				dropMenu.slideUp();
+				$('.xi-angle-up').removeClass('rotate');
+			} else {
+				dropMenu.slideDown();
+				$('.xi-angle-up').addClass('rotate');
+			}
+		});
+	});
+</script>
