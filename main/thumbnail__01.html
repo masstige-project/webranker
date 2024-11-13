@@ -1,129 +1,45 @@
 <ul class="thumnail d-flex justify-content-between swiper-wrapper">
+    <? for ($i=0; $i<4; $i++) {?>
     <li class="item swiper-slide" data-aos="fade-up">
         <div class="thumnail-box">
-            <div class="img-box">
-                <a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img
-                        src="../assets/images/main/thumnail_img.jpg" alt="랭킹 1위 00000"></a>
+            <div class="img-bx">
+                <a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
+                    <div class="img-bx" style="background-image: url(../assets/images/main/thumnail_img.jpg);">
+                        <img
+                        src="../assets/images/main/base_360X202.png" alt="랭킹 img">
+                    </div>
+                </a>
                 <div class="like_info">
                     <p class="rank">1</p>
-                    <span class="count">367</span>
                     <div class="like-wrap">
-                        <button class="like-btn" onclick="toggle_like()"><span
-                                class="blind">좋아요</span></button>
-                        <button class="share-btn"><span class="blind">공유하기</span></button>
+                        <button class="like-btn"><span class="blind">좋아요</span></button>
                     </div>
                 </div>
             </div>
-            <ul class="subject-box">
-                <li>기업일반</li>
-                <li>대기업종합</li>
-            </ul>
-            <div class="button-box">
-                <div class="btn">
-                    <a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-                        <p class="link_txt">카카오페이</p>
-                    </a>
+            <div class="flex-bx">
+                <div class="left-bx">
+                    <ul class="subject-box">
+                        <li>기업일반</li>
+                        <li>대기업종합</li>
+                    </ul>
+                    <div class="button-box">
+                        <div class="btn">
+                            <a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
+                                <p class="link_txt">카카오페이</p>
+                            </a>
+                        </div>
+                        <div class="count_box">
+                            <p class="view">212</p>
+                            <p class="read">503</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="count_box">
-                    <p class="view">212</p>
-                    <p class="read">503</p>
+                <div class="right-bx">
+                    <p>투표하기</p>
+                    <span class="count">367 <i class="xi-long-arrow-up"></i></span>
                 </div>
             </div>
         </div>
     </li>
-    <li class="item swiper-slide" data-aos="fade-up" data-aos-delay="200">
-        <div class="thumnail-box">
-            <div class="img-box">
-                <a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img
-                        src="../assets/images/main/thumnail_img.jpg" alt="랭킹 1위 00000"></a>
-                <div class="like_info">
-                    <p class="rank">2</p>
-                    <span class="count">367</span>
-                    <div class="like-wrap">
-                        <button class="like-btn" onclick="toggle_like()"><span
-                                class="blind">좋아요</span></button>
-                        <button class="share-btn"><span class="blind">공유하기</span></button>
-                    </div>
-                </div>
-            </div>
-            <ul class="subject-box">
-                <li>기업일반</li>
-                <li>대기업종합</li>
-            </ul>
-            <div class="button-box">
-                <div class="btn">
-                    <a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-                        <p class="link_txt">카카오페이</p>
-                    </a>
-                </div>
-                <div class="count_box">
-                    <p class="view">212</p>
-                    <p class="read">503</p>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li class="item swiper-slide" data-aos="fade-up" data-aos-delay="300">
-        <div class="thumnail-box">
-            <div class="img-box">
-                <a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img
-                        src="../assets/images/main/thumnail_img.jpg" alt="랭킹 1위 00000"></a>
-                <div class="like_info">
-                    <p class="rank">3</p>
-                    <span class="count">367</span>
-                    <div class="like-wrap">
-                        <button class="like-btn" onclick="toggle_like()"><span
-                                class="blind">좋아요</span></button>
-                        <button class="share-btn"><span class="blind">공유하기</span></button>
-                    </div>
-                </div>
-            </div>
-            <ul class="subject-box">
-                <li>기업일반</li>
-                <li>대기업종합</li>
-            </ul>
-            <div class="button-box">
-                <div class="btn">
-                    <a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-                        <p class="link_txt">카카오페이</p>
-                    </a>
-                </div>
-                <div class="count_box">
-                    <p class="view">212</p>
-                    <p class="read">503</p>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li class="item swiper-slide" data-aos="fade-up" data-aos-delay="400">
-        <div class="thumnail-box">
-            <div class="img-box">
-                <a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')"><img
-                        src="../assets/images/main/thumnail_img.jpg" alt="랭킹 1위 00000"></a>
-                <div class="like_info">
-                    <span class="count">367</span>
-                    <div class="like-wrap">
-                        <button class="like-btn" onclick="toggle_like()"><span
-                                class="blind">좋아요</span></button>
-                        <button class="share-btn"><span class="blind">공유하기</span></button>
-                    </div>
-                </div>
-            </div>
-            <ul class="subject-box">
-                <li>기업일반</li>
-                <li>대기업종합</li>
-            </ul>
-            <div class="button-box">
-                <div class="btn">
-                    <a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
-                        <p class="link_txt">카카오페이</p>
-                    </a>
-                </div>
-                <div class="count_box">
-                    <p class="view">212</p>
-                    <p class="read">503</p>
-                </div>
-            </div>
-        </div>
-    </li>
+    <?}?>
 </ul>

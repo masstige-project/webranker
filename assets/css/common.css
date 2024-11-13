@@ -45284,9 +45284,19 @@ html {
 .quick-menu {
   position: fixed;
   right: 3.75rem;
-  bottom: 20rem;
+  bottom: 2.5rem;
   z-index: 99;
   color: #fff;
+}
+@media all and (max-width: 1200px) {
+  .quick-menu {
+    right: 1.25rem;
+  }
+}
+.quick-menu li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .quick-menu .chat-btn {
   background-color: #4A26FF;
@@ -45450,6 +45460,28 @@ html {
   .btn-wrap {
     display: flex;
   }
+}
+
+.mobile-login-bx {
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.mobile-login-bx > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+.mobile-login-bx > a.join {
+  background: #FE4742;
+  color: #fff;
+  border: 1px solid #FE4742;
 }
 
 .nav-mobile {
@@ -46523,7 +46555,7 @@ html {
 }
 .popup .text-bx::-webkit-scrollbar-track {
   background: transparent;
-  box-shadow: inset 0 0 5px #FE4742;
+  box-shadow: inset 0 0 5px #ddd;
   border-left: 4.5px solid transparent;
   border-right: 4.5px solid transparent;
 }
@@ -52792,7 +52824,7 @@ table td.text_left {
   padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1600px;
+  max-width: 1640px;
 }
 
 .membership-container {
@@ -52801,15 +52833,27 @@ table td.text_left {
   padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 500px;
+  max-width: 440px;
 }
 
-.section {
-  padding: 10rem 0;
+.swiper-wrapper {
+  height: auto;
 }
-@media all and (max-width: 1024px) {
-  .section {
-    padding: 5rem 0;
+
+.main {
+  overflow-x: hidden;
+}
+
+.back-bx a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+@media all and (max-width: 1200px) {
+  .back-bx a {
+    font-size: 1.125rem;
   }
 }
 /*# sourceMappingURL=common.css.map */

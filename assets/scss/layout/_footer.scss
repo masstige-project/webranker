@@ -111,9 +111,17 @@
 .quick-menu {
 	position: fixed;
 	right: rem(60);
-	bottom: rem(320);
+	bottom: rem(40);
 	z-index: 99;
 	color: $white;
+	@include mdq-max(xl){
+		right: rem(20);
+	}
+	li{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
 	.chat-btn {
 		background-color: #4A26FF;

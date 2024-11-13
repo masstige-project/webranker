@@ -727,3 +727,21 @@ $(document).ready(function(){
     }
   });
 })
+
+//input 숫자/특수문자 입력X
+document.querySelectorAll('.name-input').forEach(function(input) {
+  input.addEventListener('input', function(e) {
+      var value = e.target.value;
+      var filteredValue = value.replace(/[^a-zA-Zㄱ-ㅎㅏ-ㅣ가-힣\s]/g, '');
+      e.target.value = filteredValue;
+  });
+});
+
+//input 이메일 형식에 사용가능한 문자만 허용
+document.querySelectorAll(".email-input").forEach(function(input) {
+  input.addEventListener("input", function(e) {
+    var value = e.target.value;
+    var filteredValue = value.replace(/[^a-zA-Z0-9!@^.\s]/g, '');
+    e.target.value = filteredValue;
+  });
+});

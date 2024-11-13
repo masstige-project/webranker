@@ -22,7 +22,10 @@ main{
 }
 
 .main-thumnail-list {
-  padding: 120px 0 160px 0;
+  padding: 135px 0 165px 0;
+  @include mdq-max(xl){
+    padding: 60px 0 80px 0;
+  }
 
   & .container {
     & .thumnail-list {
@@ -30,10 +33,20 @@ main{
         display: flex;
         align-items: center;
         margin-bottom: 20px;
+        @include mdq-max(xl){
+          justify-content: space-between;
+          margin-bottom: 10px;
+        }
 
         & .title {
           font-size: rem(24);
           font-weight: bold;
+          @include mdq-max(xl){
+            font-size: rem(22);
+          }
+          @include mdq-max(xxs){
+            font-size: rem(18);
+          }
         }
 
         & .more {
@@ -45,6 +58,29 @@ main{
           border: 1px solid #eee;
           border-radius: 44px;
           position: relative;
+          transition: all 0.5s;
+          @include mdq-max(xl){
+            font-size: rem(16);
+            line-height: unset;
+            width: 86px;
+            height: 36px;
+            line-height: 36px;
+          }
+          @include mdq-min(md){
+            &:hover{
+              background: $black;
+              color: $white;
+              cursor: pointer;
+              &::after{
+                background: url(../images/main/icon/more_arrow_w.png)no-repeat center;
+              }
+            }
+          }
+          a{
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
 
           &::after {
             content: '';
@@ -56,6 +92,7 @@ main{
             width: 20px;
             height: 20px;
             background: url(../images/main/icon/more_arrow.png)no-repeat center;
+            transition: all 0.5s;
           }
         }
       }
@@ -76,13 +113,19 @@ main{
           }
 
           & .thumnail-box {
-            & .img-box {
+            & .img-bx {
               position: relative;
+              border-radius: 16px;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+              overflow: hidden;
+              @include mdq-max(md){
+                border-radius: 8px;
+              }
 
               & .link {
                 display: block;
-                @include img-to-bg(percentage(200/360));
-                border-radius: 16px;
               }
 
               & .like_info {
@@ -93,6 +136,9 @@ main{
                 align-items: center;
                 width: 100%;
                 padding: 0 10px;
+                @include mdq-max(md){
+                  padding: 0 6px;
+                }
 
                 & .rank {
                   display: inline-block;
@@ -107,19 +153,27 @@ main{
                   background-color: $white;
                   color: #FE8642;
                   background: #fff url(../images/main/icon/ranking_ico.png)no-repeat 8px 46%;
+                  transition: all 0.5s;
+                  @include mdq-min(md){
+                    &:hover{
+                      color: $white;
+                      background-color: #FE8642;
+                      background: #FE8642 url(../images/main/icon/ranking_ico_w.png)no-repeat 8px 46%;
+                      cursor: pointer;
+                    }
+                  }
+                  @include mdq-max(md){
+                      color: $white;
+                      background-color: #FE8642;
+                      background: #FE8642 url(../images/main/icon/ranking_ico_w.png)no-repeat 4px 46%;
+                      cursor: pointer;
+                      width: 37px;
+                      height: 23px;
+                      font-size: 14px;
+                      line-height: 24px;
+                      border-radius: 6px;
+                  }
                 }
-
-                & .count {
-                  padding: 0 8px;
-                  display: inline-block;
-                  width: 62px;
-                  height: 30px;
-                  border-radius: 10px;
-                  line-height: 31px;
-                  color: $white;
-                  background: #FE4742 url(../images/main/icon/count_arrow.png)no-repeat 42px 46%;
-                }
-
                 & .follow {
                   display: flex;
                   background-color: $color-1;
@@ -169,10 +223,13 @@ main{
 
                 & .like-wrap {
                   position: absolute;
-                  top: -65px;
-                  right: 8px;
+                  bottom: 0;
+                  right: 10px;
                   display: flex;
                   flex-direction: column;
+                  @include mdq-max(md){
+                    right: 6px;
+                  }
 
                   & .like-btn {
                     width: 45px;
@@ -184,6 +241,10 @@ main{
                     cursor: pointer;
                     transition: all 0.3s;
                     opacity: 0.4;
+                    @include mdq-max(md){
+                      width: 36px;
+                      height: 36px;
+                    }
 
                     &:hover {
                       opacity: 1;
@@ -212,12 +273,102 @@ main{
                 }
               }
             }
+            & .flex-bx{
+              display: flex;
+              justify-content: space-between;
+              margin-top: 20px;
+              @include mdq-max(md){
+                flex-direction: column;
+                justify-content: unset;
+              }
+              .right-bx{
+                background: #FE4742;
+                width: 70px;
+                height: 56px;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: $white;
+                gap: 5px;
+                padding: 10px;
+                line-height: 1;
+                @include mdq-max(md){
+                  width: 100%;
+                  height: 36px;
+                  padding: 0 10px;
+                  flex-direction: row;
+                  margin-top: 6px;
+                  line-height: 1.6;
+                }
+                p{
+                  font-size: 15px;
+                }
+              }
+              .left-bx2{
+                @include mdq-max(md){
+                  order: 2;
+                  margin-top: 7px;
+                }
+              }
+              .right-bx2{
+                background: #FE4742;
+                width: 127px;
+                height: 30px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include mdq-max(md){
+                  width: 94px;
+                  height: 20px;
+                  border-radius: 4px;
+                  order: 1;
+                }
+                .subject-box{
+                  color: $white;
+                  @include mdq-max(md){
+                    font-size: 12px;
+                    letter-spacing: -0.5px;
+                  }
+                  span{
+                    position: relative;
+                    padding-left: 16px;
+                  }
+                  li+li::before{
+                    background-color: rgba(#fff, 0.5);
+                  }
+                  span::after{
+                    content: "";
+                    width: 14px;
+                    height: 13px;
+                    background-image: url('../images/main/icon/scope.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    position: absolute;
+                    top: calc(50% - 1px);
+                    left: 0;
+                    transform: translateY(-50%);
+                  }
+                }
+              }
+              .count {
+                display: inline-block;
+                font-weight: bold;
+                position: relative;
+                font-size: 16px;
+              }
+            }
 
             & .subject-box {
               display: flex;
               font-size: rem(15);
               color: $gray-6;
-              margin-top: 20px;
+              @include mdq-max(xl){
+                font-size: 14px;
+              }
 
               & li {
                 +li {
@@ -244,6 +395,12 @@ main{
               & .btn {
                 margin-top: 4px;
                 font-size: rem(24);
+                @include mdq-max(xl){
+                  font-size: rem(22);
+                }
+                @include mdq-max(xxs){
+                  font-size: rem(18);
+                }
 
                 & .link_txt {
                   display: flex;
@@ -269,11 +426,14 @@ main{
                 & p {
                   display: flex;
                   align-items: center;
+                  @include mdq-max(xl){
+                    font-size: 14px;
+                  }
 
                   &.view {
                     &::before {
                       content: '';
-                      padding-right: 3.5px;
+                      padding-right: 4px;
                       display: inline-block;
                       width: 20px;
                       height: 30px;
@@ -284,7 +444,7 @@ main{
                   &.read {
                     &::before {
                       content: '';
-                      padding-right: 3.5px;
+                      padding-right: 4px;
                       display: inline-block;
                       width: 20px;
                       height: 30px;
@@ -313,6 +473,10 @@ main{
   }
 
   &.question_list {
+    padding: 160px 0 301px 0;
+    @include mdq-max(xl){
+      padding: 80px 0 200px 0;
+    }
     & .container {
       & .thumnail-list {
         & .thumnail-box {
@@ -324,6 +488,10 @@ main{
             & .link_txt_sub {
               font-size: 20px;
               font-weight: 500;
+              @include text-truncate(2);
+              @include mdq-max(xl){
+                font-size: rem(18);
+              }
             }
           }
         }
@@ -333,6 +501,21 @@ main{
 }
 
 .swiper {
+  & .swiper-pagination{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 12px;
+    &-bullet{
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $gray-6;
+    }
+    &-bullet-active{
+      background: #FE4742;
+    }
+  }
   & .container {
     max-width: 1730px;
     width: 1730px;
@@ -350,6 +533,13 @@ main{
         &::before,
         &::after{
           width: 60px !important;
+        }
+      }
+      @include mdq-max(xl){
+        padding: 0 30px;
+        &::before,
+        &::after{
+          width: 30px !important;
         }
       }
 
@@ -388,10 +578,16 @@ main{
         max-width: 100%;
         width: 100%;
       }
+      @include mdq-max(xl){
+        justify-content: space-between;
+      }
 
       & .title {
         font-size: rem(24);
         font-weight: bold;
+        @include mdq-max(xl){
+          font-size: rem(22);
+        }
       }
 
       & .more {
@@ -403,6 +599,23 @@ main{
         border: 1px solid #eee;
         border-radius: 44px;
         position: relative;
+        @include mdq-max(xl){
+          font-size: rem(16);
+          line-height: unset;
+          width: 86px;
+          height: 36px;
+          line-height: 36px;
+        }
+        @include mdq-min(md){
+          &:hover{
+            background: $black;
+            color: $white;
+            cursor: pointer;
+            &::after{
+              background: url(../images/main/icon/more_arrow_w.png)no-repeat center;
+            }
+          }
+        }
 
         &::after {
           content: '';
@@ -414,6 +627,7 @@ main{
           width: 20px;
           height: 20px;
           background: url(../images/main/icon/more_arrow.png)no-repeat center;
+          transition: all 0.5s;
         }
       }
     }
@@ -421,6 +635,9 @@ main{
     & .swiper-container {
       width: 100%;
       height: auto;
+      @include mdq-max(md){
+        padding-bottom: 20px;
+      }
 
       & .swiper-slide {
         & .reply-box {
@@ -428,6 +645,12 @@ main{
           padding: 30px;
           background-color: #F5F5F5;
           border-radius: var(--border-rd);
+          @include mdq-max(xl){
+            padding: 20px;
+          }
+          @include mdq-max(md){
+            height: 186px;
+          }
 
           & .reply_txt {
             @include text-truncate(3);
@@ -439,6 +662,10 @@ main{
             margin-top: 20px;
             padding-top: 20px;
             position: relative;
+            @include mdq-max(md){
+              margin-top: 10px;
+              padding-top: 10px;
+            }
 
             &::before {
               content: '';
@@ -467,6 +694,12 @@ main{
                 display: flex;
                 align-items: center;
                 margin-right: 10px;
+                @include mdq-max(md){
+                  width: 48px;
+                  height: 21px;
+                  line-height: unset;
+                  font-size: 12px;
+                }
 
                 &::after {
                   content: '';
@@ -474,6 +707,11 @@ main{
                   height: 24px;
                   display: inline-block;
                   background: url(../images/main/icon/count_arrow.png)no-repeat center;
+                  @include mdq-max(md){
+                    width: 10px;
+                    height: 12px;
+                    margin-left: 4px;
+                  }
                 }
               }
 
@@ -482,13 +720,17 @@ main{
                 align-items: center;
                 font-size: rem(22);
                 font-weight: 600;
+                @include mdq-max(xxs){
+                  font-size: rem(18);
+                }
 
                 &::after {
                   content: '';
                   display: inline-block;
-                  width: 24px;
-                  height: 36px;
+                  width: 8px;
+                  height: 14px;
                   background: url(../images/main/icon/title_arrow.png)no-repeat center;
+                  margin-left: 8px;
                 }
               }
             }
@@ -497,6 +739,12 @@ main{
               display: flex;
               justify-content: space-between;
               color: #999;
+              @include mdq-max(xxs){
+                justify-content: unset;
+                flex-direction: column;
+                gap: 5px;
+                margin-top: 5px;
+              }
 
               & .view_wrap {
                 display: flex;
@@ -508,6 +756,9 @@ main{
                   display: flex;
                   align-items: center;
                   margin-right: 10px;
+                  @include mdq-max(xxs){
+                    line-height: unset;
+                  }
 
                   &::before {
                     content: "";
@@ -523,6 +774,9 @@ main{
                   line-height: 30px;
                   display: flex;
                   align-items: center;
+                  @include mdq-max(xxs){
+                    line-height: unset;
+                  }
 
                   &::before {
                     content: "";
@@ -538,6 +792,9 @@ main{
               & .type_list {
                 display: flex;
                 line-height: 30px;
+                @include mdq-max(xxs){
+                  line-height: unset;
+                }
 
                 & li {
                   +li {
@@ -587,6 +844,12 @@ main{
           background-color: #f9f9f9;
           border-radius: 10px;
           transition: all 0.3s;
+          @include mdq-max(md){
+            width: unset;
+            line-height: unset;
+            background: transparent;
+            border-radius: unset;
+          }
 
           &:hover {
             background-color: #AAAAAA;
@@ -663,11 +926,12 @@ main{
       font-weight: 500;
 
       @include mdq-max(lg) {
-        margin-top: rem(30);
+        margin-top: rem(30); 
         width: rem(162);
         height: rem(48);
         font-size: rem(15);
         font-weight: 500;
+        line-height: rem(48);
       }
     }
   }

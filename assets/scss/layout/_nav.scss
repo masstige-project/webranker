@@ -157,6 +157,27 @@
 
 // ASIDE
 $nav-mobile-direction: right; //네비버튼 위치 , 네비 나오는 방향
+.mobile-login-bx{
+	padding: 1rem 1rem;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	border-bottom: 1px solid $gray-d;
+	> a{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 4px 8px;
+		border-radius: 10px;
+		border: 1px solid $gray-d;
+		font-size: 14px;
+		&.join{
+			background: $color-1;
+			color: $white;
+			border: 1px solid $color-1;
+		}
+	}
+}
 .nav-mobile {
 	z-index: 700;
 	background-color: #fff;

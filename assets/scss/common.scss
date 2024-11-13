@@ -24,7 +24,7 @@
     padding-left: 20px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 1600px;
+    max-width: 1640px;
 }
 
 .membership-container{
@@ -33,12 +33,26 @@
     padding-left: 20px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 500px;
+    max-width: 440px;
 }
 
-.section{
-    padding: rem(160) 0;
-    @include mdq-max(lg){
-        padding: rem(80) 0;
+.swiper-wrapper{
+    height: auto;
+}
+
+.main{
+    overflow-x: hidden;
+}
+
+.back-bx{
+    a{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 20px;
+        font-weight: 500;
+        @include mdq-max(xl){
+            font-size: rem(18);
+        }
     }
 }

@@ -1,38 +1,527 @@
 @charset "UTF-8";
-.section--login{
-    .member-tit{
-        .tit{
-            font-size: rem(42);
-            font-weight: 700;
-            color: #222;
+
+.section--membership {
+    padding: 200px 0 237px 0;
+
+    @include mdq-max(xl) {
+        padding: 100px 0;
+    }
+
+    &.login {
+        text-align: center;
+    }
+
+    &.email {
+        padding: 120px 0 272px 0;
+
+        @include mdq-max(xl) {
+            padding: 80px 0;
         }
     }
-    .intro-bx{
-        margin-top: rem(111);
-        a{
-            height: rem(80);
+    &.complete{
+        padding: 160px 0 225px 0;
+        @include mdq-max(xl) {
+            padding: 100px 0;
+        }
+    }
+    &.join-complete{
+        padding: 135px 0 229px 0;
+        @include mdq-max(xl) {
+            padding: 100px 0;
+        }
+    }
+
+    .member-tit {
+        .tit {
+            font-size: rem(40);
+            font-weight: 500;
+            color: #222;
+
+            @include mdq-max(xl) {
+                font-size: rem(30);
+            }
+        }
+    }
+
+    //login-intro
+    .intro-bx {
+        margin-top: rem(60);
+
+        @include mdq-max(xl) {
+            margin-top: rem(40);
+        }
+
+        a {
+            height: rem(50);
             width: 100%;
             display: flex;
             align-items: center;
-            font-size: rem(28);
-            font-weight: 700;
-            &.kakao-btn{
-                background: #F9E000;
-                color: #3C1E1E;
+            font-size: rem(20);
+            border-radius: 10px;
+
+            @include mdq-max(xl) {
+                font-size: 14px;
+            }
+
+            &.kakao-btn {
+                background: #FAE100;
                 padding: 0 20px;
                 gap: rem(80);
             }
-            &.email-btn{
-                background: #E11960;
+
+            &.email-btn {
+                background: #FF4844;
                 color: $white;
                 justify-content: center;
             }
         }
-        p{
-            font-size: rem(20);
-            color: #666;
-            margin: rem(40) 0;
+
+        p {
+            font-size: 15px;
+            color: #999;
+            margin: rem(20) 0;
+
+            @include mdq-max(xl) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    //email-join
+    .inputBox {
+        .title {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            @include mdq-max(xl){
+                font-size: rem(18);
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .title--30 {
+        font-size: 30px;
+        font-weight: 500;
+        @include mdq-max(xl){
+            font-size: rem(24);
+        }
+    }
+
+    .btnBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .btn {
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            color: $white;
+            font-size: 20px;
+            background: $gray-a;
+            transition: all 0.5s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $gray-a;
+            @include mdq-max(xl){
+                height: 40px;
+                font-size: rem(18);
+            }
+
+            @include mdq-min(md) {
+                &:hover {
+                    background: $color-1;
+                    border: 1px solid $color-1;
+                }
+            }
+        }
+    }
+
+    .inputBox {
+        >li+li {
+            margin-top: 30px;
+            @include mdq-max(xl){
+                margin-top: 20px;
+            }
+        }
+        .message{
+            margin-top: 10px;
+            color: #FF4844;
+            font-size: 15px;
+            display: block;
+        }
+        .input-flex-bx{
+            display: flex;
+            gap: 8px;
+            input{
+                width: calc(100% - 100px);
+            }
+            .certified-btn,
+            .confirm-btn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 48px;
+                width: 100px;
+                border-radius: 10px;
+                background: $gray-a;
+                font-size: 18px;
+                color: $white;
+                transition: all 0.5s;
+                border: 1px solid $gray-a;
+                @include mdq-max(xl){
+                    height: 38px;
+                }
+                &.active{
+                    background: #FF4844;
+                    border: 1px solid #FF4844;
+                }
+                &.change{
+                    background: $white;
+                    border: 1px solid #FF4844;
+                    color: #FF4844;
+                }
+                @include mdq-min(md){
+                    &:hover{
+                        background: $color-1;
+                        border: 1px solid #FF4844;
+                    }
+                }
+            }
+            &.hidden-input{
+                display: none;
+                position: relative;
+                .certificationTime{
+                    position: absolute;
+                    font-size: 18px;
+                    color: #FF4844;
+                    right: 128px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &.active{
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    .pw-wrap {
+        position: relative;
+
+        .eyes {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            z-index: 1;
+            transform: translateY(-50%);
+            cursor: pointer;
+
+            i {
+                font-size: 18px;
+                color: #ccc;
+            }
+        }
+    }
+
+    .input-100 {
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+        background: $white;
+        border: none;
+        padding: 0 20px;
+        border: 1px solid $gray-e;
+        @include mdq-max(xl){
+            height: 40px;
+            padding: 0 10px;
+        }
+
+        &.bd-red {
+            border: 1px solid #FF4844;
+        }
+
+        &::placeholder {
+            font-size: 18px;
+            color: rgba(#000, 0.2);
+            @include mdq-max(xl){
+                font-size: rem(16);
+            }
+        }
+    }
+
+    .agreeBox {
+        .all-chk {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 0;
+            border-top: 1px solid $black;
+            border-bottom: 1px solid #ddd;
+
+            input:checked+label:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 8px;
+                left: 5px;
+                width: 3px;
+                height: 7px;
+                border: solid $color-1;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+                @include mdq-max(xl){
+                    top: 6px;
+                }
+            }
+        }
+
+        .other-chk {
+            padding: 25px 30px;
+            border-bottom: 1px solid #ddd;
+            @include mdq-max(xl){
+                padding: 15px 10px;
+            }
+
+            >li {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                line-height: 1;
+
+                &+li {
+                    margin-top: 20px;
+                    @include mdq-max(xl){
+                        margin-top: 12px;
+                    }
+                }
+
+                a {
+                    position: relative;
+                    margin-left: 6px;
+                    font-size: 15px;
+                    @include mdq-max(xl){
+                        font-size: rem(14);
+                    }
+
+                    &::before {
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        background: $black;
+                        position: absolute;
+                        left: 0;
+                        bottom: -1px;
+                        z-index: 1;
+                    }
+                }
+            }
+            input:checked+label:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 3px;
+                left: 5px;
+                width: 3px;
+                height: 7px;
+                border: solid $color-1;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+        }
+
+        input {
+            padding: 0;
+            height: initial;
+            width: initial;
+            margin-bottom: 0;
+            display: none;
+            cursor: pointer;
+        }
+
+        label {
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            @include mdq-max(xl){
+                font-size: rem(16);
+            }
+
+            &::before {
+                content: '';
+                background-color: transparent;
+                border: 1px solid $gray-e;
+                border-radius: 2px;
+                padding: 7px;
+                display: inline-block;
+                position: relative;
+                vertical-align: middle;
+                cursor: pointer;
+                margin-right: 6px;
+            }
+        }
+    }
+    //이메일 인증
+    .complete-bx{
+        width: 800px;
+        margin: 0 auto;
+        @include mdq-max(lg){
+            width: 100%;
+        }
+        .top--bx{
+            background: #F9F9F9;
+            border-radius: 10px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            @include mdq-max(lg){
+                height: fit-content;
+                padding: 40px 0;
+            }
+            img{
+                @include mdq-max(md){
+                    width: 100px;
+                }
+            }
+        }
+        .number-bx{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            p{
+                font-size: 20px;
+                font-weight: 300;
+                color: #444;
+                @include mdq-max(xl){
+                    font-size: rem(18);
+                    font-weight: normal;
+                }
+                &.num{
+                    font-size: 30px;
+                    font-weight: bold;
+                    color: $black;
+                    letter-spacing: 2px;
+                    @include mdq-max(xl){
+                        font-size: rem(24);
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+        .bottom-bx{
             text-align: center;
+            p{
+                font-size: 18px;
+                color: $gray-6;
+                @include mdq-max(xl){
+                    font-size: rem(16);
+                }
+                & +p{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    //회원가입 완료
+    .join-complete-bx{
+        width: 820px;
+        margin: 0 auto;
+        @include mdq-max(lg){
+            width: 100%;
+        }
+        .title{
+            font-size: 40px;
+            line-height: 1.5;
+            letter-spacing: -0.5px;
+            span{
+                font-weight: bold;
+            }
+            @include mdq-max(xl){
+                font-size: rem(30);
+                line-height: 1.4;
+            }
+        }
+        .dec{
+            font-size: 18px;
+            color: $gray-6;
+            @include mdq-max(xl){
+                font-size: rem(16);
+            }
+        }
+        .image-bx{
+            margin: 50px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            @include mdq-max(md){
+                margin: 20px 0 40px 0;
+            }
+        }
+        .completeBtnbox{
+            display: flex;
+            gap: 20px;
+            @include mdq-max(xl){
+                gap: 10px;
+            }
+            @include mdq-max(md){
+                flex-direction: column;
+                gap: 20px;
+            }
+            > div{
+                flex: 1;
+            }
+            a{
+                height: 50px;
+                border-radius: 10px;
+                border: 1px solid #FF4844;
+                color: #FF4844;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $white;
+                transition: all 0.5s;
+                @include mdq-max(xl){
+                    font-size: rem(18);
+                    text-align: center;
+                    line-height: 1.2;
+                }
+                @include mdq-max(md){
+                    height: 40px;
+                }
+                &.active{
+                    color: $white;
+                    background: #FF4844;
+                }
+                @include mdq-min(md){
+                    &:hover{
+                        color: $white;
+                        background: #FF4844;
+                    }
+                }
+            }
+            p{
+                font-size: 17px;
+                color: $gray-7;
+                line-height: 1.5;
+                letter-spacing: -1px;
+                @include mdq-max(xl){
+                    font-size: rem(16);
+                }
+                @include mdq-max(md){
+                    margin-top: 10px !important;
+                }
+            }
         }
     }
 }

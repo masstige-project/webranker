@@ -1,0 +1,197 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+    include "../include/meta.html"
+		?>
+  <link rel="stylesheet" href="../assets/css/sub.min.css" />
+  <script src="../assets/js/add.js"></script>
+</head>
+
+<body class="sub-body">
+  <!-- S : Header -->
+  <? include "../include/header.html" ?>
+  <!-- E : Header -->
+
+  <!-- S : Main -->
+  <main class="main" id="contents">
+    <!-- S : Section -->
+    <section class="section section--membership email">
+      <div class="membership-container">
+        <div class="back-bx wow fadeInUp mb-5">
+          <a href="JavaScript:history.go(-1);">
+            <img src="../assets/images/main/icon/back.png" alt="돌아가기" loading="lazy">
+            돌아가기
+          </a>
+        </div>
+        <p class="title--30 wow fadeInUp">이메일 간편가입</p>
+        <!-- 유효성검사시 외곽선 bd-red 추가 -->
+        <ul class="inputBox mt-10">
+          <li class="wow fadeInUp">
+            <p class="title">이메일</p>
+            <div class="input-flex-bx">
+              <input type="text" name="uemail" maxlength="20" class="input-100 email-input bd-red" placeholder="이메일 계정">
+              <!-- active추가시 활성화 -->
+              <button type="button" class="certified-btn">인증하기</button>
+            </div>
+            <div class="input-flex-bx hidden-input mt-2">
+              <input type="text" name="unumber" maxlength="20" class="input-100 utel bd-red" placeholder="인증번호 입력">
+              <span class="certificationTime">03:00</span>
+              <button type="button" class="confirm-btn">확인</button>
+            </div>
+            <!-- 이메일형식 입력가능 email-input -->
+            <span class="message">이메일을 입력해주세요.</span>
+            <span class="message">이미 사용중인 이메일입니다.</span>
+            <!-- 인증번호 유효성 메세지 -->
+            <span class="message">인증번호를 정확히 입력해주세요.</span>
+          </li>
+          <li class="wow fadeInUp">
+            <p class="title">이름</p>
+            <!-- name-input:문자만입력 -->
+            <input type="text" name="uname" maxlength="10" class="input-100 bd-red name-input bd-red" placeholder="이름 입력">
+            <span class="message">최소 2자 이상입니다.</span>
+          </li>
+          <li class="wow fadeInUp">
+            <p class="title">휴대 전화번호</p>
+            <div class="input-bx">
+              <input type="text" name="utel" maxlength="20" class="input-100 AutoHyphen bd-red" placeholder="휴대 전화번호 입력">
+              <span class="message">휴대 전화번호를 확인해주세요.</span>
+            </div>
+          </li>
+          <li class="wow fadeInUp">
+            <p class="title">비밀번호</p>
+            <div class="pw-wrap">
+              <input type="password" name="upassword" maxlength="20" class="input-100 bd-red" placeholder="비밀번호 입력">
+              <div class="eyes">
+                <i class="xi-eye-off-o"></i>
+              </div>
+            </div>
+            <span class="message">비밀번호를 입력해주세요.</span>
+            <span class="message">최소 8자 이상입니다.</span>
+            <span class="message">영문, 숫자, 특수문자를 조합한 8자 이상입니다.</span>
+            <div class="pw-wrap mt-2">
+              <input type="password" name="upassword" maxlength="20" class="input-100 bd-red" placeholder="비밀번호 확인">
+              <div class="eyes">
+                <i class="xi-eye-off-o"></i>
+              </div>
+            </div>
+            <span class="message">동일한 비밀번호를 입력해주세요.</span>
+          </li>
+        </ul>
+        <div class="agreeBox mt-10">
+          <div class="all-chk wow fadeInUp">
+            <input type="checkbox" id="allCheck" title="모두동의" value="Y">
+            <label for="allCheck">아래 약관에 모두 동의합니다.</label>
+          </div>
+          <ul class="other-chk wow fadeInUp">
+            <li>
+              <input type="checkbox" id="check1" title="이용약관 동의(필수)" value="Y">
+              <label for="check1">이용약관 동의(필수)
+                <a href="../pop/term-popup.html" class="popup-link">자세히보기</a>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" id="check2" title="개인정보 수집이용 동의(필수)
+                            " value="Y">
+              <label for="check2">개인정보 수집이용 동의(필수)
+                <a href="../pop/privary-popup.html" class="popup-link">자세히보기</a>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" id="check3" title="마케팅 정보 수신 동의(선택)" value="Y">
+              <label for="check3">마케팅 정보 수신 동의(선택)
+                <a href="../pop/marketting-popup.html" class="popup-link">자세히보기</a>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" id="check4" title="만 14세 이상 동의(필수)" value="Y">
+              <label for="check4">만 14세 이상 동의(필수)
+                <a href="../pop/regulation-popup.html" class="popup-link">자세히보기</a>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="btnBox mt-10 wow fadeInUp">
+          <a href="./join__complete.html" class="btn btn-1">완료</a>
+          <!-- 활성화시 active추가-->
+        </div>
+      </div>
+    </section>
+    <!-- E : Section -->
+  </main>
+  <!-- E : Main -->
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/js.html" ?>
+
+  <script>
+
+    $(document).ready(function () {
+      // 비밀번호 숨김/노출설정
+      $('.eyes').click(function () {
+        const passwordInput = $(this).siblings('input');
+        const eyeIcon = $(this).find('i');
+
+        if (passwordInput.attr('type') === 'password') {
+          passwordInput.attr('type', 'text');
+          eyeIcon.removeClass('xi-eye-off-o').addClass('xi-eye-o');
+        } else {
+          passwordInput.attr('type', 'password');
+          eyeIcon.removeClass('xi-eye-o').addClass('xi-eye-off-o');
+        }
+      });
+      //이메일 인증
+      $('.certified-btn').on('click', function () {
+        $('.hidden-input').addClass('active');
+        if (!$(this).hasClass('change')) {
+          $(this).text('재전송');
+          $(this).addClass('change');
+        } else {
+          $(this).text('인증하기');
+          $(this).removeClass('change');
+          $('.hidden-input').removeClass('active');
+        }
+      });
+      //인증번호 카운트업
+      let countTime = 0;
+      let intervalCall;
+
+      $.time = function (time) {
+        countTime = time;
+        intervalCall = setInterval(alertFunc, 1000);
+      }
+
+      $.closeTime = function () {
+        clearInterval(intervalCall);
+      }
+
+      function alertFunc() {
+        let min = Math.floor(countTime / 60);
+        let sec = countTime - (60 * min);
+        if (sec > 9) {
+          $('.certificationTime').text(min + ':' + sec + '');
+        } else {
+          $('.certificationTime').text(min + ':0' + sec + '');
+        }
+        if (countTime <= 0) {
+          clearInterval(intervalCall);
+        }
+        countTime--;
+      };
+      $('.certified-btn').on("click", function () {
+        $.time(179);
+      });
+      //개인정보 체크
+      $('#allCheck').on('change', function () {
+        var isChecked = $(this).is(':checked');
+        $('#check1, #check2, #check3, #check4').prop('checked', isChecked);
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>
