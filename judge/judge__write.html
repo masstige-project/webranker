@@ -1,0 +1,135 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+    <?
+    $P_dp1 = '3';
+    include "../include/meta.html"
+		?>
+    <link rel="stylesheet" href="../assets/css/sub.min.css" />
+</head>
+
+<body class="sub-body">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>
+    <!-- E : Header -->
+
+    <!-- S : Main -->
+    <main class="main" id="contents">
+        <!-- S : Section -->
+        <section class="section sc--judge">
+            <div class="container">
+                <div class="title-bx title-bx2">
+                    <h2 class="wow fadeInUp main-title">심사위원 정보 등록</h2>
+                    <ul class="stepBox wow fadeInUp">
+                        <li>
+                            <p class="num">1</p>
+                            <p class="step-txt">기본정보</p>
+                        </li>
+                        <i class="xi-angle-right-min"></i>
+                        <li>
+                            <p class="num active">2</p>
+                            <p class="step-txt active">상세정보</p>
+                        </li>
+                        <i class="xi-angle-right-min"></i>
+                        <li>
+                            <p class="num">3</p>
+                            <p class="step-txt">완료</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="writeList">
+                    <p class="write-dec">심사위원 상세정보를 등록해주세요.<br>
+                        등록한 정보가 심사위원 프로필 페이지에 표출됩니다.</p>
+                    <ul class="writeInputBox mt-15 writeInputBox1">
+                        <li class="wow fadeInUp">
+                            <p class="title">프로필 이미지<span>*</span></p>
+                            <div class="upload-bx">
+                                <div class="upload-top">
+                                    <div class="file--text">
+                                        <label for="file-upload">이미지 등록</label>
+                                        <input type="file" id="file-upload" name="file-upload" accept="image/*" multiple="">
+                                    </div>
+                                    <p class="file--info mgt-10">
+                                        500 x 500px 사이즈의 jpg, png, gif 파일 1mb 이하로 첨부 가능합니다.
+                                    </p>
+                                </div>
+                                <!-- 이미지권장 사이즈 100*100 -->
+                                <ul class="upload-bottom-img mgt-10">
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">이름(심사위원명)<span>*</span></p>
+                            <input type="text" name="uname" maxlength="20" class="input-100" placeholder="실명 또는 가명(심사위원명)을 입력해주세요.">
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">소속 기관이나 회사<span>*</span></p>
+                            <input type="text" name="ucompany" maxlength="20" class="input-100" placeholder="소속 기관이나 회사명을 입력해주세요.">
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">직위<span>*</span></p>
+                            <input type="text" name="uposition" maxlength="20" class="input-100" placeholder="직위명을 입력해주세요.">
+                        </li>
+                    </ul>
+                    <!-- 경력정보 -->
+                    <ul class="writeInputBox writeInputBox2">
+                        <p class="form-title mb-10">경력정보</p>
+                        <li class="wow fadeInUp">
+                            <p class="title">경력 년수<span>*</span></p>
+                            <input type="text" name="ucareer" maxlength="10" class="input-100" placeholder="경력 년수를 입력해주세요.">
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">주요 업무 경험 및 담당 프로젝트<span>*</span></p>
+                            <div class="contentArea">
+                                <textarea name="ucontent" placeholder="주요 업무 경험 및 담당 프로젝트를 입력해주세요." class="contentBox" maxlength="2000"></textarea>
+                                <p class="contentCount text_right mgt-10">(0/2,000)</p>
+                            </div>
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">이전에 참여한 심사 또는 평가 활동(있는 경우 기재)<span>*</span></p>
+                            <div class="contentArea">
+                                <textarea name="ucontent" placeholder="이전에 참여한 심사 또는 평가 활동을 입력해주세요." class="contentBox" maxlength="2000"></textarea>
+                                <p class="contentCount text_right mgt-10">(0/2,000)</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 포트폴리오 -->
+                    <ul class="writeInputBox writeInputBox2">
+                        <p class="form-title mb-10">포트폴리오</p>
+                        <li class="wow fadeInUp">
+                            <p class="title">경력 년수<span>*</span></p>
+                            <input type="text" name="ucareer" maxlength="10" class="input-100" placeholder="경력 년수를 입력해주세요.">
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">주요 업무 경험 및 담당 프로젝트<span>*</span></p>
+                            <div class="contentArea">
+                                <textarea name="ucontent" placeholder="주요 업무 경험 및 담당 프로젝트를 입력해주세요." class="contentBox" maxlength="2000"></textarea>
+                                <p class="contentCount text_right mgt-10">(0/2,000)</p>
+                            </div>
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">이전에 참여한 심사 또는 평가 활동(있는 경우 기재)<span>*</span></p>
+                            <div class="contentArea">
+                                <textarea name="ucontent" placeholder="이전에 참여한 심사 또는 평가 활동을 입력해주세요." class="contentBox" maxlength="2000"></textarea>
+                                <p class="contentCount text_right mgt-10">(0/2,000)</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nextStepBtn wow fadeInRight">
+                    <a href="JavaScript:history.go(-1);" class="prev">이전</a>
+                    <a href="./judge__step__2.html" class="complete">완료</a>
+                </div>
+            </div>
+        </section>
+        <!-- E : Section -->
+    </main>
+    <!-- E : Main -->
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+</body>
+
+</html>

@@ -36,7 +36,7 @@ $nav_policy_3 = "이메일무단수집거부";
 // 네비게이션 하이퍼링크
 $nav_1_href = "../template/template.html";
 $nav_2_href = "../template/template.html";
-$nav_3_href = "../template/template.html";
+$nav_3_href = "../judge/judge.html";
 $nav_4_href = "../template/template.html";
 $nav_5_href = "../template/template.html";
 $nav_6_href = "../template/template.html";

@@ -30,15 +30,128 @@
             padding: 100px 0;
         }
     }
+    &.kakao{
+        padding: 120px 0 442px 0;
+        @include mdq-max(xl) {
+            padding: 100px 0;
+        }
+    }
 
     .member-tit {
         .tit {
             font-size: rem(40);
             font-weight: 500;
             color: #222;
+            line-height: 1;
+            letter-spacing: -3px;
 
             @include mdq-max(xl) {
                 font-size: rem(30);
+                letter-spacing: -0.5px;
+            }
+        }
+        .dec{
+            font-size: 18px;
+            @include mdq-max(xl) {
+                font-size: rem(16);
+            }
+        }
+    }
+    //아이디/비밀번호 착기
+    .find-bx{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        color: $gray-4;
+        font-size: 15px;
+        @include mdq-max(xl){
+            font-size: rem(14);
+        }
+        a{
+            display: block;
+            padding: 0 10px;
+            &:last-child{
+                padding-right: 0;
+                position: relative;
+                &::before{
+                    content: "";
+                    width: 1px;
+                    height: 50%;
+                    background: $gray-e;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+    .findTab{
+        display: flex;
+        border-radius: 10px;
+        border: 1px solid $gray-e;
+        overflow: hidden;
+        > a{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $white;
+            font-size: 18px;
+            transition: all 0.5s;
+            height: 50px;
+            @include mdq-max(xl){
+                font-size: rem(16);
+                height: 40px;
+            }
+            &.active{
+                background: #FF4844;
+                color: $white;
+            }
+            @include mdq-min(md){
+                &:hover{
+                    background: #FF4844;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .find-info{
+        color: $gray-3;
+        letter-spacing: -1.5px;
+        font-size: 18px;
+        @include mdq-max(xl){
+            font-size: rem(16);
+            letter-spacing: -0.5px;
+        }
+        .message{
+            margin-top: 10px;
+            color: #FF4844;
+            font-size: 15px;
+            display: block;
+            @include mdq-max(xl){
+                font-size: rem(14);
+            }
+        }
+    }
+    .register-bx,
+    .not-register,
+    .kakao-account{
+        .account{
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 1;
+            @include mdq-max(xl){
+                font-size: rem(20);
+            }
+        }
+        .dec{
+            color: $gray-3;
+            letter-spacing: -1.5px;
+            font-size: 18px;
+            @include mdq-max(xl){
+                font-size: rem(16);
+                letter-spacing: -0.5px;
             }
         }
     }
@@ -50,39 +163,90 @@
         @include mdq-max(xl) {
             margin-top: rem(40);
         }
-
-        a {
-            height: rem(50);
-            width: 100%;
-            display: flex;
-            align-items: center;
-            font-size: rem(20);
-            border-radius: 10px;
-
-            @include mdq-max(xl) {
-                font-size: 14px;
+        .btn-list{
+            a {
+                height: rem(50);
+                width: 100%;
+                display: flex;
+                align-items: center;
+                font-size: rem(20);
+                border-radius: 10px;
+    
+                @include mdq-max(xl) {
+                    font-size: 14px;
+                }
+    
+                &.kakao-btn {
+                    background: #FAE100;
+                    padding: 0 20px;
+                    gap: rem(80);
+                }
+    
+                &.email-btn,
+                &.complete-btn,
+                &.login-btn,
+                &.join-btn,
+                &.resend-btn {
+                    background: #FF4844;
+                    color: $white;
+                    justify-content: center;
+                }
+                &.before-btn,
+                &.send-btn{
+                    background: $gray-a;
+                    color: $white;
+                    justify-content: center;
+                    &.active{
+                        background: #FF4844;
+                    }
+                }
+                &.reconfirm-btn{
+                    background: $white;
+                    border: 1px solid $gray-e;
+                    justify-content: center;
+                }
             }
-
-            &.kakao-btn {
-                background: #FAE100;
-                padding: 0 20px;
-                gap: rem(80);
-            }
-
-            &.email-btn {
-                background: #FF4844;
-                color: $white;
-                justify-content: center;
+    
+            p {
+                font-size: 15px;
+                color: #999;
+                margin: rem(20) 0;
+    
+                @include mdq-max(xl) {
+                    font-size: rem(14);
+                }
             }
         }
-
-        p {
+        .other-join{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span{
+                text-align: center;
+                color: $gray-a;
+                font-size: 17px;
+                text-decoration: underline;
+                @include mdq-max(xl){
+                    font-size: rem(16);
+                }
+            }
+        }
+        .join-txt{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             font-size: 15px;
-            color: #999;
-            margin: rem(20) 0;
-
-            @include mdq-max(xl) {
-                font-size: 14px;
+            @include mdq-max(xl){
+                font-size: rem(14);
+            }
+            p{
+                color: $gray-4;
+            }
+            a{
+                display: block;
+                color: #FF4844;
+                text-decoration: underline;
             }
         }
     }
@@ -96,6 +260,9 @@
             @include mdq-max(xl){
                 font-size: rem(18);
                 margin-bottom: 5px;
+            }
+            span{
+                color: #FF4844;
             }
         }
     }
@@ -151,6 +318,9 @@
             color: #FF4844;
             font-size: 15px;
             display: block;
+            @include mdq-max(xl){
+                font-size: rem(14);
+            }
         }
         .input-flex-bx{
             display: flex;
@@ -224,6 +394,26 @@
                 color: #ccc;
             }
         }
+        //check-icon
+        .check-icon{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            &::before{
+                content: "";
+                background-image: url(../images/main/icon/check.svg);
+                width: 18px;
+                height: 13px;
+                background-size: cover;
+                background-position: center center;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-30%);
+                right: 20px;
+                z-index: 1;
+            }
+        }
     }
 
     .input-100 {
@@ -234,9 +424,12 @@
         border: none;
         padding: 0 20px;
         border: 1px solid $gray-e;
+        font-size: 18px;
+        color: rgba(#000, 0.2);
         @include mdq-max(xl){
             height: 40px;
             padding: 0 10px;
+            font-size: rem(16);
         }
 
         &.bd-red {
@@ -250,8 +443,12 @@
                 font-size: rem(16);
             }
         }
+        &.active{
+            background: #f9f9f9;
+        }
     }
 
+    //개인정보
     .agreeBox {
         .all-chk {
             display: flex;
@@ -414,6 +611,29 @@
                 }
             }
         }
+        //비밀전호 재설정
+        .reset-bx{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #FF4844;
+                width: 400px;
+                height: 50px;
+                border-radius: 10px;
+                color: $white;
+                font-size: 20px;
+                @include mdq-max(xl){
+                    font-size: rem(18);
+                }
+                @include mdq-max(sm){
+                    width: 100%;
+                }
+            }
+        }
         .bottom-bx{
             text-align: center;
             p{
@@ -435,16 +655,20 @@
         @include mdq-max(lg){
             width: 100%;
         }
+        &.kakao{
+            width: 100%;
+        }
         .title{
             font-size: 40px;
             line-height: 1.5;
-            letter-spacing: -0.5px;
+            letter-spacing: -3px;
             span{
                 font-weight: bold;
             }
             @include mdq-max(xl){
                 font-size: rem(30);
                 line-height: 1.4;
+                letter-spacing: -0.5px;
             }
         }
         .dec{

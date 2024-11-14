@@ -46522,14 +46522,14 @@ html {
   }
 }
 .popup .popup-title-bx .title {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: bold;
   line-height: 1;
   letter-spacing: normal;
 }
 @media all and (max-width: 768px) {
   .popup .popup-title-bx .title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 .popup .popup-title-bx .mfp-close {
@@ -46571,6 +46571,78 @@ html {
 .popup.popup--privary .popup-body {
   max-height: 400px;
   overflow-y: auto;
+}
+.popup--send {
+  padding: 50px 75px 75px;
+}
+@media all and (max-width: 1200px) {
+  .popup--send {
+    padding: 2.5rem 1.25rem;
+  }
+}
+.popup--send .text-bx {
+  overflow-y: hidden;
+  max-height: unset;
+}
+.popup--send .popup-title-bx {
+  margin: 0;
+  padding-bottom: 40px;
+  border-bottom: none;
+}
+@media all and (max-width: 1200px) {
+  .popup--send .popup-title-bx {
+    padding-bottom: 20px;
+  }
+}
+.popup--send .info-text {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 40px 0;
+}
+@media all and (max-width: 1200px) {
+  .popup--send .info-text {
+    padding: 20px 0;
+  }
+}
+.popup--send .info-text p {
+  font-weight: 500;
+}
+@media all and (max-width: 1200px) {
+  .popup--send .info-text p {
+    font-size: 1rem;
+  }
+}
+.popup--send .mfp-close {
+  opacity: 1;
+}
+@media all and (max-width: 768px) {
+  .popup--send .mfp-close img {
+    width: 30px;
+  }
+}
+.popup .popupBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup .popupBtn button, .popup .popupBtn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-size: 18px;
+}
+@media all and (max-width: 1200px) {
+  .popup .popupBtn button, .popup .popupBtn a {
+    font-size: 1rem;
+    height: 40px;
+  }
+}
+.popup .popupBtn button.btn1, .popup .popupBtn a.btn1 {
+  width: 280px;
+  border-radius: 10px;
+  background: #FF4844;
+  color: #fff;
 }
 .popup__title {
   font-size: 1.25rem;
@@ -47335,7 +47407,7 @@ html {
   padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1540px;
+  max-width: 1580px;
 }
 
 .container-fluid, .container-xxxs {
@@ -47347,7 +47419,7 @@ html {
 }
 
 .container {
-  max-width: 1540px;
+  max-width: 1580px;
 }
 
 .row {
@@ -52836,6 +52908,15 @@ table td.text_left {
   max-width: 440px;
 }
 
+.write-container {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 640px;
+}
+
 .swiper-wrapper {
   height: auto;
 }
@@ -52855,5 +52936,9 @@ table td.text_left {
   .back-bx a {
     font-size: 1.125rem;
   }
+}
+
+.mgt-10 {
+  margin-top: 10px !important;
 }
 /*# sourceMappingURL=common.css.map */

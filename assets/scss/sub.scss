@@ -12,3 +12,411 @@
         box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
     }
 }
+
+.section{
+    .main-title{
+        font-size: 30px;
+        font-weight: bold;
+        @include mdq-max(xl){
+            font-size: rem(24);
+        }
+    }
+}
+
+.sc{
+    //심사위원 되기
+    &--judge{
+        padding: 80px 0 297px 0;
+        @include mdq-max(xl){
+            padding: 100px 0;
+        }
+        .title-bx{
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            &.title-bx2{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                @include mdq-max(xl){
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: unset;
+                    gap: 10px;
+                }
+            }
+        }
+        .nothing-txt{
+            text-align: center;
+            font-size: 18px;
+            color: $gray-a;
+            margin: 60px 0 120px 0;
+            @include mdq-max(xl){
+                margin: 60px 0;
+                font-size: rem(16);
+            }
+        }
+        .registration-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 400px;
+                height: 50px;
+                background: #FF4844;
+                font-size: 20px;
+                color: $white;
+                border-radius: 10px;
+                @include mdq-max(xl){
+                    font-size: rem(18);
+                    height: 40px;
+                }
+                @include mdq-max(sm){
+                    width: 100%;
+                }
+            }
+        }
+        .stepBox{
+            display: flex;
+            align-items: center;
+            li{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .num{
+                font-weight: bold;
+                color: $gray-e;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                background: #ddd;
+                @include mdq-max(xl){
+                    font-size: rem(16);
+                }
+                &.active{
+                    background: #FF4844;
+                }
+            }
+            .step-txt{
+                font-size: 18px;
+                color: $gray-a;
+                @include mdq-max(xl){
+                    font-size: rem(18);
+                }
+                &.active{
+                    color: #FF4844;
+                }
+            }
+            i{
+                display: inline-block;
+                margin: 0 20px;
+                font-size: 18px;
+                @include mdq-max(xl){
+                    margin: 0 10px;
+                }
+            }
+        }
+        .stepInfoBox{
+            .step-num{
+                font-weight: bold;
+                color: #FF4844;
+                @include mdq-max(xl){
+                    font-size: rem(16);
+                }
+            }
+            .step-tit{
+                font-size: 20px;
+                font-weight: 500;
+                @include mdq-max(xl){
+                    font-size: rem(18);
+                }
+            }
+        }
+        .selectList{
+            .selectBtn{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                flex-wrap: wrap;
+                @include mdq-max(xl){
+                    flex-wrap: nowrap;
+                    gap: 0;
+                }
+                li{
+                    width: 160px;
+                    height: 40px;
+                }
+                button,a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    border: 1px solid $gray-e;
+                    background: $white;
+                    font-size: 15px;
+                    transition: all 0.5s;
+                    @include mdq-max(xl){
+                        font-size: rem(14);
+                    }
+                    &.active{
+                        background: #FF4844;
+                        color: $white;
+                    }
+                    @include mdq-min(md){
+                        &:hover{
+                            background: #FF4844;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            .swiper-wrapper{
+                height: auto;
+            }
+        }
+        .nextStepBtn{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 10px;
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 200px;
+                height: 50px;
+                border-radius: 10px;
+                background: $black;
+                color: $white;
+                font-size: 20px;
+                border: 1px solid $black;
+                @include mdq-max(xl){
+                    font-size: rem(18);
+                    height: 40px;
+                }
+                @include mdq-max(xxs){
+                    width: 140px;
+                }
+                &.prev{
+                    background: $white;
+                    border: 1px solid $gray-3;
+                    color: $black;
+                }
+            }
+        }
+        .form-title{
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 1;
+            @include mdq-max(xl){
+                font-size: rem(24);
+            }
+        }
+        //심사위원 정보 등록
+        .writeList{
+            width: 600px;
+            margin: 0 auto;
+            padding: 60px 0;
+            .write-dec{
+                font-size: 20px;
+                line-height: 1.5;
+                @include mdq-max(xl){
+                    font-size: rem(18);
+                }
+            }
+        }
+        .writeInputBox{
+            border-bottom: 1px solid $gray-e;
+            &.writeInputBox1{
+                padding-bottom: 50px;
+            }
+            &.writeInputBox2{
+                padding: 50px 0;
+            }
+            .title{
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                span{
+                    color: #FF4844;
+                }
+            }
+            > li+li{
+                margin-top: 30px;
+                @include mdq-max(xl){
+                    margin-top: 20px;
+                }
+            }
+            .input-100,
+            .contentBox {
+                width: 100%;
+                height: 50px;
+                border-radius: 10px;
+                background: $white;
+                border: none;
+                padding: 0 20px;
+                border: 1px solid $gray-e;
+                font-size: 18px;
+                color: rgba(#000, 0.2);
+                @include mdq-max(xl){
+                    height: 40px;
+                    padding: 0 10px;
+                    font-size: rem(16);
+                }
+        
+                &.bd-red {
+                    border: 1px solid #FF4844;
+                }
+        
+                &::placeholder {
+                    font-size: 18px;
+                    color: rgba(#000, 0.2);
+                    @include mdq-max(xl){
+                        font-size: rem(16);
+                    }
+                }
+                &.active{
+                    background: #f9f9f9;
+                }
+            }
+            .contentArea{
+                .contentBox{
+                    padding: 20px;
+                    min-height: 200px;
+                    @include mdq-max(xl){
+                        padding: 10px;
+                    }
+                }
+                .contentCount{
+                    font-size: 15px;
+                    color: rgba(#000, 0.2);
+                    @include mdq-max(xl){
+                        font-size: rem(14);
+                    }
+                }
+            }
+            .upload-bx {
+                .upload-top {        
+                    .file--text {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        gap: rem(20);
+        
+                        label {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 200px;
+                            height: 40px;
+                            background: #FF4844;
+                            border-radius: 10px;
+                            cursor: pointer;
+                            color: $white;
+                            font-size: 18px;
+                            @include mdq-max(xl){
+                                font-size: rem(16);
+                            }
+                        }
+        
+                        input[type="file"] {
+                            display: none;
+                        }
+                    }
+                }
+        
+                .file--info {
+                    color: #aaa;
+                    @include mdq-max(xl){
+                        font-size: rem(14);
+                    }
+                }
+                
+                //파일첨부-text
+                .upload-bottom {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 20px;
+        
+                    >li {
+                        display: flex;
+                        justify-content: center;
+                        gap: 4px;
+                        color: #4d4d4d;
+                        @include mdq-max(xl){
+                            font-size: rem(14);
+                        }
+                    }
+        
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        object-fit: cover;
+                        border-radius: 10px;
+                    }
+        
+                    .delete-btn {
+                        display: flex;
+                        justify-content: center;
+                        cursor: pointer;
+        
+                        .xi-close {
+                            color: #4d4d4d;
+                            font-size: rem(16);
+                        }
+                    }
+                }
+                //파일첨부-img
+                .upload-bottom-img {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 30px;
+    
+                    > li {
+                        display: flex;
+                        justify-content: center;
+                        gap: 4px;
+                        color: #4d4d4d;
+                        @include mdq-max(xl){
+                            font-size: rem(14);
+                        }
+                    }
+                    .img-bx{
+                        width: 500px;
+                        height: 500px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 10px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: scale-down;
+                        }
+                    }
+    
+                    .delete-btn {
+                        display: flex;
+                        justify-content: center;
+                        cursor: pointer;
+        
+                        .xi-close {
+                            color: #4d4d4d;
+                            font-size: rem(16);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

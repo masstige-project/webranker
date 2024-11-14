@@ -36,6 +36,15 @@
     max-width: 440px;
 }
 
+.write-container{
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 640px;
+}
+
 .swiper-wrapper{
     height: auto;
 }
@@ -55,4 +64,8 @@
             font-size: rem(18);
         }
     }
+}
+
+.mgt-10{
+    margin-top: 10px !important;
 }

@@ -20,19 +20,39 @@
     <section class="section section--membership login">
       <div class="membership-container">
         <div class="member-tit">
-          <h2 class="tit wow fadeInUp">회원가입</h2>
+          <h2 class="tit wow fadeInUp text_left">로그인</h2>
+        </div>
+        <ul class="inputBox mt-10">
+          <li class="wow fadeInUp">
+            <input type="text" name="uemail" maxlength="20" class="input-100 email-input bd-red" placeholder="이메일 입력">
+            <span class="message text_left">이메일 형식이 올바르지 않습니다.</span>
+          </li>
+          <li class="wow fadeInUp mgt-10">
+            <div class="input-bx">
+              <input type="password" name="upassword" maxlength="20" class="input-100 bd-red" placeholder="비밀번호 입력">
+              <span class="message text_left">이메일을 입력해주세요.</span>
+              <span class="message text_left">등록되지 않은 아이디거나, 아이디 또는 비밀번호가 회원정보와 일치하지 않습니다.</span>
+            </div>
+          </li>
+        </ul>
+        <div class="find-bx mgt-10">
+          <a href="./find__id.html">아이디</a>
+          <a href="./find__pw.html">비밀번호 찾기</a>
         </div>
         <div class="intro-bx">
-            <div class="btn-list">
-                <a href="javascript:void(0)" onclick="alert('준비중입니다.')" class="kakao-btn wow fadeInUp" data-wow-delay="0.2s">
-                    <img src="../assets/images/main/icon/kakao-icon.png" alt="kakao-icon">
-                    카카오로 시작하기
-                </a>
-                <p class="wow fadeInUp" data-wow-delay="0.3s">또는</p>
-                <a href="../membership/email__join.html" class="email-btn wow fadeInUp" data-wow-delay="0.4s">
-                    이메일로 시작하기
-                </a>
-            </div>
+          <div class="btn-list">
+            <a href="./login__intro.html" class="login-btn wow fadeInUp">
+              로그인
+            </a>
+            <a href="./kakao__join.html" class="kakao-btn wow fadeInUp mt-4">
+              <img src="../assets/images/main/icon/kakao-icon.png" alt="kakao-icon">
+              카카오로 시작하기
+            </a>
+          </div>
+          <div class="join-txt mt-5 wow fadeInUp">
+            <p>아직 계정이 없나요?</p>
+            <a href="./join__intro.html">회원가입</a>
+          </div>
         </div>
       </div>
     </section>

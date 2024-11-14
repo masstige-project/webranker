@@ -745,3 +745,70 @@ document.querySelectorAll(".email-input").forEach(function(input) {
     e.target.value = filteredValue;
   });
 });
+
+// 모든 파일 업로드 입력 요소 선택
+const fileUploads = document.querySelectorAll('input[name="file-upload"]');
+
+fileUploads.forEach((fileUpload) => {
+  fileUpload.addEventListener("change", function (event) {
+    const files = Array.from(event.target.files);
+    const uploadBox = this.closest(".upload-bx");
+    const uploadBottom = uploadBox.querySelector(".upload-bottom");
+    const uploadBottomImg = uploadBox.querySelector(".upload-bottom-img");
+
+    // 최대 파일 개수 설정
+    const maxFiles = 10;
+    const currentFilesCount = uploadBottom
+      ? uploadBottom.querySelectorAll("li").length
+      : uploadBottomImg.querySelectorAll("li").length;
+    const availableSlots = maxFiles - currentFilesCount;
+
+    const fileLimit =
+      files.length > availableSlots ? availableSlots : files.length;
+
+    for (let i = 0; i < fileLimit; i++) {
+      const file = files[i];
+      const li = document.createElement("li");
+
+      // Create img-bx container
+      const imgBx = document.createElement("div");
+      imgBx.className = "img-bx";
+
+      const deleteBtn = document.createElement("button");
+      deleteBtn.className = "delete-btn";
+      deleteBtn.innerHTML = '<i class="xi-close"></i>';
+
+      if (uploadBottom) {
+        const fileName = document.createElement("span");
+        fileName.textContent = file.name;
+        fileName.className = "file-name";
+
+        imgBx.appendChild(fileName);
+        li.appendChild(imgBx);
+        li.appendChild(deleteBtn);
+        uploadBottom.appendChild(li);
+      } else if (uploadBottomImg) {
+        const img = document.createElement("img");
+        img.src = URL.createObjectURL(file);
+        img.alt = file.name;
+
+        imgBx.appendChild(img);
+        li.appendChild(imgBx);
+        li.appendChild(deleteBtn);
+        uploadBottomImg.appendChild(li);
+      }
+
+      // 삭제 버튼 클릭 시 해당 파일 제거
+      deleteBtn.addEventListener("click", function () {
+        if (uploadBottom) {
+          uploadBottom.removeChild(li);
+        } else if (uploadBottomImg) {
+          uploadBottomImg.removeChild(li);
+        }
+      });
+    }
+
+    // 파일 입력 값 초기화
+    event.target.value = "";
+  });
+});

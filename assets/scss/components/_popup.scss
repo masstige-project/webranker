@@ -22,13 +22,13 @@
 		}
 
 		.title {
-			font-size: rem(24);
+			font-size: rem(28);
 			font-weight: bold;
 			line-height: 1;
 			letter-spacing: normal;
 
 			@include mdq-max(md) {
-				font-size: rem(20);
+				font-size: rem(24);
 			}
 		}
 
@@ -81,14 +81,72 @@
 		}
 	}
 
+	&--send{
+		padding: 50px 75px 75px;
+		@include mdq-max(xl){
+			padding: rem(40) rem(20);
+		}
+		.text-bx{
+			overflow-y: hidden;
+			max-height: unset;
+		}
+		.popup-title-bx{
+			margin: 0;
+			padding-bottom: 40px;
+			border-bottom: none;
+			@include mdq-max(xl){
+				padding-bottom: 20px;
+			}
+		}
+		.info-text{
+			border-top: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			padding: 40px 0;
+			@include mdq-max(xl){
+				padding: 20px 0;
+			}
+			p{
+				font-weight: 500;
+				@include mdq-max(xl){
+					font-size: rem(16);
+				}
+			}
+		}
+		.mfp-close{
+			opacity: 1;
+			img{
+				@include mdq-max(md){
+					width: 30px;
+				}
+			}
+		}
+	}
+
+	.popupBtn{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		button,a{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 50px;
+			font-size: 18px;
+			@include mdq-max(xl){
+				font-size: rem(16);
+				height: 40px;
+			}
+			&.btn1{
+				width: 280px;
+				border-radius: 10px;
+				background: #FF4844;
+				color: $white;
+			}
+		}
+	}
+
 	&__title {
 		font-size: rem(20);
-	}
-
-	&-body {
-	}
-
-	&-footer {
 	}
 
 	&.hide-close {
