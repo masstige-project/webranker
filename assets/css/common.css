@@ -52941,4 +52941,171 @@ table td.text_left {
 .mgt-10 {
   margin-top: 10px !important;
 }
+
+.overlay,
+.overlay2,
+.overlay3,
+.overlay4 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 95;
+  display: none;
+}
+.overlay .popup-bx,
+.overlay2 .popup-bx,
+.overlay3 .popup-bx,
+.overlay4 .popup-bx {
+  width: 800px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  background: #fff;
+  max-width: 800px;
+  padding: 50px 75px 75px;
+}
+@media all and (max-width: 1200px) {
+  .overlay .popup-bx,
+  .overlay2 .popup-bx,
+  .overlay3 .popup-bx,
+  .overlay4 .popup-bx {
+    padding: 2.5rem 1.25rem;
+  }
+}
+@media screen and (max-width: 801px) {
+  .overlay .popup-bx,
+  .overlay2 .popup-bx,
+  .overlay3 .popup-bx,
+  .overlay4 .popup-bx {
+    width: calc(100% - 20px);
+  }
+}
+.overlay .popClosebtn,
+.overlay2 .popClosebtn,
+.overlay3 .popClosebtn,
+.overlay4 .popClosebtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media all and (max-width: 375px) {
+  .overlay .popClosebtn img,
+  .overlay2 .popClosebtn img,
+  .overlay3 .popClosebtn img,
+  .overlay4 .popClosebtn img {
+    width: 20px;
+  }
+}
+.overlay .title-bx,
+.overlay2 .title-bx,
+.overlay3 .title-bx,
+.overlay4 .title-bx {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #ddd;
+}
+@media all and (max-width: 768px) {
+  .overlay .title-bx,
+  .overlay2 .title-bx,
+  .overlay3 .title-bx,
+  .overlay4 .title-bx {
+    margin-bottom: 1.25rem;
+  }
+}
+.overlay .title-bx .title,
+.overlay2 .title-bx .title,
+.overlay3 .title-bx .title,
+.overlay4 .title-bx .title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: normal;
+}
+@media all and (max-width: 768px) {
+  .overlay .title-bx .title,
+  .overlay2 .title-bx .title,
+  .overlay3 .title-bx .title,
+  .overlay4 .title-bx .title {
+    font-size: 1.5rem;
+  }
+}
+@media all and (max-width: 375px) {
+  .overlay .title-bx .title,
+  .overlay2 .title-bx .title,
+  .overlay3 .title-bx .title,
+  .overlay4 .title-bx .title {
+    font-size: 1.25rem;
+  }
+}
+.overlay .btn-bx,
+.overlay2 .btn-bx,
+.overlay3 .btn-bx,
+.overlay4 .btn-bx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.overlay .btn-bx a,
+.overlay .btn-bx button,
+.overlay2 .btn-bx a,
+.overlay2 .btn-bx button,
+.overlay3 .btn-bx a,
+.overlay3 .btn-bx button,
+.overlay4 .btn-bx a,
+.overlay4 .btn-bx button {
+  width: 280px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+@media all and (max-width: 768px) {
+  .overlay .btn-bx a,
+  .overlay .btn-bx button,
+  .overlay2 .btn-bx a,
+  .overlay2 .btn-bx button,
+  .overlay3 .btn-bx a,
+  .overlay3 .btn-bx button,
+  .overlay4 .btn-bx a,
+  .overlay4 .btn-bx button {
+    width: 100%;
+    flex: 1;
+    font-size: 1rem;
+    height: 40px;
+  }
+}
+.overlay .btn-bx a.btn1,
+.overlay .btn-bx button.btn1,
+.overlay2 .btn-bx a.btn1,
+.overlay2 .btn-bx button.btn1,
+.overlay3 .btn-bx a.btn1,
+.overlay3 .btn-bx button.btn1,
+.overlay4 .btn-bx a.btn1,
+.overlay4 .btn-bx button.btn1 {
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.overlay .btn-bx a.btn2,
+.overlay .btn-bx button.btn2,
+.overlay2 .btn-bx a.btn2,
+.overlay2 .btn-bx button.btn2,
+.overlay3 .btn-bx a.btn2,
+.overlay3 .btn-bx button.btn2,
+.overlay4 .btn-bx a.btn2,
+.overlay4 .btn-bx button.btn2 {
+  border: 1px solid #FE4742;
+  background: #FE4742;
+  color: #fff;
+}
 /*# sourceMappingURL=common.css.map */
