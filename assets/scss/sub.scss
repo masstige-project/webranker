@@ -7,43 +7,51 @@
 @import 'mixins';
 @import 'sub/membership';
 
-.sub-body{
-    .header{
-        box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+.sub-body {
+    .header {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     }
 }
 
-.section{
-    .main-title{
+.section {
+    .main-title {
         font-size: 30px;
         font-weight: bold;
-        @include mdq-max(xl){
+
+        @include mdq-max(xl) {
             font-size: rem(24);
         }
     }
 }
 
-.sc{
+.sc {
+
     //심사위원 되기
-    &--judge{
+    &--judge {
         padding: 80px 0 297px 0;
-        @include mdq-max(xl){
+
+        @include mdq-max(xl) {
             padding: 100px 0;
         }
-        &.judge--preview{
+
+        &.judge--preview {
             padding: 80px 0 325px 0;
-            @include mdq-max(xl){
+
+            @include mdq-max(xl) {
                 padding: 100px 0;
             }
         }
-        .title-bx{
+
+        .title-bx {
             padding-bottom: 20px;
             border-bottom: 1px solid #ddd;
-            &.title-bx2{
+
+            &.title-bx2 {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     flex-direction: column;
                     align-items: start;
                     justify-content: unset;
@@ -51,48 +59,57 @@
                 }
             }
         }
-        .nothing-txt{
+
+        .nothing-txt {
             text-align: center;
             font-size: 18px;
             color: $gray-a;
             margin: 60px 0 120px 0;
-            @include mdq-max(xl){
+
+            @include mdq-max(xl) {
                 margin: 60px 0;
                 font-size: rem(16);
             }
         }
-        .registration-btn{
+
+        .registration-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            a{
+
+            a {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 width: 400px;
                 height: 50px;
-                background: #FF4844;
+                background: $color-1;
                 font-size: 20px;
                 color: $white;
                 border-radius: 10px;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     font-size: rem(18);
                     height: 40px;
                 }
-                @include mdq-max(sm){
+
+                @include mdq-max(sm) {
                     width: 100%;
                 }
             }
         }
-        .stepBox{
+
+        .stepBox {
             display: flex;
             align-items: center;
-            li{
+
+            li {
                 display: flex;
                 align-items: center;
                 gap: 8px;
             }
-            .num{
+
+            .num {
                 font-weight: bold;
                 color: $gray-e;
                 display: flex;
@@ -102,74 +119,93 @@
                 height: 26px;
                 border-radius: 50%;
                 background: #ddd;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     font-size: rem(16);
                 }
-                @include mdq-max(xs){
+
+                @include mdq-max(xs) {
                     font-size: 12px;
                     width: 20px;
                     height: 20px;
                 }
-                &.active{
-                    background: #FF4844;
+
+                &.active {
+                    background: $color-1;
                 }
             }
-            .step-txt{
+
+            .step-txt {
                 font-size: 18px;
                 color: $gray-a;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     font-size: rem(18);
                 }
-                @include mdq-max(xs){
+
+                @include mdq-max(xs) {
                     font-size: 14px;
                 }
-                &.active{
-                    color: #FF4844;
+
+                &.active {
+                    color: $color-1;
                 }
             }
-            i{
+
+            i {
                 display: inline-block;
                 margin: 0 20px;
                 font-size: 18px;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     margin: 0 10px;
                 }
-                @include mdq-max(xs){
+
+                @include mdq-max(xs) {
                     margin: 0 4px;
                 }
             }
         }
-        .stepInfoBox{
-            .step-num{
+
+        .stepInfoBox {
+            .step-num {
                 font-weight: bold;
-                color: #FF4844;
-                @include mdq-max(xl){
+                color: $color-1;
+
+                @include mdq-max(xl) {
                     font-size: rem(16);
                 }
             }
-            .step-tit{
+
+            .step-tit {
                 font-size: 20px;
                 font-weight: 500;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     font-size: rem(18);
                 }
             }
         }
-        .selectList{
-            .selectBtn{
+
+        .selectList {
+            .selectBtn {
                 display: flex;
                 align-items: center;
                 gap: 8px;
                 flex-wrap: wrap;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     flex-wrap: nowrap;
                     gap: 0;
                 }
-                li{
+
+                li {
                     width: 160px;
                     height: 40px;
                 }
-                button,a {
+
+                button,
+                a {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -180,31 +216,37 @@
                     background: $white;
                     font-size: 15px;
                     transition: all 0.5s;
-                    @include mdq-max(xl){
+
+                    @include mdq-max(xl) {
                         font-size: rem(14);
                     }
-                    &.active{
-                        background: #FF4844;
+
+                    &.active {
+                        background: $color-1;
                         color: $white;
                     }
-                    @include mdq-min(md){
-                        &:hover{
-                            background: #FF4844;
+
+                    @include mdq-min(md) {
+                        &:hover {
+                            background: $color-1;
                             color: $white;
                         }
                     }
                 }
             }
-            .swiper-wrapper{
+
+            .swiper-wrapper {
                 height: auto;
             }
         }
-        .nextStepBtn{
+
+        .nextStepBtn {
             display: flex;
             align-items: center;
             justify-content: end;
             gap: 10px;
-            a{
+
+            a {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -215,87 +257,114 @@
                 color: $white;
                 font-size: 20px;
                 border: 1px solid $black;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     font-size: rem(18);
                     height: 40px;
                 }
-                @include mdq-max(xs){
+
+                @include mdq-max(xs) {
                     flex: 1;
                     width: 100%;
                 }
+
                 &.prev,
-                &.preview{
+                &.preview {
                     background: $white;
                     border: 1px solid $gray-e;
                     color: $black;
                 }
             }
         }
-        .form-title{
+
+        .form-title {
             font-size: 30px;
             font-weight: bold;
             line-height: 1;
-            @include mdq-max(xl){
+
+            @include mdq-max(xl) {
                 font-size: rem(24);
             }
         }
-        .form-dec{
+
+        .form-dec {
             color: $gray-a;
             line-height: 1;
-            @include mdq-max(xl){
+
+            @include mdq-max(xl) {
                 font-size: rem(14);
             }
         }
+
         //심사위원 정보 등록
-        .writeList{
+        .writeList {
             width: 600px;
             margin: 0 auto;
             padding: 60px 0;
-            @include mdq-max(xl){
+
+            @include mdq-max(xl) {
                 padding: 40px 0;
             }
-            @include mdq-max(md){
+
+            @include mdq-max(md) {
                 width: 100%;
             }
-            .write-dec{
+
+            .write-dec {
                 font-size: 20px;
                 line-height: 1.5;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     font-size: rem(18);
                 }
             }
         }
-        .writeInputBox{
+
+        .writeInputBox {
             border-bottom: 1px solid $gray-e;
-            &.writeInputBox1{
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &.writeInputBox1 {
                 padding-bottom: 50px;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     padding-bottom: 40px;
                 }
             }
-            &.writeInputBox2{
+
+            &.writeInputBox2 {
                 padding: 50px 0;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     padding: 40px 0;
                 }
             }
-            .title{
+
+            .title {
                 font-size: 18px;
                 font-weight: 600;
                 margin-bottom: 10px;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     font-size: rem(18);
                 }
-                span{
-                    color: #FF4844;
+
+                span {
+                    color: $color-1;
                 }
             }
-            > li+li{
+
+            >li+li {
                 margin-top: 30px;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     margin-top: 20px;
                 }
             }
+
             .input-100,
             .contentBox {
                 width: 100%;
@@ -307,146 +376,161 @@
                 border: 1px solid $gray-e;
                 font-size: 18px;
                 color: rgba(#000, 0.2);
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     height: 40px;
                     padding: 0 10px;
                     font-size: rem(16);
                 }
-        
+
                 &.bd-red {
-                    border: 1px solid #FF4844;
+                    border: 1px solid $color-1;
                 }
-        
+
                 &::placeholder {
                     font-size: 18px;
                     color: rgba(#000, 0.2);
-                    @include mdq-max(xl){
+
+                    @include mdq-max(xl) {
                         font-size: rem(16);
                     }
                 }
-                &.active{
+
+                &.active {
                     background: #f9f9f9;
                 }
             }
-            .contentArea{
-                .contentBox{
+
+            .contentArea {
+                .contentBox {
                     padding: 20px;
                     min-height: 200px;
-                    @include mdq-max(xl){
+
+                    @include mdq-max(xl) {
                         padding: 10px;
                     }
                 }
-                .contentCount{
+
+                .contentCount {
                     font-size: 15px;
                     color: rgba(#000, 0.2);
-                    @include mdq-max(xl){
+
+                    @include mdq-max(xl) {
                         font-size: rem(14);
                     }
                 }
             }
+
             .upload-bx {
-                .upload-top {        
+                .upload-top {
                     .file--text {
                         position: relative;
                         display: flex;
                         align-items: center;
                         gap: rem(20);
-        
+
                         label {
                             display: flex;
                             align-items: center;
                             justify-content: center;
                             width: 200px;
                             height: 40px;
-                            background: #FF4844;
+                            background: $color-1;
                             border-radius: 10px;
                             cursor: pointer;
                             color: $white;
                             font-size: 18px;
-                            @include mdq-max(xl){
+
+                            @include mdq-max(xl) {
                                 font-size: rem(16);
                             }
                         }
-        
+
                         input[type="file"] {
                             display: none;
                         }
                     }
                 }
-        
+
                 .file--info {
                     color: #aaa;
-                    @include mdq-max(xl){
+
+                    @include mdq-max(xl) {
                         font-size: rem(14);
                     }
                 }
-                
+
                 //파일첨부-text
                 .upload-bottom {
                     display: flex;
                     align-items: center;
                     flex-wrap: wrap;
                     gap: 20px;
-        
+
                     >li {
                         display: flex;
                         justify-content: center;
                         gap: 4px;
                         color: #4d4d4d;
-                        @include mdq-max(xl){
+
+                        @include mdq-max(xl) {
                             font-size: rem(14);
                         }
                     }
-        
+
                     img {
                         width: 100px;
                         height: 100px;
                         object-fit: cover;
                         border-radius: 10px;
                     }
-        
+
                     .delete-btn {
                         display: flex;
                         justify-content: center;
                         cursor: pointer;
-        
+
                         .xi-close {
                             color: #4d4d4d;
                             font-size: rem(16);
                         }
                     }
                 }
+
                 //파일첨부-img
                 .upload-bottom-img {
                     display: flex;
                     align-items: center;
                     flex-wrap: wrap;
                     gap: 30px;
-    
-                    > li {
+
+                    >li {
                         display: flex;
                         justify-content: center;
                         gap: 4px;
                         color: #4d4d4d;
                         position: relative;
-                        @include mdq-max(xl){
+
+                        @include mdq-max(xl) {
                             font-size: rem(14);
                         }
                     }
-                    .img-bx{
+
+                    .img-bx {
                         width: 190px;
                         height: 190px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         border-radius: 10px;
-                        img{
+
+                        img {
                             width: 100%;
                             height: 100%;
                             object-fit: scale-down;
                         }
                     }
-    
+
                     .delete-btn {
                         display: flex;
                         align-items: center;
@@ -459,7 +543,7 @@
                         height: 30px;
                         border-radius: 50%;
                         background: rgba(#000, 0.5);
-        
+
                         i {
                             font-size: 18px;
                             color: $white;
@@ -468,55 +552,68 @@
                 }
             }
         }
+
         //심사위원등록 완료
-        .judge-complete-bx{
+        .judge-complete-bx {
             margin: 100px 0;
             text-align: center;
-            @include mdq-max(xl){
+
+            @include mdq-max(xl) {
                 margin: 60px 0;
             }
-            .title{
+
+            .title {
                 font-size: 36px;
                 font-weight: bold;
                 line-height: 1;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     font-size: rem(24);
                 }
             }
-            .dec1{
+
+            .dec1 {
                 font-size: 20px;
                 line-height: 1;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     font-size: rem(18);
                     line-height: 1.4;
                 }
             }
-            .dec2{
+
+            .dec2 {
                 color: $gray-a;
                 line-height: 1;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     font-size: rem(16);
                     line-height: 1.4;
                 }
             }
         }
+
         //미리보기
-        .registerList{
+        .registerList {
             display: flex;
-            @include mdq-max(xl){
+
+            @include mdq-max(xl) {
                 flex-direction: column;
                 gap: 20px;
             }
-            .leftImg{
+
+            .leftImg {
                 position: relative;
                 overflow: hidden;
                 border-radius: 16px;
-                &:hover{
-                    .img-bx{
+
+                &:hover {
+                    .img-bx {
                         transform: scale(1.05);
                     }
                 }
-                .img-bx{
+
+                .img-bx {
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: center;
@@ -524,30 +621,41 @@
                     transition: all 0.5s;
                     width: 300px;
                     min-width: 300px;
+
+                    @include mdq-max(md) {
+                        width: 100%;
+                        min-width: unset;
+                    }
                 }
             }
-            .rightText{
+
+            .rightText {
                 width: calc(100% - 300px);
                 padding-left: 30px;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     width: 100%;
                     padding-left: 0;
                 }
             }
-            .topIntro{
+
+            .topIntro {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                @include mdq-max(md){
+
+                @include mdq-max(md) {
                     flex-direction: column;
                     align-items: start;
                     gap: 10px;
                 }
-                .linkArea{
+
+                .linkArea {
                     display: flex;
                     align-items: center;
                     gap: 16px;
-                    @include mdq-max(md){
+
+                    @include mdq-max(md) {
                         border-top: 1px solid $gray-e;
                         border-bottom: 1px solid $gray-e;
                         padding: 10px 0;
@@ -555,70 +663,92 @@
                     }
                 }
             }
-            .infoArea{
+
+            .infoArea {
                 display: flex;
                 align-items: center;
-               .status{
-                font-weight: 600;
-                color: $white;
-                line-height: 1;
-                padding: 0 6px;
-                height: 24px;
-                background: $color-1;
-                border-radius: 4px;
-                display: flex;
-                align-items: center;
-                justify-content: center; 
-                &.status2{
-                    background: $gray-3;
-                }               
-               }
-               .name{
-                font-size: 24px;
-                font-weight: bold;
-                @include mdq-max(xl){
-                    font-size: 20px;
+
+                .status {
+                    font-weight: 600;
+                    color: $white;
+                    line-height: 1;
+                    padding: 0 6px;
+                    height: 24px;
+                    background: $color-1;
+                    border-radius: 4px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &.status2 {
+                        background: $gray-3;
+                    }
+                    &.status3, .status4{
+                        background: $white;
+                        border: 1px solid $color-1
+                    }
+                    &.status5 {
+                        background: $white;
+                        border: 1px solid $black;
+                    }
                 }
-                @include mdq-max(xs){
-                    font-size: rem(18);
+
+                .name {
+                    font-size: 24px;
+                    font-weight: bold;
+
+                    @include mdq-max(xl) {
+                        font-size: 20px;
+                    }
+
+                    @include mdq-max(xs) {
+                        font-size: rem(18);
+                    }
                 }
-               }
-               .infoLIst{
-                display: flex;
-                align-items: center;
-                li{
-                    padding: 0 8px;
-                    position: relative;
-                    font-size: 17px;
-                    color: $gray-a;
-                    @include mdq-max(xl){
-                        font-size: 16px;
-                    }
-                    @include mdq-max(xs){
-                        font-size: rem(16);
-                    }
-                    &::after{
-                        content: "";
-                        width: 3px;
-                        height: 3px;
-                        border-radius: 50%;
-                        background: $gray-a;
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        left: 0;
-                    }
-                    &:first-child{
-                        padding-left: 0;
-                        &::after{
-                            display: none;
+
+                .infoLIst {
+                    display: flex;
+                    align-items: center;
+
+                    li {
+                        padding: 0 8px;
+                        position: relative;
+                        font-size: 17px;
+                        color: $gray-a;
+
+                        @include mdq-max(xl) {
+                            font-size: 16px;
+                        }
+
+                        @include mdq-max(xs) {
+                            font-size: rem(16);
+                        }
+
+                        &::after {
+                            content: "";
+                            width: 3px;
+                            height: 3px;
+                            border-radius: 50%;
+                            background: $gray-a;
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            left: 0;
+                        }
+
+                        &:first-child {
+                            padding-left: 0;
+
+                            &::after {
+                                display: none;
+                            }
                         }
                     }
                 }
-               }
             }
-            .contentBox{
-                p{
+
+            .contentBox {
+                p {
                     color: $gray-a;
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -628,23 +758,28 @@
                     -webkit-box-orient: vertical;
                     word-wrap: break-word;
                     height: 3em;
-                    @include mdq-max(xl){
+
+                    @include mdq-max(xl) {
                         font-size: rem(16);
                     }
                 }
             }
-            .bottomLink{
+
+            .bottomLink {
                 display: flex;
                 gap: 10px;
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                     justify-content: center;
                 }
-                li{
-                    @include mdq-max(md){
+
+                li {
+                    @include mdq-max(md) {
                         width: 100%;
                     }
                 }
-                a{
+
+                a {
                     width: 120px;
                     height: 40px;
                     border-radius: 10px;
@@ -654,24 +789,116 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    @include mdq-max(xl){
+
+                    @include mdq-max(xl) {
                         font-size: rem(16);
                     }
-                    @include mdq-max(md){
+
+                    @include mdq-max(md) {
                         width: 100%;
                         flex: 1;
                     }
-                    &.preview-link{
+
+                    &.preview-link {
                         background: $white;
                         border: 1px solid $gray-e;
                         color: $black;
                     }
-                    &.modify-link{
+
+                    &.modify-link {
                         background: $color-1;
                         border: 1px solid $color-1;
                     }
                 }
             }
+        }
+    }
+    &--ranking{
+        padding: 50px 0 300px 0;
+        @include mdq-max(xl){
+            padding: 80px 0;
+        }
+        .category-slide,
+        .category-slide2{
+            position: relative;
+            .swiper-slide{
+                width: 80px;
+                height: 80px;
+                @include mdq-max(xl){
+                    width: 60px;
+                    height: 60px;
+                }
+                a{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 15px;
+                    background: #f9f9f9;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.5s;
+                    text-align: center;
+                    padding: 10px;
+                    &.active{
+                        background: $color-1;
+                        color: $white;
+                        font-weight: bold;
+                    }
+                    @include mdq-max(xl){
+                        padding: 4px;
+                        font-size: rem(14);
+                        line-height: 1.2;
+                    }
+                    @include mdq-min(md){
+                        &:hover{
+                            background: $color-1;
+                            color: $white;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            .swiper-container{
+                width: calc(100% - 190px);
+                @include mdq-max(xl){
+                    width: calc(100% - 140px);
+                }
+            }
+            .btn-bx{
+                > div{
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 15px;
+                    background: #E5E5E5;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    z-index: 1;
+                    @include mdq-max(xl){
+                        width: 60px;
+                        height: 60px;
+                    }
+                    i{
+                        font-size: 24px;
+                    }
+                }
+                .prev-btn{
+                    left: 0;
+                }
+                .next-btn{
+                    right: 0;
+                }
+            }
+        }
+        .category-slide{
+            margin-top: 75px;
+        }
+        .category-slide2{
+            margin-top: 30px;
         }
     }
 }

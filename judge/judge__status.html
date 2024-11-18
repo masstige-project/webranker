@@ -118,28 +118,22 @@
             //비공개
             $('.nondisclosure-link').on('click', function () {
                 $('.overlay, .overlay .popup-bx').show();
-                $("body").css({overflow: "hidden",});
             });
             $('.popClosebtn, .cancelBtn').on('click', function () {
                 $('.overlay, .overlay .popup-bx').hide();
-                $("body").css({ overflow: "visible" });
             });
             $('.conversion-btn').on('click', function () {
                 $('.overlay2, .overlay2 .popup-bx').show();
-                $("body").css({overflow: "hidden",});
             });
             $('.confirm-btn').on('click', function () {
                 $('.overlay, .overlay2, .overlay .popup-bx, .overlay2 .popup-bx').hide();
-                $("body").css({ overflow: "visible" });
             });
             //공개
             $('.public-link').on('click', function () {
                 $('.overlay3, .overlay3 .popup-bx').show();
-                $("body").css({overflow: "hidden",});
             });
             $('.overlay3 .cancelBtn, .overlay3 .popClosebtn3').on('click', function () {
                 $('.overlay3, .overlay3 .popup-bx').hide();
-                $("body").css({ overflow: "visible" });
             });
             $('.overlay3 .conversion-btn').on('click', function () {
                 $('.overlay4, .overlay4 .popup-bx').show();
@@ -147,7 +141,6 @@
             });
             $('.overlay4 .confirm-btn').on('click', function () {
                 $('.overlay4,.overlay4 .popup-bx').hide();
-                $("body").css({ overflow: "visible" });
             });
         })
     </script>

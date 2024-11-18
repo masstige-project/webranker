@@ -1,0 +1,246 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+    <?
+    $P_dp1 = '1';
+    include "../include/meta.html"
+		?>
+    <link rel="stylesheet" href="../assets/css/sub.min.css" />
+    <script src="../assets/js/rank.js"></script>
+</head>
+
+<body class="sub-body">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>
+    <!-- E : Header -->
+
+    <!-- S : Main -->
+    <main class="main" id="contents">
+        <!-- S : Section -->
+        <section class="section sc--ranking">
+            <div class="lg-container">
+                <div class="main-search wow fadeInUp">
+                    <div class="searchArea">
+                        <a href="#" class="filter-bx">
+                            <i class="xi-filter"></i>
+                            <p>필터</p>
+                        </a>
+                        <div class="search-bx">
+                            <input type="text" name="search" class="searchInput"
+                                placeholder="웹 사이트명, 앱 서비스명 등의 검색어를 입력해주세요.">
+                            <button type="button" class="searchButton">
+                                <i class="xi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-slide wow fadeInUp">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <!-- active추가시 활성화 -->
+                            <div class="swiper-slide"><a href="#" class="active">전체</a></div>
+                            <div class="swiper-slide"><a href="#">기업 일반</a></div>
+                            <div class="swiper-slide"><a href="#">금융</a></div>
+                            <div class="swiper-slide"><a href="#">생활</a></div>
+                            <div class="swiper-slide"><a href="#">제품</a></div>
+                            <div class="swiper-slide"><a href="#">쇼핑몰</a></div>
+                            <div class="swiper-slide"><a href="#">정보<br>서비스</a></div>
+                            <div class="swiper-slide"><a href="#">공공</a></div>
+                            <div class="swiper-slide"><a href="#">의료</a></div>
+                            <div class="swiper-slide"><a href="#">문화</a></div>
+                            <div class="swiper-slide"><a href="#">관공</a></div>
+                            <div class="swiper-slide"><a href="#">프로모션</a></div>
+                            <div class="swiper-slide"><a href="#">고객<br>서비스</a></div>
+                            <div class="swiper-slide"><a href="#">교육</a></div>
+                            <div class="swiper-slide"><a href="#">모바일<br>서비스</a></div>
+                            <div class="swiper-slide"><a href="#">모바일<br>마케팅</a></div>
+                        </div>
+                    </div>
+                    <div class="btn-bx">
+                        <div class="prev-btn">
+                            <i class="xi-long-arrow-left"></i>
+                        </div>
+                        <div class="next-btn">
+                            <i class="xi-long-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-slide2 wow fadeInUp">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="#">전체</a></div>
+                            <div class="swiper-slide"><a href="#" class="active">기업 일반</a></div>
+                            <div class="swiper-slide"><a href="#">금융</a></div>
+                            <div class="swiper-slide"><a href="#">생활</a></div>
+                            <div class="swiper-slide"><a href="#">제품</a></div>
+                            <div class="swiper-slide"><a href="#">쇼핑몰</a></div>
+                            <div class="swiper-slide"><a href="#">정보<br>서비스</a></div>
+                            <div class="swiper-slide"><a href="#">공공</a></div>
+                            <div class="swiper-slide"><a href="#">의료</a></div>
+                            <div class="swiper-slide"><a href="#">문화</a></div>
+                            <div class="swiper-slide"><a href="#">관공</a></div>
+                            <div class="swiper-slide"><a href="#">프로모션</a></div>
+                            <div class="swiper-slide"><a href="#">고객<br>서비스</a></div>
+                            <div class="swiper-slide"><a href="#">교육</a></div>
+                            <div class="swiper-slide"><a href="#">모바일<br>서비스</a></div>
+                            <div class="swiper-slide"><a href="#">모바일<br>마케팅</a></div>
+                        </div>
+                    </div>
+                    <div class="btn-bx">
+                        <div class="prev-btn">
+                            <i class="xi-long-arrow-left"></i>
+                        </div>
+                        <div class="next-btn">
+                            <i class="xi-long-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <? include "./filter/filter.html" ?>
+                <!-- S : 본문 컨텐츠 -->
+                <div class="contentArea mt-15 mt-xl-30">
+                    <div class="contentList">
+                        <div class="contentWrap">
+                            <div class="contentTitle mb-5 wow fadeInUp">
+                                <p class="tit">오늘 최고 투표</p>
+                                <div class="rankBtnWrap">
+                                    <!-- active추가시 활성화 -->
+                                    <div class="rankBtnItem"><a href="#" class="active">웹</a></div>
+                                    <div class="rankBtnItem"><a href="#">모바일</a></div>
+                                    <div class="rankBtnItem"><a href="#" class="active">투표</a></div>
+                                    <div class="rankBtnItem"><a href="#">조회</a></div>
+                                    <div class="rankBtnItem"><a href="#">댓글</a></div>
+                                    <div class="rankBtnItem"><a href="#">최신</a></div>
+                                </div>
+                            </div>
+                            <? include "./ranking__thumb.html" ?>
+                            <!-- S : 페이징 -->
+                            <div class="paging-area wow fadeInUp">
+                                <ul>
+                                <li><a href="javascript:;" class="prev-first"><span>맨앞으로</span></a></li>
+                                <li><a href="javascript:;" class="prev"><span>이전으로</span></a></li>
+                                <li><a href="javascript:;" class="active">1<span></span></a></li>
+                                <li><a href="javascript:;">2<span></span></a></li>
+                                <li><a href="javascript:;">3<span></span></a></li>
+                                <li><a href="javascript:;" class="next"><span>다음으로</span></a></li>
+                                <li><a href="javascript:;" class="next-last"><span>맨뒤로</span></a></li>
+                                </ul>
+                            </div>
+                            <!-- E : 페이징 -->
+                        </div>
+                        <div class="contentWrap mt-40">
+                            <div class="contentTitle mb-5 wow fadeInUp">
+                                <p class="tit">어제 최고 투표</p>
+                                <div class="rankBtnWrap">
+                                    <!-- active추가시 활성화 -->
+                                    <div class="rankBtnItem"><a href="#" class="active">웹</a></div>
+                                    <div class="rankBtnItem"><a href="#">모바일</a></div>
+                                    <div class="rankBtnItem"><a href="#" class="active">투표</a></div>
+                                    <div class="rankBtnItem"><a href="#">조회</a></div>
+                                    <div class="rankBtnItem"><a href="#">댓글</a></div>
+                                    <div class="rankBtnItem"><a href="#">최신</a></div>
+                                </div>
+                            </div>
+                            <? include "./ranking__thumb__2.html" ?>
+                            <!-- S : 페이징 -->
+                            <div class="paging-area">
+                                <ul>
+                                <li><a href="javascript:;" class="prev-first"><span>맨앞으로</span></a></li>
+                                <li><a href="javascript:;" class="prev"><span>이전으로</span></a></li>
+                                <li><a href="javascript:;" class="active">1<span></span></a></li>
+                                <li><a href="javascript:;">2<span></span></a></li>
+                                <li><a href="javascript:;">3<span></span></a></li>
+                                <li><a href="javascript:;" class="next"><span>다음으로</span></a></li>
+                                <li><a href="javascript:;" class="next-last"><span>맨뒤로</span></a></li>
+                                </ul>
+                            </div>
+                            <!-- E : 페이징 -->
+                        </div>
+                    </div>
+                    <div class="rankArea">
+                        <div class="rankWrap wow fadeInRight">
+                            <p class="rank-tit mb-5">기간별 투표작</p>
+                            <ul class="list__1">
+                                <li class="active">오늘 최고 투표</li>
+                                <li>어제 최고 투표</li>
+                                <li>이번 주 최고 투표</li>
+                                <li>지난 주 최고 투표</li>
+                            </ul>
+                        </div>
+                        <div class="rankWrap mt-10 wow fadeInRight">
+                            <div class="rank-link mb-5">
+                                <a href="#" class="active">월별</a>
+                                <a href="#">연도별</a>
+                            </div>
+                            <ul class="list__2">
+                                <li>지난 달 최고 평가</li>
+                                <li>2024년 02월</li>
+                                <li>2024년 01월</li>
+                                <li>2023년 12월</li>
+                                <li>2023년 11월</li>
+                                <li>2023년 10월</li>
+                                <li>2023년 09월</li>
+                                <li>2023년 08월</li>
+                                <li>2023년 07월</li>
+                                <li>2023년 06월</li>
+                                <li>2023년 05월</li>
+                                <li>2023년 04월</li>
+                                <li>2023년 03월</li>
+                                <li>2023년 02월</li>
+                            </ul>
+                            <div class="moreBtn mgt-10">
+                                <a href="#">더보기</a>
+                            </div>
+                        </div>
+                        <div class="rankWrap mt-10 wow fadeInRight">
+                            <p class="rank-tit mb-5">인기 댓글</p>
+                            <ul class="list__3">
+                                <? for ($i=0; $i<5; $i++) {?>
+                                <li>
+                                    <div class="reply-box">
+                                        <p class="reply_txt">
+                                            홈페이지 심플하고 이쁘게 바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다. 홈페이지 심플하고 이쁘게
+                                            바뀌었어요. 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지 않고 제작했습니다.
+                                        </p>
+                                        <div class="reply_title">
+                                            <a href="javascript:void(0)" onclick="alert('준비중입니다.')">
+                                                <div class="title_box">
+                                                    <span class="reply_count">367</span>
+                                                    <p class="title">카카오페이</p>
+                                                </div>
+                                                <ul class="reply_info">
+                                                    <li class="count_list">
+                                                        <ul class="view_wrap">
+                                                            <li class="view">212</li>
+                                                            <li class="conut">503</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="type">
+                                                        <ul class="type_list">
+                                                            <li class="info">기업일반</li>
+                                                            <li class="info">대기업종합</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <?}?>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- E : 본문 컨텐츠 -->
+            </div>
+        </section>
+        <!-- E : Section -->
+    </main>
+    <!-- E : Main -->
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+</body>
+
+</html>
