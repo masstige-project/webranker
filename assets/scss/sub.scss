@@ -6,6 +6,7 @@
 // Mixins
 @import 'mixins';
 @import 'sub/membership';
+@import 'sub/ranking';
 
 .sub-body {
     .header {
@@ -683,10 +684,13 @@
                     &.status2 {
                         background: $gray-3;
                     }
-                    &.status3, .status4{
+
+                    &.status3,
+                    .status4 {
                         background: $white;
                         border: 1px solid $color-1
                     }
+
                     &.status5 {
                         background: $white;
                         border: 1px solid $black;
@@ -811,94 +815,6 @@
                     }
                 }
             }
-        }
-    }
-    &--ranking{
-        padding: 50px 0 300px 0;
-        @include mdq-max(xl){
-            padding: 80px 0;
-        }
-        .category-slide,
-        .category-slide2{
-            position: relative;
-            .swiper-slide{
-                width: 80px;
-                height: 80px;
-                @include mdq-max(xl){
-                    width: 60px;
-                    height: 60px;
-                }
-                a{
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 15px;
-                    background: #f9f9f9;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    transition: all 0.5s;
-                    text-align: center;
-                    padding: 10px;
-                    &.active{
-                        background: $color-1;
-                        color: $white;
-                        font-weight: bold;
-                    }
-                    @include mdq-max(xl){
-                        padding: 4px;
-                        font-size: rem(14);
-                        line-height: 1.2;
-                    }
-                    @include mdq-min(md){
-                        &:hover{
-                            background: $color-1;
-                            color: $white;
-                            font-weight: bold;
-                        }
-                    }
-                }
-            }
-            .swiper-container{
-                width: calc(100% - 190px);
-                @include mdq-max(xl){
-                    width: calc(100% - 140px);
-                }
-            }
-            .btn-bx{
-                > div{
-                    width: 80px;
-                    height: 80px;
-                    border-radius: 15px;
-                    background: #E5E5E5;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    cursor: pointer;
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    z-index: 1;
-                    @include mdq-max(xl){
-                        width: 60px;
-                        height: 60px;
-                    }
-                    i{
-                        font-size: 24px;
-                    }
-                }
-                .prev-btn{
-                    left: 0;
-                }
-                .next-btn{
-                    right: 0;
-                }
-            }
-        }
-        .category-slide{
-            margin-top: 75px;
-        }
-        .category-slide2{
-            margin-top: 30px;
         }
     }
 }

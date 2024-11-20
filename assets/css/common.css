@@ -46620,6 +46620,34 @@ html {
     width: 30px;
   }
 }
+.popup--image .imgViewList + .imgViewList {
+  margin-top: 20px;
+}
+.popup--image .imgViewList .img-bx {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.popup--image .mfp-close {
+  position: absolute;
+  top: -68px;
+  right: 0;
+  opacity: 1;
+}
+@media all and (max-width: 1200px) {
+  .popup--image .mfp-close {
+    top: -40px;
+  }
+}
+.popup--image .mfp-close i {
+  color: #fff;
+  font-size: 48px;
+}
+@media all and (max-width: 1200px) {
+  .popup--image .mfp-close i {
+    font-size: 20px;
+  }
+}
 .popup .popupBtn {
   display: flex;
   align-items: center;
@@ -52879,6 +52907,10 @@ table td.text_left {
   --border-rd: 20px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .lg-container {
   width: 100%;
   padding-right: 20px;
@@ -52906,10 +52938,6 @@ table td.text_left {
   max-width: 640px;
 }
 
-.swiper-wrapper {
-  height: auto;
-}
-
 .main {
   overflow-x: hidden;
 }
@@ -52935,11 +52963,17 @@ table td.text_left {
   border-bottom: none !important;
 }
 
+.p-color {
+  color: #FE4844;
+}
+
 .overlay,
 .overlay2,
 .overlay3,
 .overlay4,
-.overlay5 {
+.overlay5,
+.share-overlay,
+.evaluation-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -52953,7 +52987,9 @@ table td.text_left {
 .overlay2 .popup-bx,
 .overlay3 .popup-bx,
 .overlay4 .popup-bx,
-.overlay5 .popup-bx {
+.overlay5 .popup-bx,
+.share-overlay .popup-bx,
+.evaluation-overlay .popup-bx {
   width: 800px;
   position: fixed;
   top: 50%;
@@ -52969,7 +53005,9 @@ table td.text_left {
   .overlay2 .popup-bx,
   .overlay3 .popup-bx,
   .overlay4 .popup-bx,
-  .overlay5 .popup-bx {
+  .overlay5 .popup-bx,
+  .share-overlay .popup-bx,
+  .evaluation-overlay .popup-bx {
     padding: 2.5rem 1.25rem;
   }
 }
@@ -52978,7 +53016,9 @@ table td.text_left {
   .overlay2 .popup-bx,
   .overlay3 .popup-bx,
   .overlay4 .popup-bx,
-  .overlay5 .popup-bx {
+  .overlay5 .popup-bx,
+  .share-overlay .popup-bx,
+  .evaluation-overlay .popup-bx {
     width: calc(100% - 20px);
   }
 }
@@ -52986,7 +53026,9 @@ table td.text_left {
 .overlay2 .filter-bx,
 .overlay3 .filter-bx,
 .overlay4 .filter-bx,
-.overlay5 .filter-bx {
+.overlay5 .filter-bx,
+.share-overlay .filter-bx,
+.evaluation-overlay .filter-bx {
   width: 1150px;
   position: fixed;
   top: 50%;
@@ -53002,7 +53044,9 @@ table td.text_left {
   .overlay2 .filter-bx,
   .overlay3 .filter-bx,
   .overlay4 .filter-bx,
-  .overlay5 .filter-bx {
+  .overlay5 .filter-bx,
+  .share-overlay .filter-bx,
+  .evaluation-overlay .filter-bx {
     padding: 2.5rem 1.25rem;
     width: calc(100% - 20px);
   }
@@ -53011,7 +53055,9 @@ table td.text_left {
 .overlay2 .filter-bx .fliterWrap,
 .overlay3 .filter-bx .fliterWrap,
 .overlay4 .filter-bx .fliterWrap,
-.overlay5 .filter-bx .fliterWrap {
+.overlay5 .filter-bx .fliterWrap,
+.share-overlay .filter-bx .fliterWrap,
+.evaluation-overlay .filter-bx .fliterWrap {
   padding-bottom: 40px;
   border-bottom: 1px solid #ddd;
 }
@@ -53019,7 +53065,9 @@ table td.text_left {
 .overlay2 .filter-bx .stepList,
 .overlay3 .filter-bx .stepList,
 .overlay4 .filter-bx .stepList,
-.overlay5 .filter-bx .stepList {
+.overlay5 .filter-bx .stepList,
+.share-overlay .filter-bx .stepList,
+.evaluation-overlay .filter-bx .stepList {
   gap: 8px;
   display: flex;
   flex-wrap: wrap;
@@ -53029,7 +53077,9 @@ table td.text_left {
   .overlay2 .filter-bx .stepList,
   .overlay3 .filter-bx .stepList,
   .overlay4 .filter-bx .stepList,
-  .overlay5 .filter-bx .stepList {
+  .overlay5 .filter-bx .stepList,
+  .share-overlay .filter-bx .stepList,
+  .evaluation-overlay .filter-bx .stepList {
     flex-wrap: nowrap;
     gap: 0;
   }
@@ -53038,7 +53088,9 @@ table td.text_left {
 .overlay2 .filter-bx .stepList .stepItem,
 .overlay3 .filter-bx .stepList .stepItem,
 .overlay4 .filter-bx .stepList .stepItem,
-.overlay5 .filter-bx .stepList .stepItem {
+.overlay5 .filter-bx .stepList .stepItem,
+.share-overlay .filter-bx .stepList .stepItem,
+.evaluation-overlay .filter-bx .stepList .stepItem {
   width: 160px;
   height: 40px;
 }
@@ -53047,7 +53099,9 @@ table td.text_left {
   .overlay2 .filter-bx .stepList .stepItem,
   .overlay3 .filter-bx .stepList .stepItem,
   .overlay4 .filter-bx .stepList .stepItem,
-  .overlay5 .filter-bx .stepList .stepItem {
+  .overlay5 .filter-bx .stepList .stepItem,
+  .share-overlay .filter-bx .stepList .stepItem,
+  .evaluation-overlay .filter-bx .stepList .stepItem {
     width: auto;
   }
 }
@@ -53055,7 +53109,9 @@ table td.text_left {
 .overlay2 .filter-bx .stepList .stepItem > a,
 .overlay3 .filter-bx .stepList .stepItem > a,
 .overlay4 .filter-bx .stepList .stepItem > a,
-.overlay5 .filter-bx .stepList .stepItem > a {
+.overlay5 .filter-bx .stepList .stepItem > a,
+.share-overlay .filter-bx .stepList .stepItem > a,
+.evaluation-overlay .filter-bx .stepList .stepItem > a {
   width: 100%;
   height: 100%;
   display: flex;
@@ -53071,7 +53127,9 @@ table td.text_left {
   .overlay2 .filter-bx .stepList .stepItem > a,
   .overlay3 .filter-bx .stepList .stepItem > a,
   .overlay4 .filter-bx .stepList .stepItem > a,
-  .overlay5 .filter-bx .stepList .stepItem > a {
+  .overlay5 .filter-bx .stepList .stepItem > a,
+  .share-overlay .filter-bx .stepList .stepItem > a,
+  .evaluation-overlay .filter-bx .stepList .stepItem > a {
     font-size: 0.875rem;
     padding: 0 10px;
   }
@@ -53080,7 +53138,9 @@ table td.text_left {
 .overlay2 .filter-bx .stepList .stepItem > a.active,
 .overlay3 .filter-bx .stepList .stepItem > a.active,
 .overlay4 .filter-bx .stepList .stepItem > a.active,
-.overlay5 .filter-bx .stepList .stepItem > a.active {
+.overlay5 .filter-bx .stepList .stepItem > a.active,
+.share-overlay .filter-bx .stepList .stepItem > a.active,
+.evaluation-overlay .filter-bx .stepList .stepItem > a.active {
   color: #fff;
   border: 1px solid #FE4844;
   background: #FE4844;
@@ -53089,7 +53149,9 @@ table td.text_left {
 .overlay2 .filter-bx .stepList2,
 .overlay3 .filter-bx .stepList2,
 .overlay4 .filter-bx .stepList2,
-.overlay5 .filter-bx .stepList2 {
+.overlay5 .filter-bx .stepList2,
+.share-overlay .filter-bx .stepList2,
+.evaluation-overlay .filter-bx .stepList2 {
   gap: 8px;
   display: flex;
   flex-wrap: wrap;
@@ -53099,7 +53161,9 @@ table td.text_left {
   .overlay2 .filter-bx .stepList2,
   .overlay3 .filter-bx .stepList2,
   .overlay4 .filter-bx .stepList2,
-  .overlay5 .filter-bx .stepList2 {
+  .overlay5 .filter-bx .stepList2,
+  .share-overlay .filter-bx .stepList2,
+  .evaluation-overlay .filter-bx .stepList2 {
     flex-wrap: nowrap;
     gap: 0;
   }
@@ -53108,7 +53172,9 @@ table td.text_left {
 .overlay2 .filter-bx .stepItem2,
 .overlay3 .filter-bx .stepItem2,
 .overlay4 .filter-bx .stepItem2,
-.overlay5 .filter-bx .stepItem2 {
+.overlay5 .filter-bx .stepItem2,
+.share-overlay .filter-bx .stepItem2,
+.evaluation-overlay .filter-bx .stepItem2 {
   width: 60px;
   height: 60px;
   border-radius: 10px;
@@ -53120,7 +53186,9 @@ table td.text_left {
   .overlay2 .filter-bx .stepItem2,
   .overlay3 .filter-bx .stepItem2,
   .overlay4 .filter-bx .stepItem2,
-  .overlay5 .filter-bx .stepItem2 {
+  .overlay5 .filter-bx .stepItem2,
+  .share-overlay .filter-bx .stepItem2,
+  .evaluation-overlay .filter-bx .stepItem2 {
     width: 40px;
     height: 40px;
     border-radius: 4px;
@@ -53130,14 +53198,18 @@ table td.text_left {
 .overlay2 .filter-bx .stepItem2.active::after,
 .overlay3 .filter-bx .stepItem2.active::after,
 .overlay4 .filter-bx .stepItem2.active::after,
-.overlay5 .filter-bx .stepItem2.active::after {
+.overlay5 .filter-bx .stepItem2.active::after,
+.share-overlay .filter-bx .stepItem2.active::after,
+.evaluation-overlay .filter-bx .stepItem2.active::after {
   opacity: 1;
 }
 .overlay .filter-bx .stepItem2::after,
 .overlay2 .filter-bx .stepItem2::after,
 .overlay3 .filter-bx .stepItem2::after,
 .overlay4 .filter-bx .stepItem2::after,
-.overlay5 .filter-bx .stepItem2::after {
+.overlay5 .filter-bx .stepItem2::after,
+.share-overlay .filter-bx .stepItem2::after,
+.evaluation-overlay .filter-bx .stepItem2::after {
   content: "";
   background-image: url("../images/main/icon/pick.png");
   background-repeat: no-repeat;
@@ -53156,14 +53228,18 @@ table td.text_left {
 .overlay2 .filter-bx .stepItem2:nth-child(1),
 .overlay3 .filter-bx .stepItem2:nth-child(1),
 .overlay4 .filter-bx .stepItem2:nth-child(1),
-.overlay5 .filter-bx .stepItem2:nth-child(1) {
+.overlay5 .filter-bx .stepItem2:nth-child(1),
+.share-overlay .filter-bx .stepItem2:nth-child(1),
+.evaluation-overlay .filter-bx .stepItem2:nth-child(1) {
   background: #000;
 }
 .overlay .filter-bx .stepItem2:nth-child(2),
 .overlay2 .filter-bx .stepItem2:nth-child(2),
 .overlay3 .filter-bx .stepItem2:nth-child(2),
 .overlay4 .filter-bx .stepItem2:nth-child(2),
-.overlay5 .filter-bx .stepItem2:nth-child(2) {
+.overlay5 .filter-bx .stepItem2:nth-child(2),
+.share-overlay .filter-bx .stepItem2:nth-child(2),
+.evaluation-overlay .filter-bx .stepItem2:nth-child(2) {
   background: #fff;
   border: 1px solid #eee;
   box-sizing: border-box;
@@ -53172,84 +53248,108 @@ table td.text_left {
 .overlay2 .filter-bx .stepItem2:nth-child(3),
 .overlay3 .filter-bx .stepItem2:nth-child(3),
 .overlay4 .filter-bx .stepItem2:nth-child(3),
-.overlay5 .filter-bx .stepItem2:nth-child(3) {
+.overlay5 .filter-bx .stepItem2:nth-child(3),
+.share-overlay .filter-bx .stepItem2:nth-child(3),
+.evaluation-overlay .filter-bx .stepItem2:nth-child(3) {
   background: rgba(0, 0, 0, 0.8);
 }
 .overlay .filter-bx .stepItem2:nth-child(4),
 .overlay2 .filter-bx .stepItem2:nth-child(4),
 .overlay3 .filter-bx .stepItem2:nth-child(4),
 .overlay4 .filter-bx .stepItem2:nth-child(4),
-.overlay5 .filter-bx .stepItem2:nth-child(4) {
+.overlay5 .filter-bx .stepItem2:nth-child(4),
+.share-overlay .filter-bx .stepItem2:nth-child(4),
+.evaluation-overlay .filter-bx .stepItem2:nth-child(4) {
   background: #FF0000;
 }
 .overlay .filter-bx .stepItem2:nth-child(5),
 .overlay2 .filter-bx .stepItem2:nth-child(5),
 .overlay3 .filter-bx .stepItem2:nth-child(5),
 .overlay4 .filter-bx .stepItem2:nth-child(5),
-.overlay5 .filter-bx .stepItem2:nth-child(5) {
+.overlay5 .filter-bx .stepItem2:nth-child(5),
+.share-overlay .filter-bx .stepItem2:nth-child(5),
+.evaluation-overlay .filter-bx .stepItem2:nth-child(5) {
   background: #FF9900;
 }
 .overlay .filter-bx .stepItem2:nth-child(6),
 .overlay2 .filter-bx .stepItem2:nth-child(6),
 .overlay3 .filter-bx .stepItem2:nth-child(6),
 .overlay4 .filter-bx .stepItem2:nth-child(6),
-.overlay5 .filter-bx .stepItem2:nth-child(6) {
+.overlay5 .filter-bx .stepItem2:nth-child(6),
+.share-overlay .filter-bx .stepItem2:nth-child(6),
+.evaluation-overlay .filter-bx .stepItem2:nth-child(6) {
   background: #FFFF00;
 }
 .overlay .filter-bx .stepItem2:nth-child(7),
 .overlay2 .filter-bx .stepItem2:nth-child(7),
 .overlay3 .filter-bx .stepItem2:nth-child(7),
 .overlay4 .filter-bx .stepItem2:nth-child(7),
-.overlay5 .filter-bx .stepItem2:nth-child(7) {
+.overlay5 .filter-bx .stepItem2:nth-child(7),
+.share-overlay .filter-bx .stepItem2:nth-child(7),
+.evaluation-overlay .filter-bx .stepItem2:nth-child(7) {
   background: #80FF00;
 }
 .overlay .filter-bx .stepItem2:nth-child(8),
 .overlay2 .filter-bx .stepItem2:nth-child(8),
 .overlay3 .filter-bx .stepItem2:nth-child(8),
 .overlay4 .filter-bx .stepItem2:nth-child(8),
-.overlay5 .filter-bx .stepItem2:nth-child(8) {
+.overlay5 .filter-bx .stepItem2:nth-child(8),
+.share-overlay .filter-bx .stepItem2:nth-child(8),
+.evaluation-overlay .filter-bx .stepItem2:nth-child(8) {
   background: #00EE26;
 }
 .overlay .filter-bx .stepItem2:nth-child(9),
 .overlay2 .filter-bx .stepItem2:nth-child(9),
 .overlay3 .filter-bx .stepItem2:nth-child(9),
 .overlay4 .filter-bx .stepItem2:nth-child(9),
-.overlay5 .filter-bx .stepItem2:nth-child(9) {
+.overlay5 .filter-bx .stepItem2:nth-child(9),
+.share-overlay .filter-bx .stepItem2:nth-child(9),
+.evaluation-overlay .filter-bx .stepItem2:nth-child(9) {
   background: #00E1AB;
 }
 .overlay .filter-bx .stepItem2:nth-child(10),
 .overlay2 .filter-bx .stepItem2:nth-child(10),
 .overlay3 .filter-bx .stepItem2:nth-child(10),
 .overlay4 .filter-bx .stepItem2:nth-child(10),
-.overlay5 .filter-bx .stepItem2:nth-child(10) {
+.overlay5 .filter-bx .stepItem2:nth-child(10),
+.share-overlay .filter-bx .stepItem2:nth-child(10),
+.evaluation-overlay .filter-bx .stepItem2:nth-child(10) {
   background: #11F1FF;
 }
 .overlay .filter-bx .stepItem2:nth-child(11),
 .overlay2 .filter-bx .stepItem2:nth-child(11),
 .overlay3 .filter-bx .stepItem2:nth-child(11),
 .overlay4 .filter-bx .stepItem2:nth-child(11),
-.overlay5 .filter-bx .stepItem2:nth-child(11) {
+.overlay5 .filter-bx .stepItem2:nth-child(11),
+.share-overlay .filter-bx .stepItem2:nth-child(11),
+.evaluation-overlay .filter-bx .stepItem2:nth-child(11) {
   background: #0075FF;
 }
 .overlay .filter-bx .stepItem2:nth-child(12),
 .overlay2 .filter-bx .stepItem2:nth-child(12),
 .overlay3 .filter-bx .stepItem2:nth-child(12),
 .overlay4 .filter-bx .stepItem2:nth-child(12),
-.overlay5 .filter-bx .stepItem2:nth-child(12) {
+.overlay5 .filter-bx .stepItem2:nth-child(12),
+.share-overlay .filter-bx .stepItem2:nth-child(12),
+.evaluation-overlay .filter-bx .stepItem2:nth-child(12) {
   background: #8F00FF;
 }
 .overlay .filter-bx .stepItem2:nth-child(13),
 .overlay2 .filter-bx .stepItem2:nth-child(13),
 .overlay3 .filter-bx .stepItem2:nth-child(13),
 .overlay4 .filter-bx .stepItem2:nth-child(13),
-.overlay5 .filter-bx .stepItem2:nth-child(13) {
+.overlay5 .filter-bx .stepItem2:nth-child(13),
+.share-overlay .filter-bx .stepItem2:nth-child(13),
+.evaluation-overlay .filter-bx .stepItem2:nth-child(13) {
   background: #FA00FF;
 }
 .overlay .filter-bx .step-tit,
 .overlay2 .filter-bx .step-tit,
 .overlay3 .filter-bx .step-tit,
 .overlay4 .filter-bx .step-tit,
-.overlay5 .filter-bx .step-tit {
+.overlay5 .filter-bx .step-tit,
+.share-overlay .filter-bx .step-tit,
+.evaluation-overlay .filter-bx .step-tit {
   font-weight: 500;
   margin-bottom: 20px;
 }
@@ -53257,7 +53357,9 @@ table td.text_left {
 .overlay2 .filter-bx .dateList,
 .overlay3 .filter-bx .dateList,
 .overlay4 .filter-bx .dateList,
-.overlay5 .filter-bx .dateList {
+.overlay5 .filter-bx .dateList,
+.share-overlay .filter-bx .dateList,
+.evaluation-overlay .filter-bx .dateList {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -53267,7 +53369,9 @@ table td.text_left {
   .overlay2 .filter-bx .dateList,
   .overlay3 .filter-bx .dateList,
   .overlay4 .filter-bx .dateList,
-  .overlay5 .filter-bx .dateList {
+  .overlay5 .filter-bx .dateList,
+  .share-overlay .filter-bx .dateList,
+  .evaluation-overlay .filter-bx .dateList {
     flex-direction: column;
   }
 }
@@ -53275,7 +53379,9 @@ table td.text_left {
 .overlay2 .filter-bx .dateList > div,
 .overlay3 .filter-bx .dateList > div,
 .overlay4 .filter-bx .dateList > div,
-.overlay5 .filter-bx .dateList > div {
+.overlay5 .filter-bx .dateList > div,
+.share-overlay .filter-bx .dateList > div,
+.evaluation-overlay .filter-bx .dateList > div {
   position: relative;
 }
 @media all and (max-width: 576px) {
@@ -53283,7 +53389,9 @@ table td.text_left {
   .overlay2 .filter-bx .dateList > div,
   .overlay3 .filter-bx .dateList > div,
   .overlay4 .filter-bx .dateList > div,
-  .overlay5 .filter-bx .dateList > div {
+  .overlay5 .filter-bx .dateList > div,
+  .share-overlay .filter-bx .dateList > div,
+  .evaluation-overlay .filter-bx .dateList > div {
     width: 100%;
     text-align: center;
   }
@@ -53292,7 +53400,9 @@ table td.text_left {
 .overlay2 .filter-bx .dateList input,
 .overlay3 .filter-bx .dateList input,
 .overlay4 .filter-bx .dateList input,
-.overlay5 .filter-bx .dateList input {
+.overlay5 .filter-bx .dateList input,
+.share-overlay .filter-bx .dateList input,
+.evaluation-overlay .filter-bx .dateList input {
   width: 160px;
   height: 40px;
   border-radius: 10px;
@@ -53304,7 +53414,9 @@ table td.text_left {
   .overlay2 .filter-bx .dateList input,
   .overlay3 .filter-bx .dateList input,
   .overlay4 .filter-bx .dateList input,
-  .overlay5 .filter-bx .dateList input {
+  .overlay5 .filter-bx .dateList input,
+  .share-overlay .filter-bx .dateList input,
+  .evaluation-overlay .filter-bx .dateList input {
     width: 100%;
   }
 }
@@ -53312,7 +53424,9 @@ table td.text_left {
 .overlay2 .filter-bx .dateList .img-bx,
 .overlay3 .filter-bx .dateList .img-bx,
 .overlay4 .filter-bx .dateList .img-bx,
-.overlay5 .filter-bx .dateList .img-bx {
+.overlay5 .filter-bx .dateList .img-bx,
+.share-overlay .filter-bx .dateList .img-bx,
+.evaluation-overlay .filter-bx .dateList .img-bx {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -53322,7 +53436,9 @@ table td.text_left {
 .overlay2 .filter-bx .text-bx,
 .overlay3 .filter-bx .text-bx,
 .overlay4 .filter-bx .text-bx,
-.overlay5 .filter-bx .text-bx {
+.overlay5 .filter-bx .text-bx,
+.share-overlay .filter-bx .text-bx,
+.evaluation-overlay .filter-bx .text-bx {
   overflow-y: scroll;
   max-height: 600px;
   padding: 0 20px 0 0;
@@ -53332,14 +53448,18 @@ table td.text_left {
 .overlay2 .filter-bx .text-bx::-webkit-scrollbar,
 .overlay3 .filter-bx .text-bx::-webkit-scrollbar,
 .overlay4 .filter-bx .text-bx::-webkit-scrollbar,
-.overlay5 .filter-bx .text-bx::-webkit-scrollbar {
+.overlay5 .filter-bx .text-bx::-webkit-scrollbar,
+.share-overlay .filter-bx .text-bx::-webkit-scrollbar,
+.evaluation-overlay .filter-bx .text-bx::-webkit-scrollbar {
   width: 10px;
 }
 .overlay .filter-bx .text-bx::-webkit-scrollbar-thumb,
 .overlay2 .filter-bx .text-bx::-webkit-scrollbar-thumb,
 .overlay3 .filter-bx .text-bx::-webkit-scrollbar-thumb,
 .overlay4 .filter-bx .text-bx::-webkit-scrollbar-thumb,
-.overlay5 .filter-bx .text-bx::-webkit-scrollbar-thumb {
+.overlay5 .filter-bx .text-bx::-webkit-scrollbar-thumb,
+.share-overlay .filter-bx .text-bx::-webkit-scrollbar-thumb,
+.evaluation-overlay .filter-bx .text-bx::-webkit-scrollbar-thumb {
   width: 10px;
   background: #FE4844;
 }
@@ -53347,7 +53467,9 @@ table td.text_left {
 .overlay2 .filter-bx .text-bx::-webkit-scrollbar-track,
 .overlay3 .filter-bx .text-bx::-webkit-scrollbar-track,
 .overlay4 .filter-bx .text-bx::-webkit-scrollbar-track,
-.overlay5 .filter-bx .text-bx::-webkit-scrollbar-track {
+.overlay5 .filter-bx .text-bx::-webkit-scrollbar-track,
+.share-overlay .filter-bx .text-bx::-webkit-scrollbar-track,
+.evaluation-overlay .filter-bx .text-bx::-webkit-scrollbar-track {
   background: transparent;
   box-shadow: inset 0 0 5px #ddd;
   border-left: 4.5px solid transparent;
@@ -53357,7 +53479,9 @@ table td.text_left {
 .overlay2 .projectBtn,
 .overlay3 .projectBtn,
 .overlay4 .projectBtn,
-.overlay5 .projectBtn {
+.overlay5 .projectBtn,
+.share-overlay .projectBtn,
+.evaluation-overlay .projectBtn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53368,7 +53492,9 @@ table td.text_left {
   .overlay2 .projectBtn,
   .overlay3 .projectBtn,
   .overlay4 .projectBtn,
-  .overlay5 .projectBtn {
+  .overlay5 .projectBtn,
+  .share-overlay .projectBtn,
+  .evaluation-overlay .projectBtn {
     flex-direction: column;
   }
 }
@@ -53381,7 +53507,11 @@ table td.text_left {
 .overlay4 .projectBtn > button,
 .overlay4 .projectBtn a,
 .overlay5 .projectBtn > button,
-.overlay5 .projectBtn a {
+.overlay5 .projectBtn a,
+.share-overlay .projectBtn > button,
+.share-overlay .projectBtn a,
+.evaluation-overlay .projectBtn > button,
+.evaluation-overlay .projectBtn a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53402,7 +53532,11 @@ table td.text_left {
   .overlay4 .projectBtn > button,
   .overlay4 .projectBtn a,
   .overlay5 .projectBtn > button,
-  .overlay5 .projectBtn a {
+  .overlay5 .projectBtn a,
+  .share-overlay .projectBtn > button,
+  .share-overlay .projectBtn a,
+  .evaluation-overlay .projectBtn > button,
+  .evaluation-overlay .projectBtn a {
     font-size: 1rem;
     width: calc(50% - 5px);
   }
@@ -53417,7 +53551,11 @@ table td.text_left {
   .overlay4 .projectBtn > button,
   .overlay4 .projectBtn a,
   .overlay5 .projectBtn > button,
-  .overlay5 .projectBtn a {
+  .overlay5 .projectBtn a,
+  .share-overlay .projectBtn > button,
+  .share-overlay .projectBtn a,
+  .evaluation-overlay .projectBtn > button,
+  .evaluation-overlay .projectBtn a {
     width: 100%;
   }
 }
@@ -53430,7 +53568,11 @@ table td.text_left {
 .overlay4 .projectBtn > button.btn1,
 .overlay4 .projectBtn a.btn1,
 .overlay5 .projectBtn > button.btn1,
-.overlay5 .projectBtn a.btn1 {
+.overlay5 .projectBtn a.btn1,
+.share-overlay .projectBtn > button.btn1,
+.share-overlay .projectBtn a.btn1,
+.evaluation-overlay .projectBtn > button.btn1,
+.evaluation-overlay .projectBtn a.btn1 {
   border: 1px solid #eee;
   background: #fff;
 }
@@ -53443,7 +53585,11 @@ table td.text_left {
 .overlay4 .projectBtn > button.btn2,
 .overlay4 .projectBtn a.btn2,
 .overlay5 .projectBtn > button.btn2,
-.overlay5 .projectBtn a.btn2 {
+.overlay5 .projectBtn a.btn2,
+.share-overlay .projectBtn > button.btn2,
+.share-overlay .projectBtn a.btn2,
+.evaluation-overlay .projectBtn > button.btn2,
+.evaluation-overlay .projectBtn a.btn2 {
   background: #FE4844;
   color: #fff;
 }
@@ -53457,7 +53603,11 @@ table td.text_left {
   .overlay4 .projectBtn > button:hover,
   .overlay4 .projectBtn a:hover,
   .overlay5 .projectBtn > button:hover,
-  .overlay5 .projectBtn a:hover {
+  .overlay5 .projectBtn a:hover,
+  .share-overlay .projectBtn > button:hover,
+  .share-overlay .projectBtn a:hover,
+  .evaluation-overlay .projectBtn > button:hover,
+  .evaluation-overlay .projectBtn a:hover {
     background: #FE4844;
     color: #fff;
   }
@@ -53466,7 +53616,9 @@ table td.text_left {
 .overlay2 .popClosebtn,
 .overlay3 .popClosebtn,
 .overlay4 .popClosebtn,
-.overlay5 .popClosebtn {
+.overlay5 .popClosebtn,
+.share-overlay .popClosebtn,
+.evaluation-overlay .popClosebtn {
   position: relative;
   display: flex;
   align-items: center;
@@ -53477,7 +53629,9 @@ table td.text_left {
   .overlay2 .popClosebtn img,
   .overlay3 .popClosebtn img,
   .overlay4 .popClosebtn img,
-  .overlay5 .popClosebtn img {
+  .overlay5 .popClosebtn img,
+  .share-overlay .popClosebtn img,
+  .evaluation-overlay .popClosebtn img {
     width: 20px;
   }
 }
@@ -53485,7 +53639,9 @@ table td.text_left {
 .overlay2 .popClosebtn.filterClose i,
 .overlay3 .popClosebtn.filterClose i,
 .overlay4 .popClosebtn.filterClose i,
-.overlay5 .popClosebtn.filterClose i {
+.overlay5 .popClosebtn.filterClose i,
+.share-overlay .popClosebtn.filterClose i,
+.evaluation-overlay .popClosebtn.filterClose i {
   font-size: 48px;
 }
 @media all and (max-width: 768px) {
@@ -53493,7 +53649,9 @@ table td.text_left {
   .overlay2 .popClosebtn.filterClose i,
   .overlay3 .popClosebtn.filterClose i,
   .overlay4 .popClosebtn.filterClose i,
-  .overlay5 .popClosebtn.filterClose i {
+  .overlay5 .popClosebtn.filterClose i,
+  .share-overlay .popClosebtn.filterClose i,
+  .evaluation-overlay .popClosebtn.filterClose i {
     font-size: 20px;
   }
 }
@@ -53501,7 +53659,9 @@ table td.text_left {
 .overlay2 .title-bx,
 .overlay3 .title-bx,
 .overlay4 .title-bx,
-.overlay5 .title-bx {
+.overlay5 .title-bx,
+.share-overlay .title-bx,
+.evaluation-overlay .title-bx {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53513,7 +53673,9 @@ table td.text_left {
   .overlay2 .title-bx,
   .overlay3 .title-bx,
   .overlay4 .title-bx,
-  .overlay5 .title-bx {
+  .overlay5 .title-bx,
+  .share-overlay .title-bx,
+  .evaluation-overlay .title-bx {
     margin-bottom: 1.25rem;
   }
 }
@@ -53521,7 +53683,9 @@ table td.text_left {
 .overlay2 .title-bx .title,
 .overlay3 .title-bx .title,
 .overlay4 .title-bx .title,
-.overlay5 .title-bx .title {
+.overlay5 .title-bx .title,
+.share-overlay .title-bx .title,
+.evaluation-overlay .title-bx .title {
   font-size: 1.75rem;
   font-weight: bold;
   line-height: 1;
@@ -53532,7 +53696,9 @@ table td.text_left {
   .overlay2 .title-bx .title,
   .overlay3 .title-bx .title,
   .overlay4 .title-bx .title,
-  .overlay5 .title-bx .title {
+  .overlay5 .title-bx .title,
+  .share-overlay .title-bx .title,
+  .evaluation-overlay .title-bx .title {
     font-size: 1.5rem;
   }
 }
@@ -53541,7 +53707,9 @@ table td.text_left {
   .overlay2 .title-bx .title,
   .overlay3 .title-bx .title,
   .overlay4 .title-bx .title,
-  .overlay5 .title-bx .title {
+  .overlay5 .title-bx .title,
+  .share-overlay .title-bx .title,
+  .evaluation-overlay .title-bx .title {
     font-size: 1.25rem;
   }
 }
@@ -53549,7 +53717,9 @@ table td.text_left {
 .overlay2 .btn-bx,
 .overlay3 .btn-bx,
 .overlay4 .btn-bx,
-.overlay5 .btn-bx {
+.overlay5 .btn-bx,
+.share-overlay .btn-bx,
+.evaluation-overlay .btn-bx {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53564,7 +53734,11 @@ table td.text_left {
 .overlay4 .btn-bx a,
 .overlay4 .btn-bx button,
 .overlay5 .btn-bx a,
-.overlay5 .btn-bx button {
+.overlay5 .btn-bx button,
+.share-overlay .btn-bx a,
+.share-overlay .btn-bx button,
+.evaluation-overlay .btn-bx a,
+.evaluation-overlay .btn-bx button {
   width: 280px;
   height: 50px;
   border-radius: 10px;
@@ -53583,7 +53757,11 @@ table td.text_left {
   .overlay4 .btn-bx a,
   .overlay4 .btn-bx button,
   .overlay5 .btn-bx a,
-  .overlay5 .btn-bx button {
+  .overlay5 .btn-bx button,
+  .share-overlay .btn-bx a,
+  .share-overlay .btn-bx button,
+  .evaluation-overlay .btn-bx a,
+  .evaluation-overlay .btn-bx button {
     width: 100%;
     flex: 1;
     font-size: 1rem;
@@ -53599,7 +53777,11 @@ table td.text_left {
 .overlay4 .btn-bx a.btn1,
 .overlay4 .btn-bx button.btn1,
 .overlay5 .btn-bx a.btn1,
-.overlay5 .btn-bx button.btn1 {
+.overlay5 .btn-bx button.btn1,
+.share-overlay .btn-bx a.btn1,
+.share-overlay .btn-bx button.btn1,
+.evaluation-overlay .btn-bx a.btn1,
+.evaluation-overlay .btn-bx button.btn1 {
   border: 1px solid #ddd;
   background: #fff;
 }
@@ -53612,10 +53794,447 @@ table td.text_left {
 .overlay4 .btn-bx a.btn2,
 .overlay4 .btn-bx button.btn2,
 .overlay5 .btn-bx a.btn2,
-.overlay5 .btn-bx button.btn2 {
+.overlay5 .btn-bx button.btn2,
+.share-overlay .btn-bx a.btn2,
+.share-overlay .btn-bx button.btn2,
+.evaluation-overlay .btn-bx a.btn2,
+.evaluation-overlay .btn-bx button.btn2 {
   border: 1px solid #FE4844;
   background: #FE4844;
   color: #fff;
+}
+.overlay .shareLinkArea,
+.overlay2 .shareLinkArea,
+.overlay3 .shareLinkArea,
+.overlay4 .shareLinkArea,
+.overlay5 .shareLinkArea,
+.share-overlay .shareLinkArea,
+.evaluation-overlay .shareLinkArea {
+  padding: 40px 0;
+  border-bottom: 1px solid #ddd;
+}
+.overlay .shareLinkArea.shareLinkArea2,
+.overlay2 .shareLinkArea.shareLinkArea2,
+.overlay3 .shareLinkArea.shareLinkArea2,
+.overlay4 .shareLinkArea.shareLinkArea2,
+.overlay5 .shareLinkArea.shareLinkArea2,
+.share-overlay .shareLinkArea.shareLinkArea2,
+.evaluation-overlay .shareLinkArea.shareLinkArea2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: none;
+}
+.overlay .shareLinkArea.shareLinkArea2 .shareFlex button,
+.overlay .shareLinkArea.shareLinkArea2 a,
+.overlay2 .shareLinkArea.shareLinkArea2 .shareFlex button,
+.overlay2 .shareLinkArea.shareLinkArea2 a,
+.overlay3 .shareLinkArea.shareLinkArea2 .shareFlex button,
+.overlay3 .shareLinkArea.shareLinkArea2 a,
+.overlay4 .shareLinkArea.shareLinkArea2 .shareFlex button,
+.overlay4 .shareLinkArea.shareLinkArea2 a,
+.overlay5 .shareLinkArea.shareLinkArea2 .shareFlex button,
+.overlay5 .shareLinkArea.shareLinkArea2 a,
+.share-overlay .shareLinkArea.shareLinkArea2 .shareFlex button,
+.share-overlay .shareLinkArea.shareLinkArea2 a,
+.evaluation-overlay .shareLinkArea.shareLinkArea2 .shareFlex button,
+.evaluation-overlay .shareLinkArea.shareLinkArea2 a {
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+}
+.overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+.overlay2 .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+.overlay3 .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+.overlay4 .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+.overlay5 .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+.share-overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+.evaluation-overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2 {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+}
+.overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
+.overlay2 .shareLinkArea.shareLinkArea2 .shareFlex a,
+.overlay3 .shareLinkArea.shareLinkArea2 .shareFlex a,
+.overlay4 .shareLinkArea.shareLinkArea2 .shareFlex a,
+.overlay5 .shareLinkArea.shareLinkArea2 .shareFlex a,
+.share-overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
+.evaluation-overlay .shareLinkArea.shareLinkArea2 .shareFlex a {
+  width: 200px;
+  height: 40px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+.overlay .shareLinkArea .share-title,
+.overlay2 .shareLinkArea .share-title,
+.overlay3 .shareLinkArea .share-title,
+.overlay4 .shareLinkArea .share-title,
+.overlay5 .shareLinkArea .share-title,
+.share-overlay .shareLinkArea .share-title,
+.evaluation-overlay .shareLinkArea .share-title {
+  font-size: 28px;
+  font-weight: 600;
+}
+@media all and (max-width: 1200px) {
+  .overlay .shareLinkArea .share-title,
+  .overlay2 .shareLinkArea .share-title,
+  .overlay3 .shareLinkArea .share-title,
+  .overlay4 .shareLinkArea .share-title,
+  .overlay5 .shareLinkArea .share-title,
+  .share-overlay .shareLinkArea .share-title,
+  .evaluation-overlay .shareLinkArea .share-title {
+    font-size: 1.25rem;
+  }
+}
+.overlay .shareLinkArea .flexBox,
+.overlay2 .shareLinkArea .flexBox,
+.overlay3 .shareLinkArea .flexBox,
+.overlay4 .shareLinkArea .flexBox,
+.overlay5 .shareLinkArea .flexBox,
+.share-overlay .shareLinkArea .flexBox,
+.evaluation-overlay .shareLinkArea .flexBox {
+  display: flex;
+  gap: 6px;
+}
+@media all and (max-width: 375px) {
+  .overlay .shareLinkArea .flexBox,
+  .overlay2 .shareLinkArea .flexBox,
+  .overlay3 .shareLinkArea .flexBox,
+  .overlay4 .shareLinkArea .flexBox,
+  .overlay5 .shareLinkArea .flexBox,
+  .share-overlay .shareLinkArea .flexBox,
+  .evaluation-overlay .shareLinkArea .flexBox {
+    flex-direction: column;
+  }
+}
+.overlay .shareLinkArea .flexBox > .subject-box,
+.overlay2 .shareLinkArea .flexBox > .subject-box,
+.overlay3 .shareLinkArea .flexBox > .subject-box,
+.overlay4 .shareLinkArea .flexBox > .subject-box,
+.overlay5 .shareLinkArea .flexBox > .subject-box,
+.share-overlay .shareLinkArea .flexBox > .subject-box,
+.evaluation-overlay .shareLinkArea .flexBox > .subject-box {
+  color: #666;
+}
+.overlay .shareLinkArea .flexBox > .count_box,
+.overlay2 .shareLinkArea .flexBox > .count_box,
+.overlay3 .shareLinkArea .flexBox > .count_box,
+.overlay4 .shareLinkArea .flexBox > .count_box,
+.overlay5 .shareLinkArea .flexBox > .count_box,
+.share-overlay .shareLinkArea .flexBox > .count_box,
+.evaluation-overlay .shareLinkArea .flexBox > .count_box {
+  gap: 6px;
+}
+.overlay .shareLinkArea .shareLink,
+.overlay2 .shareLinkArea .shareLink,
+.overlay3 .shareLinkArea .shareLink,
+.overlay4 .shareLinkArea .shareLink,
+.overlay5 .shareLinkArea .shareLink,
+.share-overlay .shareLinkArea .shareLink,
+.evaluation-overlay .shareLinkArea .shareLink {
+  display: flex;
+}
+@media all and (max-width: 375px) {
+  .overlay .shareLinkArea .shareLink,
+  .overlay2 .shareLinkArea .shareLink,
+  .overlay3 .shareLinkArea .shareLink,
+  .overlay4 .shareLinkArea .shareLink,
+  .overlay5 .shareLinkArea .shareLink,
+  .share-overlay .shareLinkArea .shareLink,
+  .evaluation-overlay .shareLinkArea .shareLink {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+.overlay .shareLinkArea .shareLink li,
+.overlay2 .shareLinkArea .shareLink li,
+.overlay3 .shareLinkArea .shareLink li,
+.overlay4 .shareLinkArea .shareLink li,
+.overlay5 .shareLinkArea .shareLink li,
+.share-overlay .shareLinkArea .shareLink li,
+.evaluation-overlay .shareLinkArea .shareLink li {
+  flex: 1;
+}
+.overlay .shareLinkArea .shareLink a,
+.overlay2 .shareLinkArea .shareLink a,
+.overlay3 .shareLinkArea .shareLink a,
+.overlay4 .shareLinkArea .shareLink a,
+.overlay5 .shareLinkArea .shareLink a,
+.share-overlay .shareLinkArea .shareLink a,
+.evaluation-overlay .shareLinkArea .shareLink a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+@media all and (max-width: 1200px) {
+  .overlay .shareLinkArea .shareLink a,
+  .overlay2 .shareLinkArea .shareLink a,
+  .overlay3 .shareLinkArea .shareLink a,
+  .overlay4 .shareLinkArea .shareLink a,
+  .overlay5 .shareLinkArea .shareLink a,
+  .share-overlay .shareLinkArea .shareLink a,
+  .evaluation-overlay .shareLinkArea .shareLink a {
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 1200px) {
+  .overlay .shareLinkArea .shareLink img,
+  .overlay2 .shareLinkArea .shareLink img,
+  .overlay3 .shareLinkArea .shareLink img,
+  .overlay4 .shareLinkArea .shareLink img,
+  .overlay5 .shareLinkArea .shareLink img,
+  .share-overlay .shareLinkArea .shareLink img,
+  .evaluation-overlay .shareLinkArea .shareLink img {
+    width: 30px;
+  }
+}
+
+.evaluation-overlay .popup-bx {
+  width: 1400px;
+  max-width: 1400px;
+}
+@media all and (max-width: 1400px) {
+  .evaluation-overlay .popup-bx {
+    width: calc(100% - 20px);
+  }
+}
+.evaluation-overlay .popClosebtn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+}
+.evaluation-overlay .text-bx {
+  overflow-y: scroll;
+  max-height: 600px;
+  padding: 0 20px 0 0;
+  margin: 40px 0;
+}
+.evaluation-overlay .text-bx::-webkit-scrollbar {
+  width: 10px;
+}
+.evaluation-overlay .text-bx::-webkit-scrollbar-thumb {
+  width: 10px;
+  background: #FE4844;
+}
+.evaluation-overlay .text-bx::-webkit-scrollbar-track {
+  background: transparent;
+  box-shadow: inset 0 0 5px #ddd;
+  border-left: 4.5px solid transparent;
+  border-right: 4.5px solid transparent;
+}
+.evaluation-overlay .viewContent .img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.evaluation-overlay .viewContent .img-wrap .img-bx {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+.evaluation-overlay .viewContent .like_info {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  width: 45px;
+  height: 45px;
+}
+@media all and (max-width: 768px) {
+  .evaluation-overlay .viewContent .like_info {
+    padding: 0 6px;
+  }
+}
+.evaluation-overlay .viewContent .like_info .like-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.evaluation-overlay .viewContent .like_info .like-wrap .like-btn {
+  width: 45px;
+  height: 45px;
+  background-image: url(../images/main/icon/like_ico_03.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  opacity: 1;
+}
+@media all and (max-width: 768px) {
+  .evaluation-overlay .viewContent .like_info .like-wrap .like-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+.evaluation-overlay .viewContent .like_info .like-wrap .like-btn:hover {
+  opacity: 1;
+}
+.evaluation-overlay .viewContent .like_info .like-wrap .like-btn.clicked {
+  opacity: 1;
+  background-image: url(../images/main/icon/like_ico_02.png);
+}
+.evaluation-overlay .viewContent .like_info .like-wrap .like-btn.clicked:hover {
+  opacity: 1;
+}
+.evaluation-overlay .infoWrap {
+  padding: 50px 0;
+  border-bottom: 1px solid #ddd;
+}
+.evaluation-overlay .infoWrap .user-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .infoWrap .user-list img {
+    width: 50px;
+  }
+}
+.evaluation-overlay .infoWrap .user-icon {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.evaluation-overlay .infoWrap .user-text {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.evaluation-overlay .infoWrap .user-text .maker {
+  font-size: 22px;
+  font-weight: 600;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .infoWrap .user-text .maker {
+    font-size: 1.25rem;
+  }
+}
+.evaluation-overlay .infoWrap .user-text .linkBox {
+  display: flex;
+  gap: 20px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #FE4844;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .infoWrap .user-text .linkBox {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+}
+.evaluation-overlay .infoWrap .desc {
+  color: #333;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .infoWrap .desc {
+    font-size: 1rem;
+  }
+}
+.evaluation-overlay .infoWrap .project--info {
+  display: flex;
+}
+.evaluation-overlay .infoWrap .project--info > li {
+  flex: 1;
+  padding-left: 40px;
+  border-left: 1px solid #eee;
+}
+.evaluation-overlay .infoWrap .project--info > li:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+.evaluation-overlay .infoWrap .project--info .tit {
+  font-size: 18px;
+  font-weight: 500;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .infoWrap .project--info .tit {
+    font-size: 1rem;
+  }
+}
+.evaluation-overlay .infoWrap .project--info .dec,
+.evaluation-overlay .infoWrap .project--info .color-txt {
+  margin-top: 5px;
+  color: #333;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .infoWrap .project--info .dec,
+  .evaluation-overlay .infoWrap .project--info .color-txt {
+    font-size: 0.875rem;
+  }
+}
+.evaluation-overlay .infoWrap .project--info .color-txt {
+  display: flex;
+}
+.evaluation-overlay .infoWrap .project--info .color-txt span {
+  display: flex;
+}
+.evaluation-overlay .infoWrap .project--info .color-txt i {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #FEE500;
+}
+.evaluation-overlay .infoWrap .project--info .color-txt span:nth-child(2) i {
+  background: #3C1E1E;
+}
+.evaluation-overlay .big-title {
+  margin: 50px 0 30px 0;
+  font-size: 36px;
+  font-weight: bold;
+}
+.evaluation-overlay .evaluationItem .tit {
+  font-size: 22px;
+  font-weight: 600;
+}
+.evaluation-overlay .evaluationItem .dec {
+  color: #333;
+}
+.evaluation-overlay .selectScore {
+  padding: 40px 0;
+}
+.evaluation-overlay .selectScore {
+  display: flex;
+  gap: 10px;
+}
+.evaluation-overlay .selectScore > li {
+  width: calc(20% - 7.5px);
+  background: #f9f9f9;
+  border-radius: 20px;
+  padding: 40px 20px;
+  height: 368px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+.evaluation-overlay .selectScore .txt1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+.evaluation-overlay .selectScore .txt2 {
+  font-size: 18px;
+  color: #999;
+}
+.evaluation-overlay .selectScore .txt3 {
+  color: #333;
+  margin-top: 30px;
+}
+.evaluation-overlay .selectScore .txt4 {
+  color: #aaa;
 }
 
 .main-search {
@@ -53695,6 +54314,9 @@ table td.text_left {
 .contentArea {
   display: flex;
 }
+.contentArea.contentArea2 {
+  display: unset;
+}
 .contentArea .contentList {
   width: calc(100% - 280px);
 }
@@ -53707,6 +54329,13 @@ table td.text_left {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media all and (max-width: 576px) {
+  .contentArea .contentTitle {
+    flex-direction: column;
+    align-items: start;
+    justify-content: unset;
+  }
 }
 .contentArea .contentTitle .tit {
   font-size: 24px;
@@ -53798,23 +54427,36 @@ table td.text_left {
     width: 100%;
   }
 }
+.contentArea .contentWrap .thumnail .swiper-wrapper {
+  height: auto;
+}
+.contentArea .contentWrap.contentWrap2 {
+  margin-left: 50px;
+}
+@media all and (max-width: 1200px) {
+  .contentArea .contentWrap.contentWrap2 {
+    margin-left: 0;
+  }
+}
 .contentArea .contentWrap .thumnail-box .img-bx {
-  position: relative;
   border-radius: 16px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  overflow: hidden;
 }
 @media all and (max-width: 768px) {
   .contentArea .contentWrap .thumnail-box .img-bx {
     border-radius: 8px;
   }
 }
-.contentArea .contentWrap .thumnail-box .img-bx .link {
+.contentArea .contentWrap .thumnail-box .img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.contentArea .contentWrap .thumnail-box .img-wrap .link {
   display: block;
 }
-.contentArea .contentWrap .thumnail-box .img-bx .like_info {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info {
   position: absolute;
   bottom: 10px;
   z-index: 4;
@@ -53824,11 +54466,11 @@ table td.text_left {
   padding: 0 10px;
 }
 @media all and (max-width: 768px) {
-  .contentArea .contentWrap .thumnail-box .img-bx .like_info {
+  .contentArea .contentWrap .thumnail-box .img-wrap .like_info {
     padding: 0 6px;
   }
 }
-.contentArea .contentWrap .thumnail-box .img-bx .like_info .rank {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .rank {
   display: inline-block;
   width: 48px;
   height: 30px;
@@ -53844,7 +54486,7 @@ table td.text_left {
   transition: all 0.5s;
 }
 @media all and (min-width: 768.02px) {
-  .contentArea .contentWrap .thumnail-box .img-bx .like_info .rank:hover {
+  .contentArea .contentWrap .thumnail-box .img-wrap .like_info .rank:hover {
     color: #fff;
     background-color: #FE8642;
     background: #FE8642 url(../images/main/icon/ranking_ico_w.png) no-repeat 8px 46%;
@@ -53852,7 +54494,7 @@ table td.text_left {
   }
 }
 @media all and (max-width: 768px) {
-  .contentArea .contentWrap .thumnail-box .img-bx .like_info .rank {
+  .contentArea .contentWrap .thumnail-box .img-wrap .like_info .rank {
     color: #fff;
     background-color: #FE8642;
     background: #FE8642 url(../images/main/icon/ranking_ico_w.png) no-repeat 4px 46%;
@@ -53864,7 +54506,7 @@ table td.text_left {
     border-radius: 6px;
   }
 }
-.contentArea .contentWrap .thumnail-box .img-bx .like_info .follow {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .follow {
   display: flex;
   background-color: #FE4844;
   border-radius: 10px;
@@ -53872,13 +54514,13 @@ table td.text_left {
   line-height: 30px;
   color: #fff;
 }
-.contentArea .contentWrap .thumnail-box .img-bx .like_info .follow li + li {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .follow li + li {
   margin-left: 15px;
 }
-.contentArea .contentWrap .thumnail-box .img-bx .like_info .follow li.check {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .follow li.check {
   position: relative;
 }
-.contentArea .contentWrap .thumnail-box .img-bx .like_info .follow li.check::after {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .follow li.check::after {
   position: absolute;
   top: 50%;
   right: -9px;
@@ -53891,11 +54533,11 @@ table td.text_left {
   background-color: #FFFFFF;
   opacity: 0.5;
 }
-.contentArea .contentWrap .thumnail-box .img-bx .like_info .follow li.scope {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .follow li.scope {
   display: flex;
   align-items: center;
 }
-.contentArea .contentWrap .thumnail-box .img-bx .like_info .follow li.scope::before {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .follow li.scope::before {
   content: "";
   width: 14px;
   height: 21px;
@@ -53903,7 +54545,7 @@ table td.text_left {
   margin-right: 2px;
   background: url(../images/main/icon/scope.png) no-repeat center 40%;
 }
-.contentArea .contentWrap .thumnail-box .img-bx .like_info .like-wrap {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap {
   position: absolute;
   bottom: 0;
   right: 10px;
@@ -53911,11 +54553,11 @@ table td.text_left {
   flex-direction: column;
 }
 @media all and (max-width: 768px) {
-  .contentArea .contentWrap .thumnail-box .img-bx .like_info .like-wrap {
+  .contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap {
     right: 6px;
   }
 }
-.contentArea .contentWrap .thumnail-box .img-bx .like_info .like-wrap .like-btn {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .like-btn {
   width: 45px;
   height: 45px;
   background-image: url(../images/main/icon/like_ico_01.png);
@@ -53927,22 +54569,22 @@ table td.text_left {
   opacity: 0.4;
 }
 @media all and (max-width: 768px) {
-  .contentArea .contentWrap .thumnail-box .img-bx .like_info .like-wrap .like-btn {
+  .contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .like-btn {
     width: 36px;
     height: 36px;
   }
 }
-.contentArea .contentWrap .thumnail-box .img-bx .like_info .like-wrap .like-btn:hover {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .like-btn:hover {
   opacity: 1;
 }
-.contentArea .contentWrap .thumnail-box .img-bx .like_info .like-wrap .like-btn.clicked {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .like-btn.clicked {
   opacity: 1;
   background-image: url(../images/main/icon/like_ico_02.png);
 }
-.contentArea .contentWrap .thumnail-box .img-bx .like_info .like-wrap .like-btn.clicked:hover {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .like-btn.clicked:hover {
   opacity: 1;
 }
-.contentArea .contentWrap .thumnail-box .img-bx .like_info .like-wrap .share-btn {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .share-btn {
   width: 45px;
   height: 45px;
   margin-top: 6px;
@@ -54373,5 +55015,29 @@ table td.text_left {
   border-radius: 3px;
   display: inline-block;
   background-color: #aaa;
+}
+
+.subNavigation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 50px 0;
+}
+@media all and (max-width: 1200px) {
+  .subNavigation {
+    margin: 20px 0;
+  }
+}
+.subNavigation li {
+  font-size: 15px;
+  color: #999;
+}
+@media all and (max-width: 1200px) {
+  .subNavigation li {
+    font-size: 14px;
+  }
+}
+.subNavigation i {
+  color: #ccc;
 }
 /*# sourceMappingURL=common.css.map */

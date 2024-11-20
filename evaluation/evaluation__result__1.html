@@ -1,0 +1,123 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+    <?
+    $P_dp1 = '1';
+    include "../include/meta.html"
+		?>
+    <link rel="stylesheet" href="../assets/css/sub.min.css" />
+    <script src="../assets/js/rank.js"></script>
+</head>
+
+<body class="sub-body">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>
+    <!-- E : Header -->
+
+    <!-- S : Main -->
+    <main class="main" id="contents">
+        <!-- S : Section -->
+        <section class="section sc--ranking">
+            <div class="lg-container">
+                <div class="main-search wow fadeInUp">
+                    <div class="searchArea">
+                        <a href="#" class="filter-bx">
+                            <i class="xi-filter"></i>
+                            <p>필터</p>
+                        </a>
+                        <div class="search-bx">
+                            <input type="text" name="search" class="searchInput"
+                                placeholder="웹 사이트명, 앱 서비스명 등의 검색어를 입력해주세요.">
+                            <button type="button" class="searchButton">
+                                <i class="xi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-slide wow fadeInUp">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <!-- active추가시 활성화 -->
+                            <div class="swiper-slide"><a href="#" class="active">전체</a></div>
+                            <div class="swiper-slide"><a href="#">기업 일반</a></div>
+                            <div class="swiper-slide"><a href="#">금융</a></div>
+                            <div class="swiper-slide"><a href="#">생활</a></div>
+                            <div class="swiper-slide"><a href="#">제품</a></div>
+                            <div class="swiper-slide"><a href="#">쇼핑몰</a></div>
+                            <div class="swiper-slide"><a href="#">정보<br>서비스</a></div>
+                            <div class="swiper-slide"><a href="#">공공</a></div>
+                            <div class="swiper-slide"><a href="#">의료</a></div>
+                            <div class="swiper-slide"><a href="#">문화</a></div>
+                            <div class="swiper-slide"><a href="#">관공</a></div>
+                            <div class="swiper-slide"><a href="#">프로모션</a></div>
+                            <div class="swiper-slide"><a href="#">고객<br>서비스</a></div>
+                            <div class="swiper-slide"><a href="#">교육</a></div>
+                            <div class="swiper-slide"><a href="#">모바일<br>서비스</a></div>
+                            <div class="swiper-slide"><a href="#">모바일<br>마케팅</a></div>
+                        </div>
+                    </div>
+                    <div class="btn-bx">
+                        <div class="prev-btn">
+                            <i class="xi-long-arrow-left"></i>
+                        </div>
+                        <div class="next-btn">
+                            <i class="xi-long-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-slide2 wow fadeInUp">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="#">전체</a></div>
+                            <div class="swiper-slide"><a href="#" class="active">기업 일반</a></div>
+                            <div class="swiper-slide"><a href="#">금융</a></div>
+                            <div class="swiper-slide"><a href="#">생활</a></div>
+                            <div class="swiper-slide"><a href="#">제품</a></div>
+                            <div class="swiper-slide"><a href="#">쇼핑몰</a></div>
+                            <div class="swiper-slide"><a href="#">정보<br>서비스</a></div>
+                            <div class="swiper-slide"><a href="#">공공</a></div>
+                            <div class="swiper-slide"><a href="#">의료</a></div>
+                            <div class="swiper-slide"><a href="#">문화</a></div>
+                            <div class="swiper-slide"><a href="#">관공</a></div>
+                            <div class="swiper-slide"><a href="#">프로모션</a></div>
+                            <div class="swiper-slide"><a href="#">고객<br>서비스</a></div>
+                            <div class="swiper-slide"><a href="#">교육</a></div>
+                            <div class="swiper-slide"><a href="#">모바일<br>서비스</a></div>
+                            <div class="swiper-slide"><a href="#">모바일<br>마케팅</a></div>
+                        </div>
+                    </div>
+                    <div class="btn-bx">
+                        <div class="prev-btn">
+                            <i class="xi-long-arrow-left"></i>
+                        </div>
+                        <div class="next-btn">
+                            <i class="xi-long-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <? include "./filter/filter.html" ?>
+                <div class="resultArea wow fadeInUp">
+                    <p class="result-title">‘카카오’에 대한 검색 결과 <span>0</span>개</p>
+                    <!-- color검색결과 -->
+                    <div class="color-result">
+                        <ul>
+                            <li>Color</li>
+                            <li><span class="color"></span>(#FEE500)</li>
+                            <li>총 <span class="p-color">0</span>개</li>
+                        </ul>
+                    </div>
+                    <p class="nothing-txt">검색된 결과가 없습니다.</p>
+                </div>
+            </div>
+        </section>
+        <!-- E : Section -->
+    </main>
+    <!-- E : Main -->
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+</body>
+
+</html>

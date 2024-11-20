@@ -1,0 +1,60 @@
+<div class="scoreList">
+    <table class="w-100">
+        <caption><span class="hidden">평가리스트 입니다.</span>
+        </caption>
+        <colgroup>
+            <col width="*%;">
+            <col width="10%;">
+            <col width="10%;">
+            <col width="10%;">
+            <col width="10%;">
+            <col width="10%;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>
+                    심사위원
+                </th>
+                <th>
+                    디자인
+                </th>
+                <th>
+                    사용자 경험(UX)
+                </th>
+                <th>
+                    콘텐츠
+                </th>
+                <th>
+                    브랜딩
+                </th>
+                <th class="p-color">
+                    총점
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <? for ($i=0; $i<6; $i++) {?>
+            <tr>
+                <td>
+                    <div class="icon-bx">
+                        <div class="user-icon"
+                        style="background-image: url(../assets/images/main/user-icon.png);">
+                        <img src="../assets/images/main/base_75X75.png" alt="img">
+                        </div>
+                        <ul>
+                            <li>홍길동</li>
+                            <li>매스티지</li>
+                            <li>UI / UX 디자인 이사</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>4</td>
+                <td>5</td>
+                <td>4</td>
+                <td>4</td>
+                <td class="p-color">3.4</td>
+            </tr>
+            <?}?>
+        </tbody>
+    </table>
+</div>

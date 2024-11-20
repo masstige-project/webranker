@@ -18,6 +18,10 @@
     --border-rd: 20px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .lg-container {
     width: 100%;
     padding-right: 20px;
@@ -43,10 +47,6 @@
     margin-right: auto;
     margin-left: auto;
     max-width: 640px;
-}
-
-.swiper-wrapper {
-    height: auto;
 }
 
 .main {
@@ -75,12 +75,18 @@
     border-bottom: none !important;
 }
 
+.p-color {
+    color: $color-1;
+}
+
 //팝업
 .overlay,
 .overlay2,
 .overlay3,
 .overlay4,
-.overlay5 {
+.overlay5,
+.share-overlay,
+.evaluation-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -479,6 +485,360 @@
             }
         }
     }
+
+    .shareLinkArea {
+        padding: 40px 0;
+        border-bottom: 1px solid $gray-d;
+
+        &.shareLinkArea2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: none;
+
+            .shareFlex button,
+            a {
+                border-bottom: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                font-size: 15px;
+            }
+
+            .shareFlex {
+                &.shareFlex2 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: end;
+                    gap: 10px;
+                }
+
+                a {
+                    width: 200px;
+                    height: 40px;
+                    background: $white;
+                    border: 1px solid $gray-e;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .share-title {
+            font-size: 28px;
+            font-weight: 600;
+
+            @include mdq-max(xl) {
+                font-size: rem(20);
+            }
+        }
+
+        .flexBox {
+            display: flex;
+            gap: 6px;
+
+            @include mdq-max(xs) {
+                flex-direction: column;
+            }
+
+            >.subject-box {
+                color: $gray-6;
+            }
+
+            >.count_box {
+                gap: 6px;
+            }
+        }
+
+        .shareLink {
+            display: flex;
+
+            @include mdq-max(xs) {
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            li {
+                flex: 1;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 18px;
+                font-weight: 500;
+
+                @include mdq-max(xl) {
+                    font-size: rem(16);
+                }
+            }
+
+            img {
+                @include mdq-max(xl) {
+                    width: 30px;
+                }
+            }
+        }
+    }
+}
+
+.evaluation-overlay {
+    .popup-bx {
+        width: 1400px;
+        max-width: 1400px;
+
+        @include mdq-max(xxl) {
+            width: calc(100% - 20px);
+        }
+    }
+
+    .popClosebtn {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        width: 100%;
+    }
+
+    .text-bx {
+        overflow-y: scroll;
+        max-height: 600px;
+        padding: 0 20px 0 0;
+        margin: 40px 0;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            width: 10px;
+            background: $color-1;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+            box-shadow: inset 0 0 5px $gray-d;
+            border-left: 4.5px solid transparent;
+            border-right: 4.5px solid transparent;
+        }
+    }
+
+    .viewContent {
+        .img-wrap {
+            position: relative;
+            overflow: hidden;
+            .img-bx{
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                border-radius: 20px;
+            }
+        }
+        
+        .like_info {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 4;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            width: 45px;
+            height: 45px;
+
+            @include mdq-max(md) {
+                padding: 0 6px;
+            }
+
+            & .like-wrap {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+
+                & .like-btn {
+                    width: 45px;
+                    height: 45px;
+                    background-image: url(../images/main/icon/like_ico_03.png);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    border: none;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    opacity: 1;
+
+                    @include mdq-max(md) {
+                        width: 36px;
+                        height: 36px;
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    &.clicked {
+                        opacity: 1;
+                        background-image: url(../images/main/icon/like_ico_02.png);
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .infoWrap{
+        padding: 50px 0;
+        border-bottom: 1px solid $gray-d;
+        .user-list {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            img {
+                @include mdq-max(xl) {
+                    width: 50px;
+                }
+            }
+        }
+
+        .user-icon {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .user-text {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .maker {
+                font-size: 22px;
+                font-weight: 600;
+                @include mdq-max(xl) {
+                    font-size: rem(20);
+                }
+            }
+
+            .linkBox {
+                display: flex;
+                gap: 20px;
+                font-size: 17px;
+                font-weight: 500;
+                color: $color-1;
+                @include mdq-max(xl) {
+                    font-size: rem(16);
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        .desc {
+            color: $gray-3;
+            @include mdq-max(xl) {
+                font-size: rem(16);
+            }
+        }
+
+        .project--info {
+            display: flex;
+            > li{
+                flex: 1;
+                padding-left: 40px;
+                border-left: 1px solid $gray-e;
+                &:first-child{
+                    padding-left: 0;
+                    border-left: none;
+                }
+            }
+
+            .tit {
+                font-size: 18px;
+                font-weight: 500;
+                @include mdq-max(xl) {
+                    font-size: rem(16);
+                }
+            }
+
+            .dec,
+            .color-txt {
+                margin-top: 5px;
+                color: $gray-3;
+                @include mdq-max(xl) {
+                    font-size: rem(14);
+                }
+            }
+
+            .color-txt {
+                display: flex;
+
+                span {
+                    display: flex;
+                }
+
+                i {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    background: #FEE500;
+                }
+
+                span:nth-child(2) {
+                    i {
+                        background: #3C1E1E;
+                    }
+                }
+            }
+        }
+    }
+    .big-title{
+        margin: 50px 0 30px 0;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .evaluationItem{
+        .tit{
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .dec{
+            color: $gray-3;
+        }
+    }
+    .selectScore{
+        padding: 40px 0;
+    }
+    .selectScore{
+        display: flex;
+        gap: 10px;
+        > li{
+            width: calc(20% - 7.5px);
+            background: #f9f9f9;
+            border-radius: 20px;
+            padding: 40px 20px;
+            height: 368px;
+            text-align: center;
+            letter-spacing: -1px;
+        }
+        .txt1{
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .txt2{
+            font-size: 18px;
+            color: $gray-9;
+        }
+        .txt3{
+            color: $gray-3;
+            margin-top: 30px;
+        }
+        .txt4{
+            color: $gray-a;
+        }
+    }
 }
 
 //검색창
@@ -562,9 +922,14 @@
 .contentArea {
     display: flex;
 
+    &.contentArea2 {
+        display: unset;
+    }
+
     .contentList {
         width: calc(100% - 280px);
-        @include mdq-max(lg){
+
+        @include mdq-max(lg) {
             width: 100%;
         }
     }
@@ -573,6 +938,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include mdq-max(sm) {
+            flex-direction: column;
+            align-items: start;
+            justify-content: unset;
+        }
 
         .tit {
             font-size: 24px;
@@ -640,42 +1011,63 @@
         .thumnail {
             gap: 40px 12.5px;
             flex-wrap: wrap;
-            @include mdq-max(xxl){
+
+            @include mdq-max(xxl) {
                 gap: 40px 14.5px;
             }
-            @include mdq-max(md){
+
+            @include mdq-max(md) {
                 gap: 40px 20px;
             }
-            @include mdq-max(sm){
+
+            @include mdq-max(sm) {
                 gap: 40px;
             }
 
             .item {
                 width: calc(25% - 10px);
-                @include mdq-max(xxl){
+
+                @include mdq-max(xxl) {
                     width: calc(33.3333% - 10px);
                 }
-                @include mdq-max(md){
+
+                @include mdq-max(md) {
                     width: calc(50% - 10px);
                 }
-                @include mdq-max(sm){
+
+                @include mdq-max(sm) {
                     width: 100%;
                 }
+            }
+
+            .swiper-wrapper {
+                height: auto;
+            }
+        }
+
+        &.contentWrap2 {
+            margin-left: 50px;
+
+            @include mdq-max(xl) {
+                margin-left: 0;
             }
         }
 
         & .thumnail-box {
             & .img-bx {
-                position: relative;
                 border-radius: 16px;
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
-                overflow: hidden;
 
                 @include mdq-max(md) {
                     border-radius: 8px;
                 }
+            }
+
+            & .img-wrap {
+                position: relative;
+                overflow: hidden;
 
                 & .link {
                     display: block;
@@ -993,7 +1385,8 @@
         width: 280px;
         min-width: 280px;
         margin-left: 60px;
-        @include mdq-max(lg){
+
+        @include mdq-max(lg) {
             display: none;
         }
 
@@ -1054,17 +1447,21 @@
                     }
                 }
             }
-            .list__1{
+
+            .list__1 {
                 width: 100%;
+
                 li+li {
                     margin-top: 10px;
                 }
             }
-            .list__2{
+
+            .list__2 {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 10px;
-                > li{
+
+                >li {
                     width: calc(50% - 5px);
                 }
             }
@@ -1075,7 +1472,8 @@
                 }
             }
         }
-        .moreBtn{
+
+        .moreBtn {
             width: 100%;
             height: 40px;
             border-radius: 10px;
@@ -1085,12 +1483,14 @@
             justify-content: center;
             border: 1px solid $gray-e;
             transition: all 0.5s;
-            a{
+
+            a {
                 display: block;
                 font-size: 15px;
             }
-            @include mdq-min(md){
-                &:hover{
+
+            @include mdq-min(md) {
+                &:hover {
                     background: $color-1;
                     color: $white;
                 }
@@ -1290,5 +1690,30 @@
                 }
             }
         }
+    }
+}
+
+//서브 네비게이션
+.subNavigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0 50px 0;
+
+    @include mdq-max(xl) {
+        margin: 20px 0;
+    }
+
+    li {
+        font-size: 15px;
+        color: $gray-9;
+
+        @include mdq-max(xl) {
+            font-size: 14px;
+        }
+    }
+
+    i {
+        color: $gray-c;
     }
 }

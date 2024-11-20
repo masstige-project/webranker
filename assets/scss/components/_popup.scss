@@ -122,6 +122,35 @@
 		}
 	}
 
+	&--image{
+		.imgViewList{
+			&+.imgViewList{
+				margin-top: 20px;
+			}
+			.img-bx{
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+		}
+		.mfp-close{
+			position: absolute;
+			top: -68px;
+			right: 0;
+			opacity: 1;
+			@include mdq-max(xl){
+				top: -40px;
+			}
+			i{
+				color: $white;
+				font-size: 48px;
+				@include mdq-max(xl){
+					font-size: 20px;
+				}
+			}
+		}
+	}
+
 	.popupBtn{
 		display: flex;
 		align-items: center;

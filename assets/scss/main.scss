@@ -17,13 +17,14 @@ body {
   }
 }
 
-main{
+main {
   overflow: hidden;
 }
 
 .main-thumnail-list {
   padding: 135px 0 165px 0;
-  @include mdq-max(xl){
+
+  @include mdq-max(xl) {
     padding: 60px 0 80px 0;
   }
 
@@ -33,7 +34,8 @@ main{
         display: flex;
         align-items: center;
         margin-bottom: 20px;
-        @include mdq-max(xl){
+
+        @include mdq-max(xl) {
           justify-content: space-between;
           margin-bottom: 10px;
         }
@@ -41,10 +43,12 @@ main{
         & .title {
           font-size: rem(24);
           font-weight: bold;
-          @include mdq-max(xl){
+
+          @include mdq-max(xl) {
             font-size: rem(22);
           }
-          @include mdq-max(xxs){
+
+          @include mdq-max(xxs) {
             font-size: rem(18);
           }
         }
@@ -59,24 +63,28 @@ main{
           border-radius: 44px;
           position: relative;
           transition: all 0.5s;
-          @include mdq-max(xl){
+
+          @include mdq-max(xl) {
             font-size: rem(16);
             line-height: unset;
             width: 86px;
             height: 36px;
             line-height: 36px;
           }
-          @include mdq-min(md){
-            &:hover{
+
+          @include mdq-min(md) {
+            &:hover {
               background: $black;
               color: $white;
               cursor: pointer;
-              &::after{
+
+              &::after {
                 background: url(../images/main/icon/more_arrow_w.png)no-repeat center;
               }
             }
           }
-          a{
+
+          a {
             display: block;
             width: 100%;
             height: 100%;
@@ -101,28 +109,38 @@ main{
         display: flex;
         align-items: center;
         gap: rem(10);
-        @include mdq-max(lg){
+
+        @include mdq-max(lg) {
           align-items: unset;
           gap: unset;
         }
 
+        & .swiper-wrapper {
+          height: auto;
+        }
+
         & .item {
           width: calc(25% - rem(10));
-          @include mdq-max(lg){
+
+          @include mdq-max(lg) {
             width: auto;
           }
 
           & .thumnail-box {
             & .img-bx {
-              position: relative;
               border-radius: 16px;
               background-repeat: no-repeat;
               background-size: cover;
               background-position: center;
-              overflow: hidden;
-              @include mdq-max(md){
+
+              @include mdq-max(md) {
                 border-radius: 8px;
               }
+            }
+
+            & .img-wrap {
+              position: relative;
+              overflow: hidden;
 
               & .link {
                 display: block;
@@ -136,7 +154,8 @@ main{
                 align-items: center;
                 width: 100%;
                 padding: 0 10px;
-                @include mdq-max(md){
+
+                @include mdq-max(md) {
                   padding: 0 6px;
                 }
 
@@ -154,26 +173,29 @@ main{
                   color: #FE8642;
                   background: #fff url(../images/main/icon/ranking_ico.png)no-repeat 8px 46%;
                   transition: all 0.5s;
-                  @include mdq-min(md){
-                    &:hover{
+
+                  @include mdq-min(md) {
+                    &:hover {
                       color: $white;
                       background-color: #FE8642;
                       background: #FE8642 url(../images/main/icon/ranking_ico_w.png)no-repeat 8px 46%;
                       cursor: pointer;
                     }
                   }
-                  @include mdq-max(md){
-                      color: $white;
-                      background-color: #FE8642;
-                      background: #FE8642 url(../images/main/icon/ranking_ico_w.png)no-repeat 4px 46%;
-                      cursor: pointer;
-                      width: 37px;
-                      height: 23px;
-                      font-size: 14px;
-                      line-height: 24px;
-                      border-radius: 6px;
+
+                  @include mdq-max(md) {
+                    color: $white;
+                    background-color: #FE8642;
+                    background: #FE8642 url(../images/main/icon/ranking_ico_w.png)no-repeat 4px 46%;
+                    cursor: pointer;
+                    width: 37px;
+                    height: 23px;
+                    font-size: 14px;
+                    line-height: 24px;
+                    border-radius: 6px;
                   }
                 }
+
                 & .follow {
                   display: flex;
                   background-color: $color-1;
@@ -227,7 +249,8 @@ main{
                   right: 10px;
                   display: flex;
                   flex-direction: column;
-                  @include mdq-max(md){
+
+                  @include mdq-max(md) {
                     right: 6px;
                   }
 
@@ -241,7 +264,8 @@ main{
                     cursor: pointer;
                     transition: all 0.3s;
                     opacity: 0.4;
-                    @include mdq-max(md){
+
+                    @include mdq-max(md) {
                       width: 36px;
                       height: 36px;
                     }
@@ -273,15 +297,18 @@ main{
                 }
               }
             }
-            & .flex-bx{
+
+            & .flex-bx {
               display: flex;
               justify-content: space-between;
               margin-top: 20px;
-              @include mdq-max(md){
+
+              @include mdq-max(md) {
                 flex-direction: column;
                 justify-content: unset;
               }
-              .right-bx{
+
+              .right-bx {
                 background: #FE4742;
                 width: 70px;
                 height: 56px;
@@ -294,7 +321,8 @@ main{
                 gap: 5px;
                 padding: 10px;
                 line-height: 1;
-                @include mdq-max(md){
+
+                @include mdq-max(md) {
                   width: 100%;
                   height: 36px;
                   padding: 0 10px;
@@ -302,17 +330,20 @@ main{
                   margin-top: 6px;
                   line-height: 1.6;
                 }
-                p{
+
+                p {
                   font-size: 15px;
                 }
               }
-              .left-bx2{
-                @include mdq-max(md){
+
+              .left-bx2 {
+                @include mdq-max(md) {
                   order: 2;
                   margin-top: 7px;
                 }
               }
-              .right-bx2{
+
+              .right-bx2 {
                 background: #FE4742;
                 width: 127px;
                 height: 30px;
@@ -320,26 +351,32 @@ main{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                @include mdq-max(md){
+
+                @include mdq-max(md) {
                   width: 94px;
                   height: 20px;
                   border-radius: 4px;
                   order: 1;
                 }
-                .subject-box{
+
+                .subject-box {
                   color: $white;
-                  @include mdq-max(md){
+
+                  @include mdq-max(md) {
                     font-size: 12px;
                     letter-spacing: -0.5px;
                   }
-                  span{
+
+                  span {
                     position: relative;
                     padding-left: 16px;
                   }
-                  li+li::before{
+
+                  li+li::before {
                     background-color: rgba(#fff, 0.5);
                   }
-                  span::after{
+
+                  span::after {
                     content: "";
                     width: 14px;
                     height: 13px;
@@ -354,6 +391,7 @@ main{
                   }
                 }
               }
+
               .count {
                 display: inline-block;
                 font-weight: bold;
@@ -366,7 +404,8 @@ main{
               display: flex;
               font-size: rem(15);
               color: $gray-6;
-              @include mdq-max(xl){
+
+              @include mdq-max(xl) {
                 font-size: 14px;
               }
 
@@ -395,10 +434,12 @@ main{
               & .btn {
                 margin-top: 4px;
                 font-size: rem(24);
-                @include mdq-max(xl){
+
+                @include mdq-max(xl) {
                   font-size: rem(22);
                 }
-                @include mdq-max(xxs){
+
+                @include mdq-max(xxs) {
                   font-size: rem(18);
                 }
 
@@ -426,7 +467,8 @@ main{
                 & p {
                   display: flex;
                   align-items: center;
-                  @include mdq-max(xl){
+
+                  @include mdq-max(xl) {
                     font-size: 14px;
                   }
 
@@ -474,9 +516,11 @@ main{
 
   &.question_list {
     padding: 160px 0 301px 0;
-    @include mdq-max(xl){
+
+    @include mdq-max(xl) {
       padding: 80px 0 200px 0;
     }
+
     & .container {
       & .thumnail-list {
         & .thumnail-box {
@@ -489,7 +533,8 @@ main{
               font-size: 20px;
               font-weight: 500;
               @include text-truncate(2);
-              @include mdq-max(xl){
+
+              @include mdq-max(xl) {
                 font-size: rem(18);
               }
             }
@@ -501,26 +546,30 @@ main{
 }
 
 .swiper {
-  & .swiper-pagination{
+  & .swiper-pagination {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     gap: 12px;
-    &-bullet{
+
+    &-bullet {
       width: 6px;
       height: 6px;
       border-radius: 50%;
       background: $gray-6;
     }
-    &-bullet-active{
+
+    &-bullet-active {
       background: #FE4742;
     }
   }
+
   & .container {
     max-width: 1730px;
     width: 1730px;
     margin: 0 auto;
-    @include mdq-max(xxxhl){
+
+    @include mdq-max(xxxhl) {
       max-width: 100%;
       width: 100%;
     }
@@ -528,17 +577,21 @@ main{
     & .swiper-container {
       position: relative;
       padding: 0 95px;
-      @include mdq-max(xxxhl){
+
+      @include mdq-max(xxxhl) {
         padding: 0 60px;
+
         &::before,
-        &::after{
+        &::after {
           width: 60px !important;
         }
       }
-      @include mdq-max(xl){
+
+      @include mdq-max(xl) {
         padding: 0 30px;
+
         &::before,
-        &::after{
+        &::after {
           width: 30px !important;
         }
       }
@@ -574,18 +627,21 @@ main{
       max-width: 1500px;
       width: 1500px;
       margin: 0 auto;
-      @include mdq-max(xxxhl){
+
+      @include mdq-max(xxxhl) {
         max-width: 100%;
         width: 100%;
       }
-      @include mdq-max(xl){
+
+      @include mdq-max(xl) {
         justify-content: space-between;
       }
 
       & .title {
         font-size: rem(24);
         font-weight: bold;
-        @include mdq-max(xl){
+
+        @include mdq-max(xl) {
           font-size: rem(22);
         }
       }
@@ -599,19 +655,22 @@ main{
         border: 1px solid #eee;
         border-radius: 44px;
         position: relative;
-        @include mdq-max(xl){
+
+        @include mdq-max(xl) {
           font-size: rem(16);
           line-height: unset;
           width: 86px;
           height: 36px;
           line-height: 36px;
         }
-        @include mdq-min(md){
-          &:hover{
+
+        @include mdq-min(md) {
+          &:hover {
             background: $black;
             color: $white;
             cursor: pointer;
-            &::after{
+
+            &::after {
               background: url(../images/main/icon/more_arrow_w.png)no-repeat center;
             }
           }
@@ -635,8 +694,13 @@ main{
     & .swiper-container {
       width: 100%;
       height: auto;
-      @include mdq-max(md){
+
+      @include mdq-max(md) {
         padding-bottom: 20px;
+      }
+
+      & .swiper-wrapper {
+        height: auto;
       }
 
       & .swiper-slide {
@@ -645,10 +709,12 @@ main{
           padding: 30px;
           background-color: #F5F5F5;
           border-radius: var(--border-rd);
-          @include mdq-max(xl){
+
+          @include mdq-max(xl) {
             padding: 20px;
           }
-          @include mdq-max(md){
+
+          @include mdq-max(md) {
             height: 186px;
           }
 
@@ -662,7 +728,8 @@ main{
             margin-top: 20px;
             padding-top: 20px;
             position: relative;
-            @include mdq-max(md){
+
+            @include mdq-max(md) {
               margin-top: 10px;
               padding-top: 10px;
             }
@@ -694,7 +761,8 @@ main{
                 display: flex;
                 align-items: center;
                 margin-right: 10px;
-                @include mdq-max(md){
+
+                @include mdq-max(md) {
                   width: 48px;
                   height: 21px;
                   line-height: unset;
@@ -707,7 +775,8 @@ main{
                   height: 24px;
                   display: inline-block;
                   background: url(../images/main/icon/count_arrow.png)no-repeat center;
-                  @include mdq-max(md){
+
+                  @include mdq-max(md) {
                     width: 10px;
                     height: 12px;
                     margin-left: 4px;
@@ -720,7 +789,8 @@ main{
                 align-items: center;
                 font-size: rem(22);
                 font-weight: 600;
-                @include mdq-max(xxs){
+
+                @include mdq-max(xxs) {
                   font-size: rem(18);
                 }
 
@@ -739,7 +809,8 @@ main{
               display: flex;
               justify-content: space-between;
               color: #999;
-              @include mdq-max(xxs){
+
+              @include mdq-max(xxs) {
                 justify-content: unset;
                 flex-direction: column;
                 gap: 5px;
@@ -756,7 +827,8 @@ main{
                   display: flex;
                   align-items: center;
                   margin-right: 10px;
-                  @include mdq-max(xxs){
+
+                  @include mdq-max(xxs) {
                     line-height: unset;
                   }
 
@@ -774,7 +846,8 @@ main{
                   line-height: 30px;
                   display: flex;
                   align-items: center;
-                  @include mdq-max(xxs){
+
+                  @include mdq-max(xxs) {
                     line-height: unset;
                   }
 
@@ -792,7 +865,8 @@ main{
               & .type_list {
                 display: flex;
                 line-height: 30px;
-                @include mdq-max(xxs){
+
+                @include mdq-max(xxs) {
                   line-height: unset;
                 }
 
@@ -844,7 +918,8 @@ main{
           background-color: #f9f9f9;
           border-radius: 10px;
           transition: all 0.3s;
-          @include mdq-max(md){
+
+          @include mdq-max(md) {
             width: unset;
             line-height: unset;
             background: transparent;
@@ -886,7 +961,8 @@ main{
   .banner_right {
     color: $white;
     flex: 1;
-    @include mdq-max(lg){
+
+    @include mdq-max(lg) {
       flex: unset;
       width: 100%;
       height: rem(310);
@@ -906,6 +982,7 @@ main{
         width: 100%;
       }
     }
+
     & h4 {
       font-size: 36px;
 
@@ -926,7 +1003,7 @@ main{
       font-weight: 500;
 
       @include mdq-max(lg) {
-        margin-top: rem(30); 
+        margin-top: rem(30);
         width: rem(162);
         height: rem(48);
         font-size: rem(15);
