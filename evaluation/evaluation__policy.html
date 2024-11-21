@@ -1,0 +1,54 @@
+<div class="popup-bx">
+    <div class="title-bx">
+        <p class="title"><i class="xi-help-o"></i>평가정책</p>
+        <button type="button" class="popClosebtn">
+          <img src="../assets/images/main/icon/popup-close.png" alt="닫기버튼" loading="lazy">
+        </button>
+      </div>
+    <div class="text-bx">
+        <div class="viewContainer">
+            <!-- S : 평가하기 -->
+            <p class="big-title">평가하기</p>
+            <div class="evaluationItem">
+                <p class="tit">디자인 평가</p>
+                <p class="dec mt-2 mt-xl-4">사용자의 시각적 편안함과 정보의 명확한 전달을 위한 레이아웃, 색상, 타이포그래피, 이미지등의 시각적 요소를 평가합니다. 좋은 디자인은
+                    사용자 경험을 강화하고, 메시지 전달을 효과적으로 합니다.</p>
+                <ul class="selectScore" id="selectScore1">
+                    <? for ($i=0; $i<5; $i++) {?>
+                    <li class="scoreItem" data-score="<?= $i + 1 ?>">
+                        <p class="txt1">
+                            <?= $i + 1 ?>점
+                        </p>
+                        <p class="txt2 mt-2 mt-xl-4">미흡</p>
+                        <p class="txt3">디자인이 기본적인 기준에도 미치지 못함. 사용자 인터페이스가 혼란스럽고, 시각적 요소가 일관성 없이 배치되어 있으며, 사용자 경험을 저해하는
+                            수준임.</p>
+                        <p class="txt4 mgt-10">예: 사용자 인터페이스가 혼란스럽고, 디자인 요소가 불규칙적으로 배치됨.</p>
+                    </li>
+                    <?}?>
+                </ul>
+            </div>
+            <div class="evaluationItem">
+                <p class="tit">사용자경험(UX) 평가</p>
+                <p class="dec mt-2 mt-xl-4">사용자가 사이트나 서비스를 이용하면서 겪는 전반적인 경험과 감정을 포함합니다. 사용자 경험은 사용의 용이성 뿐만 아니라, 사용자의 요구와
+                    목표를 얼마나 잘 충족시키는지에 대한 평가도 포함합니다.</p>
+                <ul class="selectScore" id="selectScore2">
+                    <? for ($i=0; $i<5; $i++) {?>
+                    <li class="scoreItem" data-score="<?= $i + 1 ?>">
+                        <p class="txt1">
+                            <?= $i + 1 ?>점
+                        </p>
+                        <p class="txt2 mt-2 mt-xl-4">미흡</p>
+                        <p class="txt3">디자인이 기본적인 기준에도 미치지 못함. 사용자 인터페이스가 혼란스럽고, 시각적 요소가 일관성 없이 배치되어 있으며, 사용자 경험을 저해하는
+                            수준임.</p>
+                        <p class="txt4 mgt-10">예: 사용자 인터페이스가 혼란스럽고, 디자인 요소가 불규칙적으로 배치됨.</p>
+                    </li>
+                    <?}?>
+                </ul>
+            </div>
+            <!-- E : 평가하기 -->
+        </div>
+        <div class="btn-bx">
+            <button type="button" class="btn2 popClosebtn">확인</button>
+        </div>
+    </div>
+</div>

@@ -38,7 +38,7 @@ $nav_1_href = "../ranking/ranking__list.html";
 $nav_2_href = "../evaluation/evaluation__list.html";
 $nav_3_href = "../judge/judge.html";
 $nav_4_href = "../template/template.html";
-$nav_5_href = "../template/template.html";
-$nav_6_href = "../template/template.html";
+$nav_5_href = "../community/community.html";
+$nav_6_href = "../service/service.html";
 
 ?>

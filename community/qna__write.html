@@ -1,0 +1,73 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+    <?
+    $P_dp1 = '5';
+    include "../include/meta.html"
+		?>
+    <link rel="stylesheet" href="../assets/css/sub.min.css" />
+</head>
+
+<body class="sub-body">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>
+    <!-- E : Header -->
+
+    <!-- S : Main -->
+    <main class="main" id="contents">
+        <!-- S : Section -->
+        <section class="section sc--community">
+            <div class="cmt-container">
+                <div class="back-bx wow fadeInUp mb-5">
+                    <a href="JavaScript:history.go(-1);">
+                        <img src="../assets/images/main/icon/back.png" alt="돌아가기" loading="lazy">
+                        돌아가기
+                    </a>
+                </div>
+                <p class="font-30-md mt-5 wow fadeInUp">Q&A 작성하기</p>
+                <p class="font-18-rg mt-5 mt-xl-4 wow fadeInUp">기획, 디자인, 개발 등에 관한 궁금증을 자유롭게 질문해주세요.</p>
+                <div class="writeArea wow fadeInUp">
+                    <select name="qnaSelect">
+                        <option value="">카테고리를 선택해주세요.</option>
+                        <option value="1">기획</option>
+                        <option value="2">디자인</option>
+                        <option value="3">개발</option>
+                        <option value="4">마케팅 & SEO</option>
+                        <option value="5">기타</option>
+                    </select>
+                    <input type="text" name="utitle" maxlength="30" class="input-100" placeholder="제목을 입력해주세요.">
+                    <div class="cmt-contentArea">
+                        <textarea name="ucontent" placeholder="명예훼손 및 음란 정보, 저작권 침해 등 법령에 위반되는 내용의 정보는 운영원칙에 따라 무통보 삭제 될 수 있습니다." class="contentBox" maxlength="300"></textarea>
+                        <p class="contentCount text_right mgt-10">(0/300)</p>
+                    </div>
+                    <div class="upload-bx">
+                        <div class="upload-top">
+                            <div class="file--text">
+                                <label for="file-upload-img-1">사진등록</label>
+                                <input type="file" id="file-upload-img-1" class="file-upload-img" accept="image/*" multiple="">
+                            </div>
+                            <p class="file--info mgt-10">
+                                사진은 최대 20MB 이하의 JPG, PNG, GIF 파일 10장까지 첨부 가능합니다.
+                            </p>
+                        </div>
+                        <!-- 이미지권장 사이즈 500*500 -->
+                        <ul class="upload-bottom-img mgt-10">
+                        </ul>
+                    </div>
+                </div>
+                <div class="commonBtn mt-10 wow fadeInUp">
+                    <a href="#" class="cmBtn1">등록하기</a>
+                </div>
+            </div>
+        </section>
+        <!-- E : Section -->
+    </main>
+    <!-- E : Main -->
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+</body>
+
+</html>

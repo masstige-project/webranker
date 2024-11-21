@@ -39063,7 +39063,7 @@ select {
   background-position: calc(100% - 10px) center;
   background-image: url(../images/icon/select_icon.svg);
   background-size: 12px 6px;
-  padding-right: 22px !important;
+  padding-right: 20px !important;
 }
 
 /* IE 10, 11의 네이티브 화살표 숨기기 */
@@ -52911,6 +52911,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.h-main {
+  min-height: unset;
+}
+
 .lg-container {
   width: 100%;
   padding-right: 20px;
@@ -52938,10 +52942,24 @@ html {
   max-width: 640px;
 }
 
+.cmt-container {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 840px;
+}
+
 .main {
   overflow-x: hidden;
 }
 
+.back-bx.back-bx2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .back-bx a {
   display: flex;
   align-items: center;
@@ -52967,19 +52985,466 @@ html {
   color: #FE4844;
 }
 
+.fw-smbold {
+  font-weight: 600;
+}
+
+.font-30-sb {
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 1;
+}
+@media all and (max-width: 1200px) {
+  .font-30-sb {
+    font-size: 1.25rem;
+  }
+}
+
+.font-30-md {
+  font-size: 1.875rem;
+  font-weight: 500;
+  line-height: 1;
+}
+@media all and (max-width: 1200px) {
+  .font-30-md {
+    font-size: 1.25rem;
+  }
+}
+
+.font-24-sb {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+}
+@media all and (max-width: 1200px) {
+  .font-24-sb {
+    font-size: 1.25rem;
+  }
+}
+
+.font-20-rg {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+@media all and (max-width: 1200px) {
+  .font-20-rg {
+    font-size: 1.125rem;
+  }
+}
+
+.font-20-md {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1;
+}
+@media all and (max-width: 1200px) {
+  .font-20-md {
+    font-size: 1.125rem;
+  }
+}
+
+.font-18-sb {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+@media all and (max-width: 1200px) {
+  .font-18-sb {
+    font-size: 1rem;
+  }
+}
+
+.font-18-md {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+@media all and (max-width: 1200px) {
+  .font-18-md {
+    font-size: 1rem;
+  }
+}
+
+.font-18-rg {
+  font-size: 1.125rem;
+}
+@media all and (max-width: 1200px) {
+  .font-18-rg {
+    font-size: 1rem;
+  }
+}
+
+.cmLinkArea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cmLinkArea .cmType__1,
+.cmLinkArea .cmType__3 {
+  display: flex;
+  align-items: center;
+}
+.cmLinkArea .cmType__1 button,
+.cmLinkArea .cmType__3 button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+@media all and (max-width: 1200px) {
+  .cmLinkArea .cmType__1 button,
+  .cmLinkArea .cmType__3 button {
+    border: 1px solid #eee;
+  }
+}
+.cmLinkArea .cmType__1 i,
+.cmLinkArea .cmType__3 i {
+  font-size: 20px;
+  margin-top: 1px;
+}
+@media all and (max-width: 1200px) {
+  .cmLinkArea .cmType__1 i,
+  .cmLinkArea .cmType__3 i {
+    font-size: 16px;
+  }
+}
+.cmLinkArea .cmType__2 .like_info .like-wrap .like-btn {
+  width: 45px;
+  height: 45px;
+  background-image: url(../images/main/icon/like_ico_03.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  opacity: 1;
+}
+@media all and (max-width: 1200px) {
+  .cmLinkArea .cmType__2 .like_info .like-wrap .like-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+.cmLinkArea .cmType__2 .like_info .like-wrap .like-btn.clicked {
+  opacity: 1;
+  background-image: url(../images/main/icon/like_ico_02.png);
+}
+.cmLinkArea .cmType__2 .like_info .like-wrap .like-btn.clicked:hover {
+  opacity: 1;
+}
+
+.cmtView .title--bx .category {
+  font-size: 20px;
+  font-weight: bold;
+}
+@media all and (max-width: 1200px) {
+  .cmtView .title--bx .category {
+    font-size: 1.125rem;
+  }
+}
+.cmtView .title--bx .title {
+  font-size: 40px;
+  font-weight: bold;
+}
+@media all and (max-width: 1200px) {
+  .cmtView .title--bx .title {
+    font-size: 1.875rem;
+  }
+}
+.cmtView .user--area {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cmtView .user--area .user--info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.cmtView .user--area .user--info .user {
+  font-size: 22px;
+  font-weight: 600;
+}
+@media all and (max-width: 1200px) {
+  .cmtView .user--area .user--info .user {
+    font-size: 1.125rem;
+  }
+}
+.cmtView .user--area .user--info .date {
+  margin-top: 6px;
+  font-size: 17px;
+  color: #666;
+}
+@media all and (max-width: 1200px) {
+  .cmtView .user--area .user--info .date {
+    font-size: 1rem;
+    margin-top: 44px;
+  }
+}
+.cmtView .user--area .user-icon {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 75px;
+}
+.cmtView .user--area .user--follow button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #fff;
+  background: #FE4844;
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+}
+.cmtView .edit--area {
+  margin: 50px 0 80px 0;
+}
+.cmtView .sortingBox {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.cmtView .sortingBox a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  border-radius: 10px;
+  padding: 0 10px;
+  background: #fff;
+  border: 1px solid #eee;
+  font-size: 15px;
+}
+@media all and (max-width: 1200px) {
+  .cmtView .sortingBox a {
+    font-size: 14px;
+  }
+}
+.cmtView .sortingBox a.active {
+  background: #444;
+  color: #fff;
+  border: 1px solid #444;
+}
+.cmtView .commtentArea {
+  margin-top: 30px;
+}
+@media all and (max-width: 1200px) {
+  .cmtView .commtentArea {
+    margin-top: 20px;
+  }
+}
+.cmtView .commtentArea input {
+  width: 100%;
+  height: 60px;
+  border-radius: 15px;
+  border: 1px solid #eee;
+}
+@media all and (max-width: 1200px) {
+  .cmtView .commtentArea input {
+    height: 40px;
+    border-radius: 10px;
+  }
+}
+.cmtView .commtentArea .commentFlex {
+  display: flex;
+  align-items: center;
+}
+.cmtView .commtentArea .commentFlex .voting-icon {
+  min-width: 75px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media all and (max-width: 1200px) {
+  .cmtView .commtentArea .commentFlex .voting-icon {
+    min-width: 50px !important;
+  }
+  .cmtView .commtentArea .commentFlex .voting-icon img {
+    width: 50px;
+  }
+}
+.cmtView .commtentArea .commentList {
+  width: calc(100% - 75px);
+  margin-left: 20px;
+}
+@media all and (max-width: 1200px) {
+  .cmtView .commtentArea .commentList {
+    width: calc(100% - 50px);
+    margin-left: 10px;
+  }
+}
+.cmtView .commtentArea .commentList.commentList2 .nickname {
+  font-size: 18px;
+  font-weight: 600;
+}
+@media all and (max-width: 1200px) {
+  .cmtView .commtentArea .commentList.commentList2 .nickname {
+    font-size: 1rem;
+  }
+}
+.cmtView .commtentArea .commentList.commentList2 .nickname span {
+  font-size: 15px;
+  color: #aaa;
+  margin-left: 10px;
+  font-weight: normal;
+}
+@media all and (max-width: 1200px) {
+  .cmtView .commtentArea .commentList.commentList2 .nickname span {
+    font-size: 0.875rem;
+  }
+}
+.cmtView .commtentArea .commentList.commentList2 .commentStatus {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media all and (max-width: 1200px) {
+  .cmtView .commtentArea .commentList.commentList2 .commentStatus {
+    gap: 10px;
+  }
+}
+.cmtView .commtentArea .commentList.commentList2 .description {
+  display: flex;
+  padding-right: 20px;
+}
+.cmtView .commtentArea .commentList.commentList2 .description p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: max-height 0.3s ease;
+}
+.cmtView .commtentArea .commentList.commentList2 .description button {
+  font-weight: 600;
+}
+.cmtView .commtentArea .commentList.commentList2 .status__1 {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.cmtView .commtentArea .commentList.commentList2 .status__1 p {
+  font-size: 15px;
+  font-weight: 600;
+}
+@media all and (max-width: 1200px) {
+  .cmtView .commtentArea .commentList.commentList2 .status__1 p {
+    font-size: 0.875rem;
+  }
+}
+.cmtView .commtentArea .commentList.commentList2 .status__1 i {
+  font-size: 22px;
+}
+@media all and (max-width: 1200px) {
+  .cmtView .commtentArea .commentList.commentList2 .status__1 i {
+    font-size: 1.125rem;
+  }
+}
+.cmtView .commtentArea .commentList.commentList2 .status__2 {
+  font-weight: 600;
+}
+.cmtView .commtentArea .commentList.commentList2 .status__3 .allViewBtn {
+  color: #333;
+  gap: 2px;
+}
+.cmtView .commtentArea .commentList.commentList2 .status__3 i {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+@media all and (max-width: 1200px) {
+  .cmtView .commtentArea .commentList.commentList2 .status__3 i {
+    font-size: 1.125rem;
+  }
+}
+.cmtView .commtentArea .commentList.commentList2 .status__3 i.rotate {
+  transform: rotate(180deg);
+}
+.cmtView .commtentArea .hiddenInput {
+  transition: max-height 0.3s ease;
+  display: none;
+}
+.cmtView .commtentArea .hiddenInput.active {
+  display: block;
+}
+.cmtView .commtentArea .hiddenInput .flexBx {
+  margin-left: 95px;
+}
+.cmtView .commtentArea .hiddenInput .flexBx .inputBx {
+  margin-left: 20px;
+}
+@media all and (max-width: 1200px) {
+  .cmtView .commtentArea .hiddenInput .flexBx .inputBx {
+    margin-left: 10px;
+  }
+}
+.cmtView .commtentArea .hiddenInput .flexBx .voting-icon {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-width: 75px;
+  border-radius: 50%;
+}
+@media all and (max-width: 768px) {
+  .cmtView .commtentArea .hiddenInput .flexBx .voting-icon {
+    min-width: 50px;
+  }
+  .cmtView .commtentArea .hiddenInput .flexBx .voting-icon img {
+    width: 50px;
+  }
+}
+@media all and (max-width: 1200px) {
+  .cmtView .commtentArea .hiddenInput .flexBx {
+    margin-left: 60px;
+  }
+}
+.cmtView .commtentArea .cmtBtn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 4px;
+}
+.cmtView .commtentArea .cmtBtn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+}
+@media all and (max-width: 1200px) {
+  .cmtView .commtentArea .cmtBtn button {
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 768px) {
+  .cmtView .commtentArea .cmtBtn button {
+    height: 30px;
+    width: 80px;
+  }
+}
+.cmtView .commtentArea .cmtBtn button.cancel-btn {
+  background: #fff;
+  border: 1px solid #eee;
+}
+.cmtView .commtentArea .cmtBtn button.registration-btn {
+  background: #FE4844;
+  color: #fff;
+}
+
 .overlay,
 .overlay2,
 .overlay3,
 .overlay4,
 .overlay5,
 .share-overlay,
-.evaluation-overlay {
+.evaluation-overlay,
+.reply-overlay,
+.evaluation-policy {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
   z-index: 95;
   display: none;
 }
@@ -52989,7 +53454,9 @@ html {
 .overlay4 .popup-bx,
 .overlay5 .popup-bx,
 .share-overlay .popup-bx,
-.evaluation-overlay .popup-bx {
+.evaluation-overlay .popup-bx,
+.reply-overlay .popup-bx,
+.evaluation-policy .popup-bx {
   width: 800px;
   position: fixed;
   top: 50%;
@@ -53007,7 +53474,9 @@ html {
   .overlay4 .popup-bx,
   .overlay5 .popup-bx,
   .share-overlay .popup-bx,
-  .evaluation-overlay .popup-bx {
+  .evaluation-overlay .popup-bx,
+  .reply-overlay .popup-bx,
+  .evaluation-policy .popup-bx {
     padding: 2.5rem 1.25rem;
   }
 }
@@ -53018,7 +53487,9 @@ html {
   .overlay4 .popup-bx,
   .overlay5 .popup-bx,
   .share-overlay .popup-bx,
-  .evaluation-overlay .popup-bx {
+  .evaluation-overlay .popup-bx,
+  .reply-overlay .popup-bx,
+  .evaluation-policy .popup-bx {
     width: calc(100% - 20px);
   }
 }
@@ -53028,7 +53499,9 @@ html {
 .overlay4 .filter-bx,
 .overlay5 .filter-bx,
 .share-overlay .filter-bx,
-.evaluation-overlay .filter-bx {
+.evaluation-overlay .filter-bx,
+.reply-overlay .filter-bx,
+.evaluation-policy .filter-bx {
   width: 1150px;
   position: fixed;
   top: 50%;
@@ -53046,7 +53519,9 @@ html {
   .overlay4 .filter-bx,
   .overlay5 .filter-bx,
   .share-overlay .filter-bx,
-  .evaluation-overlay .filter-bx {
+  .evaluation-overlay .filter-bx,
+  .reply-overlay .filter-bx,
+  .evaluation-policy .filter-bx {
     padding: 2.5rem 1.25rem;
     width: calc(100% - 20px);
   }
@@ -53057,7 +53532,9 @@ html {
 .overlay4 .filter-bx .fliterWrap,
 .overlay5 .filter-bx .fliterWrap,
 .share-overlay .filter-bx .fliterWrap,
-.evaluation-overlay .filter-bx .fliterWrap {
+.evaluation-overlay .filter-bx .fliterWrap,
+.reply-overlay .filter-bx .fliterWrap,
+.evaluation-policy .filter-bx .fliterWrap {
   padding-bottom: 40px;
   border-bottom: 1px solid #ddd;
 }
@@ -53067,7 +53544,9 @@ html {
 .overlay4 .filter-bx .stepList,
 .overlay5 .filter-bx .stepList,
 .share-overlay .filter-bx .stepList,
-.evaluation-overlay .filter-bx .stepList {
+.evaluation-overlay .filter-bx .stepList,
+.reply-overlay .filter-bx .stepList,
+.evaluation-policy .filter-bx .stepList {
   gap: 8px;
   display: flex;
   flex-wrap: wrap;
@@ -53079,7 +53558,9 @@ html {
   .overlay4 .filter-bx .stepList,
   .overlay5 .filter-bx .stepList,
   .share-overlay .filter-bx .stepList,
-  .evaluation-overlay .filter-bx .stepList {
+  .evaluation-overlay .filter-bx .stepList,
+  .reply-overlay .filter-bx .stepList,
+  .evaluation-policy .filter-bx .stepList {
     flex-wrap: nowrap;
     gap: 0;
   }
@@ -53090,7 +53571,9 @@ html {
 .overlay4 .filter-bx .stepList .stepItem,
 .overlay5 .filter-bx .stepList .stepItem,
 .share-overlay .filter-bx .stepList .stepItem,
-.evaluation-overlay .filter-bx .stepList .stepItem {
+.evaluation-overlay .filter-bx .stepList .stepItem,
+.reply-overlay .filter-bx .stepList .stepItem,
+.evaluation-policy .filter-bx .stepList .stepItem {
   width: 160px;
   height: 40px;
 }
@@ -53101,7 +53584,9 @@ html {
   .overlay4 .filter-bx .stepList .stepItem,
   .overlay5 .filter-bx .stepList .stepItem,
   .share-overlay .filter-bx .stepList .stepItem,
-  .evaluation-overlay .filter-bx .stepList .stepItem {
+  .evaluation-overlay .filter-bx .stepList .stepItem,
+  .reply-overlay .filter-bx .stepList .stepItem,
+  .evaluation-policy .filter-bx .stepList .stepItem {
     width: auto;
   }
 }
@@ -53111,7 +53596,9 @@ html {
 .overlay4 .filter-bx .stepList .stepItem > a,
 .overlay5 .filter-bx .stepList .stepItem > a,
 .share-overlay .filter-bx .stepList .stepItem > a,
-.evaluation-overlay .filter-bx .stepList .stepItem > a {
+.evaluation-overlay .filter-bx .stepList .stepItem > a,
+.reply-overlay .filter-bx .stepList .stepItem > a,
+.evaluation-policy .filter-bx .stepList .stepItem > a {
   width: 100%;
   height: 100%;
   display: flex;
@@ -53129,7 +53616,9 @@ html {
   .overlay4 .filter-bx .stepList .stepItem > a,
   .overlay5 .filter-bx .stepList .stepItem > a,
   .share-overlay .filter-bx .stepList .stepItem > a,
-  .evaluation-overlay .filter-bx .stepList .stepItem > a {
+  .evaluation-overlay .filter-bx .stepList .stepItem > a,
+  .reply-overlay .filter-bx .stepList .stepItem > a,
+  .evaluation-policy .filter-bx .stepList .stepItem > a {
     font-size: 0.875rem;
     padding: 0 10px;
   }
@@ -53140,7 +53629,9 @@ html {
 .overlay4 .filter-bx .stepList .stepItem > a.active,
 .overlay5 .filter-bx .stepList .stepItem > a.active,
 .share-overlay .filter-bx .stepList .stepItem > a.active,
-.evaluation-overlay .filter-bx .stepList .stepItem > a.active {
+.evaluation-overlay .filter-bx .stepList .stepItem > a.active,
+.reply-overlay .filter-bx .stepList .stepItem > a.active,
+.evaluation-policy .filter-bx .stepList .stepItem > a.active {
   color: #fff;
   border: 1px solid #FE4844;
   background: #FE4844;
@@ -53151,7 +53642,9 @@ html {
 .overlay4 .filter-bx .stepList2,
 .overlay5 .filter-bx .stepList2,
 .share-overlay .filter-bx .stepList2,
-.evaluation-overlay .filter-bx .stepList2 {
+.evaluation-overlay .filter-bx .stepList2,
+.reply-overlay .filter-bx .stepList2,
+.evaluation-policy .filter-bx .stepList2 {
   gap: 8px;
   display: flex;
   flex-wrap: wrap;
@@ -53163,7 +53656,9 @@ html {
   .overlay4 .filter-bx .stepList2,
   .overlay5 .filter-bx .stepList2,
   .share-overlay .filter-bx .stepList2,
-  .evaluation-overlay .filter-bx .stepList2 {
+  .evaluation-overlay .filter-bx .stepList2,
+  .reply-overlay .filter-bx .stepList2,
+  .evaluation-policy .filter-bx .stepList2 {
     flex-wrap: nowrap;
     gap: 0;
   }
@@ -53174,7 +53669,9 @@ html {
 .overlay4 .filter-bx .stepItem2,
 .overlay5 .filter-bx .stepItem2,
 .share-overlay .filter-bx .stepItem2,
-.evaluation-overlay .filter-bx .stepItem2 {
+.evaluation-overlay .filter-bx .stepItem2,
+.reply-overlay .filter-bx .stepItem2,
+.evaluation-policy .filter-bx .stepItem2 {
   width: 60px;
   height: 60px;
   border-radius: 10px;
@@ -53188,7 +53685,9 @@ html {
   .overlay4 .filter-bx .stepItem2,
   .overlay5 .filter-bx .stepItem2,
   .share-overlay .filter-bx .stepItem2,
-  .evaluation-overlay .filter-bx .stepItem2 {
+  .evaluation-overlay .filter-bx .stepItem2,
+  .reply-overlay .filter-bx .stepItem2,
+  .evaluation-policy .filter-bx .stepItem2 {
     width: 40px;
     height: 40px;
     border-radius: 4px;
@@ -53200,7 +53699,9 @@ html {
 .overlay4 .filter-bx .stepItem2.active::after,
 .overlay5 .filter-bx .stepItem2.active::after,
 .share-overlay .filter-bx .stepItem2.active::after,
-.evaluation-overlay .filter-bx .stepItem2.active::after {
+.evaluation-overlay .filter-bx .stepItem2.active::after,
+.reply-overlay .filter-bx .stepItem2.active::after,
+.evaluation-policy .filter-bx .stepItem2.active::after {
   opacity: 1;
 }
 .overlay .filter-bx .stepItem2::after,
@@ -53209,7 +53710,9 @@ html {
 .overlay4 .filter-bx .stepItem2::after,
 .overlay5 .filter-bx .stepItem2::after,
 .share-overlay .filter-bx .stepItem2::after,
-.evaluation-overlay .filter-bx .stepItem2::after {
+.evaluation-overlay .filter-bx .stepItem2::after,
+.reply-overlay .filter-bx .stepItem2::after,
+.evaluation-policy .filter-bx .stepItem2::after {
   content: "";
   background-image: url("../images/main/icon/pick.png");
   background-repeat: no-repeat;
@@ -53230,7 +53733,9 @@ html {
 .overlay4 .filter-bx .stepItem2:nth-child(1),
 .overlay5 .filter-bx .stepItem2:nth-child(1),
 .share-overlay .filter-bx .stepItem2:nth-child(1),
-.evaluation-overlay .filter-bx .stepItem2:nth-child(1) {
+.evaluation-overlay .filter-bx .stepItem2:nth-child(1),
+.reply-overlay .filter-bx .stepItem2:nth-child(1),
+.evaluation-policy .filter-bx .stepItem2:nth-child(1) {
   background: #000;
 }
 .overlay .filter-bx .stepItem2:nth-child(2),
@@ -53239,7 +53744,9 @@ html {
 .overlay4 .filter-bx .stepItem2:nth-child(2),
 .overlay5 .filter-bx .stepItem2:nth-child(2),
 .share-overlay .filter-bx .stepItem2:nth-child(2),
-.evaluation-overlay .filter-bx .stepItem2:nth-child(2) {
+.evaluation-overlay .filter-bx .stepItem2:nth-child(2),
+.reply-overlay .filter-bx .stepItem2:nth-child(2),
+.evaluation-policy .filter-bx .stepItem2:nth-child(2) {
   background: #fff;
   border: 1px solid #eee;
   box-sizing: border-box;
@@ -53250,7 +53757,9 @@ html {
 .overlay4 .filter-bx .stepItem2:nth-child(3),
 .overlay5 .filter-bx .stepItem2:nth-child(3),
 .share-overlay .filter-bx .stepItem2:nth-child(3),
-.evaluation-overlay .filter-bx .stepItem2:nth-child(3) {
+.evaluation-overlay .filter-bx .stepItem2:nth-child(3),
+.reply-overlay .filter-bx .stepItem2:nth-child(3),
+.evaluation-policy .filter-bx .stepItem2:nth-child(3) {
   background: rgba(0, 0, 0, 0.8);
 }
 .overlay .filter-bx .stepItem2:nth-child(4),
@@ -53259,7 +53768,9 @@ html {
 .overlay4 .filter-bx .stepItem2:nth-child(4),
 .overlay5 .filter-bx .stepItem2:nth-child(4),
 .share-overlay .filter-bx .stepItem2:nth-child(4),
-.evaluation-overlay .filter-bx .stepItem2:nth-child(4) {
+.evaluation-overlay .filter-bx .stepItem2:nth-child(4),
+.reply-overlay .filter-bx .stepItem2:nth-child(4),
+.evaluation-policy .filter-bx .stepItem2:nth-child(4) {
   background: #FF0000;
 }
 .overlay .filter-bx .stepItem2:nth-child(5),
@@ -53268,7 +53779,9 @@ html {
 .overlay4 .filter-bx .stepItem2:nth-child(5),
 .overlay5 .filter-bx .stepItem2:nth-child(5),
 .share-overlay .filter-bx .stepItem2:nth-child(5),
-.evaluation-overlay .filter-bx .stepItem2:nth-child(5) {
+.evaluation-overlay .filter-bx .stepItem2:nth-child(5),
+.reply-overlay .filter-bx .stepItem2:nth-child(5),
+.evaluation-policy .filter-bx .stepItem2:nth-child(5) {
   background: #FF9900;
 }
 .overlay .filter-bx .stepItem2:nth-child(6),
@@ -53277,7 +53790,9 @@ html {
 .overlay4 .filter-bx .stepItem2:nth-child(6),
 .overlay5 .filter-bx .stepItem2:nth-child(6),
 .share-overlay .filter-bx .stepItem2:nth-child(6),
-.evaluation-overlay .filter-bx .stepItem2:nth-child(6) {
+.evaluation-overlay .filter-bx .stepItem2:nth-child(6),
+.reply-overlay .filter-bx .stepItem2:nth-child(6),
+.evaluation-policy .filter-bx .stepItem2:nth-child(6) {
   background: #FFFF00;
 }
 .overlay .filter-bx .stepItem2:nth-child(7),
@@ -53286,7 +53801,9 @@ html {
 .overlay4 .filter-bx .stepItem2:nth-child(7),
 .overlay5 .filter-bx .stepItem2:nth-child(7),
 .share-overlay .filter-bx .stepItem2:nth-child(7),
-.evaluation-overlay .filter-bx .stepItem2:nth-child(7) {
+.evaluation-overlay .filter-bx .stepItem2:nth-child(7),
+.reply-overlay .filter-bx .stepItem2:nth-child(7),
+.evaluation-policy .filter-bx .stepItem2:nth-child(7) {
   background: #80FF00;
 }
 .overlay .filter-bx .stepItem2:nth-child(8),
@@ -53295,7 +53812,9 @@ html {
 .overlay4 .filter-bx .stepItem2:nth-child(8),
 .overlay5 .filter-bx .stepItem2:nth-child(8),
 .share-overlay .filter-bx .stepItem2:nth-child(8),
-.evaluation-overlay .filter-bx .stepItem2:nth-child(8) {
+.evaluation-overlay .filter-bx .stepItem2:nth-child(8),
+.reply-overlay .filter-bx .stepItem2:nth-child(8),
+.evaluation-policy .filter-bx .stepItem2:nth-child(8) {
   background: #00EE26;
 }
 .overlay .filter-bx .stepItem2:nth-child(9),
@@ -53304,7 +53823,9 @@ html {
 .overlay4 .filter-bx .stepItem2:nth-child(9),
 .overlay5 .filter-bx .stepItem2:nth-child(9),
 .share-overlay .filter-bx .stepItem2:nth-child(9),
-.evaluation-overlay .filter-bx .stepItem2:nth-child(9) {
+.evaluation-overlay .filter-bx .stepItem2:nth-child(9),
+.reply-overlay .filter-bx .stepItem2:nth-child(9),
+.evaluation-policy .filter-bx .stepItem2:nth-child(9) {
   background: #00E1AB;
 }
 .overlay .filter-bx .stepItem2:nth-child(10),
@@ -53313,7 +53834,9 @@ html {
 .overlay4 .filter-bx .stepItem2:nth-child(10),
 .overlay5 .filter-bx .stepItem2:nth-child(10),
 .share-overlay .filter-bx .stepItem2:nth-child(10),
-.evaluation-overlay .filter-bx .stepItem2:nth-child(10) {
+.evaluation-overlay .filter-bx .stepItem2:nth-child(10),
+.reply-overlay .filter-bx .stepItem2:nth-child(10),
+.evaluation-policy .filter-bx .stepItem2:nth-child(10) {
   background: #11F1FF;
 }
 .overlay .filter-bx .stepItem2:nth-child(11),
@@ -53322,7 +53845,9 @@ html {
 .overlay4 .filter-bx .stepItem2:nth-child(11),
 .overlay5 .filter-bx .stepItem2:nth-child(11),
 .share-overlay .filter-bx .stepItem2:nth-child(11),
-.evaluation-overlay .filter-bx .stepItem2:nth-child(11) {
+.evaluation-overlay .filter-bx .stepItem2:nth-child(11),
+.reply-overlay .filter-bx .stepItem2:nth-child(11),
+.evaluation-policy .filter-bx .stepItem2:nth-child(11) {
   background: #0075FF;
 }
 .overlay .filter-bx .stepItem2:nth-child(12),
@@ -53331,7 +53856,9 @@ html {
 .overlay4 .filter-bx .stepItem2:nth-child(12),
 .overlay5 .filter-bx .stepItem2:nth-child(12),
 .share-overlay .filter-bx .stepItem2:nth-child(12),
-.evaluation-overlay .filter-bx .stepItem2:nth-child(12) {
+.evaluation-overlay .filter-bx .stepItem2:nth-child(12),
+.reply-overlay .filter-bx .stepItem2:nth-child(12),
+.evaluation-policy .filter-bx .stepItem2:nth-child(12) {
   background: #8F00FF;
 }
 .overlay .filter-bx .stepItem2:nth-child(13),
@@ -53340,7 +53867,9 @@ html {
 .overlay4 .filter-bx .stepItem2:nth-child(13),
 .overlay5 .filter-bx .stepItem2:nth-child(13),
 .share-overlay .filter-bx .stepItem2:nth-child(13),
-.evaluation-overlay .filter-bx .stepItem2:nth-child(13) {
+.evaluation-overlay .filter-bx .stepItem2:nth-child(13),
+.reply-overlay .filter-bx .stepItem2:nth-child(13),
+.evaluation-policy .filter-bx .stepItem2:nth-child(13) {
   background: #FA00FF;
 }
 .overlay .filter-bx .step-tit,
@@ -53349,7 +53878,9 @@ html {
 .overlay4 .filter-bx .step-tit,
 .overlay5 .filter-bx .step-tit,
 .share-overlay .filter-bx .step-tit,
-.evaluation-overlay .filter-bx .step-tit {
+.evaluation-overlay .filter-bx .step-tit,
+.reply-overlay .filter-bx .step-tit,
+.evaluation-policy .filter-bx .step-tit {
   font-weight: 500;
   margin-bottom: 20px;
 }
@@ -53359,7 +53890,9 @@ html {
 .overlay4 .filter-bx .dateList,
 .overlay5 .filter-bx .dateList,
 .share-overlay .filter-bx .dateList,
-.evaluation-overlay .filter-bx .dateList {
+.evaluation-overlay .filter-bx .dateList,
+.reply-overlay .filter-bx .dateList,
+.evaluation-policy .filter-bx .dateList {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -53371,7 +53904,9 @@ html {
   .overlay4 .filter-bx .dateList,
   .overlay5 .filter-bx .dateList,
   .share-overlay .filter-bx .dateList,
-  .evaluation-overlay .filter-bx .dateList {
+  .evaluation-overlay .filter-bx .dateList,
+  .reply-overlay .filter-bx .dateList,
+  .evaluation-policy .filter-bx .dateList {
     flex-direction: column;
   }
 }
@@ -53381,7 +53916,9 @@ html {
 .overlay4 .filter-bx .dateList > div,
 .overlay5 .filter-bx .dateList > div,
 .share-overlay .filter-bx .dateList > div,
-.evaluation-overlay .filter-bx .dateList > div {
+.evaluation-overlay .filter-bx .dateList > div,
+.reply-overlay .filter-bx .dateList > div,
+.evaluation-policy .filter-bx .dateList > div {
   position: relative;
 }
 @media all and (max-width: 576px) {
@@ -53391,7 +53928,9 @@ html {
   .overlay4 .filter-bx .dateList > div,
   .overlay5 .filter-bx .dateList > div,
   .share-overlay .filter-bx .dateList > div,
-  .evaluation-overlay .filter-bx .dateList > div {
+  .evaluation-overlay .filter-bx .dateList > div,
+  .reply-overlay .filter-bx .dateList > div,
+  .evaluation-policy .filter-bx .dateList > div {
     width: 100%;
     text-align: center;
   }
@@ -53402,7 +53941,9 @@ html {
 .overlay4 .filter-bx .dateList input,
 .overlay5 .filter-bx .dateList input,
 .share-overlay .filter-bx .dateList input,
-.evaluation-overlay .filter-bx .dateList input {
+.evaluation-overlay .filter-bx .dateList input,
+.reply-overlay .filter-bx .dateList input,
+.evaluation-policy .filter-bx .dateList input {
   width: 160px;
   height: 40px;
   border-radius: 10px;
@@ -53416,7 +53957,9 @@ html {
   .overlay4 .filter-bx .dateList input,
   .overlay5 .filter-bx .dateList input,
   .share-overlay .filter-bx .dateList input,
-  .evaluation-overlay .filter-bx .dateList input {
+  .evaluation-overlay .filter-bx .dateList input,
+  .reply-overlay .filter-bx .dateList input,
+  .evaluation-policy .filter-bx .dateList input {
     width: 100%;
   }
 }
@@ -53426,7 +53969,9 @@ html {
 .overlay4 .filter-bx .dateList .img-bx,
 .overlay5 .filter-bx .dateList .img-bx,
 .share-overlay .filter-bx .dateList .img-bx,
-.evaluation-overlay .filter-bx .dateList .img-bx {
+.evaluation-overlay .filter-bx .dateList .img-bx,
+.reply-overlay .filter-bx .dateList .img-bx,
+.evaluation-policy .filter-bx .dateList .img-bx {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -53438,7 +53983,9 @@ html {
 .overlay4 .filter-bx .text-bx,
 .overlay5 .filter-bx .text-bx,
 .share-overlay .filter-bx .text-bx,
-.evaluation-overlay .filter-bx .text-bx {
+.evaluation-overlay .filter-bx .text-bx,
+.reply-overlay .filter-bx .text-bx,
+.evaluation-policy .filter-bx .text-bx {
   overflow-y: scroll;
   max-height: 600px;
   padding: 0 20px 0 0;
@@ -53450,7 +53997,9 @@ html {
 .overlay4 .filter-bx .text-bx::-webkit-scrollbar,
 .overlay5 .filter-bx .text-bx::-webkit-scrollbar,
 .share-overlay .filter-bx .text-bx::-webkit-scrollbar,
-.evaluation-overlay .filter-bx .text-bx::-webkit-scrollbar {
+.evaluation-overlay .filter-bx .text-bx::-webkit-scrollbar,
+.reply-overlay .filter-bx .text-bx::-webkit-scrollbar,
+.evaluation-policy .filter-bx .text-bx::-webkit-scrollbar {
   width: 10px;
 }
 .overlay .filter-bx .text-bx::-webkit-scrollbar-thumb,
@@ -53459,7 +54008,9 @@ html {
 .overlay4 .filter-bx .text-bx::-webkit-scrollbar-thumb,
 .overlay5 .filter-bx .text-bx::-webkit-scrollbar-thumb,
 .share-overlay .filter-bx .text-bx::-webkit-scrollbar-thumb,
-.evaluation-overlay .filter-bx .text-bx::-webkit-scrollbar-thumb {
+.evaluation-overlay .filter-bx .text-bx::-webkit-scrollbar-thumb,
+.reply-overlay .filter-bx .text-bx::-webkit-scrollbar-thumb,
+.evaluation-policy .filter-bx .text-bx::-webkit-scrollbar-thumb {
   width: 10px;
   background: #FE4844;
 }
@@ -53469,7 +54020,9 @@ html {
 .overlay4 .filter-bx .text-bx::-webkit-scrollbar-track,
 .overlay5 .filter-bx .text-bx::-webkit-scrollbar-track,
 .share-overlay .filter-bx .text-bx::-webkit-scrollbar-track,
-.evaluation-overlay .filter-bx .text-bx::-webkit-scrollbar-track {
+.evaluation-overlay .filter-bx .text-bx::-webkit-scrollbar-track,
+.reply-overlay .filter-bx .text-bx::-webkit-scrollbar-track,
+.evaluation-policy .filter-bx .text-bx::-webkit-scrollbar-track {
   background: transparent;
   box-shadow: inset 0 0 5px #ddd;
   border-left: 4.5px solid transparent;
@@ -53481,7 +54034,9 @@ html {
 .overlay4 .projectBtn,
 .overlay5 .projectBtn,
 .share-overlay .projectBtn,
-.evaluation-overlay .projectBtn {
+.evaluation-overlay .projectBtn,
+.reply-overlay .projectBtn,
+.evaluation-policy .projectBtn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53494,7 +54049,9 @@ html {
   .overlay4 .projectBtn,
   .overlay5 .projectBtn,
   .share-overlay .projectBtn,
-  .evaluation-overlay .projectBtn {
+  .evaluation-overlay .projectBtn,
+  .reply-overlay .projectBtn,
+  .evaluation-policy .projectBtn {
     flex-direction: column;
   }
 }
@@ -53511,7 +54068,11 @@ html {
 .share-overlay .projectBtn > button,
 .share-overlay .projectBtn a,
 .evaluation-overlay .projectBtn > button,
-.evaluation-overlay .projectBtn a {
+.evaluation-overlay .projectBtn a,
+.reply-overlay .projectBtn > button,
+.reply-overlay .projectBtn a,
+.evaluation-policy .projectBtn > button,
+.evaluation-policy .projectBtn a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53536,7 +54097,11 @@ html {
   .share-overlay .projectBtn > button,
   .share-overlay .projectBtn a,
   .evaluation-overlay .projectBtn > button,
-  .evaluation-overlay .projectBtn a {
+  .evaluation-overlay .projectBtn a,
+  .reply-overlay .projectBtn > button,
+  .reply-overlay .projectBtn a,
+  .evaluation-policy .projectBtn > button,
+  .evaluation-policy .projectBtn a {
     font-size: 1rem;
     width: calc(50% - 5px);
   }
@@ -53555,7 +54120,11 @@ html {
   .share-overlay .projectBtn > button,
   .share-overlay .projectBtn a,
   .evaluation-overlay .projectBtn > button,
-  .evaluation-overlay .projectBtn a {
+  .evaluation-overlay .projectBtn a,
+  .reply-overlay .projectBtn > button,
+  .reply-overlay .projectBtn a,
+  .evaluation-policy .projectBtn > button,
+  .evaluation-policy .projectBtn a {
     width: 100%;
   }
 }
@@ -53572,7 +54141,11 @@ html {
 .share-overlay .projectBtn > button.btn1,
 .share-overlay .projectBtn a.btn1,
 .evaluation-overlay .projectBtn > button.btn1,
-.evaluation-overlay .projectBtn a.btn1 {
+.evaluation-overlay .projectBtn a.btn1,
+.reply-overlay .projectBtn > button.btn1,
+.reply-overlay .projectBtn a.btn1,
+.evaluation-policy .projectBtn > button.btn1,
+.evaluation-policy .projectBtn a.btn1 {
   border: 1px solid #eee;
   background: #fff;
 }
@@ -53589,7 +54162,11 @@ html {
 .share-overlay .projectBtn > button.btn2,
 .share-overlay .projectBtn a.btn2,
 .evaluation-overlay .projectBtn > button.btn2,
-.evaluation-overlay .projectBtn a.btn2 {
+.evaluation-overlay .projectBtn a.btn2,
+.reply-overlay .projectBtn > button.btn2,
+.reply-overlay .projectBtn a.btn2,
+.evaluation-policy .projectBtn > button.btn2,
+.evaluation-policy .projectBtn a.btn2 {
   background: #FE4844;
   color: #fff;
 }
@@ -53607,7 +54184,11 @@ html {
   .share-overlay .projectBtn > button:hover,
   .share-overlay .projectBtn a:hover,
   .evaluation-overlay .projectBtn > button:hover,
-  .evaluation-overlay .projectBtn a:hover {
+  .evaluation-overlay .projectBtn a:hover,
+  .reply-overlay .projectBtn > button:hover,
+  .reply-overlay .projectBtn a:hover,
+  .evaluation-policy .projectBtn > button:hover,
+  .evaluation-policy .projectBtn a:hover {
     background: #FE4844;
     color: #fff;
   }
@@ -53618,7 +54199,9 @@ html {
 .overlay4 .popClosebtn,
 .overlay5 .popClosebtn,
 .share-overlay .popClosebtn,
-.evaluation-overlay .popClosebtn {
+.evaluation-overlay .popClosebtn,
+.reply-overlay .popClosebtn,
+.evaluation-policy .popClosebtn {
   position: relative;
   display: flex;
   align-items: center;
@@ -53631,7 +54214,9 @@ html {
   .overlay4 .popClosebtn img,
   .overlay5 .popClosebtn img,
   .share-overlay .popClosebtn img,
-  .evaluation-overlay .popClosebtn img {
+  .evaluation-overlay .popClosebtn img,
+  .reply-overlay .popClosebtn img,
+  .evaluation-policy .popClosebtn img {
     width: 20px;
   }
 }
@@ -53641,7 +54226,9 @@ html {
 .overlay4 .popClosebtn.filterClose i,
 .overlay5 .popClosebtn.filterClose i,
 .share-overlay .popClosebtn.filterClose i,
-.evaluation-overlay .popClosebtn.filterClose i {
+.evaluation-overlay .popClosebtn.filterClose i,
+.reply-overlay .popClosebtn.filterClose i,
+.evaluation-policy .popClosebtn.filterClose i {
   font-size: 48px;
 }
 @media all and (max-width: 768px) {
@@ -53651,7 +54238,9 @@ html {
   .overlay4 .popClosebtn.filterClose i,
   .overlay5 .popClosebtn.filterClose i,
   .share-overlay .popClosebtn.filterClose i,
-  .evaluation-overlay .popClosebtn.filterClose i {
+  .evaluation-overlay .popClosebtn.filterClose i,
+  .reply-overlay .popClosebtn.filterClose i,
+  .evaluation-policy .popClosebtn.filterClose i {
     font-size: 20px;
   }
 }
@@ -53661,7 +54250,9 @@ html {
 .overlay4 .title-bx,
 .overlay5 .title-bx,
 .share-overlay .title-bx,
-.evaluation-overlay .title-bx {
+.evaluation-overlay .title-bx,
+.reply-overlay .title-bx,
+.evaluation-policy .title-bx {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53675,7 +54266,9 @@ html {
   .overlay4 .title-bx,
   .overlay5 .title-bx,
   .share-overlay .title-bx,
-  .evaluation-overlay .title-bx {
+  .evaluation-overlay .title-bx,
+  .reply-overlay .title-bx,
+  .evaluation-policy .title-bx {
     margin-bottom: 1.25rem;
   }
 }
@@ -53685,7 +54278,9 @@ html {
 .overlay4 .title-bx .title,
 .overlay5 .title-bx .title,
 .share-overlay .title-bx .title,
-.evaluation-overlay .title-bx .title {
+.evaluation-overlay .title-bx .title,
+.reply-overlay .title-bx .title,
+.evaluation-policy .title-bx .title {
   font-size: 1.75rem;
   font-weight: bold;
   line-height: 1;
@@ -53698,7 +54293,9 @@ html {
   .overlay4 .title-bx .title,
   .overlay5 .title-bx .title,
   .share-overlay .title-bx .title,
-  .evaluation-overlay .title-bx .title {
+  .evaluation-overlay .title-bx .title,
+  .reply-overlay .title-bx .title,
+  .evaluation-policy .title-bx .title {
     font-size: 1.5rem;
   }
 }
@@ -53709,7 +54306,9 @@ html {
   .overlay4 .title-bx .title,
   .overlay5 .title-bx .title,
   .share-overlay .title-bx .title,
-  .evaluation-overlay .title-bx .title {
+  .evaluation-overlay .title-bx .title,
+  .reply-overlay .title-bx .title,
+  .evaluation-policy .title-bx .title {
     font-size: 1.25rem;
   }
 }
@@ -53719,7 +54318,9 @@ html {
 .overlay4 .btn-bx,
 .overlay5 .btn-bx,
 .share-overlay .btn-bx,
-.evaluation-overlay .btn-bx {
+.evaluation-overlay .btn-bx,
+.reply-overlay .btn-bx,
+.evaluation-policy .btn-bx {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53738,7 +54339,11 @@ html {
 .share-overlay .btn-bx a,
 .share-overlay .btn-bx button,
 .evaluation-overlay .btn-bx a,
-.evaluation-overlay .btn-bx button {
+.evaluation-overlay .btn-bx button,
+.reply-overlay .btn-bx a,
+.reply-overlay .btn-bx button,
+.evaluation-policy .btn-bx a,
+.evaluation-policy .btn-bx button {
   width: 280px;
   height: 50px;
   border-radius: 10px;
@@ -53761,7 +54366,11 @@ html {
   .share-overlay .btn-bx a,
   .share-overlay .btn-bx button,
   .evaluation-overlay .btn-bx a,
-  .evaluation-overlay .btn-bx button {
+  .evaluation-overlay .btn-bx button,
+  .reply-overlay .btn-bx a,
+  .reply-overlay .btn-bx button,
+  .evaluation-policy .btn-bx a,
+  .evaluation-policy .btn-bx button {
     width: 100%;
     flex: 1;
     font-size: 1rem;
@@ -53781,7 +54390,11 @@ html {
 .share-overlay .btn-bx a.btn1,
 .share-overlay .btn-bx button.btn1,
 .evaluation-overlay .btn-bx a.btn1,
-.evaluation-overlay .btn-bx button.btn1 {
+.evaluation-overlay .btn-bx button.btn1,
+.reply-overlay .btn-bx a.btn1,
+.reply-overlay .btn-bx button.btn1,
+.evaluation-policy .btn-bx a.btn1,
+.evaluation-policy .btn-bx button.btn1 {
   border: 1px solid #ddd;
   background: #fff;
 }
@@ -53798,7 +54411,11 @@ html {
 .share-overlay .btn-bx a.btn2,
 .share-overlay .btn-bx button.btn2,
 .evaluation-overlay .btn-bx a.btn2,
-.evaluation-overlay .btn-bx button.btn2 {
+.evaluation-overlay .btn-bx button.btn2,
+.reply-overlay .btn-bx a.btn2,
+.reply-overlay .btn-bx button.btn2,
+.evaluation-policy .btn-bx a.btn2,
+.evaluation-policy .btn-bx button.btn2 {
   border: 1px solid #FE4844;
   background: #FE4844;
   color: #fff;
@@ -53809,7 +54426,9 @@ html {
 .overlay4 .shareLinkArea,
 .overlay5 .shareLinkArea,
 .share-overlay .shareLinkArea,
-.evaluation-overlay .shareLinkArea {
+.evaluation-overlay .shareLinkArea,
+.reply-overlay .shareLinkArea,
+.evaluation-policy .shareLinkArea {
   padding: 40px 0;
   border-bottom: 1px solid #ddd;
 }
@@ -53819,11 +54438,41 @@ html {
 .overlay4 .shareLinkArea.shareLinkArea2,
 .overlay5 .shareLinkArea.shareLinkArea2,
 .share-overlay .shareLinkArea.shareLinkArea2,
-.evaluation-overlay .shareLinkArea.shareLinkArea2 {
+.evaluation-overlay .shareLinkArea.shareLinkArea2,
+.reply-overlay .shareLinkArea.shareLinkArea2,
+.evaluation-policy .shareLinkArea.shareLinkArea2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: none;
+}
+@media all and (max-width: 1200px) {
+  .overlay .shareLinkArea.shareLinkArea2,
+  .overlay2 .shareLinkArea.shareLinkArea2,
+  .overlay3 .shareLinkArea.shareLinkArea2,
+  .overlay4 .shareLinkArea.shareLinkArea2,
+  .overlay5 .shareLinkArea.shareLinkArea2,
+  .share-overlay .shareLinkArea.shareLinkArea2,
+  .evaluation-overlay .shareLinkArea.shareLinkArea2,
+  .reply-overlay .shareLinkArea.shareLinkArea2,
+  .evaluation-policy .shareLinkArea.shareLinkArea2 {
+    padding: 0 0 40px 0;
+  }
+}
+@media all and (max-width: 768px) {
+  .overlay .shareLinkArea.shareLinkArea2,
+  .overlay2 .shareLinkArea.shareLinkArea2,
+  .overlay3 .shareLinkArea.shareLinkArea2,
+  .overlay4 .shareLinkArea.shareLinkArea2,
+  .overlay5 .shareLinkArea.shareLinkArea2,
+  .share-overlay .shareLinkArea.shareLinkArea2,
+  .evaluation-overlay .shareLinkArea.shareLinkArea2,
+  .reply-overlay .shareLinkArea.shareLinkArea2,
+  .evaluation-policy .shareLinkArea.shareLinkArea2 {
+    flex-direction: column;
+    align-items: start;
+    justify-content: unset;
+  }
 }
 .overlay .shareLinkArea.shareLinkArea2 .shareFlex button,
 .overlay .shareLinkArea.shareLinkArea2 a,
@@ -53838,7 +54487,11 @@ html {
 .share-overlay .shareLinkArea.shareLinkArea2 .shareFlex button,
 .share-overlay .shareLinkArea.shareLinkArea2 a,
 .evaluation-overlay .shareLinkArea.shareLinkArea2 .shareFlex button,
-.evaluation-overlay .shareLinkArea.shareLinkArea2 a {
+.evaluation-overlay .shareLinkArea.shareLinkArea2 a,
+.reply-overlay .shareLinkArea.shareLinkArea2 .shareFlex button,
+.reply-overlay .shareLinkArea.shareLinkArea2 a,
+.evaluation-policy .shareLinkArea.shareLinkArea2 .shareFlex button,
+.evaluation-policy .shareLinkArea.shareLinkArea2 a {
   border-bottom: none;
   display: flex;
   align-items: center;
@@ -53846,17 +54499,54 @@ html {
   gap: 10px;
   font-size: 15px;
 }
+@media all and (max-width: 1200px) {
+  .overlay .shareLinkArea.shareLinkArea2 .shareFlex button,
+  .overlay .shareLinkArea.shareLinkArea2 a,
+  .overlay2 .shareLinkArea.shareLinkArea2 .shareFlex button,
+  .overlay2 .shareLinkArea.shareLinkArea2 a,
+  .overlay3 .shareLinkArea.shareLinkArea2 .shareFlex button,
+  .overlay3 .shareLinkArea.shareLinkArea2 a,
+  .overlay4 .shareLinkArea.shareLinkArea2 .shareFlex button,
+  .overlay4 .shareLinkArea.shareLinkArea2 a,
+  .overlay5 .shareLinkArea.shareLinkArea2 .shareFlex button,
+  .overlay5 .shareLinkArea.shareLinkArea2 a,
+  .share-overlay .shareLinkArea.shareLinkArea2 .shareFlex button,
+  .share-overlay .shareLinkArea.shareLinkArea2 a,
+  .evaluation-overlay .shareLinkArea.shareLinkArea2 .shareFlex button,
+  .evaluation-overlay .shareLinkArea.shareLinkArea2 a,
+  .reply-overlay .shareLinkArea.shareLinkArea2 .shareFlex button,
+  .reply-overlay .shareLinkArea.shareLinkArea2 a,
+  .evaluation-policy .shareLinkArea.shareLinkArea2 .shareFlex button,
+  .evaluation-policy .shareLinkArea.shareLinkArea2 a {
+    font-size: 14px;
+  }
+}
 .overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
 .overlay2 .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
 .overlay3 .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
 .overlay4 .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
 .overlay5 .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
 .share-overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
-.evaluation-overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2 {
+.evaluation-overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+.reply-overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+.evaluation-policy .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2 {
   display: flex;
   flex-direction: column;
   align-items: end;
   gap: 10px;
+}
+@media all and (max-width: 768px) {
+  .overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+  .overlay2 .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+  .overlay3 .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+  .overlay4 .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+  .overlay5 .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+  .share-overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+  .evaluation-overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+  .reply-overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+  .evaluation-policy .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2 {
+    width: 100%;
+  }
 }
 .overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
 .overlay2 .shareLinkArea.shareLinkArea2 .shareFlex a,
@@ -53864,12 +54554,29 @@ html {
 .overlay4 .shareLinkArea.shareLinkArea2 .shareFlex a,
 .overlay5 .shareLinkArea.shareLinkArea2 .shareFlex a,
 .share-overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
-.evaluation-overlay .shareLinkArea.shareLinkArea2 .shareFlex a {
+.evaluation-overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
+.reply-overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
+.evaluation-policy .shareLinkArea.shareLinkArea2 .shareFlex a {
   width: 200px;
   height: 40px;
   background: #fff;
   border: 1px solid #eee;
   border-radius: 10px;
+}
+@media all and (max-width: 768px) {
+  .overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
+  .overlay2 .shareLinkArea.shareLinkArea2 .shareFlex a,
+  .overlay3 .shareLinkArea.shareLinkArea2 .shareFlex a,
+  .overlay4 .shareLinkArea.shareLinkArea2 .shareFlex a,
+  .overlay5 .shareLinkArea.shareLinkArea2 .shareFlex a,
+  .share-overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
+  .evaluation-overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
+  .reply-overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
+  .evaluation-policy .shareLinkArea.shareLinkArea2 .shareFlex a {
+    width: 100%;
+    padding: 0 20px;
+    font-size: 1rem;
+  }
 }
 .overlay .shareLinkArea .share-title,
 .overlay2 .shareLinkArea .share-title,
@@ -53877,7 +54584,9 @@ html {
 .overlay4 .shareLinkArea .share-title,
 .overlay5 .shareLinkArea .share-title,
 .share-overlay .shareLinkArea .share-title,
-.evaluation-overlay .shareLinkArea .share-title {
+.evaluation-overlay .shareLinkArea .share-title,
+.reply-overlay .shareLinkArea .share-title,
+.evaluation-policy .shareLinkArea .share-title {
   font-size: 28px;
   font-weight: 600;
 }
@@ -53888,7 +54597,9 @@ html {
   .overlay4 .shareLinkArea .share-title,
   .overlay5 .shareLinkArea .share-title,
   .share-overlay .shareLinkArea .share-title,
-  .evaluation-overlay .shareLinkArea .share-title {
+  .evaluation-overlay .shareLinkArea .share-title,
+  .reply-overlay .shareLinkArea .share-title,
+  .evaluation-policy .shareLinkArea .share-title {
     font-size: 1.25rem;
   }
 }
@@ -53898,7 +54609,9 @@ html {
 .overlay4 .shareLinkArea .flexBox,
 .overlay5 .shareLinkArea .flexBox,
 .share-overlay .shareLinkArea .flexBox,
-.evaluation-overlay .shareLinkArea .flexBox {
+.evaluation-overlay .shareLinkArea .flexBox,
+.reply-overlay .shareLinkArea .flexBox,
+.evaluation-policy .shareLinkArea .flexBox {
   display: flex;
   gap: 6px;
 }
@@ -53909,7 +54622,9 @@ html {
   .overlay4 .shareLinkArea .flexBox,
   .overlay5 .shareLinkArea .flexBox,
   .share-overlay .shareLinkArea .flexBox,
-  .evaluation-overlay .shareLinkArea .flexBox {
+  .evaluation-overlay .shareLinkArea .flexBox,
+  .reply-overlay .shareLinkArea .flexBox,
+  .evaluation-policy .shareLinkArea .flexBox {
     flex-direction: column;
   }
 }
@@ -53919,7 +54634,9 @@ html {
 .overlay4 .shareLinkArea .flexBox > .subject-box,
 .overlay5 .shareLinkArea .flexBox > .subject-box,
 .share-overlay .shareLinkArea .flexBox > .subject-box,
-.evaluation-overlay .shareLinkArea .flexBox > .subject-box {
+.evaluation-overlay .shareLinkArea .flexBox > .subject-box,
+.reply-overlay .shareLinkArea .flexBox > .subject-box,
+.evaluation-policy .shareLinkArea .flexBox > .subject-box {
   color: #666;
 }
 .overlay .shareLinkArea .flexBox > .count_box,
@@ -53928,7 +54645,9 @@ html {
 .overlay4 .shareLinkArea .flexBox > .count_box,
 .overlay5 .shareLinkArea .flexBox > .count_box,
 .share-overlay .shareLinkArea .flexBox > .count_box,
-.evaluation-overlay .shareLinkArea .flexBox > .count_box {
+.evaluation-overlay .shareLinkArea .flexBox > .count_box,
+.reply-overlay .shareLinkArea .flexBox > .count_box,
+.evaluation-policy .shareLinkArea .flexBox > .count_box {
   gap: 6px;
 }
 .overlay .shareLinkArea .shareLink,
@@ -53937,7 +54656,9 @@ html {
 .overlay4 .shareLinkArea .shareLink,
 .overlay5 .shareLinkArea .shareLink,
 .share-overlay .shareLinkArea .shareLink,
-.evaluation-overlay .shareLinkArea .shareLink {
+.evaluation-overlay .shareLinkArea .shareLink,
+.reply-overlay .shareLinkArea .shareLink,
+.evaluation-policy .shareLinkArea .shareLink {
   display: flex;
 }
 @media all and (max-width: 375px) {
@@ -53947,7 +54668,9 @@ html {
   .overlay4 .shareLinkArea .shareLink,
   .overlay5 .shareLinkArea .shareLink,
   .share-overlay .shareLinkArea .shareLink,
-  .evaluation-overlay .shareLinkArea .shareLink {
+  .evaluation-overlay .shareLinkArea .shareLink,
+  .reply-overlay .shareLinkArea .shareLink,
+  .evaluation-policy .shareLinkArea .shareLink {
     flex-direction: column;
     gap: 6px;
   }
@@ -53958,7 +54681,9 @@ html {
 .overlay4 .shareLinkArea .shareLink li,
 .overlay5 .shareLinkArea .shareLink li,
 .share-overlay .shareLinkArea .shareLink li,
-.evaluation-overlay .shareLinkArea .shareLink li {
+.evaluation-overlay .shareLinkArea .shareLink li,
+.reply-overlay .shareLinkArea .shareLink li,
+.evaluation-policy .shareLinkArea .shareLink li {
   flex: 1;
 }
 .overlay .shareLinkArea .shareLink a,
@@ -53967,7 +54692,9 @@ html {
 .overlay4 .shareLinkArea .shareLink a,
 .overlay5 .shareLinkArea .shareLink a,
 .share-overlay .shareLinkArea .shareLink a,
-.evaluation-overlay .shareLinkArea .shareLink a {
+.evaluation-overlay .shareLinkArea .shareLink a,
+.reply-overlay .shareLinkArea .shareLink a,
+.evaluation-policy .shareLinkArea .shareLink a {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -53981,7 +54708,9 @@ html {
   .overlay4 .shareLinkArea .shareLink a,
   .overlay5 .shareLinkArea .shareLink a,
   .share-overlay .shareLinkArea .shareLink a,
-  .evaluation-overlay .shareLinkArea .shareLink a {
+  .evaluation-overlay .shareLinkArea .shareLink a,
+  .reply-overlay .shareLinkArea .shareLink a,
+  .evaluation-policy .shareLinkArea .shareLink a {
     font-size: 1rem;
   }
 }
@@ -53992,7 +54721,9 @@ html {
   .overlay4 .shareLinkArea .shareLink img,
   .overlay5 .shareLinkArea .shareLink img,
   .share-overlay .shareLinkArea .shareLink img,
-  .evaluation-overlay .shareLinkArea .shareLink img {
+  .evaluation-overlay .shareLinkArea .shareLink img,
+  .reply-overlay .shareLinkArea .shareLink img,
+  .evaluation-policy .shareLinkArea .shareLink img {
     width: 30px;
   }
 }
@@ -54004,6 +54735,7 @@ html {
 @media all and (max-width: 1400px) {
   .evaluation-overlay .popup-bx {
     width: calc(100% - 20px);
+    padding: 20px;
   }
 }
 .evaluation-overlay .popClosebtn {
@@ -54095,10 +54827,20 @@ html {
   padding: 50px 0;
   border-bottom: 1px solid #ddd;
 }
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .infoWrap {
+    padding: 20px 0;
+  }
+}
 .evaluation-overlay .infoWrap .user-list {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .infoWrap .user-list {
+    gap: 10px;
+  }
 }
 @media all and (max-width: 1200px) {
   .evaluation-overlay .infoWrap .user-list img {
@@ -54142,20 +54884,39 @@ html {
 }
 @media all and (max-width: 1200px) {
   .evaluation-overlay .infoWrap .desc {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 .evaluation-overlay .infoWrap .project--info {
   display: flex;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .infoWrap .project--info {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
 .evaluation-overlay .infoWrap .project--info > li {
   flex: 1;
   padding-left: 40px;
   border-left: 1px solid #eee;
 }
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .infoWrap .project--info > li {
+    padding: 0;
+    flex: unset;
+    width: 100%;
+    border-left: none;
+  }
+}
 .evaluation-overlay .infoWrap .project--info > li:first-child {
-  padding-left: 0;
+  padding-left: 20px;
   border-left: none;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .infoWrap .project--info > li:first-child {
+    padding: 0;
+  }
 }
 .evaluation-overlay .infoWrap .project--info .tit {
   font-size: 18px;
@@ -54198,43 +54959,379 @@ html {
   font-size: 36px;
   font-weight: bold;
 }
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .big-title {
+    font-size: 1.75rem;
+    margin: 20px 0;
+  }
+}
 .evaluation-overlay .evaluationItem .tit {
   font-size: 22px;
   font-weight: 600;
 }
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .evaluationItem .tit {
+    font-size: 1.125rem;
+  }
+}
 .evaluation-overlay .evaluationItem .dec {
   color: #333;
 }
-.evaluation-overlay .selectScore {
-  padding: 40px 0;
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .evaluationItem .dec {
+    font-size: 0.875rem;
+  }
 }
 .evaluation-overlay .selectScore {
   display: flex;
   gap: 10px;
+  padding: 40px 0;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .selectScore {
+    flex-wrap: wrap;
+  }
+}
+@media all and (max-width: 768px) {
+  .evaluation-overlay .selectScore {
+    padding: 20px 0;
+  }
 }
 .evaluation-overlay .selectScore > li {
   width: calc(20% - 7.5px);
   background: #f9f9f9;
   border-radius: 20px;
   padding: 40px 20px;
-  height: 368px;
+  min-height: 368px;
   text-align: center;
   letter-spacing: -1px;
+  transition: all 0.5s;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .selectScore > li {
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 300px;
+    width: calc(33.3333% - 7.5px);
+  }
+}
+@media all and (max-width: 768px) {
+  .evaluation-overlay .selectScore > li {
+    width: calc(50% - 7.5px);
+    min-height: 200px;
+  }
+}
+@media all and (max-width: 576px) {
+  .evaluation-overlay .selectScore > li {
+    width: 100%;
+    min-height: 100px;
+  }
 }
 .evaluation-overlay .selectScore .txt1 {
   font-size: 22px;
   font-weight: 600;
 }
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .selectScore .txt1 {
+    font-size: 1.125rem;
+  }
+}
 .evaluation-overlay .selectScore .txt2 {
   font-size: 18px;
   color: #999;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .selectScore .txt2 {
+    font-size: 1rem;
+  }
 }
 .evaluation-overlay .selectScore .txt3 {
   color: #333;
   margin-top: 30px;
 }
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .selectScore .txt3 {
+    font-size: 0.875rem;
+    margin-top: 10px;
+  }
+}
 .evaluation-overlay .selectScore .txt4 {
   color: #aaa;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .selectScore .txt4 {
+    font-size: 0.875rem;
+  }
+}
+.evaluation-overlay .horoscopeArea {
+  padding-top: 50px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .horoscopeArea {
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: start;
+    justify-content: unset;
+  }
+}
+.evaluation-overlay .horoscopeArea .horoscopeFlex {
+  display: flex;
+  align-items: center;
+}
+.evaluation-overlay .horoscopeArea .horoscopeFlex.horoscopeFlex1 {
+  gap: 20px;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .horoscopeArea .horoscopeFlex.horoscopeFlex1 {
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+  }
+}
+.evaluation-overlay .horoscopeArea .total {
+  font-size: 22px;
+  font-weight: 600;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .horoscopeArea .total {
+    font-size: 1.25rem;
+  }
+}
+.evaluation-overlay .horoscopeArea .score {
+  font-size: 36px;
+  color: #ddd;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .horoscopeArea .score {
+    font-size: 1.75rem;
+  }
+}
+.evaluation-overlay .horoscopeArea .score .p-color {
+  font-weight: 800;
+}
+.evaluation-overlay .horoscopeArea .horoscopeList {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.evaluation-overlay .horoscopeArea .horoscopeList > p {
+  font-size: 18px;
+  font-weight: 600;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .horoscopeArea .horoscopeList > p {
+    font-size: 1rem;
+  }
+}
+.evaluation-overlay .horoscopeArea .horoscopeList > p span {
+  color: #FE4844;
+}
+.evaluation-overlay .horoscopeArea .horoscopeList > ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.evaluation-overlay .horoscopeArea .horoscopeList > ul li {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #eee;
+}
+.evaluation-overlay .horoscopeArea .horoscopeList > ul li.active {
+  background: #FE4844;
+}
+.evaluation-overlay .horoscopeText {
+  min-height: 160px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  padding: 10px 20px;
+  margin: 30px 0 50px 0;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .horoscopeText {
+    margin: 20px 0 40px 0;
+    min-height: 100px;
+  }
+}
+.evaluation-overlay .horoscopeText::placeholder {
+  font-size: 1rem;
+  color: #AEAEAE;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-overlay .horoscopeText::placeholder {
+    font-size: 0.875rem;
+    letter-spacing: 0;
+  }
+}
+
+.evaluation-policy .popup-bx {
+  width: 1400px;
+  max-width: 1400px;
+}
+@media all and (max-width: 1400px) {
+  .evaluation-policy .popup-bx {
+    width: calc(100% - 20px);
+    padding: 20px;
+  }
+}
+.evaluation-policy .text-bx {
+  overflow-y: scroll;
+  max-height: 600px;
+  padding: 0 20px 0 0;
+  margin: 40px 0;
+}
+.evaluation-policy .text-bx::-webkit-scrollbar {
+  width: 10px;
+}
+.evaluation-policy .text-bx::-webkit-scrollbar-thumb {
+  width: 10px;
+  background: #FE4844;
+}
+.evaluation-policy .text-bx::-webkit-scrollbar-track {
+  background: transparent;
+  box-shadow: inset 0 0 5px #ddd;
+  border-left: 4.5px solid transparent;
+  border-right: 4.5px solid transparent;
+}
+.evaluation-policy .big-title {
+  margin: 50px 0 30px 0;
+  font-size: 36px;
+  font-weight: bold;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-policy .big-title {
+    font-size: 1.75rem;
+    margin: 20px 0;
+  }
+}
+.evaluation-policy .evaluationItem .tit {
+  font-size: 22px;
+  font-weight: 600;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-policy .evaluationItem .tit {
+    font-size: 1.125rem;
+  }
+}
+.evaluation-policy .evaluationItem .dec {
+  color: #333;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-policy .evaluationItem .dec {
+    font-size: 0.875rem;
+  }
+}
+.evaluation-policy .selectScore {
+  display: flex;
+  gap: 10px;
+  padding: 40px 0;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-policy .selectScore {
+    flex-wrap: wrap;
+  }
+}
+@media all and (max-width: 768px) {
+  .evaluation-policy .selectScore {
+    padding: 20px 0;
+  }
+}
+.evaluation-policy .selectScore > li {
+  width: calc(20% - 7.5px);
+  background: #f9f9f9;
+  border-radius: 20px;
+  padding: 40px 20px;
+  min-height: 368px;
+  text-align: center;
+  letter-spacing: -1px;
+  transition: all 0.5s;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-policy .selectScore > li {
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 300px;
+    width: calc(33.3333% - 7.5px);
+  }
+}
+@media all and (max-width: 768px) {
+  .evaluation-policy .selectScore > li {
+    width: calc(50% - 7.5px);
+    min-height: 200px;
+  }
+}
+@media all and (max-width: 576px) {
+  .evaluation-policy .selectScore > li {
+    width: 100%;
+    min-height: 100px;
+  }
+}
+.evaluation-policy .selectScore .txt1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-policy .selectScore .txt1 {
+    font-size: 1.125rem;
+  }
+}
+.evaluation-policy .selectScore .txt2 {
+  font-size: 18px;
+  color: #999;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-policy .selectScore .txt2 {
+    font-size: 1rem;
+  }
+}
+.evaluation-policy .selectScore .txt3 {
+  color: #333;
+  margin-top: 30px;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-policy .selectScore .txt3 {
+    font-size: 0.875rem;
+    margin-top: 10px;
+  }
+}
+.evaluation-policy .selectScore .txt4 {
+  color: #aaa;
+}
+@media all and (max-width: 1200px) {
+  .evaluation-policy .selectScore .txt4 {
+    font-size: 0.875rem;
+  }
+}
+
+.reply-overlay .reply-content .contentBox {
+  padding: 20px;
+  min-height: 200px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+@media all and (max-width: 1200px) {
+  .reply-overlay .reply-content .contentBox {
+    padding: 10px;
+  }
+}
+.reply-overlay .reply-content .contentBox::placeholder {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.2);
+}
+.reply-overlay .reply-content .contentCount {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.2);
+}
+@media all and (max-width: 1200px) {
+  .reply-overlay .reply-content .contentCount {
+    font-size: 0.875rem;
+  }
 }
 
 .main-search {
@@ -54284,6 +55381,11 @@ html {
   border-radius: 15px;
   border: 1px solid #eee;
 }
+@media all and (max-width: 768px) {
+  .main-search .searchInput {
+    padding: 0 10px;
+  }
+}
 .main-search .searchInput::placeholder {
   font-size: 18px;
   color: rgba(0, 0, 0, 0.2);
@@ -54291,7 +55393,13 @@ html {
 @media all and (max-width: 768px) {
   .main-search .searchInput::placeholder {
     font-size: 1rem;
-    letter-spacing: -1px;
+    color: #666;
+  }
+}
+@media all and (max-width: 320px) {
+  .main-search .searchInput::placeholder {
+    font-size: 11px;
+    color: #666;
   }
 }
 .main-search .searchButton {
@@ -54301,6 +55409,11 @@ html {
   right: 20px;
   z-index: 1;
 }
+@media all and (max-width: 768px) {
+  .main-search .searchButton {
+    right: 10px;
+  }
+}
 .main-search .searchButton i {
   font-size: 30px;
   color: #FE4844;
@@ -54309,6 +55422,49 @@ html {
   .main-search .searchButton i {
     font-size: 20px;
   }
+}
+
+.nothing-txt {
+  text-align: center;
+  font-size: 18px;
+  color: #aaa;
+  margin: 60px 0 120px 0;
+}
+@media all and (max-width: 1200px) {
+  .nothing-txt {
+    margin: 60px 0;
+    font-size: 1rem;
+  }
+}
+
+.commonBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.commonBtn button, .commonBtn a {
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media all and (max-width: 1200px) {
+  .commonBtn button, .commonBtn a {
+    font-size: 1.125rem;
+    height: 40px;
+  }
+}
+@media all and (max-width: 768px) {
+  .commonBtn button, .commonBtn a {
+    width: 100% !important;
+  }
+}
+.commonBtn button.cmBtn1, .commonBtn a.cmBtn1 {
+  width: 280px;
+  background: #FE4844;
+  color: #fff;
 }
 
 .contentArea {

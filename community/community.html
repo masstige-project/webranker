@@ -1,0 +1,166 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+    <?
+    $P_dp1 = '5';
+    include "../include/meta.html"
+		?>
+    <link rel="stylesheet" href="../assets/css/sub.min.css" />
+</head>
+
+<body class="sub-body">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>
+    <!-- E : Header -->
+
+    <!-- S : Main -->
+    <main class="main" id="contents">
+        <!-- S : Section -->
+        <section class="section sc--community">
+            <div class="container">
+                <div class="title-bx">
+                    <h2 class="wow fadeInUp main-title">
+                        <?=${nav_.$P_dp1}?>
+                    </h2>
+                </div>
+            </div>
+            <div class="lineBox mt-5 mb-5 mb-xl-23">
+                <div class="container">
+                    <ul>
+                        <li><a href="./community__list.html" class="active">전체</a></li>
+                        <li><a href="./community__1.html">Q&A</a></li>
+                        <li><a href="./community__2.html">자유</a></li>
+                        <li><a href="./community__3.html">익명</a></li>
+                        <li><a href="./community__4.html">튜토리얼</a></li>
+                        <li><a href="./community__5.html">리소스</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="thumnail-list mt-5 mt-xl-10">
+                    <div class="title-box">
+                        <div class="title">Q&A</div>
+                        <div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')">
+                                <p>더보기</p>
+                            </a></div>
+                    </div>
+                    <div class="swiper-container cmt-slide">
+                        <? include "./community__list.html" ?>
+                    </div>
+                </div>
+                <div class="thumnail-list mt-5 mt-xl-10">
+                    <div class="title-box">
+                        <div class="title">자유</div>
+                        <div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')">
+                                <p>더보기</p>
+                            </a></div>
+                    </div>
+                    <div class="swiper-container cmt-slide">
+                        <? include "./community__list.html" ?>
+                    </div>
+                </div>
+                <div class="thumnail-list mt-5 mt-xl-10">
+                    <div class="title-box">
+                        <div class="title">익명</div>
+                        <div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')">
+                                <p>더보기</p>
+                            </a></div>
+                    </div>
+                    <div class="swiper-container cmt-slide">
+                        <? include "./community__list.html" ?>
+                    </div>
+                </div>
+                <div class="thumnail-list mt-5 mt-xl-10">
+                    <div class="title-box">
+                        <div class="title">튜토리얼</div>
+                        <div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')">
+                                <p>더보기</p>
+                            </a></div>
+                    </div>
+                    <div class="swiper-container cmt-slide">
+                        <? include "./community__list.html" ?>
+                    </div>
+                </div>
+                <div class="thumnail-list mt-5 mt-xl-10">
+                    <div class="title-box">
+                        <div class="title">리소스</div>
+                        <div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')">
+                                <p>더보기</p>
+                            </a></div>
+                    </div>
+                    <div class="swiper-container cmt-slide">
+                        <? include "./community__list.html" ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- E : Section -->
+    </main>
+    <!-- E : Main -->
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+
+    <script>
+        $(document).ready(function () {
+            //mobile-slide
+            let swiperInstances = [];
+
+            function initializeSwipers() {
+                document.querySelectorAll('.sc--community .cmt-slide').forEach((container, index) => {
+                    let swiperInstance = new Swiper(container, {
+                        slidesPerView: 1.6,
+                        spaceBetween: 20,
+                        simulateTouch: true,
+                        speed: 1000,
+                        autoplay: {
+                            delay: 4000,
+                            disableOnInteraction: false,
+                        },
+                        breakpoints: {
+                            576: {
+                                slidesPerView: 1.6,
+                                spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 2.6,
+                                spaceBetween: 20,
+                            },
+                            1024: {
+                                slidesPerView: 3.6,
+                                spaceBetween: 20,
+                            },
+                        },
+                    });
+                    swiperInstances.push(swiperInstance);
+                });
+            }
+
+            function destroySwipers() {
+                swiperInstances.forEach(swiperInstance => {
+                    if (swiperInstance) {
+                        swiperInstance.destroy(true, true);
+                    }
+                });
+                swiperInstances = [];
+            }
+
+            function handleResize() {
+                if (window.innerWidth >= 1024) {
+                    destroySwipers();
+                } else {
+                    if (swiperInstances.length === 0) {
+                        initializeSwipers();
+                    }
+                }
+            }
+
+            window.addEventListener('load', handleResize);
+            window.addEventListener('resize', handleResize);
+        })
+    </script>
+</body>
+
+</html>

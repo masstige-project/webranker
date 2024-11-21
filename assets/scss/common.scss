@@ -22,6 +22,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.h-main{
+    min-height: unset;
+}
+
 .lg-container {
     width: 100%;
     padding-right: 20px;
@@ -49,11 +53,25 @@ html {
     max-width: 640px;
 }
 
+.cmt-container {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 840px;
+}
+
 .main {
     overflow-x: hidden;
 }
 
 .back-bx {
+    &.back-bx2{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     a {
         display: flex;
         align-items: center;
@@ -79,6 +97,433 @@ html {
     color: $color-1;
 }
 
+.fw-smbold{
+    font-weight: 600;
+}
+
+.font-30-sb{
+    font-size: rem(30);
+    font-weight: 600;
+    line-height: 1;
+    @include mdq-max(xl){
+        font-size: rem(20);
+    }
+}
+
+.font-30-md{
+    font-size: rem(30);
+    font-weight: 500;
+    line-height: 1;
+    @include mdq-max(xl){
+        font-size: rem(20);
+    }
+}
+
+.font-24-sb{
+    font-size: rem(24);
+    font-weight: 600;
+    line-height: 1;
+    @include mdq-max(xl){
+        font-size: rem(20);
+    }
+}
+
+.font-20-rg{
+    font-size: rem(20);
+    line-height: 1;
+    @include mdq-max(xl){
+        font-size: rem(18);
+    }
+}
+
+.font-20-md{
+    font-size: rem(20);
+    font-weight: 500;
+    line-height: 1;
+    @include mdq-max(xl){
+        font-size: rem(18);
+    }
+}
+
+.font-18-sb{
+    font-size: rem(18);
+    font-weight: 600;
+    @include mdq-max(xl){
+        font-size: rem(16);
+    }
+}
+
+.font-18-md{
+    font-size: rem(18);
+    font-weight: 500;
+    @include mdq-max(xl){
+        font-size: rem(16);
+    }
+}
+
+.font-18-rg{
+    font-size: rem(18);
+    @include mdq-max(xl){
+        font-size: rem(16);
+    }
+}
+//공용링크
+.cmLinkArea{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .cmType__1,
+    .cmType__3{
+        display: flex;
+        align-items: center;
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+    
+            @include mdq-max(xl) {
+                border: 1px solid $gray-e;
+            }
+        }
+    
+        i {
+            font-size: 20px;
+            margin-top: 1px;
+    
+            @include mdq-max(xl) {
+                font-size: 16px;
+            }
+        }
+    }
+    .cmType__2{
+        .like_info {
+            .like-wrap {
+                & .like-btn {
+                    width: 45px;
+                    height: 45px;
+                    background-image: url(../images/main/icon/like_ico_03.png);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    border: none;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    opacity: 1;
+                    @include mdq-max(xl) {
+                        width: 36px;
+                        height: 36px;
+                    }
+
+                    &.clicked {
+                        opacity: 1;
+                        background-image: url(../images/main/icon/like_ico_02.png);
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cmtView{
+    .title--bx{
+       .category{
+            font-size: 20px;
+            font-weight: bold;
+            @include mdq-max(xl){
+                font-size: rem(18);
+            }
+       }
+       .title{
+        font-size: 40px;
+        font-weight: bold;
+        @include mdq-max(xl){
+            font-size: rem(30);
+        }
+       } 
+    }
+    .user--area{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .user--info{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .user{
+                font-size: 22px;
+                font-weight: 600;
+                @include mdq-max(xl){
+                    font-size: rem(18);
+                }
+            }
+            .date{
+                margin-top: 6px;
+                font-size: 17px;
+                color: $gray-6;
+                @include mdq-max(xl){
+                    font-size: rem(16);
+                    margin-top: 44px;
+                }
+            }
+        }
+        .user-icon {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-width: 75px;
+        }
+        .user--follow{
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                color: $white;
+                background: $color-1;
+                width: 120px;
+                height: 40px;
+                border-radius: 10px;
+            }
+        }
+    }
+    .edit--area{
+        margin: 50px 0 80px 0;
+    }
+    .sortingBox {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 30px;
+            border-radius: 10px;
+            padding: 0 10px;
+            background: $white;
+            border: 1px solid $gray-e;
+            font-size: 15px;
+
+            @include mdq-max(xl) {
+                font-size: 14px;
+            }
+
+            &.active {
+                background: $gray-4;
+                color: $white;
+                border: 1px solid $gray-4;
+            }
+        }
+    }
+    .commtentArea {
+        margin-top: 30px;
+        @include mdq-max(xl){
+            margin-top: 20px;
+        }
+
+        input {
+            width: 100%;
+            height: 60px;
+            border-radius: 15px;
+            border: 1px solid $gray-e;
+            @include mdq-max(xl){
+                height: 40px;
+                border-radius: 10px;
+            }
+        }
+
+        .commentFlex {
+            display: flex;
+            align-items: center;
+            .voting-icon{
+                min-width: 75px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                @include mdq-max(xl){
+                    min-width: 50px !important;
+                    img{
+                        width: 50px;
+                    }
+                }
+            }
+        }
+
+        .commentList {
+            width: calc(100% - 75px);
+            margin-left: 20px;
+            @include mdq-max(xl){
+                width: calc(100% - 50px);
+                margin-left: 10px;
+            }
+
+            &.commentList2 {
+                .nickname {
+                    font-size: 18px;
+                    font-weight: 600;
+                    @include mdq-max(xl){
+                        font-size: rem(16);
+                    }
+
+                    span {
+                        font-size: 15px;
+                        color: $gray-a;
+                        margin-left: 10px;
+                        font-weight: normal;
+                        @include mdq-max(xl){
+                            font-size: rem(14);
+                        }
+                    }
+                }
+
+                .commentStatus {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    @include mdq-max(xl){
+                        gap: 10px;
+                    }
+                }
+
+                .description {
+                    display: flex;
+                    padding-right: 20px;
+
+                    p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        transition: max-height 0.3s ease;
+                    }
+
+                    button {
+                        font-weight: 600;
+                    }
+                }
+
+                .status {
+                    &__1 {
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+
+                        p {
+                            font-size: 15px;
+                            font-weight: 600;
+                            @include mdq-max(xl){
+                                font-size: rem(14);
+                            }
+                        }
+
+                        i {
+                            font-size: 22px;
+                            @include mdq-max(xl){
+                                font-size: rem(18);
+                            }
+                        }
+                    }
+
+                    &__2 {
+                        font-weight: 600;
+                    }
+
+                    &__3 {
+                        .allViewBtn {
+                            color: $gray-3;
+                            gap: 2px;
+                        }
+
+                        i {
+                            font-size: 20px;
+                            transition: transform 0.3s ease; 
+                            @include mdq-max(xl){
+                                font-size: rem(18);
+                            }
+                            &.rotate{
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .hiddenInput {
+            transition: max-height 0.3s ease;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            .flexBx {
+                margin-left: 95px;
+                .inputBx{
+                    margin-left: 20px;
+                    @include mdq-max(xl){
+                        margin-left: 10px;
+                    }
+                }
+                .voting-icon {
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    min-width: 75px;
+                    border-radius: 50%;
+                    @include mdq-max(md){
+                        min-width: 50px;
+                        img{
+                            width: 50px;
+                        }
+                    }
+                }
+                @include mdq-max(xl){
+                    margin-left: 60px;
+                }
+            }
+        }
+
+        .cmtBtn {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 4px;
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 120px;
+                height: 40px;
+                border-radius: 10px;
+                @include mdq-max(xl){
+                    font-size: rem(16);
+                }
+                @include mdq-max(md){
+                    height: 30px;
+                    width: 80px;
+                }
+
+                &.cancel-btn {
+                    background: $white;
+                    border: 1px solid $gray-e;
+                }
+
+                &.registration-btn {
+                    background: $color-1;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
 //팝업
 .overlay,
 .overlay2,
@@ -86,13 +531,15 @@ html {
 .overlay4,
 .overlay5,
 .share-overlay,
-.evaluation-overlay {
+.evaluation-overlay,
+.reply-overlay,
+.evaluation-policy {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.85);
     z-index: 95;
     display: none;
 
@@ -496,6 +943,15 @@ html {
             align-items: center;
             border-bottom: none;
 
+            @include mdq-max(xl) {
+                padding: 0 0 40px 0;
+            }
+            @include mdq-max(md) {
+                flex-direction: column;
+                align-items: start;
+                justify-content: unset;
+            }
+
             .shareFlex button,
             a {
                 border-bottom: none;
@@ -504,6 +960,10 @@ html {
                 justify-content: center;
                 gap: 10px;
                 font-size: 15px;
+
+                @include mdq-max(xl) {
+                    font-size: 14px;
+                }
             }
 
             .shareFlex {
@@ -512,6 +972,9 @@ html {
                     flex-direction: column;
                     align-items: end;
                     gap: 10px;
+                    @include mdq-max(md){
+                        width: 100%;
+                    }
                 }
 
                 a {
@@ -520,6 +983,11 @@ html {
                     background: $white;
                     border: 1px solid $gray-e;
                     border-radius: 10px;
+                    @include mdq-max(md){
+                        width: 100%;
+                        padding: 0 20px;
+                        font-size: rem(16);
+                    }
                 }
             }
         }
@@ -583,6 +1051,7 @@ html {
     }
 }
 
+//심사위원 평가하기
 .evaluation-overlay {
     .popup-bx {
         width: 1400px;
@@ -590,6 +1059,7 @@ html {
 
         @include mdq-max(xxl) {
             width: calc(100% - 20px);
+            padding: 20px;
         }
     }
 
@@ -627,14 +1097,15 @@ html {
         .img-wrap {
             position: relative;
             overflow: hidden;
-            .img-bx{
+
+            .img-bx {
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
                 border-radius: 20px;
             }
         }
-        
+
         .like_info {
             position: absolute;
             top: 10px;
@@ -689,13 +1160,23 @@ html {
             }
         }
     }
-    .infoWrap{
+
+    .infoWrap {
         padding: 50px 0;
         border-bottom: 1px solid $gray-d;
+
+        @include mdq-max(xl) {
+            padding: 20px 0;
+        }
+
         .user-list {
             display: flex;
             align-items: center;
             gap: 20px;
+
+            @include mdq-max(xl) {
+                gap: 10px;
+            }
 
             img {
                 @include mdq-max(xl) {
@@ -714,9 +1195,11 @@ html {
             display: flex;
             align-items: center;
             gap: 20px;
+
             .maker {
                 font-size: 22px;
                 font-weight: 600;
+
                 @include mdq-max(xl) {
                     font-size: rem(20);
                 }
@@ -728,6 +1211,7 @@ html {
                 font-size: 17px;
                 font-weight: 500;
                 color: $color-1;
+
                 @include mdq-max(xl) {
                     font-size: rem(16);
                     margin-top: 5px;
@@ -737,26 +1221,46 @@ html {
 
         .desc {
             color: $gray-3;
+
             @include mdq-max(xl) {
-                font-size: rem(16);
+                font-size: rem(14);
             }
         }
 
         .project--info {
             display: flex;
-            > li{
+
+            @include mdq-max(xl) {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            >li {
                 flex: 1;
                 padding-left: 40px;
                 border-left: 1px solid $gray-e;
-                &:first-child{
-                    padding-left: 0;
+
+                @include mdq-max(xl) {
+                    padding: 0;
+                    flex: unset;
+                    width: 100%;
                     border-left: none;
+                }
+
+                &:first-child {
+                    padding-left: 20px;
+                    border-left: none;
+
+                    @include mdq-max(xl) {
+                        padding: 0;
+                    }
                 }
             }
 
             .tit {
                 font-size: 18px;
                 font-weight: 500;
+
                 @include mdq-max(xl) {
                     font-size: rem(16);
                 }
@@ -766,6 +1270,7 @@ html {
             .color-txt {
                 margin-top: 5px;
                 color: $gray-3;
+
                 @include mdq-max(xl) {
                     font-size: rem(14);
                 }
@@ -794,49 +1299,384 @@ html {
             }
         }
     }
-    .big-title{
+
+    .big-title {
         margin: 50px 0 30px 0;
         font-size: 36px;
         font-weight: bold;
+
+        @include mdq-max(xl) {
+            font-size: rem(28);
+            margin: 20px 0;
+        }
     }
-    .evaluationItem{
-        .tit{
+
+    .evaluationItem {
+        .tit {
             font-size: 22px;
             font-weight: 600;
+
+            @include mdq-max(xl) {
+                font-size: rem(18);
+            }
         }
-        .dec{
+
+        .dec {
             color: $gray-3;
+
+            @include mdq-max(xl) {
+                font-size: rem(14);
+            }
         }
     }
-    .selectScore{
-        padding: 40px 0;
-    }
-    .selectScore{
+
+    .selectScore {
         display: flex;
         gap: 10px;
-        > li{
+        padding: 40px 0;
+        @include mdq-max(xl){
+            flex-wrap: wrap;
+        }
+        @include mdq-max(md){
+            padding: 20px 0;
+        }
+
+        >li {
             width: calc(20% - 7.5px);
             background: #f9f9f9;
             border-radius: 20px;
             padding: 40px 20px;
-            height: 368px;
+            min-height: 368px;
             text-align: center;
             letter-spacing: -1px;
+            transition: all 0.5s;
+
+            @include mdq-max(xl) {
+                padding: 20px;
+                border-radius: 10px;
+                min-height: 300px;
+                width: calc(33.3333% - 7.5px);
+            }
+            @include mdq-max(md){
+                width: calc(50% - 7.5px);
+                min-height: 200px;
+            }
+            @include mdq-max(sm){
+                width: 100%;
+                min-height: 100px;
+            }
         }
-        .txt1{
+
+        .txt1 {
             font-size: 22px;
             font-weight: 600;
+
+            @include mdq-max(xl) {
+                font-size: rem(18);
+            }
         }
-        .txt2{
+
+        .txt2 {
             font-size: 18px;
             color: $gray-9;
+
+            @include mdq-max(xl) {
+                font-size: rem(16);
+            }
         }
-        .txt3{
+
+        .txt3 {
             color: $gray-3;
             margin-top: 30px;
+
+            @include mdq-max(xl) {
+                font-size: rem(14);
+                margin-top: 10px;
+            }
         }
-        .txt4{
+
+        .txt4 {
             color: $gray-a;
+
+            @include mdq-max(xl) {
+                font-size: rem(14);
+            }
+        }
+    }
+
+    //평점
+    .horoscopeArea {
+        padding-top: 50px;
+        border-top: 1px solid $gray-d;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include mdq-max(xl) {
+            padding-top: 20px;
+            flex-direction: column;
+            align-items: start;
+            justify-content: unset;
+        }
+
+        .horoscopeFlex {
+            display: flex;
+            align-items: center;
+
+            &.horoscopeFlex1 {
+                gap: 20px;
+                @include mdq-max(xl) {
+                    flex-direction: column;
+                    gap: 5px;
+                    align-items: start;
+                }
+            }
+        }
+
+        .total {
+            font-size: 22px;
+            font-weight: 600;
+            @include mdq-max(xl) {
+                font-size: rem(20);
+            }
+        }
+
+        .score {
+            font-size: 36px;
+            color: $gray-d;
+            @include mdq-max(xl) {
+                font-size: rem(28);
+            }
+
+            .p-color {
+                font-weight: 800;
+            }
+        }
+
+        .horoscopeList {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            >p {
+                font-size: 18px;
+                font-weight: 600;
+                @include mdq-max(xl) {
+                    font-size: rem(16);
+                }
+
+                span {
+                    color: $color-1;
+                }
+            }
+
+            >ul {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                li {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: $gray-e;
+
+                    &.active {
+                        background: $color-1;
+                    }
+                }
+            }
+        }
+    }
+
+    .horoscopeText {
+        min-height: 160px;
+        border-radius: 10px;
+        border: 1px solid $gray-e;
+        padding: 10px 20px;
+        margin: 30px 0 50px 0;
+        @include mdq-max(xl) {
+            margin: 20px 0 40px 0;
+            min-height: 100px;
+        }
+
+        &::placeholder {
+            font-size: rem(16);
+            color: #AEAEAE;
+            line-height: 1.4;
+            letter-spacing: -0.5px;
+            @include mdq-max(xl){
+                font-size: rem(14);
+                letter-spacing: 0;
+            }
+        }
+    }
+}
+
+//평가정책
+.evaluation-policy {
+    .popup-bx {
+        width: 1400px;
+        max-width: 1400px;
+
+        @include mdq-max(xxl) {
+            width: calc(100% - 20px);
+            padding: 20px;
+        }
+    }
+
+    .text-bx {
+        overflow-y: scroll;
+        max-height: 600px;
+        padding: 0 20px 0 0;
+        margin: 40px 0;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            width: 10px;
+            background: $color-1;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+            box-shadow: inset 0 0 5px $gray-d;
+            border-left: 4.5px solid transparent;
+            border-right: 4.5px solid transparent;
+        }
+    }
+
+    .big-title {
+        margin: 50px 0 30px 0;
+        font-size: 36px;
+        font-weight: bold;
+
+        @include mdq-max(xl) {
+            font-size: rem(28);
+            margin: 20px 0;
+        }
+    }
+
+    .evaluationItem {
+        .tit {
+            font-size: 22px;
+            font-weight: 600;
+
+            @include mdq-max(xl) {
+                font-size: rem(18);
+            }
+        }
+
+        .dec {
+            color: $gray-3;
+
+            @include mdq-max(xl) {
+                font-size: rem(14);
+            }
+        }
+    }
+
+    .selectScore {
+        display: flex;
+        gap: 10px;
+        padding: 40px 0;
+        @include mdq-max(xl){
+            flex-wrap: wrap;
+        }
+        @include mdq-max(md){
+            padding: 20px 0;
+        }
+
+        >li {
+            width: calc(20% - 7.5px);
+            background: #f9f9f9;
+            border-radius: 20px;
+            padding: 40px 20px;
+            min-height: 368px;
+            text-align: center;
+            letter-spacing: -1px;
+            transition: all 0.5s;
+
+            @include mdq-max(xl) {
+                padding: 20px;
+                border-radius: 10px;
+                min-height: 300px;
+                width: calc(33.3333% - 7.5px);
+            }
+            @include mdq-max(md){
+                width: calc(50% - 7.5px);
+                min-height: 200px;
+            }
+            @include mdq-max(sm){
+                width: 100%;
+                min-height: 100px;
+            }
+        }
+
+        .txt1 {
+            font-size: 22px;
+            font-weight: 600;
+
+            @include mdq-max(xl) {
+                font-size: rem(18);
+            }
+        }
+
+        .txt2 {
+            font-size: 18px;
+            color: $gray-9;
+
+            @include mdq-max(xl) {
+                font-size: rem(16);
+            }
+        }
+
+        .txt3 {
+            color: $gray-3;
+            margin-top: 30px;
+
+            @include mdq-max(xl) {
+                font-size: rem(14);
+                margin-top: 10px;
+            }
+        }
+
+        .txt4 {
+            color: $gray-a;
+
+            @include mdq-max(xl) {
+                font-size: rem(14);
+            }
+        }
+    }
+}
+
+//답글달기
+.reply-overlay{
+    .reply-content {
+        .contentBox {
+            padding: 20px;
+            min-height: 200px;
+            border-radius: 10px;
+            border: 1px solid $gray-e;
+
+            @include mdq-max(xl) {
+                padding: 10px;
+            }
+            &::placeholder{
+                font-size: 18px;
+                color: rgba(#000, 0.2);
+            }
+        }
+
+        .contentCount {
+            font-size: 15px;
+            color: rgba(#000, 0.2);
+
+            @include mdq-max(xl) {
+                font-size: rem(14);
+            }
         }
     }
 }
@@ -888,14 +1728,21 @@ html {
         padding: 0 20px;
         border-radius: 15px;
         border: 1px solid $gray-e;
+        @include mdq-max(md){
+            padding: 0 10px;
+        }
 
         &::placeholder {
             font-size: 18px;
             color: rgba(#000, 0.2);
-
             @include mdq-max(md) {
                 font-size: rem(16);
-                letter-spacing: -1px;
+                color: $gray-6;
+            }
+
+            @include mdq-max(xxs) {
+                font-size: 11px;
+                color: $gray-6;
             }
         }
     }
@@ -906,6 +1753,9 @@ html {
         transform: translateY(-50%);
         right: 20px;
         z-index: 1;
+        @include mdq-max(md){
+            right: 10px;
+        }
 
         i {
             font-size: 30px;
@@ -914,6 +1764,45 @@ html {
             @include mdq-max(md) {
                 font-size: 20px;
             }
+        }
+    }
+}
+
+.nothing-txt {
+    text-align: center;
+    font-size: 18px;
+    color: $gray-a;
+    margin: 60px 0 120px 0;
+
+    @include mdq-max(xl) {
+        margin: 60px 0;
+        font-size: rem(16);
+    }
+}
+
+//공통버튼
+.commonBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button,a{
+        height: 50px;
+        border-radius: 10px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mdq-max(xl){
+            font-size: rem(18);
+            height: 40px;
+        }
+        @include mdq-max(md){
+            width: 100% !important;
+        }
+        &.cmBtn1{
+            width: 280px;
+            background: $color-1;
+            color: $white;
         }
     }
 }

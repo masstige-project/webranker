@@ -4,7 +4,7 @@
     padding: 50px 0 300px 0;
 
     @include mdq-max(xl) {
-        padding: 80px 0;
+        padding: 60px 0;
     }
 
     .category-slide,
@@ -290,7 +290,6 @@
                 display: flex;
                 align-items: center;
                 @include mdq-max(md){
-                    flex-direction: column;
                     width: 100%;
                 }
 
@@ -302,6 +301,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    cursor: pointer;
                     @include mdq-max(md){
                         font-size: rem(16);
                     }
@@ -866,12 +866,8 @@
                             }
                         }
 
-                        &__2 {
-                            font-weight: 600;
-                        }
-
                         &__3 {
-                            button {
+                            .allViewBtn {
                                 color: $gray-3;
                                 display: flex;
                                 align-items: center;
@@ -880,8 +876,12 @@
 
                             i {
                                 font-size: 20px;
+                                transition: transform 0.3s ease; 
                                 @include mdq-max(xl){
                                     font-size: rem(18);
+                                }
+                                &.rotate{
+                                    transform: rotate(180deg);
                                 }
                             }
                         }
@@ -901,6 +901,25 @@
                     margin-left: 95px;
                     @include mdq-max(xl){
                         margin-left: 60px;
+                    }
+                    .inputBx{
+                        margin-left: 20px;
+                        @include mdq-max(xl){
+                            margin-left: 10px;
+                        }
+                    }
+                    .voting-icon {
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        min-width: 75px;
+                        border-radius: 50%;
+                        @include mdq-max(md){
+                            min-width: 50px;
+                            img{
+                                width: 50px;
+                            }
+                        }
                     }
                 }
             }
@@ -986,13 +1005,22 @@
             display: flex;
             align-items: center;
             gap: 16px;
+            @include mdq-max(xl){
+                gap: 10px;
+            }
             p{
                 font-size: 22px;
                 font-weight: 600;
+                @include mdq-max(xl){
+                    font-size: rem(18);
+                }
                 &.score{
                     font-size: 36px;
                     color: $gray-d;
                     font-weight: normal;
+                    @include mdq-max(xl){
+                        font-size: rem(28);
+                    }
                     .p-color{
                         font-weight: 800;
                     }
@@ -1006,6 +1034,9 @@
                 gap: 4px;
                 color: $gray-9;
                 font-size: 18px;
+                @include mdq-max(xl){
+                    font-size: rem(16);
+                }
             }
         }
     }
@@ -1033,6 +1064,7 @@
                     font-weight: 500;
                     @include mdq-max(xl){
                         font-size: rem(18);
+                        padding: 10px;
                     }
                 }
             }

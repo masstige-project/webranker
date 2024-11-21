@@ -1,5 +1,6 @@
 <ul class="thumnail swiper-wrapper">
-    <li class="item swiper-slide" data-aos="fade-up">
+    <? for ($i=0; $i<2; $i++) {?>
+    <li class="item swiper-slide wow fadeInUp">
         <div class="thumnail-box">
             <div class="img-wrap">
                 <!--권장 이미지 사이즈 360 x 202 -->
@@ -33,7 +34,7 @@
             </div>
         </div>
     </li>
-    <li class="item swiper-slide" data-aos="fade-up" data-aos-delay="200">
+    <li class="item swiper-slide wow fadeInUp">
         <div class="thumnail-box">
             <div class="img-wrap">
                 <a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
@@ -65,7 +66,7 @@
             </div>
         </div>
     </li>
-    <li class="item swiper-slide" data-aos="fade-up" data-aos-delay="300">
+    <li class="item swiper-slide wow fadeInUp">
         <div class="thumnail-box">
             <div class="img-wrap">
                 <a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
@@ -97,7 +98,7 @@
             </div>
         </div>
     </li>
-    <li class="item swiper-slide" data-aos="fade-up" data-aos-delay="400">
+    <li class="item swiper-slide wow fadeInUp">
         <div class="thumnail-box">
             <div class="img-wrap">
                 <a class="link" href="javascript:void(0)" onclick="alert('준비중입니다.')">
@@ -129,4 +130,5 @@
             </div>
         </div>
     </li>
+    <?}?>
 </ul>

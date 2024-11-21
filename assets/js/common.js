@@ -893,3 +893,48 @@ $(".top-btn").on("click", function () {
   });
   return false;
 });
+
+//공유하기 팝업
+$(".shareBtn").on("click", function () {
+  $(".share-overlay, .share-overlay .popup-bx").show();
+  $("body").css({ overflow: "hidden" });
+});
+$(".share-overlay .popClosebtn").on("click", function () {
+  $(".share-overlay, .share-overlay .popup-bx").hide();
+  $("body").css({ overflow: "visible" });
+});
+
+//더보기버튼
+$(".toggleMorebtn").on("click", function () {
+  const $description = $(this).closest(".description");
+  const $paragraph = $description.find("p");
+  if ($paragraph.css("white-space") === "nowrap") {
+    $paragraph.css({
+      "white-space": "normal",
+      overflow: "visible",
+      "text-overflow": "clip",
+    });
+    $(this).text("접기");
+  } else {
+    $paragraph.css({
+      "white-space": "nowrap",
+      overflow: "hidden",
+      "text-overflow": "ellipsis",
+    });
+    $(this).text("더보기");
+  }
+});
+
+$('.allViewBtn').on('click', function() {
+  $(this).find('i').toggleClass('rotate');
+});
+
+//답글달기
+$(".replyBtn").on("click", function () {
+  $(".reply-overlay, .reply-overlay .popup-bx").show();
+  $("body").css({ overflow: "hidden" });
+});
+$(".reply-overlay .popClosebtn").on("click", function () {
+  $(".reply-overlay, .reply-overlay .popup-bx").hide();
+  $("body").css({ overflow: "visible" });
+});

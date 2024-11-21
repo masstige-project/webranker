@@ -1,6 +1,6 @@
 <div class="popup-bx">
     <button type="button" class="popClosebtn">
-        <img src="../assets/images/main/icon/popup-close.png" alt="닫기버튼">
+        <img src="../assets/images/main/icon/popup-close.png" alt="닫기버튼" loading="lazy">
     </button>
     <div class="text-bx">
         <div class="viewContainer">
@@ -36,8 +36,7 @@
             <div class="viewContent">
                 <!-- 이미지권장 사이즈 1260*708 -->
                 <div class="img-wrap">
-                    <div class="img-bx"
-                        style="background-image: url(../assets/images/main/view-main.jpg);">
+                    <div class="img-bx" style="background-image: url(../assets/images/main/view-main.jpg);">
                         <img src="../assets/images/main/base_1260X708.png" alt="img">
                     </div>
                     <div class="like_info">
@@ -48,8 +47,7 @@
                 </div>
                 <div class="infoWrap">
                     <div class="user-list">
-                        <div class="user-icon"
-                            style="background-image: url(../assets/images/main/user-icon.png);">
+                        <div class="user-icon" style="background-image: url(../assets/images/main/user-icon.png);">
                             <img src="../assets/images/main/base_75X75.png" alt="img">
                         </div>
                         <div class="user-text">
@@ -60,7 +58,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="desc mt-xl-5">
+                    <div class="desc mt-5">
                         <p>카카오페이는 사용자에게 간편하고 안전한 모바일 결제 경험을 제공하는 서비스입니다. QR 코드 결제, 송금, 공과금 납부 등 다양한 금융
                             서비스를 하나의 앱에서 해결할 수 있습니다. 사용자의 편의성을 최우선으로 하며, 최신 보안 기술을 통해 안전성을 강화했습니다. 모든
                             연령대의 스마트폰 사용자를 대상으로 합니다.</p>
@@ -93,33 +91,118 @@
             <p class="big-title">평가하기</p>
             <div class="evaluationItem">
                 <p class="tit">디자인 평가</p>
-                <p class="dec mt-2 mt-xl-4">사용자의 시각적 편안함과 정보의 명확한 전달을 위한 레이아웃, 색상, 타이포그래피, 이미지등의 시각적 요소를 평가합니다. 좋은 디자인은 사용자 경험을 강화하고, 메시지 전달을 효과적으로 합니다.</p>
-                <ul class="selectScore">
+                <p class="dec mt-2 mt-xl-4">사용자의 시각적 편안함과 정보의 명확한 전달을 위한 레이아웃, 색상, 타이포그래피, 이미지등의 시각적 요소를 평가합니다. 좋은 디자인은
+                    사용자 경험을 강화하고, 메시지 전달을 효과적으로 합니다.</p>
+                <ul class="selectScore" id="selectScore1">
                     <? for ($i=0; $i<5; $i++) {?>
-                    <li>
-                        <p class="txt1">1점</p>
+                    <!-- active추가시 활성화 -->    
+                    <li class="scoreItem" data-score="<?= $i + 1 ?>">
+                        <p class="txt1">
+                            <?= $i + 1 ?>점
+                        </p>
                         <p class="txt2 mt-2 mt-xl-4">미흡</p>
-                        <p class="txt3">디자인이 기본적인 기준에도 미치지 못함. 사용자 인터페이스가 혼란스럽고, 시각적 요소가 일관성 없이 배치되어 있으며, 사용자 경험을 저해하는 수준임.</p>
+                        <p class="txt3">디자인이 기본적인 기준에도 미치지 못함. 사용자 인터페이스가 혼란스럽고, 시각적 요소가 일관성 없이 배치되어 있으며, 사용자 경험을 저해하는
+                            수준임.</p>
                         <p class="txt4 mgt-10">예: 사용자 인터페이스가 혼란스럽고, 디자인 요소가 불규칙적으로 배치됨.</p>
                     </li>
                     <?}?>
                 </ul>
             </div>
             <div class="evaluationItem">
-                <p class="tit">디자인 평가</p>
-                <p class="dec mt-2 mt-xl-4">사용자의 시각적 편안함과 정보의 명확한 전달을 위한 레이아웃, 색상, 타이포그래피, 이미지등의 시각적 요소를 평가합니다. 좋은 디자인은 사용자 경험을 강화하고, 메시지 전달을 효과적으로 합니다.</p>
-                <ul class="selectScore">
+                <p class="tit">사용자경험(UX) 평가</p>
+                <p class="dec mt-2 mt-xl-4">사용자가 사이트나 서비스를 이용하면서 겪는 전반적인 경험과 감정을 포함합니다. 사용자 경험은 사용의 용이성 뿐만 아니라, 사용자의 요구와
+                    목표를 얼마나 잘 충족시키는지에 대한 평가도 포함합니다.</p>
+                <ul class="selectScore" id="selectScore2">
                     <? for ($i=0; $i<5; $i++) {?>
-                    <li>
-                        <p class="txt1">1점</p>
+                    <!-- active추가시 활성화 -->      
+                    <li class="scoreItem" data-score="<?= $i + 1 ?>">
+                        <p class="txt1">
+                            <?= $i + 1 ?>점
+                        </p>
                         <p class="txt2 mt-2 mt-xl-4">미흡</p>
-                        <p class="txt3">디자인이 기본적인 기준에도 미치지 못함. 사용자 인터페이스가 혼란스럽고, 시각적 요소가 일관성 없이 배치되어 있으며, 사용자 경험을 저해하는 수준임.</p>
+                        <p class="txt3">디자인이 기본적인 기준에도 미치지 못함. 사용자 인터페이스가 혼란스럽고, 시각적 요소가 일관성 없이 배치되어 있으며, 사용자 경험을 저해하는
+                            수준임.</p>
                         <p class="txt4 mgt-10">예: 사용자 인터페이스가 혼란스럽고, 디자인 요소가 불규칙적으로 배치됨.</p>
                     </li>
                     <?}?>
                 </ul>
             </div>
             <!-- E : 평가하기 -->
+            <!-- S : 평점 -->
+            <div class="horoscopeArea">
+                <div class="horoscopeFlex horoscopeFlex1">
+                    <div class="horoscopeList" id="horoscope1">
+                        <p>디자인 <span class="scoreDisplay">4점</span></p>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="horoscopeList" id="horoscope2">
+                        <p>사용자 경험 <span class="scoreDisplay">4점</span></p>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="horoscopeFlex horoscopeFlex2">
+                    <p class="total">총점</p>
+                    <p class="score ml-4">
+                        <span class="p-color">3.4</span>
+                        <span>/5.0</span>
+                    </p>
+                </div>
+            </div>
+            <textarea name="ucontent" class="horoscopeText"
+                placeholder="평가작에 대한 구체적인 피드백, 강점과 개선이 필요한 부분, 그리고 제안사항을 자유롭게 작성해주세요. 심사위원님의 소중한 의견은 웹사이트 또는 앱 서비스 개선에 큰 도움이 됩니다."></textarea>
+            <!-- E : 평점 -->
+        </div>
+        <div class="btn-bx">
+            <button type="button" class="btn2">제출하기</button>
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        //심사위원평가
+        $(".selectScore li").on("click", function () {
+            $(".selectScore li").removeClass("active");
+            $(this).addClass("active");
+        });
+    })
+    //평가하기 클릭시 평점업데이트
+    document.addEventListener("DOMContentLoaded", () => {
+        const horoscopeAreas = document.querySelectorAll(".evaluation-overlay .horoscopeArea .horoscopeList");
+        const selectScores = document.querySelectorAll(".evaluation-overlay .selectScore");
+
+        selectScores.forEach((scoreList, scoreIndex) => {
+            const scoreItems = scoreList.querySelectorAll(".scoreItem");
+            const horoscopeList = horoscopeAreas[scoreIndex];
+            const scoreDisplay = horoscopeList.querySelector(".evaluation-overlay .scoreDisplay"); 
+            const liItems = horoscopeList.querySelectorAll("ul li");
+
+            scoreItems.forEach((item) => {
+                item.addEventListener("click", () => {
+                    const selectedScore = parseInt(item.getAttribute("data-score"));
+                    scoreDisplay.textContent = `${selectedScore}점`;
+
+                    liItems.forEach((li, liIndex) => {
+                        if (liIndex < selectedScore) {
+                            li.classList.add("active");
+                        } else {
+                            li.classList.remove("active");
+                        }
+                    });
+                });
+            });
+        });
+    });
+</script>

@@ -25,6 +25,235 @@
     }
 }
 
+//알림
+.sc--alert {
+    padding: 100px 0;
+
+    @include mdq-max(xl) {
+        padding: 60px 0;
+    }
+
+    .alret-list {
+        .data-bx {
+            border-bottom: 2px solid $black;
+        }
+
+        .no_alert {
+            font-size: rem(18);
+            color: #999;
+            padding: 30px 0;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+    }
+
+    .alret-item+.alret-item {
+        margin-top: 60px;
+
+        @include mdq-max(xl) {
+            margin-top: 40px;
+        }
+    }
+
+    .alert-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        padding: 0 30px;
+        border-bottom: 1px solid #ddd;
+        background: $white;
+        font-size: 18px;
+
+        @include mdq-max(xl) {
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            height: unset;
+            min-height: 80px;
+            padding: 10px;
+            gap: 5px;
+            font-size: rem(16);
+        }
+
+        &.not_read {
+            background: #f9f9f9;
+        }
+
+        .status-list {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            @include mdq-max(xl) {
+                flex-direction: column;
+                align-items: start;
+                gap: 5px;
+            }
+
+            .type {
+                color: $color-1;
+            }
+        }
+
+        .alert-data {
+            color: #999;
+        }
+    }
+
+    .reading_status {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            width: 400px;
+            height: 60px;
+            border-radius: 50px;
+            border: 2px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $white;
+            color: #aaa;
+            font-size: 18px;
+            font-weight: 500;
+
+            @include mdq-max(xl) {
+                font-size: rem(16);
+                height: 40px;
+            }
+
+            @include mdq-max(md) {
+                width: calc(100% - 40px);
+            }
+
+            &.active {
+                color: $black;
+            }
+        }
+    }
+
+    .alret-setting {
+        .title-bx {
+            padding-bottom: 40px;
+            border-bottom: 2px solid $black;
+
+            @include mdq-max(md) {
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+    .setting-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        border-bottom: 1px solid #ddd;
+
+        @include mdq-max(md) {
+            height: 40px;
+        }
+
+        .alert-active {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            input[type=checkbox] {
+                height: 0;
+                width: 0;
+                visibility: hidden;
+            }
+
+            label {
+                cursor: pointer;
+                width: 64px;
+                height: 30px;
+                background: #999;
+                display: block;
+                border-radius: 50px;
+                position: relative;
+
+                @include mdq-max(md) {
+                    width: 64px;
+                    height: 20px;
+                }
+            }
+
+            label:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 5px;
+                width: 24px;
+                height: 24px;
+                background: white;
+                border-radius: 50px;
+                transition: left 0.3s ease, transform 0.3s ease;
+
+                @include mdq-max(md) {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+
+            .toggle-text {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                text-indent: 0;
+                color: white;
+                display: flex;
+                align-items: center;
+                transition: opacity 0.3s, justify-content 0.3s, padding 0.3s;
+                z-index: 1;
+                opacity: 1;
+                font-size: 13px;
+                font-weight: 500;
+
+                &.toggle-text1 {
+                    padding-right: 7px;
+                    justify-content: flex-end;
+                }
+
+                &.toggle-text2 {
+                    opacity: 0;
+                }
+            }
+
+            input:checked+label {
+                background: $color-1;
+            }
+
+            input:checked+label:after {
+                left: calc(100% - 29px);
+                transform: translateY(-50%);
+
+                @include mdq-max(md) {
+                    left: calc(100% - 18px);
+                }
+            }
+
+            input:checked+label .toggle-text1 {
+                opacity: 0;
+            }
+
+            input:checked+label .toggle-text2 {
+                opacity: 1;
+                padding-left: 7px;
+                justify-content: flex-start;
+            }
+        }
+    }
+
+}
+
+//sub
 .sc {
 
     //심사위원 되기
@@ -32,7 +261,7 @@
         padding: 80px 0 297px 0;
 
         @include mdq-max(xl) {
-            padding: 100px 0;
+            padding: 60px 0;
         }
 
         &.judge--preview {
@@ -58,18 +287,6 @@
                     justify-content: unset;
                     gap: 10px;
                 }
-            }
-        }
-
-        .nothing-txt {
-            text-align: center;
-            font-size: 18px;
-            color: $gray-a;
-            margin: 60px 0 120px 0;
-
-            @include mdq-max(xl) {
-                margin: 60px 0;
-                font-size: rem(16);
             }
         }
 
@@ -402,7 +619,7 @@
                 }
             }
 
-            .contentArea {
+            .jd-contentArea {
                 .contentBox {
                     padding: 20px;
                     min-height: 200px;
@@ -812,6 +1029,898 @@
                     &.modify-link {
                         background: $color-1;
                         border: 1px solid $color-1;
+                    }
+                }
+            }
+        }
+    }
+
+    //서비스소개
+    &--service {
+        padding: 100px 0 287px 0;
+
+        @include mdq-max(xl) {
+            padding: 60px 0;
+        }
+
+        .img-wrap {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+
+            &:hover {
+
+                .service__img__1,
+                .service__img__2,
+                .service__img__3,
+                .service__img__4 {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        .service__img__1,
+        .service__img__2,
+        .service__img__3,
+        .service__img__4 {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 100%;
+            transition: all 0.5s;
+        }
+
+        .service__img__1 {
+            height: 400px;
+            background-image: url('../images/sub/service__1.jpg');
+        }
+
+        .service__img__2,
+        .service__img__3,
+        .service__img__4 {
+            height: 300px;
+        }
+
+        .service__img__2 {
+            background-image: url('../images/sub/service__2.jpg');
+        }
+
+        .service__img__3 {
+            background-image: url('../images/sub/service__3.jpg');
+        }
+
+        .service__img__4 {
+            background-image: url('../images/sub/service__4.jpg');
+        }
+
+        .infoTxt {
+            margin: 40px 0 80px 0;
+
+            a {
+                display: flex;
+                align-items: center;
+                letter-spacing: -1px;
+
+                @include mdq-max(xl) {
+                    flex-wrap: wrap;
+                    gap: 10px;
+                }
+            }
+
+            .tit {
+                font-size: 30px;
+                font-weight: 600;
+                min-width: 280px;
+
+                @include mdq-max(xl) {
+                    font-size: rem(20);
+                    min-width: unset;
+                }
+            }
+
+            .dec {
+                font-size: 18px;
+                color: $gray-4;
+
+                @include mdq-max(xl) {
+                    font-size: rem(16);
+                }
+            }
+        }
+
+        .text-wrap {
+            background: #FE4742;
+            width: 70px;
+            height: 56px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: $white;
+            gap: 5px;
+            padding: 10px;
+            line-height: 1;
+
+            @include mdq-max(md) {
+                width: 100%;
+                height: 36px;
+                padding: 0 10px;
+                flex-direction: row;
+                line-height: 1.6;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+
+        .text-wrap2 {
+            background: #FE4742;
+            width: 127px;
+            height: 30px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .subject-box {
+            display: flex;
+            font-size: rem(15);
+            color: $white;
+
+            @include mdq-max(xl) {
+                font-size: 14px;
+            }
+
+            & li {
+                +li {
+                    position: relative;
+                    margin-left: 11px;
+
+                    &::before {
+                        position: absolute;
+                        left: -7px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        content: '';
+                        width: 3px;
+                        height: 3px;
+                        border-radius: 3px;
+                        display: inline-block;
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+
+        .serviceWrap {
+            >div+div {
+                margin-top: 20px;
+            }
+
+            .serviceList {
+                position: relative;
+            }
+
+            .text-area {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1;
+                padding: 0 40px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                @include mdq-max(md) {
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: unset;
+                    gap: 10px;
+                    padding: 0 20px;
+                }
+
+                >p {
+                    font-size: 30px;
+                    font-weight: 600;
+                    letter-spacing: -1px;
+
+                    @include mdq-max(xl) {
+                        font-size: rem(20);
+                    }
+                }
+            }
+        }
+
+        .btnArea {
+            .tit {
+                font-size: 40px;
+                font-weight: 600;
+                text-align: center;
+                letter-spacing: -1px;
+
+                @include mdq-max(xl) {
+                    font-size: rem(30);
+                }
+
+                @include mdq-max(md) {
+                    font-size: rem(24);
+                }
+            }
+
+            .btn-bx {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 400px;
+                    height: 50px;
+                    border-radius: 10px;
+                    background: $color-1;
+                    color: $white;
+                    font-size: 20px;
+
+                    @include mdq-max(md) {
+                        width: 100%;
+                        height: 40px;
+                        font-size: rem(18);
+                    }
+                }
+            }
+        }
+    }
+
+    //커뮤니티
+    &--community {
+        padding: 100px 0 160px 0;
+
+        @include mdq-max(xl) {
+            padding: 80px 0;
+        }
+
+        .lineBox {
+            border-bottom: 1px solid $gray-e;
+
+            ul {
+                display: flex;
+                align-items: center;
+                gap: 60px;
+                padding: 20px 0;
+
+                @include mdq-max(xl) {
+                    gap: 20px;
+                    padding: 10px 0;
+                }
+
+                a {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: $gray-4;
+
+                    @include mdq-max(xl) {
+                        font-size: rem(16);
+                    }
+
+                    @include mdq-min(md) {
+                        &:hover {
+                            color: $color-1;
+                        }
+                    }
+
+                    &.active {
+                        color: $color-1;
+                    }
+                }
+            }
+        }
+
+        //qna
+        .main-search {
+            width: 750px;
+
+            @include mdq-max(md) {
+                width: 100%;
+            }
+        }
+
+        .cmtCategory {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            button,
+            a {
+                font-weight: 500;
+                color: $gray-4;
+
+                @include mdq-max(xl) {
+                    font-size: rem(16);
+                }
+
+                @include mdq-min(md) {
+                    &:hover {
+                        color: $color-1;
+                    }
+                }
+
+                &.active {
+                    color: $color-1;
+                }
+            }
+        }
+
+        .resultArea {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .result__1 {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .total {
+                    font-weight: 500;
+
+                    @include mdq-max(xl) {
+                        font-size: rem(16);
+                    }
+                }
+
+                select {
+                    width: 120px;
+                    height: 40px;
+                    border-radius: 10px;
+                    border: 1px solid $gray-e;
+                    padding: 0 20px;
+                }
+            }
+
+            .result__2 {
+                font-size: 15px;
+                width: 200px;
+                height: 40px;
+                border-radius: 10px;
+                background: $color-1;
+                position: relative;
+                transition: all 0.5s;
+                color: $white;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        right: 10px;
+                        transform: translateY(-50%);
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        background: url(../images/sub/icon/write_icon.png) no-repeat center;
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
+
+        .thumnail-list {
+
+            & .title-box {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+
+                @include mdq-max(xl) {
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                }
+
+                & .title {
+                    font-size: rem(24);
+                    font-weight: bold;
+
+                    @include mdq-max(xl) {
+                        font-size: rem(22);
+                    }
+
+                    @include mdq-max(xxs) {
+                        font-size: rem(18);
+                    }
+                }
+
+                & .more {
+                    font-size: rem(18);
+                    width: 107px;
+                    padding: 0 16px;
+                    line-height: 44px;
+                    margin-left: 10px;
+                    border: 1px solid #eee;
+                    border-radius: 44px;
+                    position: relative;
+                    transition: all 0.5s;
+
+                    @include mdq-max(xl) {
+                        font-size: rem(16);
+                        line-height: unset;
+                        width: 86px;
+                        height: 36px;
+                        line-height: 36px;
+                    }
+
+                    @include mdq-min(md) {
+                        &:hover {
+                            background: $color-1;
+                            color: $white;
+                            cursor: pointer;
+
+                            &::after {
+                                background: url(../images/main/icon/more_arrow_w.png)no-repeat center;
+                            }
+                        }
+                    }
+
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        right: 16px;
+                        transform: translateY(-50%);
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        background: url(../images/main/icon/more_arrow.png)no-repeat center;
+                        transition: all 0.5s;
+
+                        @include mdq-max(xl) {
+                            right: 4px;
+                        }
+                    }
+                }
+            }
+
+            .thumnail {
+                display: flex;
+                align-items: center;
+                gap: 20px rem(10);
+                flex-wrap: wrap;
+
+                @include mdq-max(lg) {
+                    align-items: unset;
+                    gap: unset;
+                    flex-wrap: nowrap;
+                }
+
+                &.swiper-wrapper {
+                    height: auto;
+                }
+
+                & .item {
+                    width: calc(25% - rem(10));
+
+                    @include mdq-max(lg) {
+                        width: auto;
+                    }
+                }
+
+                .thumnail-box {
+                    & .img-bx {
+                        border-radius: 16px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+
+                        @include mdq-max(md) {
+                            border-radius: 8px;
+                        }
+                    }
+
+                    & .img-wrap {
+                        position: relative;
+                        overflow: hidden;
+
+                        & .link {
+                            display: block;
+                        }
+
+                        & .like_info {
+                            position: absolute;
+                            bottom: 10px;
+                            z-index: 4;
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            padding: 0 10px;
+
+                            @include mdq-max(md) {
+                                padding: 0 6px;
+                            }
+
+                            & .like-wrap {
+                                position: absolute;
+                                bottom: 0;
+                                right: 10px;
+                                display: flex;
+                                flex-direction: column;
+
+                                @include mdq-max(md) {
+                                    right: 6px;
+                                }
+
+                                & .like-btn {
+                                    width: 45px;
+                                    height: 45px;
+                                    background-image: url(../images/main/icon/like_ico_01.png);
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    border: none;
+                                    cursor: pointer;
+                                    transition: all 0.3s;
+                                    opacity: 0.4;
+
+                                    @include mdq-max(md) {
+                                        width: 36px;
+                                        height: 36px;
+                                    }
+
+                                    &:hover {
+                                        opacity: 1;
+                                    }
+
+                                    &.clicked {
+                                        opacity: 1;
+                                        background-image: url(../images/main/icon/like_ico_02.png);
+
+                                        &:hover {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+
+                                & .share-btn {
+                                    width: 45px;
+                                    height: 45px;
+                                    margin-top: 6px;
+                                    background-image: url(../images/main/icon/share_ico.png);
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    border: none;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .subject-box {
+                display: flex;
+                font-size: rem(15);
+                color: $gray-6;
+
+                @include mdq-max(xl) {
+                    font-size: 14px;
+                }
+
+                & li {
+                    +li {
+                        position: relative;
+                        margin-left: 11px;
+
+                        &::before {
+                            position: absolute;
+                            left: -7px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            content: '';
+                            width: 3px;
+                            height: 3px;
+                            border-radius: 3px;
+                            display: inline-block;
+                            background-color: #aaa;
+                        }
+                    }
+                }
+            }
+
+            .button-box {
+                & .btn {
+                    margin-top: 4px;
+                    font-size: rem(24);
+
+                    @include mdq-max(xl) {
+                        font-size: rem(22);
+                    }
+
+                    @include mdq-max(xxs) {
+                        font-size: rem(18);
+                    }
+
+                    & .link_txt {
+                        display: flex;
+                        align-items: center;
+                        font-weight: 600;
+
+                        &::after {
+                            content: '';
+                            width: 24px;
+                            height: 24px;
+                            margin-left: 6px;
+                            display: inline-block;
+                            background: url(../images/main/icon/link_ico_03.png)no-repeat center;
+                        }
+                    }
+                }
+
+                & .link_txt_sub {
+                    font-size: 20px;
+                    font-weight: 500;
+                    @include text-truncate(2);
+
+                    @include mdq-max(xl) {
+                        font-size: rem(18);
+                    }
+                }
+
+                & .count_box {
+                    display: flex;
+                    gap: 10px;
+                    color: #BBB;
+
+                    & p {
+                        display: flex;
+                        align-items: center;
+
+                        @include mdq-max(xl) {
+                            font-size: 14px;
+                        }
+
+                        &.view {
+                            &::before {
+                                content: '';
+                                padding-right: 4px;
+                                display: inline-block;
+                                width: 20px;
+                                height: 30px;
+                                background: url(../images/main/icon/view_ico.png)no-repeat center;
+                            }
+                        }
+
+                        &.read {
+                            &::before {
+                                content: '';
+                                padding-right: 4px;
+                                display: inline-block;
+                                width: 20px;
+                                height: 30px;
+                                background: url(../images/main/icon/read_ico.png)no-repeat center;
+                            }
+                        }
+
+                        &.like {
+                            &::before {
+                                content: '';
+                                padding-right: 3.5px;
+                                display: inline-block;
+                                width: 20px;
+                                height: 30px;
+                                background: url(../images/main/icon/like_ico_04_g.png)no-repeat center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .input-100{
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            background: $white;
+            border: none;
+            padding: 0 20px;
+            border: 1px solid $gray-e;
+            font-size: 18px;
+            color: rgba(#000, 0.2);
+
+            @include mdq-max(xl) {
+                height: 40px;
+                padding: 0 10px;
+                font-size: rem(16);
+            }
+
+            &::placeholder {
+                font-size: 18px;
+                color: rgba(#000, 0.2);
+
+                @include mdq-max(xl) {
+                    font-size: rem(16);
+                }
+            }
+        }
+        .writeArea{
+            margin-top: 50px;
+            > select{
+                width: 100%;
+                height: 50px;
+                border-radius: 10px;
+                border: 1px solid $gray-e;
+            }
+            input{
+                margin: 20px 0;
+            }
+        }
+
+        .cmt-contentArea {
+            .contentBox {
+                padding: 20px;
+                min-height: 200px;
+                border-radius: 10px;
+                border: 1px solid $gray-e;
+
+                @include mdq-max(xl) {
+                    padding: 10px;
+                }
+                &::placeholder{
+                    font-size: 18px;
+                    color: rgba(#000, 0.2);
+                }
+            }
+
+            .contentCount {
+                font-size: 15px;
+                color: rgba(#000, 0.2);
+
+                @include mdq-max(xl) {
+                    font-size: rem(14);
+                }
+            }
+        }
+        .upload-bx {
+            .upload-top {
+                .file--text {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    gap: rem(20);
+
+                    label {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 200px;
+                        height: 40px;
+                        background: $color-1;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        color: $white;
+                        font-size: 18px;
+
+                        @include mdq-max(xl) {
+                            font-size: rem(16);
+                        }
+                    }
+
+                    input[type="file"] {
+                        display: none;
+                    }
+                }
+            }
+
+            .file--info {
+                color: #aaa;
+
+                @include mdq-max(xl) {
+                    font-size: rem(14);
+                }
+            }
+
+            //파일첨부-text
+            .upload-bottom {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 20px;
+
+                >li {
+                    display: flex;
+                    justify-content: center;
+                    gap: 4px;
+                    color: #4d4d4d;
+
+                    @include mdq-max(xl) {
+                        font-size: rem(14);
+                    }
+                }
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+
+                .delete-btn {
+                    display: flex;
+                    justify-content: center;
+                    cursor: pointer;
+
+                    .xi-close {
+                        color: #4d4d4d;
+                        font-size: rem(16);
+                    }
+                }
+            }
+
+            //파일첨부-img
+            .upload-bottom-img {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 30px;
+
+                >li {
+                    display: flex;
+                    justify-content: center;
+                    gap: 4px;
+                    color: #4d4d4d;
+                    position: relative;
+
+                    @include mdq-max(xl) {
+                        font-size: rem(14);
+                    }
+                }
+
+                .img-bx {
+                    width: 190px;
+                    height: 190px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 10px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: scale-down;
+                    }
+                }
+
+                .delete-btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: rgba(#000, 0.5);
+
+                    i {
+                        font-size: 18px;
+                        color: $white;
                     }
                 }
             }

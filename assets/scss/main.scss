@@ -74,7 +74,7 @@ main {
 
           @include mdq-min(md) {
             &:hover {
-              background: $black;
+              background: $color-1;
               color: $white;
               cursor: pointer;
 
@@ -101,6 +101,9 @@ main {
             height: 20px;
             background: url(../images/main/icon/more_arrow.png)no-repeat center;
             transition: all 0.5s;
+            @include mdq-max(xl){
+              right: 4px;
+            }
           }
         }
       }
@@ -115,7 +118,7 @@ main {
           gap: unset;
         }
 
-        & .swiper-wrapper {
+        &.swiper-wrapper {
           height: auto;
         }
 
@@ -666,7 +669,7 @@ main {
 
         @include mdq-min(md) {
           &:hover {
-            background: $black;
+            background: $color-1;
             color: $white;
             cursor: pointer;
 

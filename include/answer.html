@@ -1,0 +1,79 @@
+<div class="sortingBox">
+    <a href="#" class="active">인기순</a>
+    <a href="#">최신순</a>
+    <button type="button" class="replyBtn">답글달기</button>
+    <!-- 공유하기 팝업 -->
+    <? include "../include/reply-popup.html" ?>
+</div>
+<div class="commtentArea">
+    <div class="commtentWrap">
+        <div class="commentFlex">
+            <div class="voting-icon" style="background-image: url(../assets/images/main/user-icon.png);">
+                <img src="../assets/images/main/base_75X75.png" alt="img">
+            </div>
+            <div class="commentList">
+                <input type="text" name="ucomment" placeholder="댓글 작성">
+            </div>
+        </div>
+        <div class="cmtBtn mgt-10">
+            <button type="button" class="cancel-btn">취소</button>
+            <button type="button" class="registration-btn">등록</button>
+        </div>
+    </div>
+    <div class="commtentWrap mt-5">
+        <div class="commentFlex">
+            <div class="voting-icon" style="background-image: url(../assets/images/main/user-icon.png);">
+                <img src="../assets/images/main/base_75X75.png" alt="img">
+            </div>
+            <div class="commentList commentList2">
+                <p class="nickname">dony7 <span>12시간 전</span>
+                </p>
+                <div class="description mgt-10">
+                    <p>홈페이지 심플하고 예쁘게 리뉴얼 했어요. 그런데 홍길동님 말씀대로라면 모든 사이드를 특성에 고려하지
+                        않고 제작해야 할까요.홈페이지 심플하고 예쁘게 리뉴얼 했어요. 그런데 홍길동님 말씀대로라면 모든
+                        사이드를 특성에 고려하지 않고 제작해야 할까요.</p>
+                    <button type="button" class="toggleMorebtn">더보기</button>
+                </div>
+                <ul class="commentStatus mgt-10">
+                    <li class="status__1">
+                        <i class="xi-thumbs-up p-color"></i>
+                        <p class="p-color">10</p>
+                    </li>
+                    <li class="status__3">
+                        <button type="button" class="d-flex align-items-center allViewBtn">
+                            답글 282개 모두 보기 <i class="xi-angle-down-min"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 답글등록시 노출 -->
+        <div class="hiddenInput mgt-10">
+            <div class="flexBx d-flex align-items-center">
+                <div class="voting-icon" style="background-image: url(../assets/images/main/user-icon.png);">
+                    <img src="../assets/images/main/base_75X75.png" alt="img">
+                </div>
+                <div class="inputBx w-100">
+                    <input type="text" name="ucomment" placeholder="댓글 작성">
+                </div>
+            </div>
+            <div class="cmtBtn mgt-10">
+                <button type="button" class="cancel-btn answer-cancel">취소</button>
+                <button type="button" class="registration-btn">등록</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- S : 페이징 -->
+<div class="paging-area mt-10 mt-xl-15">
+    <ul>
+        <li><a href="javascript:;" class="prev-first"><span>맨앞으로</span></a></li>
+        <li><a href="javascript:;" class="prev"><span>이전으로</span></a></li>
+        <li><a href="javascript:;" class="active">1<span></span></a></li>
+        <li><a href="javascript:;">2<span></span></a></li>
+        <li><a href="javascript:;">3<span></span></a></li>
+        <li><a href="javascript:;" class="next"><span>다음으로</span></a></li>
+        <li><a href="javascript:;" class="next-last"><span>맨뒤로</span></a></li>
+    </ul>
+</div>
+<!-- E : 페이징 -->
