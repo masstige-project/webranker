@@ -1,0 +1,162 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+    <?
+    include "../include/meta.html"
+		?>
+    <link rel="stylesheet" href="../assets/css/sub.min.css" />
+</head>
+
+<body class="sub-body">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>
+    <!-- E : Header -->
+
+    <!-- S : Main -->
+    <main class="main" id="contents">
+        <!-- S : Section -->
+        <section class="section sc--mypage">
+            <div class="write-container">
+                <div class="back-bx wow fadeInUp mb-5">
+                    <a href="JavaScript:history.go(-1);">
+                        <img src="../assets/images/main/icon/back.png" alt="돌아가기" loading="lazy">
+                        돌아가기
+                    </a>
+                </div>
+                <p class="font-30-md mt-5 wow fadeInUp">프로필</p>
+                <div class="member-main wow fadeInUp">
+                    <div class="member-image">
+                        <div class="img-bx">
+                            <img id="profile-image" src="../assets/images/sub/icon/profile.png" alt="기본이미지">
+                        </div>
+                    </div>
+                    <div class="member-text">
+                        <p class="font-24-sb">홍길동</p>
+                        <div class="markBox mt-3">
+                            <i class="xi-trophy"></i>
+                            <p>적극적참여자</p>
+                            <i class="xi-help-o"></i>
+                        </div>
+                        <a href="#" id="change-profile" class="mt-5 change--img"><span>프로필 이미지 변경</span></a>
+                        <input type="file" id="profile-input" accept="image/*" style="display:none;">
+                    </div>
+                </div>
+                <!-- S : 목록 -->
+                <ul class="profileForm mt-10">
+                    <li class="wow fadeInUp">
+                        <p class="title">이름</p>
+                        <input type="text" name="uname" maxlength="10" class="input-100 bg-fill" value="홍길동">
+                    </li>
+                    <li class="wow fadeInUp">
+                        <p class="title">이메일</p>
+                        <div class="input-flex-bx">
+                            <input type="text" name="uemail" maxlength="20" class="input-100 bg-fill"
+                                value="webranker@gmail.com">
+                        </div>
+                    </li>
+                    <li class="wow fadeInUp">
+                        <p class="title">비밀번호</p>
+                        <div class="input-bx">
+                            <a href="" class="change-btn">비밀번호 변경하기</a>
+                        </div>
+                    </li>
+                    <li class="wow fadeInUp">
+                        <p class="title">휴대 전화번호</p>
+                        <div class="input-bx">
+                            <input type="text" name="utel" maxlength="20" class="input-100 AutoHyphen"
+                                value="010-1234-5678">
+                        </div>
+                        <a href="" class="change-btn mgt-10">변경하기</a>
+                    </li>
+                    <li class="wow fadeInUp">
+                        <p class="title">카카오톡 연동</p>
+                        <div class="input-bx kakao-bx">
+                            <p class="no-interlock">미연동</p>
+                            <button type="button" class="interlock-btn change-btn">연동하기</button>
+                        </div>
+                    </li>
+                    <li class="wow fadeInUp">
+                        <p class="title">마케팅 정보 수신 동의</p>
+                        <div class="input-bx yark-bx">
+                            <div class="agree-bx">
+                                <input type="checkbox" name="email-yark" id="email-yark" title="이메일 동의" value="Y">
+                                <label for="email-yark">
+                                    Email
+                                </label>
+                                <input type="checkbox" name="sns-yark" id="sns-yark" title="SMS/카카오톡 동의" value="Y">
+                                <label for="sns-yark">
+                                    SMS&middot;카카오톡
+                                </label>
+                            </div>
+                            <p class="agree-date">가입일 : YYYY.MM.DD</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="addWrap">
+                    <p class="font-30-bd wow fadeInUp">추가정보</p>
+                    <div class="addItem wow fadeInUp">
+                        <p>내 소개</p>
+                        <textarea name="ucontent" placeholder="당신을 소개하는 글을 작성해주세요. 예를들어, 당신의 전문 분야, 취미, 목표 등을 공유할 수 있어요."></textarea>
+                        <span class="text-count">(0/300)</span>
+                    </div>
+                    <div class="addItem wow fadeInUp">
+                        <p>관심 분야</p>
+                        <ul class="fieldSelect">
+                            <li>기획 & 전략</li>
+                            <li>UX/UI 디자인</li>
+                            <li>그래픽 디자인</li>
+                            <li>웹 개발</li>
+                            <li>모바일 앱 개발</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- E : 목록 -->
+                <div class="commonBtn wow fadeInUp">
+                    <button type="button" class="cmBtn2">저장하기</button>
+                </div>
+                <a href="" class="withdrawal mt-5"><span>회원 탈퇴</span></a>
+            </div>
+        </section>
+        <!-- E : Section -->
+    </main>
+    <!-- E : Main -->
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+
+    <script>
+        $(document).ready(function () {
+            const changeProfileLink = document.getElementById('change-profile');
+            const profileInput = document.getElementById('profile-input');
+            const profileImage = document.getElementById('profile-image');
+
+            const defaultImageSrc = "../assets/images/sub/icon/profile.png"; // 기본 이미지 경로
+
+            changeProfileLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                profileInput.click();
+            });
+
+            profileInput.addEventListener('change', function () {
+                const file = profileInput.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        profileImage.src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+
+        $(".fieldSelect li").on("click", function () {
+            $(".fieldSelect li").removeClass("active");
+            $(this).addClass("active");
+        });
+    </script>
+
+</body>
+
+</html>

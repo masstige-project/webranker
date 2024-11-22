@@ -1,0 +1,708 @@
+//일반 프로필
+.sc--mypage {
+    padding: 100px 0;
+
+    @include mdq-max(xl) {
+        padding: 60px 0;
+    }
+
+    .member-main {
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+        gap: 12px;
+
+        .member-image {
+            width: 150px;
+            position: relative;
+
+            @include mdq-max(md) {
+                width: 100px;
+            }
+        }
+
+        .img-bx {
+            @include img-to-bg(percentage(150/150));
+            border-radius: 50%;
+
+            @include mdq-max(md) {
+                @include img-to-bg(percentage(100/100));
+            }
+        }
+
+        .markBox {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 17px;
+            color: $gray-6;
+
+            .xi-trophy {
+                color: $color-1;
+            }
+        }
+
+        .deleteBtn {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .change--img {
+            display: block;
+
+            span {
+                color: $gray-a;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    background: $gray-a;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    //프로필 목록
+    .profileForm {
+        padding-bottom: 50px;
+        border-bottom: 1px solid $gray-e;
+
+        @include mdq-max(xl) {
+            padding-bottom: 40px;
+        }
+
+        >li+li {
+            margin-top: 30px;
+
+            @include mdq-max(xl) {
+                margin-top: 20px;
+            }
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 10px;
+
+            @include mdq-max(xl) {
+                font-size: rem(18);
+            }
+        }
+
+        .input-100 {
+            width: 100%;
+            border-radius: 10px;
+            height: 50px;
+            padding: 0 20px;
+            border: 1px solid $gray-e;
+
+            @include mdq-max(xl) {
+                height: 40px;
+                padding: 0 10px;
+            }
+
+            &.bg-fill {
+                background: #F9F9F9;
+            }
+        }
+
+        .change-btn {
+            width: 200px;
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid $color-1;
+            background: $white;
+            color: $color-1;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include mdq-max(xl) {
+                font-size: 14px;
+                height: 30px;
+            }
+        }
+
+        .input-bx {
+            &.kakao-bx {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            &.yark-bx {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                font-size: 18px;
+
+                @include mdq-max(xl) {
+                    font-size: rem(16);
+                }
+                @include mdq-max(md) {
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 10px;
+                }
+            }
+            .no-interlock{
+                font-size: 18px;
+                @include mdq-max(xl){
+                    font-size: rem(18);
+                }
+            }
+        }
+
+        .agree-bx {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            @include mdq-max(md) {
+                flex-direction: column;
+                align-items: start;
+                gap: 10px;
+            }
+
+            input {
+                padding: 0;
+                height: initial;
+                width: initial;
+                margin-bottom: 0;
+                display: none;
+                cursor: pointer;
+            }
+
+            label {
+                position: relative;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+
+                @include mdq-max(xl) {
+                    font-size: rem(16);
+                }
+
+                &::before {
+                    content: '';
+                    background-color: transparent;
+                    border: 1px solid $gray-e;
+                    border-radius: 2px;
+                    padding: 8px;
+                    display: inline-block;
+                    position: relative;
+                    vertical-align: middle;
+                    cursor: pointer;
+                    margin-right: 8px;
+                }
+            }
+
+            input:checked+label:before {
+                background-color: $color-1;
+                border: 1px solid $color-1;
+            }
+
+            input:checked+label:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 8px;
+                left: 7px;
+                width: 3px;
+                height: 7px;
+                border: solid $white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+        }
+
+        .agree-date {
+            color: $gray-a;
+        }
+    }
+}
+
+.addWrap {
+    margin-top: 50px;
+    @include mdq-max(xl) {
+        margin-top: 40px;
+    }
+
+    .addItem {
+        margin-top: 40px;
+        @include mdq-max(xl) {
+            margin-top: 20px;
+        }    
+
+        >p {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            @include mdq-max(xl) {
+               font-size: rem(18);
+            } 
+        }
+
+        textarea {
+            min-height: 120px;
+            border-radius: 10px;
+            border: 1px solid $gray-e;
+            padding: 10px 20px;
+
+            &::placeholder {
+                font-size: 18px;
+                line-height: 1.4;
+                color: rgba(#000, 0.2);
+
+                @include mdq-max(xl) {
+                    font-size: rem(16);
+                    line-height: 1.2;
+                }
+            }
+        }
+
+        .text-count {
+            text-align: right;
+            display: inline-block;
+            margin-top: 10px;
+            color: rgba(#000, 0.2);
+            width: 100%;
+            @include mdq-max(xl) {
+                font-size: rem(14);
+            } 
+        }
+    }
+
+    .fieldSelect {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 11px;
+        @include mdq-max(md) {
+            gap: 4px 3px;
+        } 
+
+        >li {
+            width: calc(33.3333% - 7.5px);
+            @include mdq-max(md) {
+                width: calc(33.3333% - 2px);
+            } 
+            background: $white;
+            border-radius: 10px;
+            border: 1px solid $gray-e;
+            height: 40px;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.5s;
+            cursor: pointer;
+
+            &.active {
+                background: $color-1;
+                color: $white;
+            }
+        }
+    }
+}
+
+.commonBtn {
+    margin-top: 50px;
+}
+
+.withdrawal {
+    text-align: center;
+    display: block;
+
+    span {
+        position: relative;
+        font-size: 18px;
+        color: $gray-4;
+        @include mdq-max(xl) {
+            font-size: rem(16);
+        } 
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: $gray-4;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+}
+
+
+.sc--profile {
+    padding: 100px 0;
+
+    @include mdq-max(xl) {
+        padding: 60px 0;
+    }
+
+    .general__profile {
+        .profile--top {
+            display: flex;
+            justify-content: space-between;
+
+            @include mdq-max(xl) {
+                flex-direction: column;
+                align-items: start;
+                justify-content: unset;
+                gap: 10px;
+            }
+        }
+
+        .user-icon {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .bx1 {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            @include mdq-max(xl) {
+                width: 100%;
+            }
+
+            @include mdq-max(md) {
+                align-items: start;
+            }
+        }
+
+        .bx2 {
+            @include mdq-max(xl) {
+                margin-left: auto;
+            }
+
+            @include mdq-max(md) {
+                width: 100%;
+            }
+        }
+
+        .markBox {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .subject-box {
+        display: flex;
+        align-items: center;
+
+        & li {
+            +li {
+                position: relative;
+                margin-left: 11px;
+
+                &::before {
+                    position: absolute;
+                    left: -7px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    content: '';
+                    width: 3px;
+                    height: 3px;
+                    border-radius: 3px;
+                    display: inline-block;
+                    background-color: #aaa;
+                }
+            }
+        }
+    }
+
+    .profile--list {
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        color: $gray-6;
+        gap: 6px;
+
+        @include mdq-max(md) {
+            flex-direction: column;
+            align-items: start;
+            font-size: rem(16);
+        }
+
+        .text-bx {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            @include mdq-max(md) {
+                flex-direction: column;
+                align-items: start;
+            }
+        }
+    }
+
+    .profile--btn {
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 100%;
+            gap: 8px;
+            padding: 0 10px;
+            height: 40px;
+            border-radius: 10px;
+
+            @include mdq-max(xl) {
+                border: 1px solid $gray-e;
+                justify-content: center;
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 40px;
+            border-radius: 10px;
+            background: #FE4844;
+            position: relative;
+            transition: all 0.5s;
+            color: #fff;
+
+            @include mdq-max(xl) {
+                margin-top: 10px;
+            }
+
+            @include mdq-max(md) {
+                width: 100%;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background: url(../images/sub/icon/profile-icon.png) no-repeat center;
+            }
+        }
+    }
+
+    .profile--bottom {
+        margin-top: 50px;
+
+        @include mdq-max(xl) {
+            margin-top: 40px;
+        }
+    }
+
+    .mypageList {
+        display: flex;
+        gap: 10px;
+
+        @include mdq-max(md) {
+            flex-wrap: wrap;
+        }
+
+        li {
+            width: calc(20% - 7.5px);
+            min-height: 120px;
+            background: #f9f9f9;
+            border-radius: 20px;
+
+            @include mdq-max(md) {
+                width: calc(33.3333% - 7.5px);
+                min-height: 100px;
+            }
+
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                font-size: 18px;
+                padding: 10px;
+
+                @include mdq-max(xl) {
+                    font-size: rem(16);
+                }
+
+                span {
+                    font-size: 36px;
+                    font-weight: 600;
+                    color: $color-1;
+
+                    @include mdq-max(xl) {
+                        font-size: rem(24);
+                    }
+                }
+            }
+        }
+    }
+
+    //심사위원 프로필
+    .judge__profile {
+        margin-top: 70px;
+
+        @include mdq-max(xl) {
+            margin-top: 40px;
+        }
+    }
+
+    .judge__title {
+        padding-bottom: 20px;
+        border-bottom: 1px solid $gray-e;
+    }
+
+    .judge__project {
+        margin-top: 50px;
+        display: flex;
+
+        @include mdq-max(xl) {
+            margin-top: 40px;
+        }
+
+        @include mdq-max(md) {
+            flex-direction: column;
+            margin-top: 20px;
+        }
+    }
+
+    .total__bx {
+        min-width: 180px;
+
+        @include mdq-max(md) {
+            min-width: unset;
+            padding-bottom: 20px;
+            border-bottom: 1px solid $gray-e;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 600;
+
+            @include mdq-max(xl) {
+                font-size: rem(18);
+            }
+
+            &.num {
+                font-size: 40px;
+                font-weight: bold;
+
+                @include mdq-max(xl) {
+                    font-size: rem(30);
+                }
+            }
+        }
+    }
+
+    .project__list {
+        @include mdq-max(md) {
+            padding-top: 20px;
+        }
+
+        >li+li {
+            margin-top: 40px;
+
+            @include mdq-max(xl) {
+                margin-top: 20px;
+            }
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1;
+
+            @include mdq-max(xl) {
+                font-size: rem(18);
+            }
+        }
+
+        .dec {
+            margin-top: 10px;
+        }
+    }
+
+    .sns__link {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: 10px;
+
+        @include mdq-max(xs) {
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+        }
+
+        >li>a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            img {
+                width: 22px;
+                height: 22px;
+            }
+        }
+    }
+}
+
+//일반 프로필 view
+.sc--general--view {
+    padding: 100px 0;
+
+    @include mdq-max(xl) {
+        padding: 60px 0;
+    }
+
+    .general__item1 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px 20px;
+
+        >li {
+            text-align: center;
+
+            .icon-bx {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .name {
+                margin-top: 16px;
+            }
+
+            .status_btn {
+                width: 100%;
+                height: 30px;
+                border-radius: 10px;
+                font-size: 15px;
+                margin-top: 12px;
+
+                &.follow,
+                &.unfollow {
+                    background: $color-1;
+                    color: $white;
+                }
+
+                &.following {
+                    background: $white;
+                    border: 1px solid $color-1;
+                    color: $color-1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,163 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+    include "../include/meta.html"
+		?>
+  <link rel="stylesheet" href="../assets/css/sub.min.css" />
+</head>
+
+<body class="sub-body">
+  <!-- S : Header -->
+  <? include "../include/header.html" ?>
+  <!-- E : Header -->
+
+  <!-- S : Main -->
+  <main class="main" id="contents">
+    <!-- S : Section -->
+    <section class="section sc--profile">
+      <div class="container">
+        <div class="back-bx wow fadeInUp mb-5">
+          <a href="JavaScript:history.go(-1);">
+            <img src="../assets/images/main/icon/back.png" alt="돌아가기" loading="lazy">
+            돌아가기
+          </a>
+        </div>
+        <div class="general__profile">
+          <div class="profile--top wow fadeInUp">
+            <div class="bx bx1">
+              <div class="user-icon" style="background-image: url(../assets/images/main/user-icon.png);">
+                <img src="../assets/images/main/base_75X75.png" alt="회원아이콘">
+              </div>
+              <div class="profile--list">
+                <div class="text-bx">
+                  <p class="font-22-rg c-black">홍길동</p>
+                  <p>일반회원</p>
+                </div>
+                <div class="text-bx">
+                  <p class="c-222">관심분야</p>
+                  <ul class="subject-box">
+                    <li>디지털마케팅</li>
+                    <li>웹디자인</li>
+                    <li>사용자경험</li>
+                  </ul>
+                  <div class="markBox">
+                    <i class="xi-trophy"></i>
+                    <p>적극적참여자</p>
+                    <i class="xi-help-o"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bx bx2">
+              <div class="profile--btn">
+                <button type="button" class="shareBtn">
+                  <i class="xi-share-alt-o"></i>
+                  <p class="share">공유하기</p>
+                </button>
+                <!-- 공유하기 팝업 -->
+                <? include "../include/share-popup.html" ?>
+                <a href="./mypage__profile.html">프로필 편집</a>
+              </div>
+            </div>
+          </div>
+          <div class="profile--bottom wow fadeInUp">
+            <p class="c-222 mb-10 mb-xl-15">사용자 경험을 최우선으로 생각하는 UX 디자이너이자 웹&앱 평가 심사위원입니다. 사용성 테스트와 사용자 조사를 통해 제품의 사용자 경험을 개선하는 데에 기여하고 있습니다.</p>
+            <ul class="mypageList">
+              <li><a href="./general__view__2.html">투표한 프로젝트 <span>42</span></a></li>
+              <li><a href="./general__view__1.html">팔로워 <span>42</span></a></li>
+              <li><a href="./general__view__1.html">팔로잉 <span>42</span></a></li>
+              <li><a href="./general__view__2.html">좋아요 <span>42</span></a></li>
+              <li><a href="./general__view__2.html">참여 댓글 <span>42</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- 심사위원 프로필 d-none 해제 -->
+        <div class="judge__profile d-none">
+          <div class="judge__title">
+            <p class="p-color font-18-md">심사위원정보</p>
+          </div>
+          <div class="judge__project">
+            <div class="total__bx">
+              <p>평가한 프로젝트</p>
+              <p class="num">40</p>
+            </div>
+            <ul class="project__list">
+              <li class="wow fadeInUp">
+                <p class="title">심사위원명</p>
+                <p class="dec">디자인스튜디오 인터렉트</p>
+              </li>
+              <li class="wow fadeInUp">
+                <p class="title">소속 기관이나 회사</p>
+                <p class="dec">디자인스튜디오 인터렉트</p>
+              </li>
+              <li class="wow fadeInUp">
+                <p class="title">직위</p>
+                <p class="dec">디자인스튜디오 인터렉트</p>
+              </li>
+              <li class="wow fadeInUp">
+                <p class="title">경력연수</p>
+                <p class="dec">8년</p>
+              </li>
+              <li class="wow fadeInUp">
+                <p class="title">주요 업무 경험 및 담당 프로젝트</p>
+                <p class="dec">사용자 경험 디자인, 인터페이스 디자인, 모바일 앱 개발 프로젝트 리드. 주요 프로젝트로는 "스마트홈 앱 디자인", "피트니스 트래킹 모바일 앱" 등이 있음.</p>
+              </li class="wow fadeInUp">
+              <li class="wow fadeInUp">
+                <p class="title">이전에 참여한 심사 도는 평가 활동</p>
+                <p class="dec">2023년 디지털 디자인 어워드 심사위원, 2022년 모바일 UX/UI 디자인 콘테스트 심사위원.</p>
+              </li>
+              <li class="wow fadeInUp">
+                <p class="title">자신의 자격증 및 수상경력 내용</p>
+                <p class="dec">2023년 디지털 디자인 어워드 심사위원, 2022년 모바일 UX/UI 디자인 콘테스트 심사위원.</p>
+              </li>
+              <li class="wow fadeInUp">
+                <p class="title">심사 과정에서 중요하게 생각하는 기준 또는 가치</p>
+                <p class="dec">사용성, 접근성, 디자인의 혁신성 및 창의성. 사용자 경험을 최우선으로 하는 프로젝트에 높은 평가를 합니다.</p>
+              </li>
+              <li class="wow fadeInUp">
+                <p class="title">SNS 및 블로그 링크</p>
+                <ul class="sns__link">
+                  <li>
+                    <a href="">
+                      <img src="../assets/images/sub/icon/insta.svg" alt="인스타그램">
+                      <p>인스타그램</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="../assets/images/sub/icon/youtube.svg" alt="유튜브">
+                      <p>유튜브</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="../assets/images/sub/icon/facebook.svg" alt="페이스북">
+                      <p>페이스북</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="../assets/images/sub/icon/blog.svg" alt="블로그">
+                      <p>블로그</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- E : Section -->
+  </main>
+  <!-- E : Main -->
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/js.html" ?>
+
+</body>
+
+</html>

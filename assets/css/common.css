@@ -45171,7 +45171,7 @@ html {
 @media all and (max-width: 768px) {
   .footer {
     font-size: 1rem;
-    padding: 2.5rem 0;
+    padding: 40px 0 110px 0;
   }
 }
 .footer__logo {
@@ -45336,6 +45336,154 @@ html {
 }
 .quick-menu .top-btn.down i {
   transform: rotate(180deg);
+}
+
+.mobile-nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}
+.mobile-nav .nav-list {
+  display: flex;
+}
+.mobile-nav .nav-list li {
+  flex: 1;
+  height: 70px;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-nav .nav-list li a {
+  display: flex;
+  text-align: center;
+  color: #fff;
+}
+
+.mobileWrap {
+  max-width: 768px;
+  margin: 0 auto;
+  width: 100%;
+}
+.mobileWrap .mobileNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.mobileWrap .mHeader .top--bx {
+  position: relative;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+.mobileWrap .mHeader .top--bx .alert-link {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.mobileWrap .infoTxt {
+  margin: 0 20px;
+}
+.mobileWrap .infoTxt p {
+  width: 100%;
+  border-radius: 20px;
+  background: #FE4844;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+}
+.mobileWrap .loginBox--off {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.mobileWrap .loginBox--off > a {
+  flex: 1;
+  height: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border-radius: 0.5em;
+  font-size: 14px;
+}
+.mobileWrap .loginBox--off > a.m-login {
+  border: 1px solid #eee;
+  background: #fff;
+}
+.mobileWrap .loginBox--off > a.m-join {
+  border: 1px solid #FE4844;
+  background: #FE4844;
+  color: #fff;
+}
+.mobileWrap .loginBox--on {
+  padding: 20px;
+}
+.mobileWrap .loginBox--on .profill-bx {
+  display: flex;
+  align-items: center;
+}
+.mobileWrap .loginBox--on .profill-bx .icon-bx {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.mobileWrap .loginBox--on .profill-bx .profill-setting {
+  color: #FE4844;
+  font-weight: 500;
+  display: block;
+}
+.mobileWrap .loginBox--on .myList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 10px;
+  text-align: center;
+}
+.mobileWrap .loginBox--on .myList > li {
+  width: calc(50% - 5px);
+}
+.mobileWrap .loginBox--on .myList > li a {
+  border-radius: 0.5em;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  flex-direction: column;
+}
+.mobileWrap .loginBox--on .myList > li .active-txt {
+  color: #FE4844;
+  font-weight: 500;
+}
+.mobileWrap .mBottom {
+  padding: 20px;
+  height: 100%;
+}
+.mobileWrap .mBottom .utill--off, .mobileWrap .mBottom .utill--on {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.mobileWrap .mBottom .utill--off li, .mobileWrap .mBottom .utill--on li {
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+.mobileWrap .mBottom .utill--off li + li, .mobileWrap .mBottom .utill--on li + li {
+  margin-top: 10px;
+}
+.mobileWrap .mBottom .utill--off li > a, .mobileWrap .mBottom .utill--on li > a {
+  font-weight: 500;
+  display: block;
+  position: relative;
 }
 
 .header .nav {
@@ -52952,7 +53100,11 @@ html {
 }
 
 .main {
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+.mobile-body {
+  padding-top: 0;
 }
 
 .back-bx.back-bx2 {
@@ -52989,8 +53141,19 @@ html {
   font-weight: 600;
 }
 
+.font-30-bd {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+}
+@media all and (max-width: 1200px) {
+  .font-30-bd {
+    font-size: 1.25rem;
+  }
+}
+
 .font-30-sb {
-  font-size: 1.875rem;
+  font-size: 30px;
   font-weight: 600;
   line-height: 1;
 }
@@ -53001,7 +53164,7 @@ html {
 }
 
 .font-30-md {
-  font-size: 1.875rem;
+  font-size: 30px;
   font-weight: 500;
   line-height: 1;
 }
@@ -53012,7 +53175,7 @@ html {
 }
 
 .font-24-sb {
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1;
 }
@@ -53022,8 +53185,28 @@ html {
   }
 }
 
+.font-24-bd {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+}
+@media all and (max-width: 1200px) {
+  .font-24-bd {
+    font-size: 1.25rem;
+  }
+}
+
+.font-22-rg {
+  font-size: 22px;
+}
+@media all and (max-width: 1200px) {
+  .font-22-rg {
+    font-size: 1.25rem;
+  }
+}
+
 .font-20-rg {
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1;
 }
 @media all and (max-width: 1200px) {
@@ -53033,7 +53216,7 @@ html {
 }
 
 .font-20-md {
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1;
 }
@@ -53043,8 +53226,18 @@ html {
   }
 }
 
+.font-18-bd {
+  font-size: 18px;
+  font-weight: bold;
+}
+@media all and (max-width: 1200px) {
+  .font-18-bd {
+    font-size: 1rem;
+  }
+}
+
 .font-18-sb {
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 600;
 }
 @media all and (max-width: 1200px) {
@@ -53054,7 +53247,7 @@ html {
 }
 
 .font-18-md {
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 500;
 }
 @media all and (max-width: 1200px) {
@@ -53064,12 +53257,38 @@ html {
 }
 
 .font-18-rg {
-  font-size: 1.125rem;
+  font-size: 18px;
 }
 @media all and (max-width: 1200px) {
   .font-18-rg {
     font-size: 1rem;
   }
+}
+
+.font-17 {
+  font-size: 17px;
+}
+@media all and (max-width: 1200px) {
+  .font-17 {
+    font-size: 1rem;
+  }
+}
+
+.font-15 {
+  font-size: 15px;
+}
+@media all and (max-width: 1200px) {
+  .font-15 {
+    font-size: 0.875rem;
+  }
+}
+
+.c-222 {
+  color: #222;
+}
+
+.c-black {
+  color: #000;
 }
 
 .cmLinkArea {
@@ -53160,6 +53379,11 @@ html {
   align-items: center;
   gap: 20px;
 }
+@media all and (max-width: 768px) {
+  .cmtView .user--area .user--info {
+    gap: 10px;
+  }
+}
 .cmtView .user--area .user--info .user {
   font-size: 22px;
   font-weight: 600;
@@ -53177,7 +53401,7 @@ html {
 @media all and (max-width: 1200px) {
   .cmtView .user--area .user--info .date {
     font-size: 1rem;
-    margin-top: 44px;
+    margin-top: 4px;
   }
 }
 .cmtView .user--area .user-icon {
@@ -53185,6 +53409,12 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   min-width: 75px;
+}
+@media all and (max-width: 768px) {
+  .cmtView .user--area .user-icon {
+    min-width: unset;
+    width: 50px;
+  }
 }
 .cmtView .user--area .user--follow button {
   display: flex;
@@ -53197,6 +53427,14 @@ html {
   height: 40px;
   border-radius: 10px;
 }
+@media all and (max-width: 1200px) {
+  .cmtView .user--area .user--follow button {
+    font-size: 1.125rem;
+    height: 30px;
+    width: auto;
+    padding: 0 20px;
+  }
+}
 .cmtView .edit--area {
   margin: 50px 0 80px 0;
 }
@@ -53205,7 +53443,53 @@ html {
   align-items: center;
   gap: 4px;
 }
-.cmtView .sortingBox a {
+.cmtView .sortingBox.sortingBox2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media all and (max-width: 768px) {
+  .cmtView .sortingBox.sortingBox2 {
+    flex-direction: column;
+    align-items: start;
+    justify-content: unset;
+    gap: 10px;
+  }
+}
+.cmtView .sortingBox.sortingBox2 .box4 {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+@media all and (max-width: 768px) {
+  .cmtView .sortingBox.sortingBox2 .box4 {
+    order: 1;
+    width: 100%;
+  }
+}
+@media all and (max-width: 768px) {
+  .cmtView .sortingBox.sortingBox2 .box3 {
+    order: 2;
+  }
+}
+.cmtView .sortingBox.sortingBox2 .box3 > ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+@media all and (max-width: 768px) {
+  .cmtView .sortingBox.sortingBox2 .box3 > ul {
+    gap: 10px;
+    font-size: 1rem;
+  }
+}
+.cmtView .sortingBox.sortingBox2 .box3 > ul li {
+  color: #666;
+}
+.cmtView .sortingBox.sortingBox2 .box3 > ul li span {
+  color: #000;
+}
+.cmtView .sortingBox a, .cmtView .sortingBox .replyBtn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53217,14 +53501,18 @@ html {
   font-size: 15px;
 }
 @media all and (max-width: 1200px) {
-  .cmtView .sortingBox a {
+  .cmtView .sortingBox a, .cmtView .sortingBox .replyBtn {
     font-size: 14px;
   }
 }
-.cmtView .sortingBox a.active {
+.cmtView .sortingBox a.active, .cmtView .sortingBox .replyBtn.active {
   background: #444;
   color: #fff;
   border: 1px solid #444;
+}
+.cmtView .sortingBox a.replyBtn, .cmtView .sortingBox .replyBtn.replyBtn {
+  background: #FE4844;
+  color: #fff;
 }
 .cmtView .commtentArea {
   margin-top: 30px;
@@ -53321,6 +53609,7 @@ html {
   display: flex;
   align-items: center;
   gap: 4px;
+  cursor: pointer;
 }
 .cmtView .commtentArea .commentList.commentList2 .status__1 p {
   font-size: 15px;
@@ -53430,6 +53719,113 @@ html {
   color: #fff;
 }
 
+.cmCategoryArea .title--bx2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+@media all and (max-width: 768px) {
+  .cmCategoryArea .title--bx2 {
+    padding-bottom: 15px;
+  }
+}
+.cmCategoryArea .cmcategoryList .font-20-md {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cmCategoryArea .cmcategoryList > li {
+  padding: 25px 0;
+  border-top: 1px solid #ddd;
+}
+@media all and (max-width: 768px) {
+  .cmCategoryArea .cmcategoryList > li {
+    padding: 15px 0;
+  }
+}
+.cmCategoryArea .cmcategoryList .wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media all and (max-width: 768px) {
+  .cmCategoryArea .cmcategoryList .wrap {
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+  }
+}
+.cmCategoryArea .cmcategoryList .date--bx,
+.cmCategoryArea .cmcategoryList .list--bx {
+  display: flex;
+  align-items: center;
+  color: #888;
+}
+.cmCategoryArea .cmcategoryList .date--bx {
+  gap: 6px;
+}
+.cmCategoryArea .cmcategoryList .list--bx {
+  gap: 20px;
+}
+@media all and (max-width: 768px) {
+  .cmCategoryArea .cmcategoryList .list--bx {
+    gap: 10px;
+  }
+}
+.cmCategoryArea .more {
+  font-size: 1.125rem;
+  width: 107px;
+  padding: 0 16px;
+  line-height: 44px;
+  margin-left: 10px;
+  border: 1px solid #eee;
+  border-radius: 44px;
+  position: relative;
+  transition: all 0.5s;
+}
+@media all and (max-width: 1200px) {
+  .cmCategoryArea .more {
+    font-size: 1rem;
+    line-height: unset;
+    width: 86px;
+    height: 36px;
+    line-height: 36px;
+  }
+}
+@media all and (min-width: 768.02px) {
+  .cmCategoryArea .more:hover {
+    background: #FE4844;
+    color: #fff;
+    cursor: pointer;
+  }
+  .cmCategoryArea .more:hover::after {
+    background: url(../images/main/icon/more_arrow_w.png) no-repeat center;
+  }
+}
+.cmCategoryArea .more a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.cmCategoryArea .more::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../images/main/icon/more_arrow.png) no-repeat center;
+  transition: all 0.5s;
+}
+@media all and (max-width: 1200px) {
+  .cmCategoryArea .more::after {
+    right: 4px;
+  }
+}
+
 .overlay,
 .overlay2,
 .overlay3,
@@ -53438,6 +53834,7 @@ html {
 .share-overlay,
 .evaluation-overlay,
 .reply-overlay,
+.report-overlay,
 .evaluation-policy {
   position: fixed;
   top: 0;
@@ -53456,6 +53853,7 @@ html {
 .share-overlay .popup-bx,
 .evaluation-overlay .popup-bx,
 .reply-overlay .popup-bx,
+.report-overlay .popup-bx,
 .evaluation-policy .popup-bx {
   width: 800px;
   position: fixed;
@@ -53476,6 +53874,7 @@ html {
   .share-overlay .popup-bx,
   .evaluation-overlay .popup-bx,
   .reply-overlay .popup-bx,
+  .report-overlay .popup-bx,
   .evaluation-policy .popup-bx {
     padding: 2.5rem 1.25rem;
   }
@@ -53489,6 +53888,7 @@ html {
   .share-overlay .popup-bx,
   .evaluation-overlay .popup-bx,
   .reply-overlay .popup-bx,
+  .report-overlay .popup-bx,
   .evaluation-policy .popup-bx {
     width: calc(100% - 20px);
   }
@@ -53501,6 +53901,7 @@ html {
 .share-overlay .filter-bx,
 .evaluation-overlay .filter-bx,
 .reply-overlay .filter-bx,
+.report-overlay .filter-bx,
 .evaluation-policy .filter-bx {
   width: 1150px;
   position: fixed;
@@ -53521,6 +53922,7 @@ html {
   .share-overlay .filter-bx,
   .evaluation-overlay .filter-bx,
   .reply-overlay .filter-bx,
+  .report-overlay .filter-bx,
   .evaluation-policy .filter-bx {
     padding: 2.5rem 1.25rem;
     width: calc(100% - 20px);
@@ -53534,6 +53936,7 @@ html {
 .share-overlay .filter-bx .fliterWrap,
 .evaluation-overlay .filter-bx .fliterWrap,
 .reply-overlay .filter-bx .fliterWrap,
+.report-overlay .filter-bx .fliterWrap,
 .evaluation-policy .filter-bx .fliterWrap {
   padding-bottom: 40px;
   border-bottom: 1px solid #ddd;
@@ -53546,6 +53949,7 @@ html {
 .share-overlay .filter-bx .stepList,
 .evaluation-overlay .filter-bx .stepList,
 .reply-overlay .filter-bx .stepList,
+.report-overlay .filter-bx .stepList,
 .evaluation-policy .filter-bx .stepList {
   gap: 8px;
   display: flex;
@@ -53560,6 +53964,7 @@ html {
   .share-overlay .filter-bx .stepList,
   .evaluation-overlay .filter-bx .stepList,
   .reply-overlay .filter-bx .stepList,
+  .report-overlay .filter-bx .stepList,
   .evaluation-policy .filter-bx .stepList {
     flex-wrap: nowrap;
     gap: 0;
@@ -53573,6 +53978,7 @@ html {
 .share-overlay .filter-bx .stepList .stepItem,
 .evaluation-overlay .filter-bx .stepList .stepItem,
 .reply-overlay .filter-bx .stepList .stepItem,
+.report-overlay .filter-bx .stepList .stepItem,
 .evaluation-policy .filter-bx .stepList .stepItem {
   width: 160px;
   height: 40px;
@@ -53586,6 +53992,7 @@ html {
   .share-overlay .filter-bx .stepList .stepItem,
   .evaluation-overlay .filter-bx .stepList .stepItem,
   .reply-overlay .filter-bx .stepList .stepItem,
+  .report-overlay .filter-bx .stepList .stepItem,
   .evaluation-policy .filter-bx .stepList .stepItem {
     width: auto;
   }
@@ -53598,6 +54005,7 @@ html {
 .share-overlay .filter-bx .stepList .stepItem > a,
 .evaluation-overlay .filter-bx .stepList .stepItem > a,
 .reply-overlay .filter-bx .stepList .stepItem > a,
+.report-overlay .filter-bx .stepList .stepItem > a,
 .evaluation-policy .filter-bx .stepList .stepItem > a {
   width: 100%;
   height: 100%;
@@ -53618,6 +54026,7 @@ html {
   .share-overlay .filter-bx .stepList .stepItem > a,
   .evaluation-overlay .filter-bx .stepList .stepItem > a,
   .reply-overlay .filter-bx .stepList .stepItem > a,
+  .report-overlay .filter-bx .stepList .stepItem > a,
   .evaluation-policy .filter-bx .stepList .stepItem > a {
     font-size: 0.875rem;
     padding: 0 10px;
@@ -53631,6 +54040,7 @@ html {
 .share-overlay .filter-bx .stepList .stepItem > a.active,
 .evaluation-overlay .filter-bx .stepList .stepItem > a.active,
 .reply-overlay .filter-bx .stepList .stepItem > a.active,
+.report-overlay .filter-bx .stepList .stepItem > a.active,
 .evaluation-policy .filter-bx .stepList .stepItem > a.active {
   color: #fff;
   border: 1px solid #FE4844;
@@ -53644,6 +54054,7 @@ html {
 .share-overlay .filter-bx .stepList2,
 .evaluation-overlay .filter-bx .stepList2,
 .reply-overlay .filter-bx .stepList2,
+.report-overlay .filter-bx .stepList2,
 .evaluation-policy .filter-bx .stepList2 {
   gap: 8px;
   display: flex;
@@ -53658,6 +54069,7 @@ html {
   .share-overlay .filter-bx .stepList2,
   .evaluation-overlay .filter-bx .stepList2,
   .reply-overlay .filter-bx .stepList2,
+  .report-overlay .filter-bx .stepList2,
   .evaluation-policy .filter-bx .stepList2 {
     flex-wrap: nowrap;
     gap: 0;
@@ -53671,6 +54083,7 @@ html {
 .share-overlay .filter-bx .stepItem2,
 .evaluation-overlay .filter-bx .stepItem2,
 .reply-overlay .filter-bx .stepItem2,
+.report-overlay .filter-bx .stepItem2,
 .evaluation-policy .filter-bx .stepItem2 {
   width: 60px;
   height: 60px;
@@ -53687,6 +54100,7 @@ html {
   .share-overlay .filter-bx .stepItem2,
   .evaluation-overlay .filter-bx .stepItem2,
   .reply-overlay .filter-bx .stepItem2,
+  .report-overlay .filter-bx .stepItem2,
   .evaluation-policy .filter-bx .stepItem2 {
     width: 40px;
     height: 40px;
@@ -53701,6 +54115,7 @@ html {
 .share-overlay .filter-bx .stepItem2.active::after,
 .evaluation-overlay .filter-bx .stepItem2.active::after,
 .reply-overlay .filter-bx .stepItem2.active::after,
+.report-overlay .filter-bx .stepItem2.active::after,
 .evaluation-policy .filter-bx .stepItem2.active::after {
   opacity: 1;
 }
@@ -53712,6 +54127,7 @@ html {
 .share-overlay .filter-bx .stepItem2::after,
 .evaluation-overlay .filter-bx .stepItem2::after,
 .reply-overlay .filter-bx .stepItem2::after,
+.report-overlay .filter-bx .stepItem2::after,
 .evaluation-policy .filter-bx .stepItem2::after {
   content: "";
   background-image: url("../images/main/icon/pick.png");
@@ -53735,6 +54151,7 @@ html {
 .share-overlay .filter-bx .stepItem2:nth-child(1),
 .evaluation-overlay .filter-bx .stepItem2:nth-child(1),
 .reply-overlay .filter-bx .stepItem2:nth-child(1),
+.report-overlay .filter-bx .stepItem2:nth-child(1),
 .evaluation-policy .filter-bx .stepItem2:nth-child(1) {
   background: #000;
 }
@@ -53746,6 +54163,7 @@ html {
 .share-overlay .filter-bx .stepItem2:nth-child(2),
 .evaluation-overlay .filter-bx .stepItem2:nth-child(2),
 .reply-overlay .filter-bx .stepItem2:nth-child(2),
+.report-overlay .filter-bx .stepItem2:nth-child(2),
 .evaluation-policy .filter-bx .stepItem2:nth-child(2) {
   background: #fff;
   border: 1px solid #eee;
@@ -53759,6 +54177,7 @@ html {
 .share-overlay .filter-bx .stepItem2:nth-child(3),
 .evaluation-overlay .filter-bx .stepItem2:nth-child(3),
 .reply-overlay .filter-bx .stepItem2:nth-child(3),
+.report-overlay .filter-bx .stepItem2:nth-child(3),
 .evaluation-policy .filter-bx .stepItem2:nth-child(3) {
   background: rgba(0, 0, 0, 0.8);
 }
@@ -53770,6 +54189,7 @@ html {
 .share-overlay .filter-bx .stepItem2:nth-child(4),
 .evaluation-overlay .filter-bx .stepItem2:nth-child(4),
 .reply-overlay .filter-bx .stepItem2:nth-child(4),
+.report-overlay .filter-bx .stepItem2:nth-child(4),
 .evaluation-policy .filter-bx .stepItem2:nth-child(4) {
   background: #FF0000;
 }
@@ -53781,6 +54201,7 @@ html {
 .share-overlay .filter-bx .stepItem2:nth-child(5),
 .evaluation-overlay .filter-bx .stepItem2:nth-child(5),
 .reply-overlay .filter-bx .stepItem2:nth-child(5),
+.report-overlay .filter-bx .stepItem2:nth-child(5),
 .evaluation-policy .filter-bx .stepItem2:nth-child(5) {
   background: #FF9900;
 }
@@ -53792,6 +54213,7 @@ html {
 .share-overlay .filter-bx .stepItem2:nth-child(6),
 .evaluation-overlay .filter-bx .stepItem2:nth-child(6),
 .reply-overlay .filter-bx .stepItem2:nth-child(6),
+.report-overlay .filter-bx .stepItem2:nth-child(6),
 .evaluation-policy .filter-bx .stepItem2:nth-child(6) {
   background: #FFFF00;
 }
@@ -53803,6 +54225,7 @@ html {
 .share-overlay .filter-bx .stepItem2:nth-child(7),
 .evaluation-overlay .filter-bx .stepItem2:nth-child(7),
 .reply-overlay .filter-bx .stepItem2:nth-child(7),
+.report-overlay .filter-bx .stepItem2:nth-child(7),
 .evaluation-policy .filter-bx .stepItem2:nth-child(7) {
   background: #80FF00;
 }
@@ -53814,6 +54237,7 @@ html {
 .share-overlay .filter-bx .stepItem2:nth-child(8),
 .evaluation-overlay .filter-bx .stepItem2:nth-child(8),
 .reply-overlay .filter-bx .stepItem2:nth-child(8),
+.report-overlay .filter-bx .stepItem2:nth-child(8),
 .evaluation-policy .filter-bx .stepItem2:nth-child(8) {
   background: #00EE26;
 }
@@ -53825,6 +54249,7 @@ html {
 .share-overlay .filter-bx .stepItem2:nth-child(9),
 .evaluation-overlay .filter-bx .stepItem2:nth-child(9),
 .reply-overlay .filter-bx .stepItem2:nth-child(9),
+.report-overlay .filter-bx .stepItem2:nth-child(9),
 .evaluation-policy .filter-bx .stepItem2:nth-child(9) {
   background: #00E1AB;
 }
@@ -53836,6 +54261,7 @@ html {
 .share-overlay .filter-bx .stepItem2:nth-child(10),
 .evaluation-overlay .filter-bx .stepItem2:nth-child(10),
 .reply-overlay .filter-bx .stepItem2:nth-child(10),
+.report-overlay .filter-bx .stepItem2:nth-child(10),
 .evaluation-policy .filter-bx .stepItem2:nth-child(10) {
   background: #11F1FF;
 }
@@ -53847,6 +54273,7 @@ html {
 .share-overlay .filter-bx .stepItem2:nth-child(11),
 .evaluation-overlay .filter-bx .stepItem2:nth-child(11),
 .reply-overlay .filter-bx .stepItem2:nth-child(11),
+.report-overlay .filter-bx .stepItem2:nth-child(11),
 .evaluation-policy .filter-bx .stepItem2:nth-child(11) {
   background: #0075FF;
 }
@@ -53858,6 +54285,7 @@ html {
 .share-overlay .filter-bx .stepItem2:nth-child(12),
 .evaluation-overlay .filter-bx .stepItem2:nth-child(12),
 .reply-overlay .filter-bx .stepItem2:nth-child(12),
+.report-overlay .filter-bx .stepItem2:nth-child(12),
 .evaluation-policy .filter-bx .stepItem2:nth-child(12) {
   background: #8F00FF;
 }
@@ -53869,6 +54297,7 @@ html {
 .share-overlay .filter-bx .stepItem2:nth-child(13),
 .evaluation-overlay .filter-bx .stepItem2:nth-child(13),
 .reply-overlay .filter-bx .stepItem2:nth-child(13),
+.report-overlay .filter-bx .stepItem2:nth-child(13),
 .evaluation-policy .filter-bx .stepItem2:nth-child(13) {
   background: #FA00FF;
 }
@@ -53880,6 +54309,7 @@ html {
 .share-overlay .filter-bx .step-tit,
 .evaluation-overlay .filter-bx .step-tit,
 .reply-overlay .filter-bx .step-tit,
+.report-overlay .filter-bx .step-tit,
 .evaluation-policy .filter-bx .step-tit {
   font-weight: 500;
   margin-bottom: 20px;
@@ -53892,6 +54322,7 @@ html {
 .share-overlay .filter-bx .dateList,
 .evaluation-overlay .filter-bx .dateList,
 .reply-overlay .filter-bx .dateList,
+.report-overlay .filter-bx .dateList,
 .evaluation-policy .filter-bx .dateList {
   display: flex;
   align-items: center;
@@ -53906,6 +54337,7 @@ html {
   .share-overlay .filter-bx .dateList,
   .evaluation-overlay .filter-bx .dateList,
   .reply-overlay .filter-bx .dateList,
+  .report-overlay .filter-bx .dateList,
   .evaluation-policy .filter-bx .dateList {
     flex-direction: column;
   }
@@ -53918,6 +54350,7 @@ html {
 .share-overlay .filter-bx .dateList > div,
 .evaluation-overlay .filter-bx .dateList > div,
 .reply-overlay .filter-bx .dateList > div,
+.report-overlay .filter-bx .dateList > div,
 .evaluation-policy .filter-bx .dateList > div {
   position: relative;
 }
@@ -53930,6 +54363,7 @@ html {
   .share-overlay .filter-bx .dateList > div,
   .evaluation-overlay .filter-bx .dateList > div,
   .reply-overlay .filter-bx .dateList > div,
+  .report-overlay .filter-bx .dateList > div,
   .evaluation-policy .filter-bx .dateList > div {
     width: 100%;
     text-align: center;
@@ -53943,6 +54377,7 @@ html {
 .share-overlay .filter-bx .dateList input,
 .evaluation-overlay .filter-bx .dateList input,
 .reply-overlay .filter-bx .dateList input,
+.report-overlay .filter-bx .dateList input,
 .evaluation-policy .filter-bx .dateList input {
   width: 160px;
   height: 40px;
@@ -53959,6 +54394,7 @@ html {
   .share-overlay .filter-bx .dateList input,
   .evaluation-overlay .filter-bx .dateList input,
   .reply-overlay .filter-bx .dateList input,
+  .report-overlay .filter-bx .dateList input,
   .evaluation-policy .filter-bx .dateList input {
     width: 100%;
   }
@@ -53971,6 +54407,7 @@ html {
 .share-overlay .filter-bx .dateList .img-bx,
 .evaluation-overlay .filter-bx .dateList .img-bx,
 .reply-overlay .filter-bx .dateList .img-bx,
+.report-overlay .filter-bx .dateList .img-bx,
 .evaluation-policy .filter-bx .dateList .img-bx {
   position: absolute;
   top: 50%;
@@ -53985,6 +54422,7 @@ html {
 .share-overlay .filter-bx .text-bx,
 .evaluation-overlay .filter-bx .text-bx,
 .reply-overlay .filter-bx .text-bx,
+.report-overlay .filter-bx .text-bx,
 .evaluation-policy .filter-bx .text-bx {
   overflow-y: scroll;
   max-height: 600px;
@@ -53999,6 +54437,7 @@ html {
 .share-overlay .filter-bx .text-bx::-webkit-scrollbar,
 .evaluation-overlay .filter-bx .text-bx::-webkit-scrollbar,
 .reply-overlay .filter-bx .text-bx::-webkit-scrollbar,
+.report-overlay .filter-bx .text-bx::-webkit-scrollbar,
 .evaluation-policy .filter-bx .text-bx::-webkit-scrollbar {
   width: 10px;
 }
@@ -54010,6 +54449,7 @@ html {
 .share-overlay .filter-bx .text-bx::-webkit-scrollbar-thumb,
 .evaluation-overlay .filter-bx .text-bx::-webkit-scrollbar-thumb,
 .reply-overlay .filter-bx .text-bx::-webkit-scrollbar-thumb,
+.report-overlay .filter-bx .text-bx::-webkit-scrollbar-thumb,
 .evaluation-policy .filter-bx .text-bx::-webkit-scrollbar-thumb {
   width: 10px;
   background: #FE4844;
@@ -54022,6 +54462,7 @@ html {
 .share-overlay .filter-bx .text-bx::-webkit-scrollbar-track,
 .evaluation-overlay .filter-bx .text-bx::-webkit-scrollbar-track,
 .reply-overlay .filter-bx .text-bx::-webkit-scrollbar-track,
+.report-overlay .filter-bx .text-bx::-webkit-scrollbar-track,
 .evaluation-policy .filter-bx .text-bx::-webkit-scrollbar-track {
   background: transparent;
   box-shadow: inset 0 0 5px #ddd;
@@ -54036,6 +54477,7 @@ html {
 .share-overlay .projectBtn,
 .evaluation-overlay .projectBtn,
 .reply-overlay .projectBtn,
+.report-overlay .projectBtn,
 .evaluation-policy .projectBtn {
   display: flex;
   align-items: center;
@@ -54051,6 +54493,7 @@ html {
   .share-overlay .projectBtn,
   .evaluation-overlay .projectBtn,
   .reply-overlay .projectBtn,
+  .report-overlay .projectBtn,
   .evaluation-policy .projectBtn {
     flex-direction: column;
   }
@@ -54071,6 +54514,8 @@ html {
 .evaluation-overlay .projectBtn a,
 .reply-overlay .projectBtn > button,
 .reply-overlay .projectBtn a,
+.report-overlay .projectBtn > button,
+.report-overlay .projectBtn a,
 .evaluation-policy .projectBtn > button,
 .evaluation-policy .projectBtn a {
   display: flex;
@@ -54100,6 +54545,8 @@ html {
   .evaluation-overlay .projectBtn a,
   .reply-overlay .projectBtn > button,
   .reply-overlay .projectBtn a,
+  .report-overlay .projectBtn > button,
+  .report-overlay .projectBtn a,
   .evaluation-policy .projectBtn > button,
   .evaluation-policy .projectBtn a {
     font-size: 1rem;
@@ -54123,6 +54570,8 @@ html {
   .evaluation-overlay .projectBtn a,
   .reply-overlay .projectBtn > button,
   .reply-overlay .projectBtn a,
+  .report-overlay .projectBtn > button,
+  .report-overlay .projectBtn a,
   .evaluation-policy .projectBtn > button,
   .evaluation-policy .projectBtn a {
     width: 100%;
@@ -54144,6 +54593,8 @@ html {
 .evaluation-overlay .projectBtn a.btn1,
 .reply-overlay .projectBtn > button.btn1,
 .reply-overlay .projectBtn a.btn1,
+.report-overlay .projectBtn > button.btn1,
+.report-overlay .projectBtn a.btn1,
 .evaluation-policy .projectBtn > button.btn1,
 .evaluation-policy .projectBtn a.btn1 {
   border: 1px solid #eee;
@@ -54165,6 +54616,8 @@ html {
 .evaluation-overlay .projectBtn a.btn2,
 .reply-overlay .projectBtn > button.btn2,
 .reply-overlay .projectBtn a.btn2,
+.report-overlay .projectBtn > button.btn2,
+.report-overlay .projectBtn a.btn2,
 .evaluation-policy .projectBtn > button.btn2,
 .evaluation-policy .projectBtn a.btn2 {
   background: #FE4844;
@@ -54187,6 +54640,8 @@ html {
   .evaluation-overlay .projectBtn a:hover,
   .reply-overlay .projectBtn > button:hover,
   .reply-overlay .projectBtn a:hover,
+  .report-overlay .projectBtn > button:hover,
+  .report-overlay .projectBtn a:hover,
   .evaluation-policy .projectBtn > button:hover,
   .evaluation-policy .projectBtn a:hover {
     background: #FE4844;
@@ -54201,6 +54656,7 @@ html {
 .share-overlay .popClosebtn,
 .evaluation-overlay .popClosebtn,
 .reply-overlay .popClosebtn,
+.report-overlay .popClosebtn,
 .evaluation-policy .popClosebtn {
   position: relative;
   display: flex;
@@ -54216,6 +54672,7 @@ html {
   .share-overlay .popClosebtn img,
   .evaluation-overlay .popClosebtn img,
   .reply-overlay .popClosebtn img,
+  .report-overlay .popClosebtn img,
   .evaluation-policy .popClosebtn img {
     width: 20px;
   }
@@ -54228,6 +54685,7 @@ html {
 .share-overlay .popClosebtn.filterClose i,
 .evaluation-overlay .popClosebtn.filterClose i,
 .reply-overlay .popClosebtn.filterClose i,
+.report-overlay .popClosebtn.filterClose i,
 .evaluation-policy .popClosebtn.filterClose i {
   font-size: 48px;
 }
@@ -54240,6 +54698,7 @@ html {
   .share-overlay .popClosebtn.filterClose i,
   .evaluation-overlay .popClosebtn.filterClose i,
   .reply-overlay .popClosebtn.filterClose i,
+  .report-overlay .popClosebtn.filterClose i,
   .evaluation-policy .popClosebtn.filterClose i {
     font-size: 20px;
   }
@@ -54252,6 +54711,7 @@ html {
 .share-overlay .title-bx,
 .evaluation-overlay .title-bx,
 .reply-overlay .title-bx,
+.report-overlay .title-bx,
 .evaluation-policy .title-bx {
   display: flex;
   align-items: center;
@@ -54268,6 +54728,7 @@ html {
   .share-overlay .title-bx,
   .evaluation-overlay .title-bx,
   .reply-overlay .title-bx,
+  .report-overlay .title-bx,
   .evaluation-policy .title-bx {
     margin-bottom: 1.25rem;
   }
@@ -54280,6 +54741,7 @@ html {
 .share-overlay .title-bx .title,
 .evaluation-overlay .title-bx .title,
 .reply-overlay .title-bx .title,
+.report-overlay .title-bx .title,
 .evaluation-policy .title-bx .title {
   font-size: 1.75rem;
   font-weight: bold;
@@ -54295,6 +54757,7 @@ html {
   .share-overlay .title-bx .title,
   .evaluation-overlay .title-bx .title,
   .reply-overlay .title-bx .title,
+  .report-overlay .title-bx .title,
   .evaluation-policy .title-bx .title {
     font-size: 1.5rem;
   }
@@ -54308,6 +54771,7 @@ html {
   .share-overlay .title-bx .title,
   .evaluation-overlay .title-bx .title,
   .reply-overlay .title-bx .title,
+  .report-overlay .title-bx .title,
   .evaluation-policy .title-bx .title {
     font-size: 1.25rem;
   }
@@ -54320,6 +54784,7 @@ html {
 .share-overlay .btn-bx,
 .evaluation-overlay .btn-bx,
 .reply-overlay .btn-bx,
+.report-overlay .btn-bx,
 .evaluation-policy .btn-bx {
   display: flex;
   align-items: center;
@@ -54342,6 +54807,8 @@ html {
 .evaluation-overlay .btn-bx button,
 .reply-overlay .btn-bx a,
 .reply-overlay .btn-bx button,
+.report-overlay .btn-bx a,
+.report-overlay .btn-bx button,
 .evaluation-policy .btn-bx a,
 .evaluation-policy .btn-bx button {
   width: 280px;
@@ -54369,6 +54836,8 @@ html {
   .evaluation-overlay .btn-bx button,
   .reply-overlay .btn-bx a,
   .reply-overlay .btn-bx button,
+  .report-overlay .btn-bx a,
+  .report-overlay .btn-bx button,
   .evaluation-policy .btn-bx a,
   .evaluation-policy .btn-bx button {
     width: 100%;
@@ -54393,6 +54862,8 @@ html {
 .evaluation-overlay .btn-bx button.btn1,
 .reply-overlay .btn-bx a.btn1,
 .reply-overlay .btn-bx button.btn1,
+.report-overlay .btn-bx a.btn1,
+.report-overlay .btn-bx button.btn1,
 .evaluation-policy .btn-bx a.btn1,
 .evaluation-policy .btn-bx button.btn1 {
   border: 1px solid #ddd;
@@ -54414,6 +54885,8 @@ html {
 .evaluation-overlay .btn-bx button.btn2,
 .reply-overlay .btn-bx a.btn2,
 .reply-overlay .btn-bx button.btn2,
+.report-overlay .btn-bx a.btn2,
+.report-overlay .btn-bx button.btn2,
 .evaluation-policy .btn-bx a.btn2,
 .evaluation-policy .btn-bx button.btn2 {
   border: 1px solid #FE4844;
@@ -54428,6 +54901,7 @@ html {
 .share-overlay .shareLinkArea,
 .evaluation-overlay .shareLinkArea,
 .reply-overlay .shareLinkArea,
+.report-overlay .shareLinkArea,
 .evaluation-policy .shareLinkArea {
   padding: 40px 0;
   border-bottom: 1px solid #ddd;
@@ -54440,6 +54914,7 @@ html {
 .share-overlay .shareLinkArea.shareLinkArea2,
 .evaluation-overlay .shareLinkArea.shareLinkArea2,
 .reply-overlay .shareLinkArea.shareLinkArea2,
+.report-overlay .shareLinkArea.shareLinkArea2,
 .evaluation-policy .shareLinkArea.shareLinkArea2 {
   display: flex;
   justify-content: space-between;
@@ -54455,6 +54930,7 @@ html {
   .share-overlay .shareLinkArea.shareLinkArea2,
   .evaluation-overlay .shareLinkArea.shareLinkArea2,
   .reply-overlay .shareLinkArea.shareLinkArea2,
+  .report-overlay .shareLinkArea.shareLinkArea2,
   .evaluation-policy .shareLinkArea.shareLinkArea2 {
     padding: 0 0 40px 0;
   }
@@ -54468,6 +54944,7 @@ html {
   .share-overlay .shareLinkArea.shareLinkArea2,
   .evaluation-overlay .shareLinkArea.shareLinkArea2,
   .reply-overlay .shareLinkArea.shareLinkArea2,
+  .report-overlay .shareLinkArea.shareLinkArea2,
   .evaluation-policy .shareLinkArea.shareLinkArea2 {
     flex-direction: column;
     align-items: start;
@@ -54490,6 +54967,8 @@ html {
 .evaluation-overlay .shareLinkArea.shareLinkArea2 a,
 .reply-overlay .shareLinkArea.shareLinkArea2 .shareFlex button,
 .reply-overlay .shareLinkArea.shareLinkArea2 a,
+.report-overlay .shareLinkArea.shareLinkArea2 .shareFlex button,
+.report-overlay .shareLinkArea.shareLinkArea2 a,
 .evaluation-policy .shareLinkArea.shareLinkArea2 .shareFlex button,
 .evaluation-policy .shareLinkArea.shareLinkArea2 a {
   border-bottom: none;
@@ -54516,6 +54995,8 @@ html {
   .evaluation-overlay .shareLinkArea.shareLinkArea2 a,
   .reply-overlay .shareLinkArea.shareLinkArea2 .shareFlex button,
   .reply-overlay .shareLinkArea.shareLinkArea2 a,
+  .report-overlay .shareLinkArea.shareLinkArea2 .shareFlex button,
+  .report-overlay .shareLinkArea.shareLinkArea2 a,
   .evaluation-policy .shareLinkArea.shareLinkArea2 .shareFlex button,
   .evaluation-policy .shareLinkArea.shareLinkArea2 a {
     font-size: 14px;
@@ -54529,6 +55010,7 @@ html {
 .share-overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
 .evaluation-overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
 .reply-overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+.report-overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
 .evaluation-policy .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2 {
   display: flex;
   flex-direction: column;
@@ -54544,6 +55026,7 @@ html {
   .share-overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
   .evaluation-overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
   .reply-overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
+  .report-overlay .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2,
   .evaluation-policy .shareLinkArea.shareLinkArea2 .shareFlex.shareFlex2 {
     width: 100%;
   }
@@ -54556,6 +55039,7 @@ html {
 .share-overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
 .evaluation-overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
 .reply-overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
+.report-overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
 .evaluation-policy .shareLinkArea.shareLinkArea2 .shareFlex a {
   width: 200px;
   height: 40px;
@@ -54572,6 +55056,7 @@ html {
   .share-overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
   .evaluation-overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
   .reply-overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
+  .report-overlay .shareLinkArea.shareLinkArea2 .shareFlex a,
   .evaluation-policy .shareLinkArea.shareLinkArea2 .shareFlex a {
     width: 100%;
     padding: 0 20px;
@@ -54586,6 +55071,7 @@ html {
 .share-overlay .shareLinkArea .share-title,
 .evaluation-overlay .shareLinkArea .share-title,
 .reply-overlay .shareLinkArea .share-title,
+.report-overlay .shareLinkArea .share-title,
 .evaluation-policy .shareLinkArea .share-title {
   font-size: 28px;
   font-weight: 600;
@@ -54599,6 +55085,7 @@ html {
   .share-overlay .shareLinkArea .share-title,
   .evaluation-overlay .shareLinkArea .share-title,
   .reply-overlay .shareLinkArea .share-title,
+  .report-overlay .shareLinkArea .share-title,
   .evaluation-policy .shareLinkArea .share-title {
     font-size: 1.25rem;
   }
@@ -54611,6 +55098,7 @@ html {
 .share-overlay .shareLinkArea .flexBox,
 .evaluation-overlay .shareLinkArea .flexBox,
 .reply-overlay .shareLinkArea .flexBox,
+.report-overlay .shareLinkArea .flexBox,
 .evaluation-policy .shareLinkArea .flexBox {
   display: flex;
   gap: 6px;
@@ -54624,6 +55112,7 @@ html {
   .share-overlay .shareLinkArea .flexBox,
   .evaluation-overlay .shareLinkArea .flexBox,
   .reply-overlay .shareLinkArea .flexBox,
+  .report-overlay .shareLinkArea .flexBox,
   .evaluation-policy .shareLinkArea .flexBox {
     flex-direction: column;
   }
@@ -54636,6 +55125,7 @@ html {
 .share-overlay .shareLinkArea .flexBox > .subject-box,
 .evaluation-overlay .shareLinkArea .flexBox > .subject-box,
 .reply-overlay .shareLinkArea .flexBox > .subject-box,
+.report-overlay .shareLinkArea .flexBox > .subject-box,
 .evaluation-policy .shareLinkArea .flexBox > .subject-box {
   color: #666;
 }
@@ -54647,6 +55137,7 @@ html {
 .share-overlay .shareLinkArea .flexBox > .count_box,
 .evaluation-overlay .shareLinkArea .flexBox > .count_box,
 .reply-overlay .shareLinkArea .flexBox > .count_box,
+.report-overlay .shareLinkArea .flexBox > .count_box,
 .evaluation-policy .shareLinkArea .flexBox > .count_box {
   gap: 6px;
 }
@@ -54658,6 +55149,7 @@ html {
 .share-overlay .shareLinkArea .shareLink,
 .evaluation-overlay .shareLinkArea .shareLink,
 .reply-overlay .shareLinkArea .shareLink,
+.report-overlay .shareLinkArea .shareLink,
 .evaluation-policy .shareLinkArea .shareLink {
   display: flex;
 }
@@ -54670,6 +55162,7 @@ html {
   .share-overlay .shareLinkArea .shareLink,
   .evaluation-overlay .shareLinkArea .shareLink,
   .reply-overlay .shareLinkArea .shareLink,
+  .report-overlay .shareLinkArea .shareLink,
   .evaluation-policy .shareLinkArea .shareLink {
     flex-direction: column;
     gap: 6px;
@@ -54683,6 +55176,7 @@ html {
 .share-overlay .shareLinkArea .shareLink li,
 .evaluation-overlay .shareLinkArea .shareLink li,
 .reply-overlay .shareLinkArea .shareLink li,
+.report-overlay .shareLinkArea .shareLink li,
 .evaluation-policy .shareLinkArea .shareLink li {
   flex: 1;
 }
@@ -54694,6 +55188,7 @@ html {
 .share-overlay .shareLinkArea .shareLink a,
 .evaluation-overlay .shareLinkArea .shareLink a,
 .reply-overlay .shareLinkArea .shareLink a,
+.report-overlay .shareLinkArea .shareLink a,
 .evaluation-policy .shareLinkArea .shareLink a {
   display: flex;
   align-items: center;
@@ -54710,6 +55205,7 @@ html {
   .share-overlay .shareLinkArea .shareLink a,
   .evaluation-overlay .shareLinkArea .shareLink a,
   .reply-overlay .shareLinkArea .shareLink a,
+  .report-overlay .shareLinkArea .shareLink a,
   .evaluation-policy .shareLinkArea .shareLink a {
     font-size: 1rem;
   }
@@ -54723,6 +55219,7 @@ html {
   .share-overlay .shareLinkArea .shareLink img,
   .evaluation-overlay .shareLinkArea .shareLink img,
   .reply-overlay .shareLinkArea .shareLink img,
+  .report-overlay .shareLinkArea .shareLink img,
   .evaluation-policy .shareLinkArea .shareLink img {
     width: 30px;
   }
@@ -55334,6 +55831,50 @@ html {
   }
 }
 
+.report-overlay .report-select {
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+@media all and (max-width: 1200px) {
+  .report-overlay .report-select {
+    height: 40px;
+  }
+}
+.report-overlay .report-content .contentBox {
+  padding: 20px;
+  min-height: 200px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+@media all and (max-width: 1200px) {
+  .report-overlay .report-content .contentBox {
+    padding: 10px;
+  }
+}
+.report-overlay .report-content .contentBox::placeholder {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.2);
+}
+.report-overlay .report-content .contentCount {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.2);
+}
+@media all and (max-width: 1200px) {
+  .report-overlay .report-content .contentCount {
+    font-size: 0.875rem;
+  }
+}
+.report-overlay .info-txt {
+  color: #aaa;
+}
+@media all and (max-width: 768px) {
+  .report-overlay .info-txt {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
 .main-search {
   width: 851px;
   margin: 0 auto;
@@ -55465,6 +56006,11 @@ html {
   width: 280px;
   background: #FE4844;
   color: #fff;
+}
+.commonBtn button.cmBtn2, .commonBtn a.cmBtn2 {
+  background: #000;
+  color: #fff;
+  width: 100%;
 }
 
 .contentArea {

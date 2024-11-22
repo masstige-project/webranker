@@ -29,72 +29,63 @@
             <div class="lineBox mt-5 mb-5 mb-xl-23">
                 <div class="container">
                     <ul>
-                        <li><a href="./community.html" class="active">전체</a></li>
+                        <li><a href="./community.html">전체</a></li>
                         <li><a href="./community__1.html">Q&A</a></li>
-                        <li><a href="./community__2.html">자유</a></li>
-                        <li><a href="./community__3.html">익명</a></li>
-                        <li><a href="./community__4.html">튜토리얼</a></li>
-                        <li><a href="./community__5.html">리소스</a></li>
+                        <!-- 자유~리소스 레이아웃 동일 -->
+                        <li><a href="./community__2.html" class="active">자유</a></li>
+                        <li><a href="./community__2.html">익명</a></li>
+                        <li><a href="./community__2.html">튜토리얼</a></li>
+                        <li><a href="./community__2.html">리소스</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="container">
-                <div class="thumnail-list mt-5 mt-xl-10">
-                    <div class="title-box">
-                        <div class="title">Q&A</div>
-                        <div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')">
-                                <p>더보기</p>
-                            </a></div>
+            <div class="container"> 
+                <div class="main-search wow fadeInUp">
+                    <div class="searchArea">
+                        <div class="search-bx">
+                            <input type="text" name="search" class="searchInput" placeholder="웹 사이트명, 앱 서비스명 등의 검색어를 입력해주세요.">
+                            <button type="button" class="searchButton">
+                                <i class="xi-search"></i>
+                            </button>
+                        </div>
                     </div>
+                </div>
+                <div class="resultArea">
+                    <div class="result__1">
+                        <p class="total">총 <span class="p-color">0</span>건</p>
+                        <select name="sorting">
+                            <option value="1">최신순</option>
+                            <option value="2">조회순</option>
+                            <option value="3">좋아요순</option>
+                            <option value="4">답변순</option>
+                        </select>
+                    </div>
+                    <div class="result__2">
+                        <a href="./free__write.html">작성</a>
+                    </div>
+                </div>
+                <!-- 검색결과가 없을때 -->
+                <p class="nothing-txt">검색된 결과가 없습니다.</p>
+                <!-- 검색결과가 있을때 -->
+                <div class="thumnail-list">
                     <div class="swiper-container cmt-slide">
                         <? include "./community__thumbnail.html" ?>
                     </div>
                 </div>
-                <div class="thumnail-list mt-5 mt-xl-10">
-                    <div class="title-box">
-                        <div class="title">자유</div>
-                        <div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')">
-                                <p>더보기</p>
-                            </a></div>
-                    </div>
-                    <div class="swiper-container cmt-slide">
-                        <? include "./community__thumbnail.html" ?>
-                    </div>
+                <!-- S : 페이징 -->
+                <div class="paging-area mt-10 mt-xl-20 wow fadeInUp">
+                    <ul>
+                    <li><a href="javascript:;" class="prev-first"><span>맨앞으로</span></a></li>
+                    <li><a href="javascript:;" class="prev"><span>이전으로</span></a></li>
+                    <li><a href="javascript:;" class="active">1<span></span></a></li>
+                    <li><a href="javascript:;">2<span></span></a></li>
+                    <li><a href="javascript:;">3<span></span></a></li>
+                    <li><a href="javascript:;" class="next"><span>다음으로</span></a></li>
+                    <li><a href="javascript:;" class="next-last"><span>맨뒤로</span></a></li>
+                    </ul>
                 </div>
-                <div class="thumnail-list mt-5 mt-xl-10">
-                    <div class="title-box">
-                        <div class="title">익명</div>
-                        <div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')">
-                                <p>더보기</p>
-                            </a></div>
-                    </div>
-                    <div class="swiper-container cmt-slide">
-                        <? include "./community__thumbnail.html" ?>
-                    </div>
-                </div>
-                <div class="thumnail-list mt-5 mt-xl-10">
-                    <div class="title-box">
-                        <div class="title">튜토리얼</div>
-                        <div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')">
-                                <p>더보기</p>
-                            </a></div>
-                    </div>
-                    <div class="swiper-container cmt-slide">
-                        <? include "./community__thumbnail.html" ?>
-                    </div>
-                </div>
-                <div class="thumnail-list mt-5 mt-xl-10">
-                    <div class="title-box">
-                        <div class="title">리소스</div>
-                        <div class="more"><a href="javascript:void(0)" onclick="alert('준비중입니다.')">
-                                <p>더보기</p>
-                            </a></div>
-                    </div>
-                    <div class="swiper-container cmt-slide">
-                        <? include "./community__thumbnail.html" ?>
-                    </div>
-                </div>
-            </div>
+                <!-- E : 페이징 -->
+            </div>     
         </section>
         <!-- E : Section -->
     </main>
@@ -105,6 +96,10 @@
 
     <script>
         $(document).ready(function () {
+            $(".sc--community .cmtCategory button").on("click", function () {
+                $(".sc--community .cmtCategory button").removeClass("active");
+                $(this).addClass("active");
+            });
             //mobile-slide
             let swiperInstances = [];
 

@@ -904,6 +904,16 @@ $(".share-overlay .popClosebtn").on("click", function () {
   $("body").css({ overflow: "visible" });
 });
 
+//신고하기
+$(".reportBtn").on("click", function () {
+  $(".report-overlay, .report-overlay .popup-bx").show();
+  $("body").css({ overflow: "hidden" });
+});
+$(".report-overlay .popClosebtn").on("click", function () {
+  $(".report-overlay, .report-overlay .popup-bx").hide();
+  $("body").css({ overflow: "visible" });
+});
+
 //더보기버튼
 $(".toggleMorebtn").on("click", function () {
   const $description = $(this).closest(".description");

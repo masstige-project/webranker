@@ -63,7 +63,11 @@ html {
 }
 
 .main {
-    overflow-x: hidden;
+    overflow: hidden;
+}
+
+.mobile-body{
+    padding-top: 0;
 }
 
 .back-bx {
@@ -101,8 +105,17 @@ html {
     font-weight: 600;
 }
 
+.font-30-bd{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+    @include mdq-max(xl){
+        font-size: rem(20);
+    }
+}
+
 .font-30-sb{
-    font-size: rem(30);
+    font-size: 30px;
     font-weight: 600;
     line-height: 1;
     @include mdq-max(xl){
@@ -111,7 +124,7 @@ html {
 }
 
 .font-30-md{
-    font-size: rem(30);
+    font-size: 30px;
     font-weight: 500;
     line-height: 1;
     @include mdq-max(xl){
@@ -120,7 +133,7 @@ html {
 }
 
 .font-24-sb{
-    font-size: rem(24);
+    font-size: 24px;
     font-weight: 600;
     line-height: 1;
     @include mdq-max(xl){
@@ -128,8 +141,24 @@ html {
     }
 }
 
+.font-24-bd{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    @include mdq-max(xl){
+        font-size: rem(20);
+    }
+}
+
+.font-22-rg{
+    font-size: 22px;
+    @include mdq-max(xl){
+        font-size: rem(20);
+    }
+}
+
 .font-20-rg{
-    font-size: rem(20);
+    font-size: 20px;
     line-height: 1;
     @include mdq-max(xl){
         font-size: rem(18);
@@ -137,7 +166,7 @@ html {
 }
 
 .font-20-md{
-    font-size: rem(20);
+    font-size: 20px;
     font-weight: 500;
     line-height: 1;
     @include mdq-max(xl){
@@ -145,8 +174,16 @@ html {
     }
 }
 
+.font-18-bd{
+    font-size: 18px;
+    font-weight: bold;
+    @include mdq-max(xl){
+        font-size: rem(16);
+    }
+}
+
 .font-18-sb{
-    font-size: rem(18);
+    font-size: 18px;
     font-weight: 600;
     @include mdq-max(xl){
         font-size: rem(16);
@@ -154,7 +191,7 @@ html {
 }
 
 .font-18-md{
-    font-size: rem(18);
+    font-size: 18px;
     font-weight: 500;
     @include mdq-max(xl){
         font-size: rem(16);
@@ -162,12 +199,35 @@ html {
 }
 
 .font-18-rg{
-    font-size: rem(18);
+    font-size: 18px;
     @include mdq-max(xl){
         font-size: rem(16);
     }
 }
-//공용링크
+
+.font-17{
+    font-size: 17px;
+    @include mdq-max(xl){
+        font-size: rem(16);
+    }
+}
+
+.font-15{
+    font-size: 15px;
+    @include mdq-max(xl){
+        font-size: rem(14);
+    }
+}
+
+.c-222{
+    color: $gray-2;
+}
+
+.c-black{
+    color: $black;
+}
+
+//공통 링크
 .cmLinkArea{
     display: flex;
     align-items: center;
@@ -228,6 +288,7 @@ html {
     }
 }
 
+//공통 뷰페이지
 .cmtView{
     .title--bx{
        .category{
@@ -254,6 +315,9 @@ html {
             display: flex;
             align-items: center;
             gap: 20px;
+            @include mdq-max(md){
+                gap: 10px;
+            }
             .user{
                 font-size: 22px;
                 font-weight: 600;
@@ -267,7 +331,7 @@ html {
                 color: $gray-6;
                 @include mdq-max(xl){
                     font-size: rem(16);
-                    margin-top: 44px;
+                    margin-top: 4px;
                 }
             }
         }
@@ -276,6 +340,10 @@ html {
             background-repeat: no-repeat;
             background-position: center;
             min-width: 75px;
+            @include mdq-max(md){
+                min-width: unset;
+                width: 50px;
+            }
         }
         .user--follow{
             button{
@@ -288,6 +356,12 @@ html {
                 width: 120px;
                 height: 40px;
                 border-radius: 10px;
+                @include mdq-max(xl){
+                    font-size: rem(18);
+                    height: 30px;
+                    width: auto;
+                    padding: 0 20px;
+                }
             }
         }
     }
@@ -298,8 +372,47 @@ html {
         display: flex;
         align-items: center;
         gap: 4px;
-
-        a {
+        &.sortingBox2{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include mdq-max(md){
+                flex-direction: column;
+                align-items: start;
+                justify-content: unset;
+                gap: 10px;
+            }
+            .box4{
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                @include mdq-max(md){
+                    order: 1;
+                    width: 100%;
+                }
+            }
+            .box3{
+                @include mdq-max(md){
+                    order: 2;
+                }
+                > ul{
+                    display: flex;
+                    align-items: center;
+                    gap: 30px;
+                    @include mdq-max(md){
+                        gap: 10px;
+                        font-size: rem(16);
+                    }
+                    li{
+                        color: $gray-6;
+                        span{
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+        a,.replyBtn {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -318,6 +431,10 @@ html {
                 background: $gray-4;
                 color: $white;
                 border: 1px solid $gray-4;
+            }
+            &.replyBtn{
+                background: $color-1;
+                color: $white;
             }
         }
     }
@@ -412,6 +529,7 @@ html {
                         display: flex;
                         align-items: center;
                         gap: 4px;
+                        cursor: pointer;
 
                         p {
                             font-size: 15px;
@@ -523,6 +641,111 @@ html {
         }
     }
 }
+//공통 카테고리 인기글
+.cmCategoryArea{
+    .title--bx2{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 25px;
+        @include mdq-max(md){
+            padding-bottom: 15px;
+        }
+    }
+    .cmcategoryList{
+        .font-20-md{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        > li{
+            padding: 25px 0;
+            border-top: 1px solid $gray-d;
+            @include mdq-max(md){
+                padding: 15px 0;
+            }
+        }
+        .wrap{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            @include mdq-max(md){
+                flex-direction: column;
+                align-items: start;
+                gap: 5px;
+            }
+        }
+        .date--bx,
+        .list--bx{
+            display: flex;
+            align-items: center;
+            color: $gray-8;
+        }
+        .date--bx{
+            gap: 6px;
+        }
+        .list--bx{
+            gap: 20px;
+            @include mdq-max(md){
+                gap: 10px;
+            }
+        }
+    }
+    .more {
+        font-size: rem(18);
+        width: 107px;
+        padding: 0 16px;
+        line-height: 44px;
+        margin-left: 10px;
+        border: 1px solid #eee;
+        border-radius: 44px;
+        position: relative;
+        transition: all 0.5s;
+
+        @include mdq-max(xl) {
+            font-size: rem(16);
+            line-height: unset;
+            width: 86px;
+            height: 36px;
+            line-height: 36px;
+        }
+
+        @include mdq-min(md) {
+            &:hover {
+                background: $color-1;
+                color: $white;
+                cursor: pointer;
+
+                &::after {
+                    background: url(../images/main/icon/more_arrow_w.png)no-repeat center;
+                }
+            }
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%);
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url(../images/main/icon/more_arrow.png)no-repeat center;
+            transition: all 0.5s;
+
+            @include mdq-max(xl) {
+                right: 4px;
+            }
+        }
+    }
+}
 
 //팝업
 .overlay,
@@ -533,6 +756,7 @@ html {
 .share-overlay,
 .evaluation-overlay,
 .reply-overlay,
+.report-overlay,
 .evaluation-policy {
     position: fixed;
     top: 0;
@@ -1681,6 +1905,50 @@ html {
     }
 }
 
+//신고하기
+.report-overlay{
+    .report-select{
+        height: 50px;
+        border-radius: 10px;
+        border: 1px solid $gray-e;
+        @include mdq-max(xl){
+            height: 40px;
+        }
+    }
+    .report-content {
+        .contentBox {
+            padding: 20px;
+            min-height: 200px;
+            border-radius: 10px;
+            border: 1px solid $gray-e;
+
+            @include mdq-max(xl) {
+                padding: 10px;
+            }
+            &::placeholder{
+                font-size: 18px;
+                color: rgba(#000, 0.2);
+            }
+        }
+
+        .contentCount {
+            font-size: 15px;
+            color: rgba(#000, 0.2);
+
+            @include mdq-max(xl) {
+                font-size: rem(14);
+            }
+        }
+    }
+    .info-txt{
+        color: $gray-a;
+        @include mdq-max(md){
+            font-size: rem(16);
+            text-align: center;
+        }
+    }
+}
+
 //검색창
 .main-search {
     width: 851px;
@@ -1803,6 +2071,11 @@ html {
             width: 280px;
             background: $color-1;
             color: $white;
+        }
+        &.cmBtn2{
+            background: $black;
+            color: $white;
+            width: 100%;
         }
     }
 }
