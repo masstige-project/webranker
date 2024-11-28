@@ -851,7 +851,6 @@ let liked = Array.from({ length: likeButtons.length }, () => false);
 function toggleLike(buttonIndex) {
   liked[buttonIndex - 1] = !liked[buttonIndex - 1];
   const likeButton = likeButtons.eq(buttonIndex - 1);
-  const likeStatus = likeButton.parent().find(".like_status");
   if (liked[buttonIndex - 1]) {
     likeButton.addClass("clicked");
   } else {
@@ -859,24 +858,72 @@ function toggleLike(buttonIndex) {
   }
 }
 
+//팔로우 버튼
+const followButtons = $(".follow-btn");
+followButtons.each(function (index) {
+  $(this).on("click", function () {
+    toggleLike(index + 1);
+  });
+});
+
+//프로필-팔로우
+const profileButtons = $(".follow-wrap");
+profileButtons.each(function (index) {
+  $(this).on("click", function () {
+    toggleFollow(index + 1);
+  });
+});
+
+let followchk = Array.from({ length: profileButtons.length }, () => false);
+
+function toggleFollow(buttonIndex) {
+  followchk[buttonIndex - 1] = !followchk[buttonIndex - 1];
+  const profileButton = profileButtons.eq(buttonIndex - 1);
+  const icon = profileButton.find("i"); 
+
+  if (followchk[buttonIndex - 1]) {
+    profileButton.addClass("clicked");
+    icon.removeClass("xi-user-plus-o").addClass("xi-user-plus"); 
+    profileButton.siblings("p").text("팔로잉"); 
+  } else {
+    profileButton.removeClass("clicked");
+    icon.removeClass("xi-user-plus").addClass("xi-user-plus-o"); 
+    profileButton.siblings("p").text("팔로우");
+  }
+}
+
+let follow = Array.from({ length: followButtons.length }, () => false);
+
+function toggleLike(buttonIndex) {
+  liked[buttonIndex - 1] = !liked[buttonIndex - 1];
+  const followButton = followButtons.eq(buttonIndex - 1);
+  if (liked[buttonIndex - 1]) {
+    followButton.addClass("clicked");
+  } else {
+    followButton.removeClass("clicked");
+  }
+}
+
 //quick-menu
 var lastScrollTop = 0;
+var minHeight = 1200; 
 
 window.addEventListener("scroll", function () {
   var st = window.pageYOffset || document.documentElement.scrollTop;
+  var docHeight = document.documentElement.scrollHeight;
+  var winHeight = window.innerHeight;
 
-  if (st > lastScrollTop) {
-    $(".top-btn").removeClass("up").addClass("down");
-  } else {
-    $(".top-btn").removeClass("down").addClass("up");
-  }
-  lastScrollTop = st;
+  if (docHeight > minHeight) {
+    if (st > lastScrollTop) {
+      $(".top-btn").removeClass("up").addClass("down");
+    } else {
+      $(".top-btn").removeClass("down").addClass("up");
+    }
+    lastScrollTop = st;
 
-  if (
-    window.innerHeight + window.pageYOffset >=
-    document.documentElement.scrollHeight
-  ) {
-    $(".top-btn").removeClass("down").addClass("up");
+    if (winHeight + st >= docHeight) {
+      $(".top-btn").removeClass("down").addClass("up");
+    }
   }
 });
 

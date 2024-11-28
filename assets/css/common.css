@@ -45293,6 +45293,11 @@ html {
     right: 1.25rem;
   }
 }
+@media all and (max-width: 768px) {
+  .quick-menu {
+    bottom: 90px;
+  }
+}
 .quick-menu li {
   display: flex;
   align-items: center;
@@ -45351,10 +45356,11 @@ html {
 .mobile-nav .nav-list li {
   flex: 1;
   height: 70px;
-  background: #333;
+  background: #222;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 .mobile-nav .nav-list li a {
   display: flex;
@@ -53842,7 +53848,7 @@ html {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.85);
-  z-index: 95;
+  z-index: 999;
   display: none;
 }
 .overlay .popup-bx,
@@ -54428,6 +54434,20 @@ html {
   max-height: 600px;
   padding: 0 20px 0 0;
   margin: 40px 0;
+}
+@media all and (max-width: 768px) {
+  .overlay .filter-bx .text-bx,
+  .overlay2 .filter-bx .text-bx,
+  .overlay3 .filter-bx .text-bx,
+  .overlay4 .filter-bx .text-bx,
+  .overlay5 .filter-bx .text-bx,
+  .share-overlay .filter-bx .text-bx,
+  .evaluation-overlay .filter-bx .text-bx,
+  .reply-overlay .filter-bx .text-bx,
+  .report-overlay .filter-bx .text-bx,
+  .evaluation-policy .filter-bx .text-bx {
+    max-height: 400px;
+  }
 }
 .overlay .filter-bx .text-bx::-webkit-scrollbar,
 .overlay2 .filter-bx .text-bx::-webkit-scrollbar,
@@ -56259,7 +56279,7 @@ html {
     right: 6px;
   }
 }
-.contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .like-btn {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .like-btn, .contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .follow-btn {
   width: 45px;
   height: 45px;
   background-image: url(../images/main/icon/like_ico_01.png);
@@ -56271,19 +56291,29 @@ html {
   opacity: 0.4;
 }
 @media all and (max-width: 768px) {
-  .contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .like-btn {
+  .contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .like-btn, .contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .follow-btn {
     width: 36px;
     height: 36px;
   }
 }
-.contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .like-btn:hover {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .like-btn:hover, .contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .follow-btn:hover {
   opacity: 1;
 }
-.contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .like-btn.clicked {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .like-btn.clicked, .contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .follow-btn.clicked {
   opacity: 1;
   background-image: url(../images/main/icon/like_ico_02.png);
 }
-.contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .like-btn.clicked:hover {
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .like-btn.clicked:hover, .contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .follow-btn.clicked:hover {
+  opacity: 1;
+}
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .follow-btn {
+  background-image: url(../images/main/icon/follow_ico_01.png);
+}
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .follow-btn.clicked {
+  opacity: 1;
+  background-image: url(../images/main/icon/follow_ico_02.png);
+}
+.contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .follow-btn.clicked:hover {
   opacity: 1;
 }
 .contentArea .contentWrap .thumnail-box .img-wrap .like_info .like-wrap .share-btn {
@@ -56305,6 +56335,27 @@ html {
   .contentArea .contentWrap .thumnail-box .flex-bx {
     flex-direction: column;
     justify-content: unset;
+  }
+}
+.contentArea .contentWrap .thumnail-box .flex-bx .maker-text-bx p {
+  font-size: 20px;
+  font-weight: 600;
+}
+@media all and (max-width: 1200px) {
+  .contentArea .contentWrap .thumnail-box .flex-bx .maker-text-bx p {
+    font-size: 1.125rem;
+  }
+}
+.contentArea .contentWrap .thumnail-box .flex-bx .maker-text-bx p span {
+  color: #aaa;
+  font-size: 16px;
+  font-weight: normal;
+  display: inline-block;
+  margin-left: 4px;
+}
+@media all and (max-width: 1200px) {
+  .contentArea .contentWrap .thumnail-box .flex-bx .maker-text-bx p span {
+    font-size: 1rem;
   }
 }
 .contentArea .contentWrap .thumnail-box .flex-bx .right-bx {
@@ -56344,6 +56395,9 @@ html {
   display: flex;
   font-size: 0.9375rem;
   color: #666;
+}
+.contentArea .contentWrap .thumnail-box .subject-box.maker-subject-box {
+  font-weight: 500;
 }
 @media all and (max-width: 1200px) {
   .contentArea .contentWrap .thumnail-box .subject-box {

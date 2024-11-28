@@ -764,7 +764,7 @@ html {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.85);
-    z-index: 95;
+    z-index: 999;
     display: none;
 
     .popup-bx {
@@ -1002,6 +1002,9 @@ html {
             max-height: 600px;
             padding: 0 20px 0 0;
             margin: 40px 0;
+            @include mdq-max(md){
+                max-height: 400px;
+            }
 
             &::-webkit-scrollbar {
                 width: 10px;
@@ -2343,7 +2346,8 @@ html {
                             right: 6px;
                         }
 
-                        & .like-btn {
+                        & .like-btn,
+                        & .follow-btn {
                             width: 45px;
                             height: 45px;
                             background-image: url(../images/main/icon/like_ico_01.png);
@@ -2366,6 +2370,17 @@ html {
                             &.clicked {
                                 opacity: 1;
                                 background-image: url(../images/main/icon/like_ico_02.png);
+
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                        & .follow-btn{
+                            background-image: url(../images/main/icon/follow_ico_01.png);
+                            &.clicked {
+                                opacity: 1;
+                                background-image: url(../images/main/icon/follow_ico_02.png);
 
                                 &:hover {
                                     opacity: 1;
@@ -2395,6 +2410,25 @@ html {
                 @include mdq-max(md) {
                     flex-direction: column;
                     justify-content: unset;
+                }
+                .maker-text-bx{
+                    p{
+                        font-size: 20px;
+                        font-weight: 600;
+                        @include mdq-max(xl){
+                            font-size: rem(18);
+                        }
+                        span{
+                            color: $gray-a;
+                            font-size: 16px;
+                            font-weight: normal;
+                            display: inline-block;
+                            margin-left: 4px;
+                            @include mdq-max(xl){
+                                font-size: rem(16);
+                            }
+                        }
+                    }
                 }
 
                 .right-bx {
@@ -2437,6 +2471,9 @@ html {
                 display: flex;
                 font-size: rem(15);
                 color: $gray-6;
+                &.maker-subject-box{
+                    font-weight: 500;
+                }
 
                 @include mdq-max(xl) {
                     font-size: 14px;

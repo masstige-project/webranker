@@ -382,6 +382,7 @@
         .bx2 {
             @include mdq-max(xl) {
                 margin-left: auto;
+                width: 100%;
             }
 
             @include mdq-max(md) {
@@ -446,42 +447,109 @@
     }
 
     .profile--btn {
-        button {
+        font-size: 15px;
+        @include mdq-max(xl){
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .shareBtn {
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            width: 100%;
+            width: 200px;
             gap: 8px;
             padding: 0 10px;
             height: 40px;
             border-radius: 10px;
+            margin-left: auto;
+            margin-bottom: 20px;
 
             @include mdq-max(xl) {
                 border: 1px solid $gray-e;
                 justify-content: center;
             }
+            @include mdq-max(sm) {
+                margin-left: unset;
+                width: 100%;
+            }
+        }
+        .follow-wrap{
+            width: 200px;
+            border: 1px solid $color-1;
+            color: $color-1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 0 10px;
+            height: 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.5s;
+            &.clicked {
+                background: $color-1;
+                color: $white;
+                .xi-user-plus{
+                    color: $white;
+                    font-size: 20px;
+                }
+            }
+            .follow{
+                max-width: 20px;
+                .xi-user-plus-o{
+                    font-size: 20px;
+                    color: $color-1;
+                }
+                i{
+                    transition: all 0.5s;
+                }
+            }
+            @include mdq-min(md){
+                &:hover{
+                    background: $color-1;
+                    color: $white;
+                    .xi-user-plus-o{
+                        color: $white;
+                    }
+                }
+            }
         }
 
-        a {
+        .contactBtn{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            @include mdq-max(xl){
+                > a,button, div{
+                    flex: 1;
+                    width: 100%;
+                }
+            }
+            @include mdq-max(md){
+                flex-wrap: wrap;
+                gap: 10px;
+                > a,button, div{
+                    flex: unset;
+                    width: calc(50% - 5px);
+                }
+            }
+        }
+
+        .edit-profile,
+        .contact,
+        .homepage,
+        .project {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 200px;
             height: 40px;
             border-radius: 10px;
-            background: #FE4844;
             position: relative;
             transition: all 0.5s;
-            color: #fff;
-
-            @include mdq-max(xl) {
-                margin-top: 10px;
-            }
-
-            @include mdq-max(md) {
-                width: 100%;
-            }
-
+            background: $color-1;
+            color: $white;
             &::after {
                 content: "";
                 position: absolute;
@@ -492,6 +560,32 @@
                 width: 20px;
                 height: 20px;
                 background: url(../images/sub/icon/profile-icon.png) no-repeat center;
+            }
+
+            @include mdq-max(md) {
+                width: 100%;
+            }
+        }
+        .contact{
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background: url(../images/sub/icon/contact-icon.png) no-repeat center;
+            }
+        }
+        .homepage, .project{
+            background: $white;
+            color: $black;
+            gap: 10px;
+            border: 1px solid $gray-e;
+            i{
+                font-size: 20px;
             }
         }
     }

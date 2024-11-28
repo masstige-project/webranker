@@ -1,0 +1,58 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+    <?
+    include "../include/meta.html"
+		?>
+    <link rel="stylesheet" href="../assets/css/sub.min.css" />
+</head>
+
+<body class="sub-body">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>
+    <!-- E : Header -->
+
+    <!-- S : Main -->
+    <main class="main" id="contents">
+        <!-- S : Section -->
+        <section class="section section--membership kakao">
+            <div class="write-container">
+                <div class="back-bx wow fadeInUp mb-5">
+                    <a href="JavaScript:history.go(-1);">
+                        <img src="../assets/images/main/icon/back.png" alt="돌아가기" loading="lazy">
+                        돌아가기
+                    </a>
+                </div>
+                <div class="member-tit">
+                    <h2 class="tit wow fadeInUp text_left">휴대 전화번호 변경하기</h2>
+                </div>
+                <ul class="inputBox mt-10">
+                    <li class="wow fadeInUp">
+                        <p class="title">새로운 휴대폰번호</p>
+                        <div class="pw-wrap">
+                            <input type="text" name="utel" maxlength="20" class="input-100 AutoHyphen"
+                            placeholder="전화번호를 입력해주세요.">
+                        </div>
+                    </li>
+                </ul>
+                <div class="intro-bx mt-10">
+                    <div class="btn-list">
+                        <a href="../pop/pw-popup.html" class="complete-btn popup-link wow fadeInUp">
+                            휴대폰번호 변경
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- E : Section -->
+    </main>
+    <!-- E : Main -->
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+    <script src="../assets/js/add.js"></script>
+</body>
+
+</html>

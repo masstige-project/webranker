@@ -58,9 +58,15 @@
                     </li>
                     <li class="wow fadeInUp">
                         <p class="title">비밀번호</p>
+                        <!-- 카카오 가입자일 경우 팝업 -->
                         <div class="input-bx">
-                            <a href="" class="change-btn">비밀번호 변경하기</a>
+                            <a href="../pop/mypage-pw.html" class="change-btn popup-link">비밀번호 변경하기</a>
                         </div>
+                        <!-- 이메일 가입자일 경우 팝업 -->
+                        <div class="input-bx">
+                            <a href="../include/pw__reset.html" class="change-btn">비밀번호 변경하기</a>
+                        </div>
+                        <!-- 변경완료 팝업 pw-popup.html -->
                     </li>
                     <li class="wow fadeInUp">
                         <p class="title">휴대 전화번호</p>
@@ -68,7 +74,8 @@
                             <input type="text" name="utel" maxlength="20" class="input-100 AutoHyphen"
                                 value="010-1234-5678">
                         </div>
-                        <a href="" class="change-btn mgt-10">변경하기</a>
+                        <a href="../include/tel__reset.html" class="change-btn mgt-10">변경하기</a>
+                        <!-- 변경완료 팝업 tel-popup.html -->
                     </li>
                     <li class="wow fadeInUp">
                         <p class="title">카카오톡 연동</p>
@@ -132,7 +139,7 @@
             const profileInput = document.getElementById('profile-input');
             const profileImage = document.getElementById('profile-image');
 
-            const defaultImageSrc = "../assets/images/sub/icon/profile.png"; // 기본 이미지 경로
+            const defaultImageSrc = "../assets/images/sub/icon/profile.png"; 
 
             changeProfileLink.addEventListener('click', function (e) {
                 e.preventDefault();

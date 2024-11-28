@@ -1,0 +1,69 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+    <?
+    include "../include/meta.html"
+		?>
+    <link rel="stylesheet" href="../assets/css/sub.min.css" />
+</head>
+
+<body class="sub-body">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>
+    <!-- E : Header -->
+
+    <!-- S : Main -->
+    <main class="main" id="contents">
+        <!-- S : Section -->
+        <section class="section section--membership kakao">
+            <div class="write-container">
+                <div class="back-bx wow fadeInUp mb-5">
+                    <a href="JavaScript:history.go(-1);">
+                        <img src="../assets/images/main/icon/back.png" alt="돌아가기" loading="lazy">
+                        돌아가기
+                    </a>
+                </div>
+                <div class="member-tit">
+                    <h2 class="tit wow fadeInUp text_left">비밀번호 재설정</h2>
+                    <p class="dec text_left mt-4 wow fadeInUp">새로운 비밀번호를 입력해주세요.</p>
+                </div>
+                <ul class="inputBox mt-10">
+                    <li class="wow fadeInUp">
+                        <p class="title">현재 비밀번호</p>
+                        <div class="pw-wrap">
+                            <input type="password" name="upassword1" maxlength="20" class="input-100"
+                                placeholder="비밀번호 입력">
+                        </div>
+                        <p class="title mt-5 mt-xl-10">비밀번호</p>
+                        <div class="pw-wrap">
+                            <input type="password" name="upassword2" maxlength="20" class="input-100"
+                                placeholder="비밀번호 입력">
+                        </div>
+                        <p class="title mt-5 mt-xl-10">비밀번호 확인</p>
+                        <div class="pw-wrap">
+                            <input type="password" name="upassword3" maxlength="20" class="input-100"
+                                placeholder="비밀번호 입력">
+                        </div>
+                    </li>
+                </ul>
+                <div class="intro-bx mt-10">
+                    <div class="btn-list">
+                        <a href="../pop/pw-popup.html" class="complete-btn popup-link wow fadeInUp">
+                            비밀번호 변경
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- E : Section -->
+    </main>
+    <!-- E : Main -->
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+    <script src="../assets/js/add.js"></script>
+</body>
+
+</html>
