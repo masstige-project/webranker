@@ -652,6 +652,9 @@
     .gallery-thumbs {
         margin: 0 auto;
         width: calc(100% - 84px);
+        @include mdq-max(md){
+            width: calc(100% - 40px);
+        }
 
         .img-bx {
             background-repeat: no-repeat;
@@ -689,6 +692,7 @@
             margin-bottom: 50px;
             @include mdq-max(xl){
                 gap: 20px;
+                margin-bottom: 20px;
             }
 
             button {
@@ -779,6 +783,130 @@
                     &.replyBtn{
                         background: $color-1;
                         color: $white;
+                    }
+                }
+            }
+        }
+        //중첩 탭메뉴
+        .thumbTabHeader {
+            display: flex;
+            margin-bottom: 20px;
+            @include mdq-max(md){
+                gap: 10px;
+            }
+            .thumbTabBtn {
+                padding: 0 20px;
+                cursor: pointer;
+                transition: all 0.3s;
+                font-size: 20px;
+                @include mdq-max(xl){
+                    font-size: rem(18);
+                }
+                @include mdq-max(md){
+                    padding: 0;
+                    font-size: rem(16);
+                }
+                &.active{
+                    font-weight: bold;
+                }
+              }
+          }
+          
+          .thumbTabContentItem {
+            display: none; 
+            &.active{
+                display: block;
+            }
+          }
+
+        //프로필-기본정보
+        .info-slide-bx{
+            position: relative;
+            padding: 0 42px;
+            @include mdq-max(xl){
+                padding: 0 20px;
+            }
+            .img-bx{
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 20px;
+                overflow: hidden;
+                @include mdq-max(md){
+                    border-radius: 10px;
+                }
+            }
+            .btnWrap {
+                >button {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                    z-index: 10;
+    
+                    &.prev-btn {
+                        left: 0;
+                    }
+    
+                    &.next-btn {
+                        right: 0;
+                    }
+                }
+            }
+        }
+        .basic__information{
+            > li{
+                margin-top: 40px;
+            }
+            .tit{
+                font-size: 20px;
+                font-weight: 500;
+                color: $gray-2;
+                @include mdq-max(xl){
+                    font-size: rem(18);
+                }
+            }
+            .dec{
+                margin-top: 10px;
+                color: #404040;
+                @include mdq-max(xl){
+                    font-size: rem(16);
+                }
+            }
+            .map-bx{
+                width: 100%;
+                border-radius: 20px;
+                height: 360px;
+                overflow: hidden;
+                position: relative;
+                margin-top: 24px;
+                @include mdq-max(md){
+                    height: 200px;
+                }
+                iframe{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .sns__link{
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                @include mdq-max(xs){
+                    flex-wrap: wrap;
+                    gap: 10px;
+                }
+                a{
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    color: #404040;
+                    @include mdq-max(xl){
+                        font-size: rem(16);
+                    }
+                    @include mdq-max(xs){
+                        width: 100%;
                     }
                 }
             }

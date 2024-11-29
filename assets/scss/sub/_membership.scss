@@ -56,6 +56,20 @@
                 font-size: rem(16);
             }
         }
+        .dec2{
+            font-size: 24px;
+            margin-top: 50px;
+            @include mdq-max(xl){
+                font-size: rem(18);
+                margin-top: 40px;
+            }
+        }
+        .info-bx{
+            width: 100%;
+            padding: 11.5px 20px;
+            background: $gray-e;
+            border-radius: 10px;
+        }
     }
     //아이디/비밀번호 착기
     .find-bx{
@@ -174,6 +188,18 @@
     
                 @include mdq-max(xl) {
                     font-size: 14px;
+                }
+
+                &.active-btn{
+                    background: #FF4844;
+                    color: $white;
+                    justify-content: center;
+                }
+
+                &.no-active{
+                    background: $gray-a;
+                    color: $white;
+                    justify-content: center;
                 }
     
                 &.kakao-btn {

@@ -53297,6 +53297,85 @@ html {
   color: #000;
 }
 
+.common-yark-bx input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+.common-yark-bx label {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+@media all and (max-width: 1200px) {
+  .common-yark-bx label {
+    font-size: 1rem;
+  }
+}
+.common-yark-bx label::before {
+  content: "";
+  background-color: transparent;
+  border: 1px solid #eee;
+  border-radius: 2px;
+  padding: 8px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 8px;
+}
+.common-yark-bx input:checked + label:before {
+  background-color: #FE4844;
+  border: 1px solid #FE4844;
+}
+.common-yark-bx input:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 7px;
+  width: 3px;
+  height: 7px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.common-contentArea .contentBox {
+  padding: 20px;
+  min-height: 120px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+@media all and (max-width: 1200px) {
+  .common-contentArea .contentBox {
+    padding: 10px;
+  }
+}
+.common-contentArea .contentBox::placeholder {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.2);
+}
+@media all and (max-width: 1200px) {
+  .common-contentArea .contentBox::placeholder {
+    font-size: 1rem;
+  }
+}
+.common-contentArea .contentCount {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.2);
+}
+@media all and (max-width: 1200px) {
+  .common-contentArea .contentCount {
+    font-size: 0.875rem;
+  }
+}
+
 .cmLinkArea {
   display: flex;
   align-items: center;

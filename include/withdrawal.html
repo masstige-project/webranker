@@ -17,7 +17,7 @@
     <!-- S : Main -->
     <main class="main" id="contents">
         <!-- S : Section -->
-        <section class="section section--membership kakao">
+        <section class="section section--membership">
             <div class="write-container">
                 <div class="back-bx wow fadeInUp mb-5">
                     <a href="JavaScript:history.go(-1);">
@@ -26,22 +26,32 @@
                     </a>
                 </div>
                 <div class="member-tit">
-                    <h2 class="tit wow fadeInUp text_left">휴대 전화번호 변경하기</h2>
+                    <h2 class="tit wow fadeInUp text_left">회원탈퇴</h2>
+                    <p class="dec2 text_left wow fadeInUp">탈퇴하시겠습니까?</p>
+                    <div class="info-bx mt-4 mb-4 wow fadeInUp">
+                        <p class="dec">탈퇴 후 회원정보 및 서비스 이용기록은 모두 삭제되며, 복구가 불가능합니다.</p>
+                    </div>
+                </div>
+                <div class="common-yark-bx wow fadeInUp">
+                    <input type="checkbox" name="info-yark" id="info-yark" title="안내사항 동의" value="Y">
+                    <label for="info-yark">
+                        안내사항을 확인하였으며, 이에 동의합니다.
+                    </label>
                 </div>
                 <ul class="inputBox mt-10">
                     <li class="wow fadeInUp">
                         <p class="title">새로운 휴대폰번호</p>
-                        <div class="pw-wrap">
-                            <input type="text" name="utel" maxlength="20" class="input-100 AutoHyphen"
-                            placeholder="전화번호를 입력해주세요.">
+                        <div class="common-contentArea">
+                            <textarea name="ucontent" placeholder="탈퇴사유를 입력해주세요." class="contentBox" maxlength="1000"></textarea>
+                            <p class="contentCount text_right mgt-10">(0/1,000)</p>
                         </div>
                     </li>
                 </ul>
                 <div class="intro-bx mt-10">
                     <!-- 활성화 active / 비활성화 no-active -->
                     <div class="btn-list">
-                        <a href="../pop/pw-popup.html" class="complete-btn popup-link wow fadeInUp">
-                            휴대폰번호 변경
+                        <a href="../pop/pw-popup.html" class="withdrawal-btn no-active  popup-link wow fadeInUp">
+                            탈퇴
                         </a>
                     </div>
                 </div>

@@ -1,0 +1,334 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+    include "../include/meta.html"
+		?>
+  <link rel="stylesheet" href="../assets/css/sub.min.css" />
+</head>
+
+<body class="sub-body">
+  <!-- S : Header -->
+  <? include "../include/header.html" ?>
+  <!-- E : Header -->
+
+  <!-- S : Main -->
+  <main class="main" id="contents">
+    <!-- S : Section -->
+    <section class="section sc--profile sc--ranking--view">
+      <div class="container">
+        <div class="back-bx wow fadeInUp mb-5">
+          <a href="JavaScript:history.go(-1);">
+            <img src="../assets/images/main/icon/back.png" alt="돌아가기" loading="lazy">
+            돌아가기
+          </a>
+        </div>
+        <div class="general__profile">
+          <div class="profile--top wow fadeInUp">
+            <div class="bx bx1">
+              <div class="user-icon" style="background-image: url(../assets/images/main/user-icon.png);">
+                <img src="../assets/images/main/base_75X75.png" alt="회원아이콘">
+              </div>
+              <div class="profile--list">
+                <div class="text-bx">
+                  <p class="font-22-rg c-black">홍길동</p>
+                  <p>일반회원</p>
+                </div>
+                <div class="text-bx">
+                  <p class="c-222">관심분야</p>
+                  <ul class="subject-box">
+                    <li>디지털마케팅</li>
+                    <li>웹디자인</li>
+                    <li>사용자경험</li>
+                  </ul>
+                  <div class="markBox">
+                    <i class="xi-trophy"></i>
+                    <p>적극적참여자</p>
+                    <i class="xi-help-o"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bx bx2">
+              <div class="profile--btn">
+                <button type="button" class="shareBtn">
+                  <i class="xi-share-alt-o"></i>
+                  <p class="share">공유하기</p>
+                </button>
+                <? include "../include/share-popup.html" ?>
+                <!-- 메이커프로필 -->
+                <div class="contactBtn d-none">
+                  <a href="javascript:void(0);" class="homepage">
+                    <i class="xi-home-o"></i>
+                    홈페이지
+                  </a>
+                  <a href="javascript:void(0);" class="project">
+                    <i class="xi-document"></i>
+                    프로젝트
+                  </a>
+                  <div class="follow-wrap">
+                    <button class="follow">
+                      <span class="blind">팔로우</span>
+                      <i class="xi-user-plus-o"></i>
+                    </button>
+                    <p>팔로우</p>
+                  </div>
+                  <a href="javascript:void(0);" class="contact">문의하기</a>
+                </div>
+                <!-- 로그인 전 -->
+                <div class="contactBtn d-none">
+                  <div class="follow-wrap">
+                    <button class="follow">
+                      <span class="blind">팔로우</span>
+                      <i class="xi-user-plus-o"></i>
+                    </button>
+                    <p>팔로우</p>
+                  </div>
+                  <a href="javascript:void(0);" class="contact">연락하기</a>
+                </div>
+                <!-- 로그인 후 -->
+                <div class="contactBtn">
+                  <a href="./mypage__profile.html" class="edit-profile">프로필 편집</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="profile--bottom wow fadeInUp">
+            <p class="c-222 mb-10 mb-xl-15">사용자 경험을 최우선으로 생각하는 UX 디자이너이자 웹&앱 평가 심사위원입니다. 사용성 테스트와 사용자 조사를 통해 제품의 사용자 경험을
+              개선하는 데에 기여하고 있습니다.</p>
+            <ul class="mypageList mb-15 mb-xl-30">
+              <li><a href="./general__view__2.html">투표한 프로젝트 <span>42</span></a></li>
+              <li><a href="./general__view__1.html">팔로워 <span>42</span></a></li>
+              <li><a href="./general__view__1.html">팔로잉 <span>42</span></a></li>
+              <li><a href="./general__view__2.html">좋아요 <span>42</span></a></li>
+              <li><a href="./general__view__2.html">참여 댓글 <span>42</span></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tabArea wow fadeInUp">
+          <!-- active추가시 활성화 -->
+          <div class="tabHeader">
+            <button type="button" class="active" data-tab="profile1">기본정보</button>
+            <button type="button" data-tab="profile2">프로젝트</button>
+            <button type="button" data-tab="profile3">웹랭커 등록작품</button>
+            <button type="button" data-tab="profile4">심사위원정보</button>
+          </div>
+          <div class="tabContentWrap">
+            <div class="tabContentItem active" data-tab="profile1">
+              <div class="info-slide-bx">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <? for ($i=0; $i<5; $i++) {?>
+                    <div class="swiper-slide">
+                      <div class="img-bx" style="background-image: url(../assets/images/main/view-thumb.jpg);">
+                        <img src="../assets/images/main/base_240X135.png" alt="img">
+                      </div>
+                    </div>
+                    <?}?>
+                  </div>
+                </div>
+                <div class="btnWrap">
+                  <button type="button" class="prev-btn">
+                    <i class="xi-angle-left-min"></i>
+                  </button>
+                  <button type="button" class="next-btn">
+                    <i class="xi-angle-right-min"></i>
+                  </button>
+                </div>
+              </div>
+              <ul class="basic__information">
+                <li>
+                  <p class="tit">전문 분야 및 기술</p>
+                  <p class="dec">디지털 마케팅, 웹 개발, 브랜드 전략, React, Vue.js, SEO 최적화</p>
+                </li>
+                <li>
+                  <p class="tit">수상 경력 및 인증</p>
+                  <p class="dec">디지털 마케팅, 웹 개발, 브랜드 전략, React, Vue.js, SEO 최적화</p>
+                </li>
+                <li>
+                  <p class="tit">SNS 및 블로그 링크</p>
+                  <div class="sns__link">
+                    <a href="javascript:void(0);" onclick="alert('준비중입니다.')">
+                      <img src="../assets/images/sub/icon/insta.svg" alt="인스타그램">
+                      <span>인스타그램</span>
+                    </a>
+                    <a href="javascript:void(0);" onclick="alert('준비중입니다.')">
+                      <img src="../assets/images/sub/icon/youtube.svg" alt="유튜브">
+                      <span>유튜브</span>
+                    </a>
+                    <a href="javascript:void(0);" onclick="alert('준비중입니다.')">
+                      <img src="../assets/images/sub/icon/facebook.svg" alt="페이스북">
+                      <span>페이스북</span>
+                    </a>
+                    <a href="javascript:void(0);" onclick="alert('준비중입니다.')">
+                      <img src="../assets/images/sub/icon/blog.svg" alt="블로그">
+                      <span>블로그</span>
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <p class="tit">주소</p>
+                  <p class="dec">서울 강서구 양천로532(더리브 아너비즈타워 1105호)</p>
+                  <div class="map-bx">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.833340062318!2d126.85362148924375!3d37.558990152480405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9c05fb44fa43%3A0xb8e100e3dd19bda4!2z6rCA7JaRIOuNlOumrOu4jOyVhOuEiOu5hOymiO2DgOybjA!5e0!3m2!1sko!2skr!4v1732843673830!5m2!1sko!2skr"
+                      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="tabContentItem" data-tab="profile2">
+              <div class="thumbTabHeader">
+                <button type="button" class="thumbTabBtn active" data-thumb-tab="thumb1">전체</button>
+                <button type="button" class="thumbTabBtn" data-thumb-tab="thumb2">PC 웹사이트</button>
+                <button type="button" class="thumbTabBtn" data-thumb-tab="thumb3">모바일 웹사이트</button>
+                <button type="button" class="thumbTabBtn" data-thumb-tab="thumb4">모바일 앱</button>
+              </div>
+              <div class="thumbTabContentWrap">
+                <div class="thumbTabContentItem active" data-thumb-tab="thumb1">
+                  <div class="contentArea">
+                    <div class="contentWrap">
+                      <? include "./project__thumbnail.html" ?>
+                    </div>
+                  </div>
+                </div>
+                <div class="thumbTabContentItem" data-thumb-tab="thumb2">
+                  <div class="contentArea">
+                    <div class="contentWrap">
+                      <? include "./project__thumbnail.html" ?>
+                    </div>
+                  </div>
+                </div>
+                <div class="thumbTabContentItem" data-thumb-tab="thumb3">
+                  <div class="contentArea">
+                    <div class="contentWrap">
+                      <? include "./project__thumbnail.html" ?>
+                    </div>
+                  </div>
+                </div>
+                <div class="thumbTabContentItem" data-thumb-tab="thumb4">
+                  <div class="contentArea">
+                    <div class="contentWrap">
+                      <? include "./project__thumbnail.html" ?>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabContentItem" data-tab="profile3">
+              <div class="thumbTabHeader">
+                <button type="button" class="thumbTabBtn active" data-thumb-tab="thumb5">전체</button>
+                <button type="button" class="thumbTabBtn" data-thumb-tab="thumb6">PC 웹사이트</button>
+                <button type="button" class="thumbTabBtn" data-thumb-tab="thumb7">모바일 웹사이트</button>
+                <button type="button" class="thumbTabBtn" data-thumb-tab="thumb8">모바일 앱</button>
+              </div>
+              <div class="thumbTabContentWrap">
+                <div class="thumbTabContentItem active" data-thumb-tab="thumb5">
+                  <div class="contentArea">
+                    <div class="contentWrap">
+                      <? include "./general__thumbnail.html" ?>
+                    </div>
+                  </div>
+                </div>
+                <div class="thumbTabContentItem" data-thumb-tab="thumb6">
+                  <div class="contentArea">
+                    <div class="contentWrap">
+                      <? include "./general__thumbnail.html" ?>
+                    </div>
+                  </div>
+                </div>
+                <div class="thumbTabContentItem" data-thumb-tab="thumb7">
+                  <div class="contentArea">
+                    <div class="contentWrap">
+                      <? include "./general__thumbnail.html" ?>
+                    </div>
+                  </div>
+                </div>
+                <div class="thumbTabContentItem" data-thumb-tab="thumb8">
+                  <div class="contentArea">
+                    <div class="contentWrap">
+                      <? include "./general__thumbnail.html" ?>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabContentItem" data-tab="profile4">
+              <? include "./tab__profile.html" ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- E : Section -->
+  </main>
+  <!-- E : Main -->
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/js.html" ?>
+
+  <script>
+    $(document).ready(function () {
+      //탭메뉴
+      $('.sc--ranking--view .tabHeader button').on('click', function () {
+        const tabValue = $(this).data('tab');
+        $('.tabHeader button').removeClass('active');
+        $(this).addClass('active');
+        $('.tabContentItem').removeClass('active');
+        $(`.tabContentItem[data-tab="${tabValue}"]`).addClass('active');
+      });
+
+      //중첩 탭메뉴
+      $('.tabContentItem .thumbTabHeader .thumbTabBtn').on('click', function () {
+        const $parentTab = $(this).closest('.tabContentItem');
+        const thumbTabValue = $(this).data('thumb-tab');
+
+        $parentTab.find('.thumbTabBtn').removeClass('active');
+        $(this).addClass('active');
+
+        $parentTab.find('.thumbTabContentItem').removeClass('active');
+        $parentTab.find(`.thumbTabContentItem[data-thumb-tab="${thumbTabValue}"]`).addClass('active');
+      });
+
+      var slideTab = new Swiper('.info-slide-bx .swiper-container', {
+        loop: true,
+        slidesPerView: 1.6,
+        spaceBetween: 10,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        autoHeight: true,
+        navigation: {
+          nextEl: '.info-slide-bx .next-btn',
+          prevEl: '.info-slide-bx .prev-btn',
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1.6,
+            spaceBetween: 10,
+          },
+          576: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+          },
+          1200: {
+            slidesPerView: 6,
+            spaceBetween: 15,
+          },
+        }
+      });
+    })
+  </script>
+
+</body>
+
+</html>

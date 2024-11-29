@@ -227,6 +227,91 @@ html {
     color: $black;
 }
 
+//공통 체크박스 스타일
+.common-yark-bx{
+    input {
+        padding: 0;
+        height: initial;
+        width: initial;
+        margin-bottom: 0;
+        display: none;
+        cursor: pointer;
+    }
+
+    label {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+
+        @include mdq-max(xl) {
+            font-size: rem(16);
+        }
+
+        &::before {
+            content: '';
+            background-color: transparent;
+            border: 1px solid $gray-e;
+            border-radius: 2px;
+            padding: 8px;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            cursor: pointer;
+            margin-right: 8px;
+        }
+    }
+
+    input:checked+label:before {
+        background-color: $color-1;
+        border: 1px solid $color-1;
+    }
+
+    input:checked+label:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 8px;
+        left: 7px;
+        width: 3px;
+        height: 7px;
+        border: solid $white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+}
+
+//공통 textarea
+.common-contentArea {
+    .contentBox {
+        padding: 20px;
+        min-height: 120px;
+        border-radius: 10px;
+        border: 1px solid $gray-e;
+
+        @include mdq-max(xl) {
+            padding: 10px;
+        }
+        &::placeholder{
+            font-size: 18px;
+            color: rgba(#000, 0.2);
+            @include mdq-max(xl){
+                font-size: rem(16);
+            }
+        }
+    }
+
+    .contentCount {
+        font-size: 15px;
+        color: rgba(#000, 0.2);
+
+        @include mdq-max(xl) {
+            font-size: rem(14);
+        }
+    }
+}
+
 //공통 링크
 .cmLinkArea{
     display: flex;
