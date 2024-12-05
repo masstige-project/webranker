@@ -624,6 +624,9 @@
                 .contentBox {
                     padding: 20px;
                     min-height: 200px;
+                    &.contentBox2{
+                        min-height: 100px;
+                    }
 
                     @include mdq-max(xl) {
                         padding: 10px;
@@ -734,6 +737,13 @@
                             font-size: rem(14);
                         }
                     }
+                    &.upload-bottom-img2{
+                        gap: 15px;
+                        .img-bx{
+                            width: 190px;
+                            height: 106px; 
+                        }
+                    }
 
                     .img-bx {
                         width: 190px;
@@ -771,6 +781,8 @@
                 }
             }
         }
+
+        
 
         //심사위원등록 완료
         .judge-complete-bx {
@@ -912,6 +924,16 @@
                     &.status5 {
                         background: $white;
                         border: 1px solid $black;
+                    }
+                    &.status6 {
+                        background: $white;
+                        border: 1px solid $gray-3;
+                        color: $gray-3;
+                    }
+                    &.status7 {
+                        background: $white;
+                        border: 1px solid $color-1;
+                        color: $color-1;
                     }
                 }
 
@@ -1094,6 +1116,205 @@
                     }
                     @include mdq-max(md){
                         width: 100%;
+                    }
+                }
+            }
+        }
+
+        //maker-write
+        .chkWrap{
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            .chkItem{
+                width: calc(33.333% - 7.5px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                button{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    height: 50px;
+                    border: 1px solid $gray-e;
+                    transition: all 0.3s;
+                    font-size: 15px;
+                    @include mdq-max(xl){
+                        font-size: rem(14);
+                    }
+                    &.active{
+                        background: $color-1;
+                        color: $white;
+                    }
+                    @include mdq-min(md){
+                        &:hover{
+                            background: $color-1;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        .makerStep{
+            .colorList {
+                gap: 8px;
+                display: flex;
+                flex-wrap: wrap;
+    
+                @include mdq-max(xl) {
+                    flex-wrap: nowrap;
+                    gap: 0;
+                }
+            }
+    
+            .colorItem {
+                width: 60px;
+                height: 60px;
+                border-radius: 10px;
+                position: relative;
+                cursor: pointer;
+    
+                @include mdq-max(xl) {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 4px;
+                }
+    
+                &.active {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+    
+                &::after {
+                    content: "";
+                    background-image: url('../images/main/icon/pick.png');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 34px;
+                    height: 33px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1;
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                }
+    
+                &:nth-child(1) {
+                    background: $black;
+                }
+    
+                &:nth-child(2) {
+                    background: $white;
+                    border: 1px solid $gray-e;
+                    box-sizing: border-box;
+                }
+    
+                &:nth-child(3) {
+                    background: rgba(#000, 0.8);
+                }
+    
+                &:nth-child(4) {
+                    background: #FF0000;
+                }
+    
+                &:nth-child(5) {
+                    background: #FF9900;
+                }
+    
+                &:nth-child(6) {
+                    background: #FFFF00;
+                }
+    
+                &:nth-child(7) {
+                    background: #80FF00;
+                }
+    
+                &:nth-child(8) {
+                    background: #00EE26;
+                }
+    
+                &:nth-child(9) {
+                    background: #00E1AB;
+                }
+    
+                &:nth-child(10) {
+                    background: #11F1FF;
+                }
+    
+                &:nth-child(11) {
+                    background: #0075FF;
+                }
+    
+                &:nth-child(12) {
+                    background: #8F00FF;
+                }
+    
+                &:nth-child(13) {
+                    background: #FA00FF;
+                }
+            }
+        }
+        .openDate{
+            position: relative;
+            label{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 20px;
+            }
+        }
+        .maker__rejection{
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            @include mdq-max(xl){
+                flex-direction: column;
+                align-items: start;
+                justify-content: unset;
+                gap: 20px;
+            }
+            .textBox{
+                .tit{
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                .dec{
+                    margin-top: 16px;
+                    color: $gray-3;
+                }
+            }
+            .btnBox{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                @include mdq-max(xl){
+                    justify-content: flex-end;
+                    width: 100%;
+                }
+                > a,button{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 10px;
+                    border: 1px solid $color-1;
+                    background: $white;
+                    color: $color-1;
+                    width: 120px;
+                    height: 40px;
+                    transition: all 0.3s;
+                    @include mdq-min(md){
+                        &:hover{
+                            background: $color-1;
+                            color: $white;
+                            border: 1px solid $white;
+                        }
+                    }
+                    @include mdq-max(md){
+                        flex: 1;
+                        width: 50%;
                     }
                 }
             }

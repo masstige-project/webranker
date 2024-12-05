@@ -862,7 +862,7 @@ function toggleLike(buttonIndex) {
 const followButtons = $(".follow-btn");
 followButtons.each(function (index) {
   $(this).on("click", function () {
-    toggleLike(index + 1);
+    toggleFollow(index + 1);
   });
 });
 
@@ -870,13 +870,13 @@ followButtons.each(function (index) {
 const profileButtons = $(".follow-wrap");
 profileButtons.each(function (index) {
   $(this).on("click", function () {
-    toggleFollow(index + 1);
+    toggleProfile(index + 1);
   });
 });
 
 let followchk = Array.from({ length: profileButtons.length }, () => false);
 
-function toggleFollow(buttonIndex) {
+function toggleProfile(buttonIndex) {
   followchk[buttonIndex - 1] = !followchk[buttonIndex - 1];
   const profileButton = profileButtons.eq(buttonIndex - 1);
   const icon = profileButton.find("i"); 
@@ -894,7 +894,7 @@ function toggleFollow(buttonIndex) {
 
 let follow = Array.from({ length: followButtons.length }, () => false);
 
-function toggleLike(buttonIndex) {
+function toggleFollow(buttonIndex) {
   liked[buttonIndex - 1] = !liked[buttonIndex - 1];
   const followButton = followButtons.eq(buttonIndex - 1);
   if (liked[buttonIndex - 1]) {

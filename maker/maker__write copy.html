@@ -1,0 +1,338 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+    <?
+    $P_dp1 = '4';
+    include "../include/meta.html"
+		?>
+    <link rel="stylesheet" href="../assets/css/sub.min.css" />
+</head>
+
+<body class="sub-body">
+    <!-- S : Header -->
+    <? include "../include/header.html" ?>
+    <!-- E : Header -->
+
+    <!-- S : Main -->
+    <main class="main" id="contents">
+        <!-- S : Section -->
+        <section class="section sc--judge">
+            <div class="container">
+                <div class="title-bx title-bx2">
+                    <h2 class="wow fadeInUp main-title">웹 또는 앱 정보 등록</h2>
+                    <ul class="stepBox wow fadeInUp">
+                        <li>
+                            <p class="num">1</p>
+                            <p class="step-txt">기본정보</p>
+                        </li>
+                        <i class="xi-angle-right-min"></i>
+                        <li>
+                            <p class="num active">2</p>
+                            <p class="step-txt active">상세정보</p>
+                        </li>
+                        <i class="xi-angle-right-min"></i>
+                        <li>
+                            <p class="num">3</p>
+                            <p class="step-txt">완료</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="writeList">
+                    <p class="write-dec wow fadeInUp">심사위원 상세정보를 등록해주세요.<br>
+                        등록한 정보가 심사위원 프로필 페이지에 표출됩니다.</p>
+                    <ul class="writeInputBox mt-10 mt-xl-15 writeInputBox1">
+                        <li class="wow fadeInUp">
+                            <p class="title">프로필 이미지<span>*</span></p>
+                            <div class="upload-bx">
+                                <div class="upload-top">
+                                    <div class="file--text">
+                                        <label for="file-upload-img-1">이미지 등록</label>
+                                        <input type="file" id="file-upload-img-1" class="file-upload-img"
+                                            accept="image/*" multiple="">
+                                    </div>
+                                    <p class="file--info mgt-10">
+                                        500 x 500px 사이즈의 jpg, png, gif 파일 1mb 이하로 첨부 가능합니다.
+                                    </p>
+                                </div>
+                                <!-- 이미지권장 사이즈 500*500 -->
+                                <ul class="upload-bottom-img mgt-10">
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">이름(심사위원명)<span>*</span></p>
+                            <input type="text" name="uname" maxlength="20" class="input-100"
+                                placeholder="실명 또는 가명(심사위원명)을 입력해주세요.">
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">소속 회사나 프리랜서명<span>*</span></p>
+                            <input type="text" name="ucompany" maxlength="20" class="input-100"
+                                placeholder="소속 회사나 프리랜서명을 입력해주세요.">
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">대표자명<span>*</span></p>
+                            <input type="text" name="uceo" maxlength="20" class="input-100"
+                                placeholder="소속 회사 대표장이나 프리랜서명을 입력해주세요.">
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">대표 이메일<span>*</span></p>
+                            <input type="text" name="uemail" maxlength="20" class="input-100 email-input"
+                                placeholder="대표 이메일을 입력해주세요.">
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">담당자 전화번호 또는 휴대폰번호<span>*</span></p>
+                            <input type="text" name="utel" maxlength="20" class="input-100 AutoHyphen"
+                                placeholder="담당자 전화번호 또는 휴대폰번호를 입력해주세요.">
+                        </li>
+                    </ul>
+
+                    <!-- 메이커 회사 또는 프리랜서 정보 -->
+                    <ul class="writeInputBox writeInputBox2">
+                        <p class="form-title mb-10 wow fadeInUp">메이커 회사 또는 프리랜서 정보</p>
+                        <li class="wow fadeInUp">
+                            <p class="title">홈페이지 URL을 등록해주세요.</p>
+                            <input type="text" name="ulink1" maxlength="30" class="input-100"
+                                placeholder="URL을 입력해주세요.">
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">프로젝트(포트폴리오) URL을 등록해주세요.</p>
+                            <input type="text" name="ulink2" maxlength="30" class="input-100"
+                                placeholder="URL을 입력해주세요.">
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">문의주소(홈페이지 문의하기 또는 카카오톡 문의하기 등)를 등록해주세요.</p>
+                            <input type="text" name="ulink3" maxlength="30" class="input-100"
+                                placeholder="URL을 입력해주세요.">
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">메이커 소개 문구 <span>*</span></p>
+                            <div class="jd-contentArea">
+                                <textarea name="ucontent1" placeholder="메이커 소개문구 내용을 입력해주세요." class="contentBox"
+                                    maxlength="2000"></textarea>
+                                <p class="contentCount text_right mgt-10">(0/2,000)</p>
+                            </div>
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">메이커 소개 동영상 URL을 등록해주세요.</p>
+                            <input type="text" name="ulink4" maxlength="30" class="input-100"
+                                placeholder="유튜브 또는 비메오URL을 입력해주세요.">
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">이미지 자료<span>*</span></p>
+                            <div class="upload-bx">
+                                <div class="upload-top">
+                                    <div class="file--text">
+                                        <label for="file-upload-img-2">이미지 등록</label>
+                                        <input type="file" id="file-upload-img-2" class="file-upload-img"
+                                            accept="image/*" multiple="">
+                                    </div>
+                                    <p class="file--info mgt-10">
+                                        pdf, zip, jpg, png, gif 파일 20mb 이하로 첨부 가능합니다.
+                                    </p>
+                                </div>
+                                <!-- 이미지권장 사이즈 500*500 -->
+                                <ul class="upload-bottom-img mgt-10">
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">수상경력 및 인증</span></p>
+                            <div class="jd-contentArea">
+                                <textarea name="ucontent3" placeholder="전문분야 및 기술 내용을 입력해주세요." class="contentBox"
+                                    maxlength="2000"></textarea>
+                                <p class="contentCount text_right mgt-10">(0/2,000)</p>
+                            </div>
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">주소를 입력해주세요.</span></p>
+                            <div class="address-bx">
+                                <div class="top">
+                                    <input type="text" name="addr_num" id="sample4_postcode" placeholder="우편번호"
+                                        class="input-100 bg-fill" required>
+                                    <input type="button" onclick="sample4_execDaumPostcode()" value="우편번호"
+                                        id="search-addr">
+                                </div>
+                                <div class="bottom">
+                                    <input type="text" name="addr_text" id="sample4_roadAddress" placeholder="주소"
+                                        class="input-100 bg-fill" required>
+                                    <input type="text" name="addr_detail_text" id="sample4_detailAddress"
+                                        class="addr_detail_text input-100" placeholder="상세주소를 입력해주세요." required>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- SNS 및 블로그 링크 -->
+                    <ul class="writeInputBox writeInputBox2">
+                        <p class="form-title mb-10 wow fadeInUp">SNS 및 블로그 링크</p>
+                        <li class="wow fadeInUp">
+                            <p class="title">인스타그램 URL을 입력해주세요.</p>
+                            <input type="text" name="ulink5" maxlength="30" class="input-100"
+                                placeholder="URL을 입력해주세요.">
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">유튜브 URL을 입력해주세요.</p>
+                            <input type="text" name="ulink6" maxlength="30" class="input-100"
+                                placeholder="URL을 입력해주세요.">
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">블로그 URL을 입력해주세요.</p>
+                            <input type="text" name="ulink7" maxlength="30" class="input-100"
+                                placeholder="URL을 입력해주세요.">
+                        </li>
+                        <li class="wow fadeInUp">
+                            <p class="title">페이스북 URL을 입력해주세요.</p>
+                            <input type="text" name="ulink8" maxlength="30" class="input-100"
+                                placeholder="URL을 입력해주세요.">
+                        </li>
+                    </ul>
+                    <!-- 프로젝트 PC웹사이트/모바일 웹사이트/모바일 앱 레이아웃 동일 -->
+                    <ul class="writeInputBox writeInputBox2">
+                        <p class="form-title mb-10 wow fadeInUp">프로젝트</p>
+                        <p class="font-24-bd mb-5 wow fadeInUp">PC 웹사이트</p>
+                        <li class="wow fadeInUp additional-content">
+                            <p class="title">프로젝트 1</p>
+                            <input type="text" name="uproject" maxlength="30" class="input-100"
+                                placeholder="프로젝트명을 입력해주세요.">
+                            <input type="text" name="ulink9" maxlength="30" class="input-100 mgt-10"
+                                placeholder="URL을 입력해주세요.">
+                            <div class="upload-bx mgt-10">
+                                <div class="upload-top">
+                                    <div class="file--text">
+                                        <label for="file-upload-img-3">이미지 등록</label>
+                                        <input type="file" id="file-upload-img-3" class="file-upload-img"
+                                            accept="image/*" multiple="">
+                                    </div>
+                                    <p class="file--info mgt-10">
+                                        pdf, zip, jpg, png, gif 파일 20mb 이하로 첨부 가능합니다.
+                                    </p>
+                                </div>
+                                <!-- 이미지권장 사이즈 500*500 -->
+                                <ul class="upload-bottom-img mgt-10">
+                                </ul>
+                            </div>
+                        </li>
+                        <div class="additional-btn mt-5">
+                            <p class="additional-txt p-color font-18-rg">프로젝트 추가 등록 (0/10)</p>
+                        </div>
+                    </ul>
+                </div>
+                <div class="nextStepBtn wow fadeInRight">
+                    <a href="./maker__complete.html" class="save">저장</a>
+                </div>
+            </div>
+        </section>
+        <!-- E : Section -->
+    </main>
+    <!-- E : Main -->
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const additionalBtn = document.querySelector('.additional-btn');
+            const projectList = document.querySelector('.additional-content').parentElement;
+            let projectCount = 0;
+            const maxProjects = 10;
+            const projectCountDisplay = additionalBtn.querySelector('.additional-txt');
+
+            if (projectCountDisplay) {
+                projectCountDisplay.textContent = `프로젝트 추가 등록 (${projectCount}/${maxProjects})`;
+            }
+
+            additionalBtn.addEventListener('click', function () {
+                if (projectCount >= maxProjects) {
+                    alert(`프로젝트는 최대 ${maxProjects}개까지 등록할 수 있습니다.`);
+                    return;
+                }
+
+                // 프로젝트 추가 
+                const newProject = document.createElement('li');
+                newProject.className = 'additional-content';
+                newProject.innerHTML = `
+            <div class="delete-btn mb-5">
+                <p class="title">프로젝트 ${projectCount + 2}</p>
+                <button type="button" class="project-delete">삭제</button>
+            </div>
+            <input type="text" name="uproject" maxlength="30" class="input-100" placeholder="프로젝트명을 입력해주세요.">
+            <input type="text" name="ulink9" maxlength="30" class="input-100 mgt-10" placeholder="URL을 입력해주세요.">
+            <div class="upload-bx mgt-10">
+                <div class="upload-top">
+                    <div class="file--text">
+                        <label for="file-upload-img-${projectCount}">이미지 등록</label>
+                        <input type="file" id="file-upload-img-${projectCount}" class="file-upload-img" accept="image/*" multiple="">
+                    </div>
+                    <p class="file--info mgt-10">
+                        pdf, zip, jpg, png, gif 파일 20mb 이하로 첨부 가능합니다.
+                    </p>
+                </div>
+                <ul class="upload-bottom-img mgt-10"></ul>
+            </div>
+        `;
+
+                projectList.insertBefore(newProject, additionalBtn);
+
+                if (projectCountDisplay) {
+                    projectCountDisplay.textContent = `프로젝트 추가 등록 (${projectCount + 1}/${maxProjects})`;
+                }
+                projectCount++;
+
+                // 삭제 
+                const deleteButton = newProject.querySelector('.project-delete');
+                deleteButton.addEventListener('click', function () {
+                    const confirmDelete = window.confirm('삭제하시겠습니까?');
+                    if (confirmDelete) {
+                        newProject.remove();
+                        projectCount--;
+
+                        if (projectCountDisplay) {
+                            projectCountDisplay.textContent = `프로젝트 추가 등록 (${projectCount}/${maxProjects})`;
+                        }
+                    }
+                });
+            });
+        });
+
+        //주소
+        function sample4_execDaumPostcode() {
+            var currentScroll = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+            new daum.Postcode({
+                oncomplete: function (data) {
+                    var roadAddr = data.roadAddress;
+                    var extraRoadAddr = '';
+
+                    if (data.bname !== '' && /[동|로|가]$/g.test(data.bname)) {
+                        extraRoadAddr += data.bname;
+                    }
+
+                    if (data.buildingName !== '' && data.apartment === 'Y') {
+                        extraRoadAddr += (extraRoadAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                    }
+
+                    if (extraRoadAddr !== '') {
+                        extraRoadAddr = ' (' + extraRoadAddr + ')';
+                    }
+
+                    document.getElementById('sample4_postcode').value = data.zonecode;
+                    document.getElementById("sample4_roadAddress").value = roadAddr;
+                    document.body.scrollTop = currentScroll;
+                    document.documentElement.scrollTop = currentScroll;
+                },
+                onclose: function (state) {
+
+                    if (state === 'FORCE_CLOSE') {
+                    } else if (state === 'COMPLETE_CLOSE') {
+                    }
+                }
+            }).open();
+        }
+
+    </script>
+</body>
+
+</html>

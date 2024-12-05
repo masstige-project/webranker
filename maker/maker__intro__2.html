@@ -42,6 +42,97 @@
                         </div>
                     </div>
                 </div>
+                <!-- 비공개팝업 -->
+                <div class="overlay">
+                    <div class="popup-bx">
+                        <div class="title-bx">
+                            <p class="title">비공개로 전환하시겠습니까?</p>
+                            <button type="button" class="popClosebtn">
+                                <img src="../assets/images/main/icon/popup-close.png" alt="닫기버튼">
+                            </button>
+                        </div>
+                        <div class="text-bx">
+                            <div class="btn-bx mt-10">
+                                <button type="button" class="btn1 cancelBtn">취소</button>
+                                <button type="button" class="btn2 conversion-btn">전환</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay2">
+                    <div class="popup-bx">
+                        <div class="title-bx">
+                            <p class="title">비공개로 전환되었습니다.</p>
+                            <button type="button" class="popClosebtn popClosebtn2">
+                                <img src="../assets/images/main/icon/popup-close.png" alt="닫기버튼">
+                            </button>
+                        </div>
+                        <div class="text-bx">
+                            <div class="btn-bx mt-10">
+                                <button type="button" class="btn2 confirm-btn">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 공개팝업 -->
+                <div class="overlay3">
+                    <div class="popup-bx">
+                        <div class="title-bx">
+                            <p class="title">공개로 전환하시겠습니까?</p>
+                            <button type="button" class="popClosebtn3">
+                                <img src="../assets/images/main/icon/popup-close.png" alt="닫기버튼">
+                            </button>
+                        </div>
+                        <div class="text-bx">
+                            <div class="btn-bx mt-10">
+                                <button type="button" class="btn1 cancelBtn">취소</button>
+                                <button type="button" class="btn2 conversion-btn">전환</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay4">
+                    <div class="popup-bx">
+                        <div class="title-bx">
+                            <p class="title">공개로 전환되었습니다.</p>
+                            <button type="button" class="popClosebtn popClosebtn4">
+                                <img src="../assets/images/main/icon/popup-close.png" alt="닫기버튼">
+                            </button>
+                        </div>
+                        <div class="text-bx">
+                            <div class="btn-bx mt-10">
+                                <button type="button" class="btn2 confirm-btn">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 심사상태 -->
+                <? include "./list/maker__list.html" ?>
+                <div class="maker__rejection mt-10 mt-xl-15">
+                    <div class="textBox">
+                        <p class="tit">아래 사유로 거절되었습니다.</p>
+                        <p class="dec">제출된 콘텐츠가 부적절하거나, 저희 플랫폼 정책에 위배됩니다. 특정 사용자 그룹에게 불쾌감을 줄 수 있는 콘텐츠가 포함되어 있습니다.<br>
+                            해당 내용 수정 후 다시 재심사 요청을 해주세요.</p>
+                    </div>
+                    <div class="btnBox">
+                        <a href="javascript:void(0);">수정하기</a>
+                        <button type="button">재승인 요청</button>
+                    </div>
+                </div>
+                <? include "./list/maker__status.html" ?>
+                <!-- S : 페이징 -->
+                <div class="paging-area mt-10 mt-xl-15">
+                    <ul>
+                    <li><a href="javascript:;" class="prev-first"><span>맨앞으로</span></a></li>
+                    <li><a href="javascript:;" class="prev"><span>이전으로</span></a></li>
+                    <li><a href="javascript:;" class="active">1<span></span></a></li>
+                    <li><a href="javascript:;">2<span></span></a></li>
+                    <li><a href="javascript:;">3<span></span></a></li>
+                    <li><a href="javascript:;" class="next"><span>다음으로</span></a></li>
+                    <li><a href="javascript:;" class="next-last"><span>맨뒤로</span></a></li>
+                    </ul>
+                </div>
+                <!-- E : 페이징 -->
             </div>
         </section>
         <!-- E : Section -->
@@ -50,6 +141,37 @@
 
     <? include "../include/footer.html" ?>
     <? include "../include/js.html" ?>
+    <script>
+        $(document).ready(function () {
+            //비공개
+            $('.nondisclosure-link').on('click', function () {
+                $('.overlay, .overlay .popup-bx').show();
+            });
+            $('.popClosebtn, .cancelBtn').on('click', function () {
+                $('.overlay, .overlay .popup-bx').hide();
+            });
+            $('.conversion-btn').on('click', function () {
+                $('.overlay2, .overlay2 .popup-bx').show();
+            });
+            $('.confirm-btn').on('click', function () {
+                $('.overlay, .overlay2, .overlay .popup-bx, .overlay2 .popup-bx').hide();
+            });
+            //공개
+            $('.public-link').on('click', function () {
+                $('.overlay3, .overlay3 .popup-bx').show();
+            });
+            $('.overlay3 .cancelBtn, .overlay3 .popClosebtn3').on('click', function () {
+                $('.overlay3, .overlay3 .popup-bx').hide();
+            });
+            $('.overlay3 .conversion-btn').on('click', function () {
+                $('.overlay4, .overlay4 .popup-bx').show();
+                $('.overlay, .overlay2, .overlay .popup-bx, .overlay2 .popup-bx, .overlay3, .overlay3 .popup-bx').hide();
+            });
+            $('.overlay4 .confirm-btn').on('click', function () {
+                $('.overlay4,.overlay4 .popup-bx').hide();
+            });
+        })
+    </script>
 </body>
 
 </html>
