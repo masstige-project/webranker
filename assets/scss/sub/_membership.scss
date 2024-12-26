@@ -329,6 +329,10 @@
                     border: 1px solid $color-1;
                 }
             }
+            &.active{
+                background: $color-1;
+                border: 1px solid $color-1;
+            }
         }
     }
 
