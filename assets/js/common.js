@@ -879,15 +879,15 @@ let followchk = Array.from({ length: profileButtons.length }, () => false);
 function toggleProfile(buttonIndex) {
   followchk[buttonIndex - 1] = !followchk[buttonIndex - 1];
   const profileButton = profileButtons.eq(buttonIndex - 1);
-  const icon = profileButton.find("i"); 
+  const icon = profileButton.find("i");
 
   if (followchk[buttonIndex - 1]) {
     profileButton.addClass("clicked");
-    icon.removeClass("xi-user-plus-o").addClass("xi-user-plus"); 
-    profileButton.siblings("p").text("팔로잉"); 
+    icon.removeClass("xi-user-plus-o").addClass("xi-user-plus");
+    profileButton.siblings("p").text("팔로잉");
   } else {
     profileButton.removeClass("clicked");
-    icon.removeClass("xi-user-plus").addClass("xi-user-plus-o"); 
+    icon.removeClass("xi-user-plus").addClass("xi-user-plus-o");
     profileButton.siblings("p").text("팔로우");
   }
 }
@@ -906,7 +906,7 @@ function toggleFollow(buttonIndex) {
 
 //quick-menu
 var lastScrollTop = 0;
-var minHeight = 1200; 
+var minHeight = 1200;
 
 window.addEventListener("scroll", function () {
   var st = window.pageYOffset || document.documentElement.scrollTop;
@@ -982,8 +982,12 @@ $(".toggleMorebtn").on("click", function () {
   }
 });
 
-$('.allViewBtn').on('click', function() {
-  $(this).find('i').toggleClass('rotate');
+$(".allViewBtn").on("click", function () {
+  var $this = $(this);
+  var $hiddenInput = $this.closest(".commentFlex").siblings(".hiddenInput");
+
+  $this.find("i").toggleClass("rotate");
+  $hiddenInput.toggleClass("active");
 });
 
 //답글달기

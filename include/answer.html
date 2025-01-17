@@ -1,13 +1,6 @@
-<div class="sortingBox sortingBox2">
-    <div class="box1">
-        <a href="#" class="active">인기순</a>
-        <a href="#">최신순</a>
-    </div>
-    <div class="box2">
-        <button type="button" class="replyBtn">답글달기</button>
-        <!-- 공유하기 팝업 -->
-        <? include "../include/reply-popup.html" ?>
-    </div>
+<div class="sortingBox">
+    <a href="#" class="active">인기순</a>
+    <a href="#">최신순</a>
 </div>
 <div class="commtentArea">
     <div class="commtentWrap">
@@ -24,14 +17,22 @@
             <button type="button" class="registration-btn">등록</button>
         </div>
     </div>
-    <div class="commtentWrap mt-5">
+    <div class="commtentWrap mt-10">
         <div class="commentFlex">
             <div class="voting-icon" style="background-image: url(../assets/images/main/user-icon.png);">
                 <img src="../assets/images/main/base_75X75.png" alt="img">
             </div>
             <div class="commentList commentList2">
-                <p class="nickname">dony7 <span>12시간 전</span>
-                </p>
+                <div class="anser-info-list mb-5 mb-md-0">
+                    <p class="nickname">dony7 <span>12시간 전</span></p>
+                    <ul class="button-box">
+                        <button type="button" class="replyBtn">답글달기</button>
+                        <button type="button" class="modifyBtn">수정</button>
+                        <button type="button" class="deleteBtn">삭제</button>
+                    </ul>
+                    <!-- 공유하기 팝업 -->
+                    <? include "../include/reply-popup.html" ?>
+                </div>
                 <div class="description mgt-10">
                     <p>홈페이지 심플하고 예쁘게 리뉴얼 했어요. 그런데 홍길동님 말씀대로라면 모든 사이트를 특성에 고려하지
                         않고 제작해야 할까요.홈페이지 심플하고 예쁘게 리뉴얼 했어요. 그런데 홍길동님 말씀대로라면 모든
@@ -57,8 +58,17 @@
                 <div class="voting-icon" style="background-image: url(../assets/images/main/user-icon.png);">
                     <img src="../assets/images/main/base_75X75.png" alt="img">
                 </div>
-                <div class="inputBx w-100">
-                    <input type="text" name="ucomment" placeholder="댓글 작성">
+                <div class="hidden-content-wrap w-100">
+                    <div class="anser-info-list mb-5 mb-md-0">
+                        <p class="nickname">dony7 <span>12시간 전</span></p>
+                        <ul class="button-box">
+                            <button type="button" class="modifyBtn">수정</button>
+                            <button type="button" class="deleteBtn">삭제</button>
+                        </ul>
+                    </div>
+                    <div class="inputBx w-100 mgt-10">
+                        <input type="text" name="ucomment" placeholder="댓글 작성">
+                    </div>
                 </div>
             </div>
             <div class="cmtBtn mgt-10">

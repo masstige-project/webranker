@@ -932,6 +932,9 @@
             .commentFlex {
                 display: flex;
                 align-items: center;
+                @include mdq-max(md){
+                    align-items: start;
+                }
             }
 
             .commentList {
@@ -943,11 +946,59 @@
                 }
 
                 &.commentList2 {
+                    .anser-info-list{
+                        display: flex;
+                        align-items: center;
+                        gap: rem(20);
+                        @include mdq-max(md){
+                            flex-direction: column;
+                            align-items: start;
+                            gap: rem(10);
+                        }
+                        .button-box{
+                            display: flex;
+                            align-items: center;
+                            gap: rem(10);
+                            @include mdq-max(md){
+                                order:1;
+                            }
+                            > a,button{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                height: 30px;
+                                border-radius: 10px;
+                                padding: 0 10px;
+                                background: $white;
+                                border: 1px solid $gray-e;
+                                font-size: 15px;
+    
+                                @include mdq-max(xl) {
+                                    font-size: 14px;
+                                }
+    
+                                &.active {
+                                    background: $gray-4;
+                                    color: $white;
+                                    border: 1px solid $gray-4;
+                                }
+                                &.replyBtn,
+                                &.deleteBtn{
+                                    background: $color-1;
+                                    color: $white;
+                                }
+                                &.modifyBtn{
+                                    background: $white;
+                                    color: $black;
+                                }
+                            }
+                        }
+                    }
                     .nickname {
                         font-size: 18px;
                         font-weight: 600;
                         @include mdq-max(xl){
-                            font-size: rem(16);
+                            font-size: rem(18);
                         }
 
                         span {
@@ -1032,24 +1083,75 @@
                 }
             }
 
+            .hidden-content-wrap{
+                margin-left: 20px;
+                @include mdq-max(xl){
+                    margin-left: 10px;
+                }
+                .anser-info-list{
+                    display: flex;
+                    align-items: center;
+                    gap: rem(20);
+                    
+                    @include mdq-max(md){
+                        flex-direction: column;
+                        align-items: start;
+                        gap: rem(10);
+                    }
+                    .button-box{
+                        display: flex;
+                        align-items: center;
+                        gap: rem(10);
+                        @include mdq-max(md){
+                            order:1;
+                        }
+                    }
+                    > a,button{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 30px;
+                        border-radius: 10px;
+                        padding: 0 10px;
+                        background: $white;
+                        border: 1px solid $gray-e;
+                        font-size: 15px;
+    
+                        @include mdq-max(xl) {
+                            font-size: 14px;
+                        }
+    
+                        &.active {
+                            background: $gray-4;
+                            color: $white;
+                            border: 1px solid $gray-4;
+                        }
+                        &.replyBtn,
+                        &.deleteBtn{
+                            background: $color-1;
+                            color: $white;
+                        }
+                        &.modifyBtn{
+                            background: $white;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+
             .hiddenInput {
-                transition: max-height 0.3s ease;
-                display: none;
+                max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
 
                 &.active {
-                    display: block;
+                    max-height: 500px;
                 }
 
                 .flexBx {
                     margin-left: 95px;
                     @include mdq-max(xl){
                         margin-left: 60px;
-                    }
-                    .inputBx{
-                        margin-left: 20px;
-                        @include mdq-max(xl){
-                            margin-left: 10px;
-                        }
                     }
                     .voting-icon {
                         background-size: cover;

@@ -1202,59 +1202,7 @@
                     transition: opacity 0.3s;
                 }
     
-                &:nth-child(1) {
-                    background: $black;
-                }
-    
-                &:nth-child(2) {
-                    background: $white;
-                    border: 1px solid $gray-e;
-                    box-sizing: border-box;
-                }
-    
-                &:nth-child(3) {
-                    background: rgba(#000, 0.8);
-                }
-    
-                &:nth-child(4) {
-                    background: #FF0000;
-                }
-    
-                &:nth-child(5) {
-                    background: #FF9900;
-                }
-    
-                &:nth-child(6) {
-                    background: #FFFF00;
-                }
-    
-                &:nth-child(7) {
-                    background: #80FF00;
-                }
-    
-                &:nth-child(8) {
-                    background: #00EE26;
-                }
-    
-                &:nth-child(9) {
-                    background: #00E1AB;
-                }
-    
-                &:nth-child(10) {
-                    background: #11F1FF;
-                }
-    
-                &:nth-child(11) {
-                    background: #0075FF;
-                }
-    
-                &:nth-child(12) {
-                    background: #8F00FF;
-                }
-    
-                &:nth-child(13) {
-                    background: #FA00FF;
-                }
+                //color지정 - 관리자에서
             }
         }
         .openDate{
