@@ -2539,13 +2539,9 @@ html {
 
             & .flex-bx {
                 display: flex;
-                justify-content: space-between;
+                flex-direction: column;
                 margin-top: 20px;
 
-                @include mdq-max(md) {
-                    flex-direction: column;
-                    justify-content: unset;
-                }
                 .maker-text-bx{
                     p{
                         font-size: 20px;
@@ -2568,29 +2564,32 @@ html {
 
                 .right-bx {
                     background: #FE4742;
-                    width: 70px;
-                    height: 56px;
+                    width: 100%;
+                    height: 36px;
                     border-radius: 10px;
                     display: flex;
-                    flex-direction: column;
                     align-items: center;
                     justify-content: center;
                     color: $white;
                     gap: 5px;
-                    padding: 10px;
-                    line-height: 1;
-
-                    @include mdq-max(md) {
-                        width: 100%;
-                        height: 36px;
-                        padding: 0 10px;
-                        flex-direction: row;
-                        margin-top: 6px;
-                        line-height: 1.6;
+                    padding: 0 10px;
+                    margin-top: 6px;
+                    line-height: 1.6;
+                    a{
+                        display: flex;
+                        align-items: center;
+                        gap: rem(20);
                     }
 
                     p {
                         font-size: 15px;
+                    }
+                    span{
+                        display: flex;
+                        align-items: center;
+                        i{
+                            margin-bottom: 2px;
+                        }
                     }
                 }
 
@@ -3049,5 +3048,28 @@ html {
 
     i {
         color: $gray-c;
+    }
+}
+
+//250122추가
+.video-wrap {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    height: 0;
+    width: calc(100% - 340px);
+    border-radius: 20px;
+    @include mdq-max(xl){
+        width: 100%;
+    }
+    .video-bx {
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
     }
 }
