@@ -6,7 +6,7 @@
     $P_dp0 = 'main';
     include "../include/meta.html" 
     ?>
-        <link rel="stylesheet" href="../assets/css/main.min.css" />
+        <link rel="stylesheet" href="../assets/css/main_new.min.css" />
     </head>
 
     <body class="main-body">
@@ -21,78 +21,78 @@
                 <div class="main-title">
                     <div class="container">
                         <h2 class="title wow fadeInUp">프로젝트가 주목받는 순간, 웹랭커에서 시작됩니다.</h2>
-                        <p class="text wow fadeInUp d-none d-lg-block">
-                            당신의 웹사이트와 모바일 앱이 전 세계와 만나는 무대. 최신 트렌드 발견부터 폭넓은 인지도 획득까지, 모든것이 가능합니다.
-                        </p>
-                        <p class="text wow fadeInUp d-block d-lg-none">
-                            당신의 웹사이트와 모바일 앱이<br />
-                            전 세계와 만나는 무대.
-                        </p>
-                        <p class="text wow fadeInUp d-block d-lg-none mt-4">
-                            최신 트렌드 발견부터 폭넓은 인지도 획득까지,<br />
-                            모든 것이 가능합니다.
-                        </p>
                     </div>
                 </div>
             </section>
             <!-- E : main-visual -->
 
             <!-- S : section -->
+            <section class="section banner_list">
+                <div class="container">
+                    <div class="title">WEBRANKER</div>
+                    <div class="thumbnail-list">
+                        <? include "./main__banner.html" ?>
+                    </div>
+                </div>
+            </section>
+            <!-- E : section -->
+
+            <!-- S : section -->
             <section class="section main-thumnail-list">
                 <div class="container">
                     <div class="thumnail-list">
                         <div class="title-box">
-                            <div class="title">이번 주 웹 최고 투표</div>
-                            <div class="more">
-                                <a href="../ranking/ranking__list.html">
-                                    <p>더보기</p>
-                                </a>
-                            </div>
+                            <div class="title crown">이번 주 웹 최고 투표</div>
                         </div>
                         <div class="swiper-container m-thumbnail1">
                             <? include "./thumbnail__01.html" ?>
+                        </div>
+                        <div class="more">
+                            <a href="../ranking/ranking__list.html">
+                                <p>VIEW MORE</p>
+                            </a>
                         </div>
                     </div>
 
                     <div class="thumnail-list mt-10">
                         <div class="title-box">
-                            <div class="title">이번 주 모바일 최고 투표</div>
-                            <div class="more">
-                                <a href="../ranking/ranking__list.html">
-                                    <p>더보기</p>
-                                </a>
-                            </div>
+                            <div class="title crown">이번 주 모바일 최고 투표</div>
                         </div>
                         <div class="swiper-container m-thumbnail1">
-                            <? include "./thumbnail__01.html" ?>
+                            <? include "./thumbnail__01_mo.html" ?>
+                        </div>
+                        <div class="more">
+                            <a href="../ranking/ranking__list.html">
+                                <p>VIEW MORE</p>
+                            </a>
                         </div>
                     </div>
 
                     <div class="thumnail-list mt-10">
                         <div class="title-box">
                             <div class="title">이번 달 진행중 웹 평가</div>
-                            <div class="more">
-                                <a href="../ranking/ranking__list.html">
-                                    <p>더보기</p>
-                                </a>
-                            </div>
                         </div>
                         <div class="swiper-container m-thumbnail1">
-                            <? include "./thumbnail__02.html" ?>
+                            <? include "./thumbnail__01.html" ?>
+                        </div>
+                        <div class="more">
+                            <a href="../ranking/ranking__list.html">
+                                <p>VIEW MORE</p>
+                            </a>
                         </div>
                     </div>
 
                     <div class="thumnail-list mt-10">
                         <div class="title-box">
                             <div class="title">이번 달 진행중 모바일 평가</div>
-                            <div class="more">
-                                <a href="../ranking/ranking__list.html">
-                                    <p>더보기</p>
-                                </a>
-                            </div>
                         </div>
                         <div class="swiper-container m-thumbnail1">
-                            <? include "./thumbnail__02.html" ?>
+                            <? include "./thumbnail__01_mo.html" ?>
+                        </div>
+                        <div class="more">
+                            <a href="../ranking/ranking__list.html">
+                                <p>VIEW MORE</p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -102,28 +102,29 @@
             <!-- S : section -->
             <section class="section swiper">
                 <div class="container">
-                    <div class="comment_swiper1" data-aos="fade-up">
+                    <div class="top-title-box">사용자와 전문가가 전하는 진심의 목소리</div>
+                    <div class="comment_swiper1 mt-10" data-aos="fade-up">
                         <div class="title-box mb-5">
                             <div class="title">사용자 투표 인기 댓글</div>
-                            <div class="more">
-                                <a href="../ranking/ranking__list.html">
-                                    <p>더보기</p>
-                                </a>
-                            </div>
                         </div>
                         <? include "./use__slide.html" ?>
+                        <div class="more">
+                            <a href="../ranking/ranking__list.html">
+                                <p>VIEW MORE</p>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="comment_swiper2 mt-10" data-aos="fade-up">
                         <div class="title-box mb-5">
                             <div class="title">심사위원 평가 인기 댓글</div>
-                            <div class="more">
-                                <a href="../ranking/ranking__list.html">
-                                    <p>더보기</p>
-                                </a>
-                            </div>
                         </div>
                         <? include "./use__slide.html" ?>
+                        <div class="more">
+                            <a href="../community/ranking__list.html">
+                                <p>VIEW MORE</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -132,73 +133,74 @@
             <!-- S : section -->
             <section class="section main-thumnail-list question_list">
                 <div class="container">
+                    <div class="top-title-box">생각이 흐르고, 이야기가 머무는 곳</div>
                     <div class="thumnail-list">
-                        <div class="title-box">
+                        <div class="title-box mt-10">
                             <div class="title">Q&A</div>
-                            <div class="more">
-                                <a href="../community/community__1.html">
-                                    <p>더보기</p>
-                                </a>
-                            </div>
                         </div>
                         <div class="swiper-container m-thumbnail2">
                             <? include "./thumbnail__03.html" ?>
+                        </div>
+                        <div class="more">
+                            <a href="../community/community__1.html">
+                                <p>VIEW MORE</p>
+                            </a>
                         </div>
                     </div>
 
                     <div class="thumnail-list mt-10">
                         <div class="title-box">
                             <div class="title">자유</div>
-                            <div class="more">
-                                <a href="../community/community__2.html">
-                                    <p>더보기</p>
-                                </a>
-                            </div>
                         </div>
                         <div class="swiper-container m-thumbnail2">
                             <? include "./thumbnail__03.html" ?>
+                        </div>
+                        <div class="more">
+                            <a href="../community/community__1.html">
+                                <p>VIEW MORE</p>
+                            </a>
                         </div>
                     </div>
 
                     <div class="thumnail-list mt-10">
                         <div class="title-box">
                             <div class="title">익명</div>
-                            <div class="more">
-                                <a href="../community/community__2.html">
-                                    <p>더보기</p>
-                                </a>
-                            </div>
                         </div>
                         <div class="swiper-container m-thumbnail2">
                             <? include "./thumbnail__03.html" ?>
+                        </div>
+                        <div class="more">
+                            <a href="../community/community__1.html">
+                                <p>VIEW MORE</p>
+                            </a>
                         </div>
                     </div>
 
                     <div class="thumnail-list mt-10">
                         <div class="title-box">
                             <div class="title">튜토리얼</div>
-                            <div class="more">
-                                <a href="../community/community__2.html">
-                                    <p>더보기</p>
-                                </a>
-                            </div>
                         </div>
                         <div class="swiper-container m-thumbnail2">
                             <? include "./thumbnail__03.html" ?>
+                        </div>
+                        <div class="more">
+                            <a href="../community/community__1.html">
+                                <p>VIEW MORE</p>
+                            </a>
                         </div>
                     </div>
 
                     <div class="thumnail-list mt-10">
                         <div class="title-box">
                             <div class="title">리소스</div>
-                            <div class="more">
-                                <a href="../community/community__2.html">
-                                    <p>더보기</p>
-                                </a>
-                            </div>
                         </div>
                         <div class="swiper-container m-thumbnail2">
                             <? include "./thumbnail__03.html" ?>
+                        </div>
+                        <div class="more">
+                            <a href="../community/community__1.html">
+                                <p>VIEW MORE</p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -210,6 +212,7 @@
                 <div class="banner_wrap">
                     <div class="banner_left wow fadeInLeft">
                         <div class="txt">
+                            <p>WebRanker</p>
                             <h4>
                                 당신의 프로젝트,<br />
                                 전세계에 빛나게 할 차례입니다.
@@ -219,6 +222,7 @@
                     </div>
                     <div class="banner_right wow fadeInRight">
                         <div class="txt">
+                            <p>WebRanker</p>
                             <h4>
                                 전문가의 시선으로 웹과 앱의 미래를<br />
                                 함께 만들어갈 준비가 되셨나요?
@@ -235,55 +239,55 @@
         <? include "../include/js.html" ?>
         <script>
             $(document).ready(function () {
-                var firSwiper = new Swiper(".comment_swiper1 .swiper-container", {
-                    loop: true,
-                    fadeEffect: {
-                        crossFade: true,
-                    },
-                    autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    },
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                    autoHeight: true,
-                    navigation: {
-                        nextEl: ".comment_swiper1 .swiper-button--prev",
-                        prevEl: ".comment_swiper1 .swiper-button--next",
-                    },
-                    pagination: {
-                        el: ".comment_swiper1 .swiper-pagination",
-                    },
-                    breakpoints: {
-                        320: {
-                            slidesPerView: 1,
-                            spaceBetween: 0,
-                        },
-                        576: {
-                            slidesPerView: 1.6,
-                            spaceBetween: 10,
-                        },
-                        768: {
-                            slidesPerView: 2.6,
-                            spaceBetween: 20,
-                        },
-                        1024: {
-                            slidesPerView: 2.6,
-                            spaceBetween: 20,
-                        },
-                        1200: {
-                            slidesPerView: 3.6,
-                            spaceBetween: 20,
-                        },
-                        1400: {
-                            slidesPerView: 4,
-                            spaceBetween: 20,
-                            slidesPerGroup: 1,
-                        },
-                    },
-                });
+                // var firSwiper = new Swiper(".comment_swiper1 .swiper-container", {
+                //     loop: true,
+                //     fadeEffect: {
+                //         crossFade: true,
+                //     },
+                //     autoplay: {
+                //         delay: 5000,
+                //         disableOnInteraction: false,
+                //     },
+                //     slidesPerView: 1,
+                //     spaceBetween: 0,
+                //     autoHeight: true,
+                //     navigation: {
+                //         nextEl: ".comment_swiper1 .swiper-button--prev",
+                //         prevEl: ".comment_swiper1 .swiper-button--next",
+                //     },
+                //     pagination: {
+                //         el: ".comment_swiper1 .swiper-pagination",
+                //     },
+                //     breakpoints: {
+                //         320: {
+                //             slidesPerView: 1,
+                //             spaceBetween: 0,
+                //         },
+                //         576: {
+                //             slidesPerView: 1.6,
+                //             spaceBetween: 10,
+                //         },
+                //         768: {
+                //             slidesPerView: 2.6,
+                //             spaceBetween: 20,
+                //         },
+                //         1024: {
+                //             slidesPerView: 2.6,
+                //             spaceBetween: 20,
+                //         },
+                //         1200: {
+                //             slidesPerView: 3.6,
+                //             spaceBetween: 20,
+                //         },
+                //         1400: {
+                //             slidesPerView: 4,
+                //             spaceBetween: 20,
+                //             slidesPerGroup: 1,
+                //         },
+                //     },
+                // });
 
-                var sedSwiper = new Swiper(".comment_swiper2 .swiper-container", {
+                // var sedSwiper = new Swiper(".comment_swiper2 .swiper-container", {
                     loop: true,
                     fadeEffect: {
                         crossFade: true,

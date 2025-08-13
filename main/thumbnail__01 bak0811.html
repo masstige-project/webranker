@@ -1,17 +1,23 @@
 <ul class="thumnail d-flex justify-content-between swiper-wrapper">
-    <? for ($i=0; $i<12; $i++) {?>
+    <? for ($i=0; $i<4; $i++) {?>
     <li class="item swiper-slide" data-aos="fade-up">
         <div class="thumnail-box">
             <div class="img-wrap">
-                <!--권장 이미지 사이즈 274 x 188 -->
-                <!--실제 적용 될 이미지는 background-image 경로에 연결 부탁드립니다.-->
+                <!--권장 이미지 사이즈 360 x 202 -->
+				<!--실제 적용 될 이미지는 background-image 경로에 연결 부탁드립니다.-->
                 <a class="link" href="../ranking/ranking__list.html">
-                    <div class="img-bx" style="background-image: url(../assets/images/main/thumbnail_img_new.jpg)">
-                        <img src="../assets/images/main/base_274X188.png" alt="랭킹 img" />
+                    <div class="img-bx" style="background-image: url(../assets/images/main/thumnail_img.jpg);">
+                        <img
+                        src="../assets/images/main/base_360X202.png" alt="랭킹 img">
                     </div>
                 </a>
+                <div class="like_info">
+                    <p class="rank">1</p>
+                    <div class="like-wrap">
+                        <button class="like-btn"><span class="blind">좋아요</span></button>
+                    </div>
+                </div>
             </div>
-
             <div class="flex-bx">
                 <div class="left-bx">
                     <ul class="subject-box">

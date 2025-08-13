@@ -1,18 +1,18 @@
 @charset "UTF-8";
 
-@import 'functions';
-@import 'variables';
+@import "functions";
+@import "variables";
 
-@import 'mixins';
-@import 'utilities';
-@import 'font-face';
-@import 'reset';
-@import 'library';
-@import 'layout';
-@import 'components';
-@import 'grid';
-@import 'board';
-@import 'board.old';
+@import "mixins";
+@import "utilities";
+@import "font-face";
+@import "reset";
+@import "library";
+@import "layout";
+@import "components";
+@import "grid";
+@import "board";
+@import "board.old";
 
 :root {
     --border-rd: 20px;
@@ -22,7 +22,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.h-main{
+.h-main {
     min-height: unset;
 }
 
@@ -32,7 +32,8 @@ html {
     padding-left: 20px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 1640px;
+    // max-width: 1640px;
+    max-width: 1760px;
 }
 
 .membership-container {
@@ -66,12 +67,12 @@ html {
     overflow: hidden;
 }
 
-.mobile-body{
+.mobile-body {
     padding-top: 0;
 }
 
 .back-bx {
-    &.back-bx2{
+    &.back-bx2 {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -101,134 +102,134 @@ html {
     color: $color-1;
 }
 
-.fw-smbold{
+.fw-smbold {
     font-weight: 600;
 }
 
-.font-30-bd{
+.font-30-bd {
     font-size: 30px;
     font-weight: bold;
     line-height: 1;
-    @include mdq-max(xl){
+    @include mdq-max(xl) {
         font-size: rem(20);
     }
 }
 
-.font-30-sb{
+.font-30-sb {
     font-size: 30px;
     font-weight: 600;
     line-height: 1;
-    @include mdq-max(xl){
+    @include mdq-max(xl) {
         font-size: rem(20);
     }
 }
 
-.font-30-md{
+.font-30-md {
     font-size: 30px;
     font-weight: 500;
     line-height: 1;
-    @include mdq-max(xl){
+    @include mdq-max(xl) {
         font-size: rem(20);
     }
 }
 
-.font-24-sb{
+.font-24-sb {
     font-size: 24px;
     font-weight: 600;
     line-height: 1;
-    @include mdq-max(xl){
+    @include mdq-max(xl) {
         font-size: rem(20);
     }
 }
 
-.font-24-bd{
+.font-24-bd {
     font-size: 24px;
     font-weight: bold;
     line-height: 1;
-    @include mdq-max(xl){
+    @include mdq-max(xl) {
         font-size: rem(20);
     }
 }
 
-.font-22-rg{
+.font-22-rg {
     font-size: 22px;
-    @include mdq-max(xl){
+    @include mdq-max(xl) {
         font-size: rem(20);
     }
 }
 
-.font-20-rg{
+.font-20-rg {
     font-size: 20px;
     line-height: 1;
-    @include mdq-max(xl){
+    @include mdq-max(xl) {
         font-size: rem(18);
     }
 }
 
-.font-20-md{
+.font-20-md {
     font-size: 20px;
     font-weight: 500;
     line-height: 1;
-    @include mdq-max(xl){
+    @include mdq-max(xl) {
         font-size: rem(18);
     }
 }
 
-.font-18-bd{
+.font-18-bd {
     font-size: 18px;
     font-weight: bold;
-    @include mdq-max(xl){
+    @include mdq-max(xl) {
         font-size: rem(16);
     }
 }
 
-.font-18-sb{
+.font-18-sb {
     font-size: 18px;
     font-weight: 600;
-    @include mdq-max(xl){
+    @include mdq-max(xl) {
         font-size: rem(16);
     }
 }
 
-.font-18-md{
+.font-18-md {
     font-size: 18px;
     font-weight: 500;
-    @include mdq-max(xl){
+    @include mdq-max(xl) {
         font-size: rem(16);
     }
 }
 
-.font-18-rg{
+.font-18-rg {
     font-size: 18px;
-    @include mdq-max(xl){
+    @include mdq-max(xl) {
         font-size: rem(16);
     }
 }
 
-.font-17{
+.font-17 {
     font-size: 17px;
-    @include mdq-max(xl){
+    @include mdq-max(xl) {
         font-size: rem(16);
     }
 }
 
-.font-15{
+.font-15 {
     font-size: 15px;
-    @include mdq-max(xl){
+    @include mdq-max(xl) {
         font-size: rem(14);
     }
 }
 
-.c-222{
+.c-222 {
     color: $gray-2;
 }
 
-.c-black{
+.c-black {
     color: $black;
 }
 
 //공통 체크박스 스타일
-.common-yark-bx{
+.common-yark-bx {
     input {
         padding: 0;
         height: initial;
@@ -250,7 +251,7 @@ html {
         }
 
         &::before {
-            content: '';
+            content: "";
             background-color: transparent;
             border: 1px solid $gray-e;
             border-radius: 2px;
@@ -263,13 +264,13 @@ html {
         }
     }
 
-    input:checked+label:before {
+    input:checked + label:before {
         background-color: $color-1;
         border: 1px solid $color-1;
     }
 
-    input:checked+label:after {
-        content: '';
+    input:checked + label:after {
+        content: "";
         display: block;
         position: absolute;
         top: 8px;
@@ -293,10 +294,10 @@ html {
         @include mdq-max(xl) {
             padding: 10px;
         }
-        &::placeholder{
+        &::placeholder {
             font-size: 18px;
             color: rgba(#000, 0.2);
-            @include mdq-max(xl){
+            @include mdq-max(xl) {
                 font-size: rem(16);
             }
         }
@@ -313,12 +314,12 @@ html {
 }
 
 //공통 링크
-.cmLinkArea{
+.cmLinkArea {
     display: flex;
     align-items: center;
     gap: 10px;
     .cmType__1,
-    .cmType__3{
+    .cmType__3 {
         display: flex;
         align-items: center;
         button {
@@ -326,22 +327,22 @@ html {
             align-items: center;
             justify-content: center;
             border-radius: 10px;
-    
+
             @include mdq-max(xl) {
                 border: 1px solid $gray-e;
             }
         }
-    
+
         i {
             font-size: 20px;
             margin-top: 1px;
-    
+
             @include mdq-max(xl) {
                 font-size: 16px;
             }
         }
     }
-    .cmType__2{
+    .cmType__2 {
         .like_info {
             .like-wrap {
                 & .like-btn {
@@ -374,47 +375,47 @@ html {
 }
 
 //공통 뷰페이지
-.cmtView{
-    .title--bx{
-       .category{
+.cmtView {
+    .title--bx {
+        .category {
             font-size: 20px;
             font-weight: bold;
-            @include mdq-max(xl){
+            @include mdq-max(xl) {
                 font-size: rem(18);
             }
-       }
-       .title{
-        font-size: 40px;
-        font-weight: bold;
-        @include mdq-max(xl){
-            font-size: rem(30);
         }
-       } 
+        .title {
+            font-size: 40px;
+            font-weight: bold;
+            @include mdq-max(xl) {
+                font-size: rem(30);
+            }
+        }
     }
-    .user--area{
+    .user--area {
         margin-top: 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        .user--info{
+        .user--info {
             display: flex;
             align-items: center;
             gap: 20px;
-            @include mdq-max(md){
+            @include mdq-max(md) {
                 gap: 10px;
             }
-            .user{
+            .user {
                 font-size: 22px;
                 font-weight: 600;
-                @include mdq-max(xl){
+                @include mdq-max(xl) {
                     font-size: rem(18);
                 }
             }
-            .date{
+            .date {
                 margin-top: 6px;
                 font-size: 17px;
                 color: $gray-6;
-                @include mdq-max(xl){
+                @include mdq-max(xl) {
                     font-size: rem(16);
                     margin-top: 4px;
                 }
@@ -425,13 +426,13 @@ html {
             background-repeat: no-repeat;
             background-position: center;
             min-width: 75px;
-            @include mdq-max(md){
+            @include mdq-max(md) {
                 min-width: unset;
                 width: 50px;
             }
         }
-        .user--follow{
-            button{
+        .user--follow {
+            button {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -441,7 +442,7 @@ html {
                 width: 120px;
                 height: 40px;
                 border-radius: 10px;
-                @include mdq-max(xl){
+                @include mdq-max(xl) {
                     font-size: rem(18);
                     height: 30px;
                     width: auto;
@@ -450,54 +451,55 @@ html {
             }
         }
     }
-    .edit--area{
+    .edit--area {
         margin: 50px 0 80px 0;
     }
     .sortingBox {
         display: flex;
         align-items: center;
         gap: 4px;
-        &.sortingBox2{
+        &.sortingBox2 {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            @include mdq-max(md){
+            @include mdq-max(md) {
                 flex-direction: column;
                 align-items: start;
                 justify-content: unset;
                 gap: 10px;
             }
-            .box4{
+            .box4 {
                 display: flex;
                 align-items: center;
                 gap: 4px;
-                @include mdq-max(md){
+                @include mdq-max(md) {
                     order: 1;
                     width: 100%;
                 }
             }
-            .box3{
-                @include mdq-max(md){
+            .box3 {
+                @include mdq-max(md) {
                     order: 2;
                 }
-                > ul{
+                > ul {
                     display: flex;
                     align-items: center;
                     gap: 30px;
-                    @include mdq-max(md){
+                    @include mdq-max(md) {
                         gap: 10px;
                         font-size: rem(16);
                     }
-                    li{
+                    li {
                         color: $gray-6;
-                        span{
+                        span {
                             color: $black;
                         }
                     }
                 }
             }
         }
-        a,.replyBtn {
+        a,
+        .replyBtn {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -517,7 +519,7 @@ html {
                 color: $white;
                 border: 1px solid $gray-4;
             }
-            &.replyBtn{
+            &.replyBtn {
                 background: $color-1;
                 color: $white;
             }
@@ -525,7 +527,7 @@ html {
     }
     .commtentArea {
         margin-top: 30px;
-        @include mdq-max(xl){
+        @include mdq-max(xl) {
             margin-top: 20px;
         }
 
@@ -534,7 +536,7 @@ html {
             height: 60px;
             border-radius: 15px;
             border: 1px solid $gray-e;
-            @include mdq-max(xl){
+            @include mdq-max(xl) {
                 height: 40px;
                 border-radius: 10px;
             }
@@ -543,14 +545,14 @@ html {
         .commentFlex {
             display: flex;
             align-items: center;
-            .voting-icon{
+            .voting-icon {
                 min-width: 75px;
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
-                @include mdq-max(xl){
+                @include mdq-max(xl) {
                     min-width: 50px !important;
-                    img{
+                    img {
                         width: 50px;
                     }
                 }
@@ -560,7 +562,7 @@ html {
         .commentList {
             width: calc(100% - 75px);
             margin-left: 20px;
-            @include mdq-max(xl){
+            @include mdq-max(xl) {
                 width: calc(100% - 50px);
                 margin-left: 10px;
             }
@@ -569,7 +571,7 @@ html {
                 .nickname {
                     font-size: 18px;
                     font-weight: 600;
-                    @include mdq-max(xl){
+                    @include mdq-max(xl) {
                         font-size: rem(16);
                     }
 
@@ -578,7 +580,7 @@ html {
                         color: $gray-a;
                         margin-left: 10px;
                         font-weight: normal;
-                        @include mdq-max(xl){
+                        @include mdq-max(xl) {
                             font-size: rem(14);
                         }
                     }
@@ -588,7 +590,7 @@ html {
                     display: flex;
                     align-items: center;
                     gap: 20px;
-                    @include mdq-max(xl){
+                    @include mdq-max(xl) {
                         gap: 10px;
                     }
                 }
@@ -619,14 +621,14 @@ html {
                         p {
                             font-size: 15px;
                             font-weight: 600;
-                            @include mdq-max(xl){
+                            @include mdq-max(xl) {
                                 font-size: rem(14);
                             }
                         }
 
                         i {
                             font-size: 22px;
-                            @include mdq-max(xl){
+                            @include mdq-max(xl) {
                                 font-size: rem(18);
                             }
                         }
@@ -644,11 +646,11 @@ html {
 
                         i {
                             font-size: 20px;
-                            transition: transform 0.3s ease; 
-                            @include mdq-max(xl){
+                            transition: transform 0.3s ease;
+                            @include mdq-max(xl) {
                                 font-size: rem(18);
                             }
-                            &.rotate{
+                            &.rotate {
                                 transform: rotate(180deg);
                             }
                         }
@@ -657,24 +659,25 @@ html {
             }
         }
 
-        .hidden-content-wrap{
-            .anser-info-list{
+        .hidden-content-wrap {
+            .anser-info-list {
                 display: flex;
                 align-items: center;
                 gap: rem(20);
-                @include mdq-max(md){
+                @include mdq-max(md) {
                     flex-direction: column;
                     align-items: start;
                     gap: rem(10);
                 }
-                .button-box{
+                .button-box {
                     display: flex;
                     align-items: center;
                     gap: rem(10);
-                    @include mdq-max(md){
-                        order:1;
+                    @include mdq-max(md) {
+                        order: 1;
                     }
-                    >a,button{
+                    > a,
+                    button {
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -684,22 +687,22 @@ html {
                         background: $white;
                         border: 1px solid $gray-e;
                         font-size: 15px;
-    
+
                         @include mdq-max(xl) {
                             font-size: 14px;
                         }
-    
+
                         &.active {
                             background: $gray-4;
                             color: $white;
                             border: 1px solid $gray-4;
                         }
                         &.replyBtn,
-                        &.deleteBtn{
+                        &.deleteBtn {
                             background: $color-1;
                             color: $white;
                         }
-                        &.modifyBtn{
+                        &.modifyBtn {
                             background: $white;
                             color: $black;
                         }
@@ -717,9 +720,9 @@ html {
 
             .flexBx {
                 margin-left: 95px;
-                .inputBx{
+                .inputBx {
                     margin-left: 20px;
-                    @include mdq-max(xl){
+                    @include mdq-max(xl) {
                         margin-left: 10px;
                     }
                 }
@@ -729,14 +732,14 @@ html {
                     background-position: center center;
                     min-width: 75px;
                     border-radius: 50%;
-                    @include mdq-max(md){
+                    @include mdq-max(md) {
                         min-width: 50px;
-                        img{
+                        img {
                             width: 50px;
                         }
                     }
                 }
-                @include mdq-max(xl){
+                @include mdq-max(xl) {
                     margin-left: 60px;
                 }
             }
@@ -755,10 +758,10 @@ html {
                 width: 120px;
                 height: 40px;
                 border-radius: 10px;
-                @include mdq-max(xl){
+                @include mdq-max(xl) {
                     font-size: rem(16);
                 }
-                @include mdq-max(md){
+                @include mdq-max(md) {
                     height: 30px;
                     width: 80px;
                 }
@@ -777,51 +780,51 @@ html {
     }
 }
 //공통 카테고리 인기글
-.cmCategoryArea{
-    .title--bx2{
+.cmCategoryArea {
+    .title--bx2 {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding-bottom: 25px;
-        @include mdq-max(md){
+        @include mdq-max(md) {
             padding-bottom: 15px;
         }
     }
-    .cmcategoryList{
-        .font-20-md{
+    .cmcategoryList {
+        .font-20-md {
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
-        > li{
+        > li {
             padding: 25px 0;
             border-top: 1px solid $gray-d;
-            @include mdq-max(md){
+            @include mdq-max(md) {
                 padding: 15px 0;
             }
         }
-        .wrap{
+        .wrap {
             display: flex;
             align-items: center;
             gap: 20px;
-            @include mdq-max(md){
+            @include mdq-max(md) {
                 flex-direction: column;
                 align-items: start;
                 gap: 5px;
             }
         }
         .date--bx,
-        .list--bx{
+        .list--bx {
             display: flex;
             align-items: center;
             color: $gray-8;
         }
-        .date--bx{
+        .date--bx {
             gap: 6px;
         }
-        .list--bx{
+        .list--bx {
             gap: 20px;
-            @include mdq-max(md){
+            @include mdq-max(md) {
                 gap: 10px;
             }
         }
@@ -852,7 +855,7 @@ html {
                 cursor: pointer;
 
                 &::after {
-                    background: url(../images/main/icon/more_arrow_w.png)no-repeat center;
+                    background: url(../images/main/icon/more_arrow_w.png) no-repeat center;
                 }
             }
         }
@@ -864,7 +867,7 @@ html {
         }
 
         &::after {
-            content: '';
+            content: "";
             position: absolute;
             top: 50%;
             right: 16px;
@@ -872,7 +875,7 @@ html {
             display: inline-block;
             width: 20px;
             height: 20px;
-            background: url(../images/main/icon/more_arrow.png)no-repeat center;
+            background: url(../images/main/icon/more_arrow.png) no-repeat center;
             transition: all 0.5s;
 
             @include mdq-max(xl) {
@@ -963,7 +966,7 @@ html {
                     width: auto;
                 }
 
-                >a {
+                > a {
                     width: 100%;
                     height: 100%;
                     display: flex;
@@ -1020,7 +1023,7 @@ html {
 
             &::after {
                 content: "";
-                background-image: url('../images/main/icon/pick.png');
+                background-image: url("../images/main/icon/pick.png");
                 background-repeat: no-repeat;
                 background-position: center;
                 width: 34px;
@@ -1049,43 +1052,43 @@ html {
             }
 
             &:nth-child(4) {
-                background: #FF0000;
+                background: #ff0000;
             }
 
             &:nth-child(5) {
-                background: #FF9900;
+                background: #ff9900;
             }
 
             &:nth-child(6) {
-                background: #FFFF00;
+                background: #ffff00;
             }
 
             &:nth-child(7) {
-                background: #80FF00;
+                background: #80ff00;
             }
 
             &:nth-child(8) {
-                background: #00EE26;
+                background: #00ee26;
             }
 
             &:nth-child(9) {
-                background: #00E1AB;
+                background: #00e1ab;
             }
 
             &:nth-child(10) {
-                background: #11F1FF;
+                background: #11f1ff;
             }
 
             &:nth-child(11) {
-                background: #0075FF;
+                background: #0075ff;
             }
 
             &:nth-child(12) {
-                background: #8F00FF;
+                background: #8f00ff;
             }
 
             &:nth-child(13) {
-                background: #FA00FF;
+                background: #fa00ff;
             }
         }
 
@@ -1103,7 +1106,7 @@ html {
                 flex-direction: column;
             }
 
-            >div {
+            > div {
                 position: relative;
 
                 @include mdq-max(sm) {
@@ -1137,7 +1140,7 @@ html {
             max-height: 600px;
             padding: 0 20px 0 0;
             margin: 40px 0;
-            @include mdq-max(md){
+            @include mdq-max(md) {
                 max-height: 400px;
             }
 
@@ -1169,7 +1172,7 @@ html {
             flex-direction: column;
         }
 
-        >button,
+        > button,
         a {
             display: flex;
             align-items: center;
@@ -1334,7 +1337,7 @@ html {
                     flex-direction: column;
                     align-items: end;
                     gap: 10px;
-                    @include mdq-max(md){
+                    @include mdq-max(md) {
                         width: 100%;
                     }
                 }
@@ -1345,7 +1348,7 @@ html {
                     background: $white;
                     border: 1px solid $gray-e;
                     border-radius: 10px;
-                    @include mdq-max(md){
+                    @include mdq-max(md) {
                         width: 100%;
                         padding: 0 20px;
                         font-size: rem(16);
@@ -1371,11 +1374,11 @@ html {
                 flex-direction: column;
             }
 
-            >.subject-box {
+            > .subject-box {
                 color: $gray-6;
             }
 
-            >.count_box {
+            > .count_box {
                 gap: 6px;
             }
         }
@@ -1597,7 +1600,7 @@ html {
                 gap: 10px;
             }
 
-            >li {
+            > li {
                 flex: 1;
                 padding-left: 40px;
                 border-left: 1px solid $gray-e;
@@ -1650,12 +1653,12 @@ html {
                     height: 20px;
                     border-radius: 50%;
                     display: inline-block;
-                    background: #FEE500;
+                    background: #fee500;
                 }
 
                 span:nth-child(2) {
                     i {
-                        background: #3C1E1E;
+                        background: #3c1e1e;
                     }
                 }
             }
@@ -1696,14 +1699,14 @@ html {
         display: flex;
         gap: 10px;
         padding: 40px 0;
-        @include mdq-max(xl){
+        @include mdq-max(xl) {
             flex-wrap: wrap;
         }
-        @include mdq-max(md){
+        @include mdq-max(md) {
             padding: 20px 0;
         }
 
-        >li {
+        > li {
             width: calc(20% - 7.5px);
             background: #f9f9f9;
             border-radius: 20px;
@@ -1719,11 +1722,11 @@ html {
                 min-height: 300px;
                 width: calc(33.3333% - 7.5px);
             }
-            @include mdq-max(md){
+            @include mdq-max(md) {
                 width: calc(50% - 7.5px);
                 min-height: 200px;
             }
-            @include mdq-max(sm){
+            @include mdq-max(sm) {
                 width: 100%;
                 min-height: 100px;
             }
@@ -1819,7 +1822,7 @@ html {
             align-items: center;
             gap: 12px;
 
-            >p {
+            > p {
                 font-size: 18px;
                 font-weight: 600;
                 @include mdq-max(xl) {
@@ -1831,7 +1834,7 @@ html {
                 }
             }
 
-            >ul {
+            > ul {
                 display: flex;
                 align-items: center;
                 gap: 10px;
@@ -1863,10 +1866,10 @@ html {
 
         &::placeholder {
             font-size: rem(16);
-            color: #AEAEAE;
+            color: #aeaeae;
             line-height: 1.4;
             letter-spacing: -0.5px;
-            @include mdq-max(xl){
+            @include mdq-max(xl) {
                 font-size: rem(14);
                 letter-spacing: 0;
             }
@@ -1943,14 +1946,14 @@ html {
         display: flex;
         gap: 10px;
         padding: 40px 0;
-        @include mdq-max(xl){
+        @include mdq-max(xl) {
             flex-wrap: wrap;
         }
-        @include mdq-max(md){
+        @include mdq-max(md) {
             padding: 20px 0;
         }
 
-        >li {
+        > li {
             width: calc(20% - 7.5px);
             background: #f9f9f9;
             border-radius: 20px;
@@ -1966,11 +1969,11 @@ html {
                 min-height: 300px;
                 width: calc(33.3333% - 7.5px);
             }
-            @include mdq-max(md){
+            @include mdq-max(md) {
                 width: calc(50% - 7.5px);
                 min-height: 200px;
             }
-            @include mdq-max(sm){
+            @include mdq-max(sm) {
                 width: 100%;
                 min-height: 100px;
             }
@@ -2015,7 +2018,7 @@ html {
 }
 
 //답글달기
-.reply-overlay{
+.reply-overlay {
     .reply-content {
         .contentBox {
             padding: 20px;
@@ -2026,7 +2029,7 @@ html {
             @include mdq-max(xl) {
                 padding: 10px;
             }
-            &::placeholder{
+            &::placeholder {
                 font-size: 18px;
                 color: rgba(#000, 0.2);
             }
@@ -2044,12 +2047,12 @@ html {
 }
 
 //신고하기
-.report-overlay{
-    .report-select{
+.report-overlay {
+    .report-select {
         height: 50px;
         border-radius: 10px;
         border: 1px solid $gray-e;
-        @include mdq-max(xl){
+        @include mdq-max(xl) {
             height: 40px;
         }
     }
@@ -2063,7 +2066,7 @@ html {
             @include mdq-max(xl) {
                 padding: 10px;
             }
-            &::placeholder{
+            &::placeholder {
                 font-size: 18px;
                 color: rgba(#000, 0.2);
             }
@@ -2078,9 +2081,9 @@ html {
             }
         }
     }
-    .info-txt{
+    .info-txt {
         color: $gray-a;
-        @include mdq-max(md){
+        @include mdq-max(md) {
             font-size: rem(16);
             text-align: center;
         }
@@ -2134,7 +2137,7 @@ html {
         padding: 0 20px;
         border-radius: 15px;
         border: 1px solid $gray-e;
-        @include mdq-max(md){
+        @include mdq-max(md) {
             padding: 0 10px;
         }
 
@@ -2159,7 +2162,7 @@ html {
         transform: translateY(-50%);
         right: 20px;
         z-index: 1;
-        @include mdq-max(md){
+        @include mdq-max(md) {
             right: 10px;
         }
 
@@ -2187,30 +2190,31 @@ html {
 }
 
 //공통버튼
-.commonBtn{
+.commonBtn {
     display: flex;
     align-items: center;
     justify-content: center;
-    button,a{
+    button,
+    a {
         height: 50px;
         border-radius: 10px;
         font-size: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
-        @include mdq-max(xl){
+        @include mdq-max(xl) {
             font-size: rem(18);
             height: 40px;
         }
-        @include mdq-max(md){
+        @include mdq-max(md) {
             width: 100% !important;
         }
-        &.cmBtn1{
+        &.cmBtn1 {
             width: 280px;
             background: $color-1;
             color: $white;
         }
-        &.cmBtn2{
+        &.cmBtn2 {
             background: $black;
             color: $white;
             width: 100%;
@@ -2397,23 +2401,23 @@ html {
                         padding: 0 8px;
                         border-radius: 10px;
                         background-color: $white;
-                        color: #FE8642;
-                        background: #fff url(../images/main/icon/ranking_ico.png)no-repeat 8px 46%;
+                        color: #fe8642;
+                        background: #fff url(../images/main/icon/ranking_ico.png) no-repeat 8px 46%;
                         transition: all 0.5s;
 
                         @include mdq-min(md) {
                             &:hover {
                                 color: $white;
-                                background-color: #FE8642;
-                                background: #FE8642 url(../images/main/icon/ranking_ico_w.png)no-repeat 8px 46%;
+                                background-color: #fe8642;
+                                background: #fe8642 url(../images/main/icon/ranking_ico_w.png) no-repeat 8px 46%;
                                 cursor: pointer;
                             }
                         }
 
                         @include mdq-max(md) {
                             color: $white;
-                            background-color: #FE8642;
-                            background: #FE8642 url(../images/main/icon/ranking_ico_w.png)no-repeat 4px 46%;
+                            background-color: #fe8642;
+                            background: #fe8642 url(../images/main/icon/ranking_ico_w.png) no-repeat 4px 46%;
                             cursor: pointer;
                             width: 37px;
                             height: 23px;
@@ -2432,7 +2436,7 @@ html {
                         color: $white;
 
                         & li {
-                            +li {
+                            + li {
                                 margin-left: 15px;
                             }
 
@@ -2444,12 +2448,12 @@ html {
                                     top: 50%;
                                     right: -9px;
                                     transform: translateY(-50%);
-                                    content: '';
+                                    content: "";
                                     display: inline-block;
                                     width: 3px;
                                     height: 3px;
                                     border-radius: 3px;
-                                    background-color: #FFFFFF;
+                                    background-color: #ffffff;
                                     opacity: 0.5;
                                 }
                             }
@@ -2459,12 +2463,12 @@ html {
                                 align-items: center;
 
                                 &::before {
-                                    content: '';
+                                    content: "";
                                     width: 14px;
                                     height: 21px;
                                     display: inline-block;
                                     margin-right: 2px;
-                                    background: url(../images/main/icon/scope.png)no-repeat center 40%;
+                                    background: url(../images/main/icon/scope.png) no-repeat center 40%;
                                 }
                             }
                         }
@@ -2511,7 +2515,7 @@ html {
                                 }
                             }
                         }
-                        & .follow-btn{
+                        & .follow-btn {
                             background-image: url(../images/main/icon/follow_ico_01.png);
                             &.clicked {
                                 opacity: 1;
@@ -2542,20 +2546,20 @@ html {
                 flex-direction: column;
                 margin-top: 20px;
 
-                .maker-text-bx{
-                    p{
+                .maker-text-bx {
+                    p {
                         font-size: 20px;
                         font-weight: 600;
-                        @include mdq-max(xl){
+                        @include mdq-max(xl) {
                             font-size: rem(18);
                         }
-                        span{
+                        span {
                             color: $gray-a;
                             font-size: 16px;
                             font-weight: normal;
                             display: inline-block;
                             margin-left: 4px;
-                            @include mdq-max(xl){
+                            @include mdq-max(xl) {
                                 font-size: rem(16);
                             }
                         }
@@ -2563,7 +2567,7 @@ html {
                 }
 
                 .right-bx {
-                    background: #FE4742;
+                    background: #fe4742;
                     width: 100%;
                     height: 36px;
                     border-radius: 10px;
@@ -2575,7 +2579,7 @@ html {
                     padding: 0 10px;
                     margin-top: 6px;
                     line-height: 1.6;
-                    a{
+                    a {
                         display: flex;
                         align-items: center;
                         gap: rem(20);
@@ -2584,10 +2588,10 @@ html {
                     p {
                         font-size: 15px;
                     }
-                    span{
+                    span {
                         display: flex;
                         align-items: center;
-                        i{
+                        i {
                             margin-bottom: 2px;
                         }
                     }
@@ -2605,7 +2609,7 @@ html {
                 display: flex;
                 font-size: rem(15);
                 color: $gray-6;
-                &.maker-subject-box{
+                &.maker-subject-box {
                     font-weight: 500;
                 }
 
@@ -2614,7 +2618,7 @@ html {
                 }
 
                 & li {
-                    +li {
+                    + li {
                         position: relative;
                         margin-left: 11px;
 
@@ -2623,7 +2627,7 @@ html {
                             left: -7px;
                             top: 50%;
                             transform: translateY(-50%);
-                            content: '';
+                            content: "";
                             width: 3px;
                             height: 3px;
                             border-radius: 3px;
@@ -2653,12 +2657,12 @@ html {
                         font-weight: 600;
 
                         &::after {
-                            content: '';
+                            content: "";
                             width: 24px;
                             height: 24px;
                             margin-left: 6px;
                             display: inline-block;
-                            background: url(../images/main/icon/link_ico_03.png)no-repeat center;
+                            background: url(../images/main/icon/link_ico_03.png) no-repeat center;
                         }
                     }
                 }
@@ -2666,7 +2670,7 @@ html {
                 & .count_box {
                     display: flex;
                     gap: 10px;
-                    color: #BBB;
+                    color: #bbb;
 
                     & p {
                         display: flex;
@@ -2678,34 +2682,34 @@ html {
 
                         &.view {
                             &::before {
-                                content: '';
+                                content: "";
                                 padding-right: 4px;
                                 display: inline-block;
                                 width: 20px;
                                 height: 30px;
-                                background: url(../images/main/icon/view_ico.png)no-repeat center;
+                                background: url(../images/main/icon/view_ico.png) no-repeat center;
                             }
                         }
 
                         &.read {
                             &::before {
-                                content: '';
+                                content: "";
                                 padding-right: 4px;
                                 display: inline-block;
                                 width: 20px;
                                 height: 30px;
-                                background: url(../images/main/icon/read_ico.png)no-repeat center;
+                                background: url(../images/main/icon/read_ico.png) no-repeat center;
                             }
                         }
 
                         &.like {
                             &::before {
-                                content: '';
+                                content: "";
                                 padding-right: 3.5px;
                                 display: inline-block;
                                 width: 20px;
                                 height: 30px;
-                                background: url(../images/main/icon/like_ico_04_g.png)no-repeat center;
+                                background: url(../images/main/icon/like_ico_04_g.png) no-repeat center;
                             }
                         }
                     }
@@ -2752,7 +2756,6 @@ html {
         }
 
         .rankWrap {
-
             .list__1,
             .list__2 {
                 li {
@@ -2784,7 +2787,7 @@ html {
             .list__1 {
                 width: 100%;
 
-                li+li {
+                li + li {
                     margin-top: 10px;
                 }
             }
@@ -2794,13 +2797,13 @@ html {
                 flex-wrap: wrap;
                 gap: 10px;
 
-                >li {
+                > li {
                     width: calc(50% - 5px);
                 }
             }
 
             .list__3 {
-                >li+li {
+                > li + li {
                     margin-top: 10px;
                 }
             }
@@ -2833,7 +2836,7 @@ html {
         .reply-box {
             height: 209px;
             padding: 20px;
-            background-color: #F5F5F5;
+            background-color: #f5f5f5;
             border-radius: var(--border-rd);
 
             @include mdq-max(xl) {
@@ -2862,7 +2865,7 @@ html {
                 }
 
                 &::before {
-                    content: '';
+                    content: "";
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -2899,11 +2902,11 @@ html {
                         }
 
                         &::after {
-                            content: '';
+                            content: "";
                             width: 16px;
                             height: 24px;
                             display: inline-block;
-                            background: url(../images/main/icon/count_arrow.png)no-repeat center;
+                            background: url(../images/main/icon/count_arrow.png) no-repeat center;
 
                             @include mdq-max(md) {
                                 width: 10px;
@@ -2924,11 +2927,11 @@ html {
                         }
 
                         &::after {
-                            content: '';
+                            content: "";
                             display: inline-block;
                             width: 8px;
                             height: 14px;
-                            background: url(../images/main/icon/title_arrow.png)no-repeat center;
+                            background: url(../images/main/icon/title_arrow.png) no-repeat center;
                             margin-left: 8px;
                         }
                     }
@@ -3001,12 +3004,12 @@ html {
                         }
 
                         & li {
-                            +li {
+                            + li {
                                 margin-left: 11px;
                                 position: relative;
 
                                 &::before {
-                                    content: '';
+                                    content: "";
                                     position: absolute;
                                     left: -7px;
                                     top: 50%;
@@ -3059,7 +3062,7 @@ html {
     height: 0;
     width: calc(100% - 340px);
     border-radius: 20px;
-    @include mdq-max(xl){
+    @include mdq-max(xl) {
         width: 100%;
     }
     .video-bx {
