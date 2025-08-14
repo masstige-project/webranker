@@ -152,7 +152,7 @@ img {
                 flex-wrap: wrap;
                 align-items: center;
                 gap: rem(24);
-                justify-content: space-between;
+                justify-content: flex-start;
 
                 @include mdq-max(lg) {
                     align-items: unset;
@@ -163,7 +163,7 @@ img {
                 }
 
                 & .item {
-                    width: calc(16.66% - rem(24));
+                    width: calc(20% - rem(24));
 
                     @media screen and (max-width: 1600px) {
                         width: calc(25% - rem(24));
@@ -474,9 +474,6 @@ img {
                         }
 
                         & .button-box {
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
                             & .btn {
                                 margin-top: 4px;
                                 font-size: rem(24);
@@ -492,16 +489,24 @@ img {
                                 & .link_txt {
                                     display: flex;
                                     align-items: center;
+                                    width:100%;
                                     font-size: rem(19);
                                     font-weight: 600;
+                                    position:relative;
+                                    padding-right:rem(30);
+                                    @include text-truncate(2);
+
 
                                     &::after {
                                         content: "";
                                         width: 24px;
                                         height: 24px;
                                         margin-left: 6px;
-                                        display: inline-block;
+                                        display: block;
                                         background: url(../images/main/icon/link_ico_03.png) no-repeat center;
+                                        position:absolute;
+                                        top:0;
+                                        right:0;
                                     }
                                 }
                             }
@@ -554,6 +559,21 @@ img {
                                     }
                                 }
                             }
+                        }
+                    }
+                }
+
+                &.mo{
+                    .item{
+                        width: calc(16.66% - rem(24));
+                        @include mdq-max(xl) {
+                            width: calc(25% - rem(24));
+                        }
+                        @include mdq-max(md) {
+                            width: calc(50% - rem(24));
+                        }
+                        @include mdq-max(sm) {
+                            width: 100%;
                         }
                     }
                 }
