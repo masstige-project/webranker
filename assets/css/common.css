@@ -56876,3 +56876,56 @@ html {
   color: #ccc;
 }
 /*# sourceMappingURL=common.css.map */
+
+/*투표작 갯수 변경 5개씩*/
+#app_list.thumnail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 12.5px;
+}
+#app_list.thumnail .item {
+    width: calc(20% - 10px);
+}
+
+#app_list.thumnail .item .subject-box li {
+    font-size: 13px;       /* 카테고리 글씨 크기 줄임 */
+}
+
+#app_list.thumnail .item .link_txt {
+    font-size: 17px; /* 제목 글자 크기 */
+}
+#app_list.thumnail .item .right-bx p {
+    font-size: 13px; /* '투표하기' 글자 크기 */
+}
+#app_list.thumnail .item .right-bx .count {
+    font-size: 12px; /* 숫자 크기 */
+}
+#app_list.thumnail .item .right-bx p,
+#app_list.thumnail .item .right-bx .count {
+    padding: 3px 6px; /* 버튼 패딩 줄이기 */
+}
+
+#app_list.thumnail .item .like-wrap .like-btn {
+    transform: scale(0.85); /* 전체 크기 축소 */
+}
+#app_list.thumnail .item .like-wrap .like-btn span {
+    font-size: 12px; /* 내부 텍스트 크기 조정(필요 시) */
+}
+
+
+@media all and (max-width: 1400px) {
+    #app_list.thumnail .item { width: calc(33.3333% - 10px); } /* 3열 */
+    #app_list.thumnail .item .link_txt { font-size: 15px; }
+    #app_list.thumnail .item .right-bx p { font-size: 14px; }
+    #app_list.thumnail .item .right-bx .count { font-size: 13px; }
+    #app_list.thumnail .item .like-wrap .like-btn { transform: scale(1); }
+    #app_list.thumnail .item .subject-box li {
+        font-size: 12px; padding: 3px 6px;
+    }
+}
+@media all and (max-width: 768px) {
+    #app_list.thumnail .item { width: calc(50% - 10px); } /* 2열 */
+}
+@media all and (max-width: 576px) {
+    #app_list.thumnail .item { width: 100%; } /* 1열 */
+}
