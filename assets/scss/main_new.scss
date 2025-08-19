@@ -95,6 +95,12 @@ img {
 
                 .img-bx {
                     background: no-repeat center / 100% auto;
+                    &.img-pc {
+                        display: block;
+                    }
+                    .img-mo {
+                        display: none;
+                    }
                 }
             }
         }
@@ -164,16 +170,10 @@ img {
 
                 & .item {
                     width: calc(20% - rem(24));
-
-                    @media screen and (max-width: 1600px) {
-                        width: calc(25% - rem(24));
+                    @include mdq-max(md) {
+                        width: calc(50% - rem(24));
                     }
-
-                    @include mdq-max(lg) {
-                        width: calc(33.33% - rem(24));
-                    }
-
-                    @media screen and (max-width: 768px) {
+                    @include mdq-max(sm) {
                         width: 100%;
                     }
                     & .thumnail-box {
@@ -185,6 +185,19 @@ img {
 
                             @include mdq-max(md) {
                                 border-radius: 8px;
+                            }
+                        }
+
+                        .img-pc {
+                            display: block;
+                            @include mdq-max(md) {
+                                display: none;
+                            }
+                        }
+                        .img-mo {
+                            display: none;
+                            @include mdq-max(md) {
+                                display: block;
                             }
                         }
 
@@ -489,13 +502,12 @@ img {
                                 & .link_txt {
                                     display: flex;
                                     align-items: center;
-                                    width:100%;
+                                    width: 100%;
                                     font-size: rem(19);
                                     font-weight: 600;
-                                    position:relative;
-                                    padding-right:rem(30);
+                                    position: relative;
+                                    padding-right: rem(30);
                                     @include text-truncate(2);
-
 
                                     &::after {
                                         content: "";
@@ -504,9 +516,9 @@ img {
                                         margin-left: 6px;
                                         display: block;
                                         background: url(../images/main/icon/link_ico_03.png) no-repeat center;
-                                        position:absolute;
-                                        top:0;
-                                        right:0;
+                                        position: absolute;
+                                        top: 0;
+                                        right: 0;
                                     }
                                 }
                             }
@@ -563,8 +575,8 @@ img {
                     }
                 }
 
-                &.mo{
-                    .item{
+                &.mo {
+                    .item {
                         width: calc(16.66% - rem(24));
                         @include mdq-max(xl) {
                             width: calc(25% - rem(24));
@@ -648,6 +660,7 @@ img {
                     }
 
                     & .info-bx {
+                        width: 100%;
                         position: absolute;
                         top: 0;
                         left: 0;

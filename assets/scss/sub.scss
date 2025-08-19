@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
-@import 'functions';
-@import 'variables';
+@import "functions";
+@import "variables";
 
 // Mixins
-@import 'mixins';
-@import 'sub/membership';
-@import 'sub/ranking';
-@import 'sub//mypage';
+@import "mixins";
+@import "sub/membership";
+@import "sub/ranking";
+@import "sub//mypage";
 
 .sub-body {
     .header {
@@ -48,7 +48,7 @@
         }
     }
 
-    .alret-item+.alret-item {
+    .alret-item + .alret-item {
         margin-top: 60px;
 
         @include mdq-max(xl) {
@@ -162,7 +162,7 @@
             display: flex;
             align-items: center;
 
-            input[type=checkbox] {
+            input[type="checkbox"] {
                 height: 0;
                 width: 0;
                 visibility: hidden;
@@ -184,7 +184,7 @@
             }
 
             label:after {
-                content: '';
+                content: "";
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
@@ -227,11 +227,11 @@
                 }
             }
 
-            input:checked+label {
+            input:checked + label {
                 background: $color-1;
             }
 
-            input:checked+label:after {
+            input:checked + label:after {
                 left: calc(100% - 29px);
                 transform: translateY(-50%);
 
@@ -240,23 +240,21 @@
                 }
             }
 
-            input:checked+label .toggle-text1 {
+            input:checked + label .toggle-text1 {
                 opacity: 0;
             }
 
-            input:checked+label .toggle-text2 {
+            input:checked + label .toggle-text2 {
                 opacity: 1;
                 padding-left: 7px;
                 justify-content: flex-start;
             }
         }
     }
-
 }
 
 //sub
 .sc {
-
     //심사위원 되기
     &--judge {
         padding: 80px 0 297px 0;
@@ -465,7 +463,8 @@
             justify-content: end;
             gap: 10px;
 
-            a,button {
+            a,
+            button {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -488,7 +487,7 @@
                 }
 
                 &.prev,
-                &.preview{
+                &.preview {
                     background: $white;
                     border: 1px solid $gray-e;
                     color: $black;
@@ -576,7 +575,7 @@
                 }
             }
 
-            >li+li {
+            > li + li {
                 margin-top: 30px;
 
                 @include mdq-max(xl) {
@@ -624,7 +623,7 @@
                 .contentBox {
                     padding: 20px;
                     min-height: 200px;
-                    &.contentBox2{
+                    &.contentBox2 {
                         min-height: 100px;
                     }
 
@@ -689,7 +688,7 @@
                     flex-wrap: wrap;
                     gap: 20px;
 
-                    >li {
+                    > li {
                         display: flex;
                         justify-content: center;
                         gap: 4px;
@@ -726,7 +725,7 @@
                     flex-wrap: wrap;
                     gap: 30px;
 
-                    >li {
+                    > li {
                         display: flex;
                         justify-content: center;
                         gap: 4px;
@@ -737,11 +736,11 @@
                             font-size: rem(14);
                         }
                     }
-                    &.upload-bottom-img2{
+                    &.upload-bottom-img2 {
                         gap: 15px;
-                        .img-bx{
+                        .img-bx {
                             width: 190px;
-                            height: 106px; 
+                            height: 106px;
                         }
                     }
 
@@ -781,8 +780,6 @@
                 }
             }
         }
-
-        
 
         //심사위원등록 완료
         .judge-complete-bx {
@@ -918,7 +915,7 @@
                     &.status3,
                     .status4 {
                         background: $white;
-                        border: 1px solid $color-1
+                        border: 1px solid $color-1;
                     }
 
                     &.status5 {
@@ -1058,30 +1055,30 @@
         }
 
         //메이커 intro
-        .maker-intro-write{
-            .maker-item{
+        .maker-intro-write {
+            .maker-item {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 padding: 40px 0;
-                &:first-child{
+                &:first-child {
                     border-bottom: 1px solid $gray-e;
                 }
-                @include mdq-max(md){
+                @include mdq-max(md) {
                     flex-direction: column;
                     align-items: start;
                     gap: 20px;
                 }
-                &.no-pd{
+                &.no-pd {
                     padding-top: 0;
                 }
             }
-            .left-bx{
+            .left-bx {
                 display: flex;
                 align-items: center;
                 line-height: 1.6 !important;
                 gap: 20px;
-                .number-bx{
+                .number-bx {
                     width: 60px;
                     height: 60px;
                     background: $gray-e;
@@ -1089,18 +1086,18 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    @include mdq-max(md){
+                    @include mdq-max(md) {
                         width: 40px;
                         height: 40px;
                         min-width: 40px;
                     }
                 }
             }
-            .right-bx{
-                @include mdq-max(md){
+            .right-bx {
+                @include mdq-max(md) {
                     width: 100%;
                 }
-                a{
+                a {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -1110,11 +1107,11 @@
                     background: $color-1;
                     color: $white;
                     font-size: 20px;
-                    @include mdq-max(xl){
+                    @include mdq-max(xl) {
                         font-size: rem(18);
                         height: 40px;
                     }
-                    @include mdq-max(md){
+                    @include mdq-max(md) {
                         width: 100%;
                     }
                 }
@@ -1122,16 +1119,16 @@
         }
 
         //maker-write
-        .chkWrap{
+        .chkWrap {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
-            .chkItem{
+            .chkItem {
                 width: calc(33.333% - 7.5px);
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                button{
+                button {
                     width: 100%;
                     height: 100%;
                     border-radius: 10px;
@@ -1139,15 +1136,15 @@
                     border: 1px solid $gray-e;
                     transition: all 0.3s;
                     font-size: 15px;
-                    @include mdq-max(xl){
+                    @include mdq-max(xl) {
                         font-size: rem(14);
                     }
-                    &.active{
+                    &.active {
                         background: $color-1;
                         color: $white;
                     }
-                    @include mdq-min(md){
-                        &:hover{
+                    @include mdq-min(md) {
+                        &:hover {
                             background: $color-1;
                             color: $white;
                         }
@@ -1155,40 +1152,40 @@
                 }
             }
         }
-        .makerStep{
+        .makerStep {
             .colorList {
                 gap: 8px;
                 display: flex;
                 flex-wrap: wrap;
-    
+
                 @include mdq-max(xl) {
                     flex-wrap: nowrap;
                     gap: 0;
                 }
             }
-    
+
             .colorItem {
                 width: 60px;
                 height: 60px;
                 border-radius: 10px;
                 position: relative;
                 cursor: pointer;
-    
+
                 @include mdq-max(xl) {
                     width: 40px;
                     height: 40px;
                     border-radius: 4px;
                 }
-    
+
                 &.active {
                     &::after {
                         opacity: 1;
                     }
                 }
-    
+
                 &::after {
                     content: "";
-                    background-image: url('../images/main/icon/pick.png');
+                    background-image: url("../images/main/icon/pick.png");
                     background-repeat: no-repeat;
                     background-position: center;
                     width: 34px;
@@ -1201,48 +1198,49 @@
                     opacity: 0;
                     transition: opacity 0.3s;
                 }
-    
+
                 //color지정 - 관리자에서
             }
         }
-        .openDate{
+        .openDate {
             position: relative;
-            label{
+            label {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
                 right: 20px;
             }
         }
-        .maker__rejection{
+        .maker__rejection {
             display: flex;
             align-items: end;
             justify-content: space-between;
-            @include mdq-max(xl){
+            @include mdq-max(xl) {
                 flex-direction: column;
                 align-items: start;
                 justify-content: unset;
                 gap: 20px;
             }
-            .textBox{
-                .tit{
+            .textBox {
+                .tit {
                     font-size: 20px;
                     font-weight: 600;
                 }
-                .dec{
+                .dec {
                     margin-top: 16px;
                     color: $gray-3;
                 }
             }
-            .btnBox{
+            .btnBox {
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                @include mdq-max(xl){
+                @include mdq-max(xl) {
                     justify-content: flex-end;
                     width: 100%;
                 }
-                > a,button{
+                > a,
+                button {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -1253,18 +1251,18 @@
                     width: 120px;
                     height: 40px;
                     transition: all 0.3s;
-                    @include mdq-min(md){
-                        &:hover{
+                    @include mdq-min(md) {
+                        &:hover {
                             background: $color-1;
                             color: $white;
                             border: 1px solid $white;
                         }
                     }
-                    @include mdq-max(md){
+                    @include mdq-max(md) {
                         flex: 1;
                         width: 50%;
                     }
-                    &.active{
+                    &.active {
                         background: $color-1;
                         color: $white;
                         border: 1px solid $white;
@@ -1274,9 +1272,9 @@
         }
         //주소
         .address-bx {
-            .input-100{
+            .input-100 {
                 &.bg-fill {
-                    background: #F9F9F9;
+                    background: #f9f9f9;
                 }
             }
             .top {
@@ -1285,11 +1283,11 @@
                 align-items: center;
                 margin-bottom: 10px;
                 gap: 10px;
-        
+
                 #sample4_postcode {
                     width: 100%;
                 }
-        
+
                 #search-addr {
                     width: 160px;
                     height: 50px;
@@ -1302,33 +1300,32 @@
                     color: $color-1;
                     transition: all 0.5s;
                     font-size: 18px;
-                    @include mdq-max(xl){
+                    @include mdq-max(xl) {
                         height: 40px;
                         font-size: rem(16);
                     }
-        
+
                     @include mdq-min(md) {
                         &:hover {
                             background: $color-1;
                             color: $white;
                         }
                     }
-        
                 }
             }
-        
+
             .bottom {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
-        
+
                 .addr_detail_text {
                     background: $white !important;
                     border: 1px solid rgba(#000, 0.1) !important;
                 }
             }
         }
-        .additional-btn{
+        .additional-btn {
             height: 50px;
             width: 100%;
             border-radius: 10px;
@@ -1336,20 +1333,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            @include mdq-max(xl){
+            @include mdq-max(xl) {
                 height: 40px;
             }
         }
-        .delete-btn{
+        .delete-btn {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            button{
+            button {
                 font-size: 18px;
                 color: $color-1;
                 font-weight: 600;
                 text-decoration: underline;
-                @include mdq-max(xl){
+                @include mdq-max(xl) {
                     font-size: rem(16);
                 }
             }
@@ -1370,7 +1367,6 @@
             border-radius: 20px;
 
             &:hover {
-
                 .service__img__1,
                 .service__img__2,
                 .service__img__3,
@@ -1393,7 +1389,7 @@
 
         .service__img__1 {
             height: 400px;
-            background-image: url('../images/sub/service__1.jpg');
+            background-image: url("../images/sub/service__1.jpg");
         }
 
         .service__img__2,
@@ -1403,15 +1399,15 @@
         }
 
         .service__img__2 {
-            background-image: url('../images/sub/service__2.jpg');
+            background-image: url("../images/sub/service__2.jpg");
         }
 
         .service__img__3 {
-            background-image: url('../images/sub/service__3.jpg');
+            background-image: url("../images/sub/service__3.jpg");
         }
 
         .service__img__4 {
-            background-image: url('../images/sub/service__4.jpg');
+            background-image: url("../images/sub/service__4.jpg");
         }
 
         .infoTxt {
@@ -1450,7 +1446,7 @@
         }
 
         .text-wrap {
-            background: #FE4742;
+            background: #fe4742;
             width: 70px;
             height: 56px;
             border-radius: 10px;
@@ -1477,7 +1473,7 @@
         }
 
         .text-wrap2 {
-            background: #FE4742;
+            background: #fe4742;
             width: 127px;
             height: 30px;
             border-radius: 10px;
@@ -1496,7 +1492,7 @@
             }
 
             & li {
-                +li {
+                + li {
                     position: relative;
                     margin-left: 11px;
 
@@ -1505,7 +1501,7 @@
                         left: -7px;
                         top: 50%;
                         transform: translateY(-50%);
-                        content: '';
+                        content: "";
                         width: 3px;
                         height: 3px;
                         border-radius: 3px;
@@ -1517,7 +1513,7 @@
         }
 
         .serviceWrap {
-            >div+div {
+            > div + div {
                 margin-top: 20px;
             }
 
@@ -1544,7 +1540,7 @@
                     padding: 0 20px;
                 }
 
-                >p {
+                > p {
                     font-size: 30px;
                     font-weight: 600;
                     letter-spacing: -1px;
@@ -1683,7 +1679,7 @@
             align-items: center;
             justify-content: space-between;
             margin-top: 50px;
-            @include mdq-max(xl){
+            @include mdq-max(xl) {
                 margin-top: 40px;
             }
 
@@ -1706,7 +1702,7 @@
                     border-radius: 10px;
                     border: 1px solid $gray-e;
                     padding: 0 20px;
-                    @include mdq-max(md){
+                    @include mdq-max(md) {
                         height: 30px;
                     }
                 }
@@ -1721,7 +1717,7 @@
                 position: relative;
                 transition: all 0.5s;
                 color: $white;
-                @include mdq-max(md){
+                @include mdq-max(md) {
                     height: 30px;
                     width: 100px;
                 }
@@ -1732,7 +1728,7 @@
                     justify-content: center;
                     width: 100%;
                     height: 100%;
-                    @include mdq-max(xl){
+                    @include mdq-max(xl) {
                         font-size: rem(16);
                     }
 
@@ -1753,7 +1749,6 @@
         }
 
         .thumnail-list {
-
             & .title-box {
                 display: flex;
                 align-items: center;
@@ -1803,7 +1798,7 @@
                             cursor: pointer;
 
                             &::after {
-                                background: url(../images/main/icon/more_arrow_w.png)no-repeat center;
+                                background: url(../images/main/icon/more_arrow_w.png) no-repeat center;
                             }
                         }
                     }
@@ -1815,7 +1810,7 @@
                     }
 
                     &::after {
-                        content: '';
+                        content: "";
                         position: absolute;
                         top: 50%;
                         right: 16px;
@@ -1823,7 +1818,7 @@
                         display: inline-block;
                         width: 20px;
                         height: 20px;
-                        background: url(../images/main/icon/more_arrow.png)no-repeat center;
+                        background: url(../images/main/icon/more_arrow.png) no-repeat center;
                         transition: all 0.5s;
 
                         @include mdq-max(xl) {
@@ -1957,7 +1952,7 @@
                 }
 
                 & li {
-                    +li {
+                    + li {
                         position: relative;
                         margin-left: 11px;
 
@@ -1966,7 +1961,7 @@
                             left: -7px;
                             top: 50%;
                             transform: translateY(-50%);
-                            content: '';
+                            content: "";
                             width: 3px;
                             height: 3px;
                             border-radius: 3px;
@@ -1996,12 +1991,12 @@
                         font-weight: 600;
 
                         &::after {
-                            content: '';
+                            content: "";
                             width: 24px;
                             height: 24px;
                             margin-left: 6px;
                             display: inline-block;
-                            background: url(../images/main/icon/link_ico_03.png)no-repeat center;
+                            background: url(../images/main/icon/link_ico_03.png) no-repeat center;
                         }
                     }
                 }
@@ -2019,7 +2014,7 @@
                 & .count_box {
                     display: flex;
                     gap: 10px;
-                    color: #BBB;
+                    color: #bbb;
 
                     & p {
                         display: flex;
@@ -2031,34 +2026,34 @@
 
                         &.view {
                             &::before {
-                                content: '';
+                                content: "";
                                 padding-right: 4px;
                                 display: inline-block;
                                 width: 20px;
                                 height: 30px;
-                                background: url(../images/main/icon/view_ico.png)no-repeat center;
+                                background: url(../images/main/icon/view_ico.png) no-repeat center;
                             }
                         }
 
                         &.read {
                             &::before {
-                                content: '';
+                                content: "";
                                 padding-right: 4px;
                                 display: inline-block;
                                 width: 20px;
                                 height: 30px;
-                                background: url(../images/main/icon/read_ico.png)no-repeat center;
+                                background: url(../images/main/icon/read_ico.png) no-repeat center;
                             }
                         }
 
                         &.like {
                             &::before {
-                                content: '';
+                                content: "";
                                 padding-right: 3.5px;
                                 display: inline-block;
                                 width: 20px;
                                 height: 30px;
-                                background: url(../images/main/icon/like_ico_04_g.png)no-repeat center;
+                                background: url(../images/main/icon/like_ico_04_g.png) no-repeat center;
                             }
                         }
                     }
@@ -2066,7 +2061,7 @@
             }
         }
 
-        .input-100{
+        .input-100 {
             width: 100%;
             height: 50px;
             border-radius: 10px;
@@ -2092,15 +2087,15 @@
                 }
             }
         }
-        .writeArea{
+        .writeArea {
             margin-top: 50px;
-            > select{
+            > select {
                 width: 100%;
                 height: 50px;
                 border-radius: 10px;
                 border: 1px solid $gray-e;
             }
-            input{
+            input {
                 margin: 20px 0;
             }
         }
@@ -2115,7 +2110,7 @@
                 @include mdq-max(xl) {
                     padding: 10px;
                 }
-                &::placeholder{
+                &::placeholder {
                     font-size: 18px;
                     color: rgba(#000, 0.2);
                 }
@@ -2176,7 +2171,7 @@
                 flex-wrap: wrap;
                 gap: 20px;
 
-                >li {
+                > li {
                     display: flex;
                     justify-content: center;
                     gap: 4px;
@@ -2213,7 +2208,7 @@
                 flex-wrap: wrap;
                 gap: 30px;
 
-                >li {
+                > li {
                     display: flex;
                     justify-content: center;
                     gap: 4px;
@@ -2262,23 +2257,24 @@
         }
         //추가 250220
 
-        .anser-info-list{
+        .anser-info-list {
             display: flex;
             align-items: center;
             gap: rem(20);
-            @include mdq-max(md){
+            @include mdq-max(md) {
                 flex-direction: column;
                 align-items: start;
                 gap: rem(10);
             }
-            .button-box{
+            .button-box {
                 display: flex;
                 align-items: center;
                 gap: rem(10);
-                @include mdq-max(md){
-                    order:1;
+                @include mdq-max(md) {
+                    order: 1;
                 }
-                > a,button{
+                > a,
+                button {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -2299,33 +2295,33 @@
                         border: 1px solid $gray-4;
                     }
                     &.replyBtn,
-                    &.deleteBtn{
+                    &.deleteBtn {
                         background: $color-1;
                         color: $white;
                     }
-                    &.modifyBtn{
+                    &.modifyBtn {
                         background: $white;
                         color: $black;
                     }
                 }
             }
         }
-        .add--title--bx{
+        .add--title--bx {
             display: flex;
             align-items: end;
             justify-content: space-between;
-            @include mdq-max(md){
+            @include mdq-max(md) {
                 flex-direction: column;
                 align-items: start;
-                gap: rem(20)
+                gap: rem(20);
             }
-            div:nth-child(1){
+            div:nth-child(1) {
                 max-width: rem(640);
-                @include mdq-max(md){
+                @include mdq-max(md) {
                     max-width: 100%;
                 }
             }
-            .title{
+            .title {
                 @include text-truncate(1);
             }
         }

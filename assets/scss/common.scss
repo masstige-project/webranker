@@ -2367,6 +2367,19 @@ html {
                 @include mdq-max(md) {
                     border-radius: 8px;
                 }
+
+                &.img-pc {
+                    display: block;
+                    @include mdq-max(md) {
+                        display: none;
+                    }
+                }
+                &.img-mo {
+                    display: none;
+                    @include mdq-max(md) {
+                        display: block;
+                    }
+                }
             }
 
             & .img-wrap {
