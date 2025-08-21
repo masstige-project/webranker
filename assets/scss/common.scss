@@ -2312,43 +2312,6 @@ html {
     }
 
     .contentWrap {
-        .thumnail {
-            gap: 40px 12.5px;
-            flex-wrap: wrap;
-
-            @include mdq-max(xxl) {
-                gap: 40px 14.5px;
-            }
-
-            @include mdq-max(md) {
-                gap: 40px 20px;
-            }
-
-            @include mdq-max(sm) {
-                gap: 40px;
-            }
-
-            .item {
-                width: calc(25% - 10px);
-
-                @include mdq-max(xxl) {
-                    width: calc(33.3333% - 10px);
-                }
-
-                @include mdq-max(md) {
-                    width: calc(50% - 10px);
-                }
-
-                @include mdq-max(sm) {
-                    width: 100%;
-                }
-            }
-
-            .swiper-wrapper {
-                height: auto;
-            }
-        }
-
         &.contentWrap2 {
             margin-left: 50px;
 
@@ -2668,6 +2631,7 @@ html {
                         display: flex;
                         align-items: center;
                         font-weight: 600;
+                        @include text-truncate(2);
 
                         &::after {
                             content: "";
@@ -3087,5 +3051,78 @@ html {
             height: 100%;
             border: none;
         }
+    }
+}
+
+// 썸네일 리스트(기본 한 줄에 4개)
+
+.thumnail {
+    gap: 40px 12.5px;
+    flex-wrap: wrap;
+
+    @include mdq-max(xxl) {
+        gap: 40px 14.5px;
+    }
+
+    @include mdq-max(md) {
+        gap: 40px 20px;
+    }
+
+    @include mdq-max(sm) {
+        gap: 40px;
+    }
+
+    &.li5 {
+        .item {
+            width: calc(20% - 12px);
+            @include mdq-max(xxl) {
+                width: calc(33.3333% - 10px);
+            }
+
+            @include mdq-max(md) {
+                width: calc(50% - 20px);
+            }
+
+            @include mdq-max(sm) {
+                width: 100%;
+            }
+        }
+    }
+    &.li6 {
+        .item {
+            width: calc(16.66% - 11px);
+
+            @include mdq-max(xxl) {
+                width: calc(33.33% - 10px);
+            }
+
+            @include mdq-max(md) {
+                width: calc(50% - 10px);
+            }
+
+            @include mdq-max(sm) {
+                width: 100%;
+            }
+        }
+    }
+
+    .item {
+        width: calc(25% - 10px);
+
+        @include mdq-max(xxl) {
+            width: calc(33.3333% - 10px);
+        }
+
+        @include mdq-max(md) {
+            width: calc(50% - 10px);
+        }
+
+        @include mdq-max(sm) {
+            width: 100%;
+        }
+    }
+
+    .swiper-wrapper {
+        height: auto;
     }
 }
