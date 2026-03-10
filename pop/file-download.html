@@ -6,7 +6,7 @@ include ($_SERVER['DOCUMENT_ROOT']."/INC/tableset.php");
 
   if($uid) {		 
 	 $row_board = get_tb_board($uid,$tablename); 
-	 if(!$row_board[uid]) {
+	 if(!$row_board['uid']) {
 		 $common->error("관련된 정보가 없습니다.","previous",""); } }else{ $common->error("잘못된 접근입니다.","previous",""); } ?>
 <div class="popup pop-file-download">
   <div class="popup-head mb-5">

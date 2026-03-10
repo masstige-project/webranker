@@ -1,107 +1,154 @@
 @charset "UTF-8";
 
 .footer {
-	padding: rem(50) 0;
-	background: #eee;
+	position: relative;
+	padding: rem(60) rem(100);
+	background: #111212;
+	z-index: 100;
 	@include mdq-max(md){
+		padding: 40px 0 110px;
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: rem(60);
+	}
+
+	&__top {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		@include mdq-max(md){
+			flex-direction: column;
+			align-items: flex-start;
+			gap: rem(40);
+		}
+	}
+
+	&__left {
+		display: flex;
+		flex-direction: column;
+		gap: rem(60);
+		max-width: 329px;
+	}
+
+	&__policy {
+		display: flex;
+		align-items: center;
+		gap: rem(16);
 		font-size: rem(16);
-		padding: 40px 0 110px 0;
+		font-weight: 600;
+		color: $white;
+		letter-spacing: -0.4px;
+		line-height: 20px;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__company {
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
 	}
 
 	&__logo {
-		justify-content: space-between;
+		height: 30px;
 		img {
-			width: em(213);
-			@include mdq-max(md){
-				width: em(140);
-			}
-		}
-		a{
-			display: inline-block;
-			width: 20px;
-			height: 30px;
-		}
-		& .youtube_link{
-			background: url(../images/main/icon/youtub_ico.png)no-repeat center/100%;
-		}
-		& .insta_link{
-			background: url(../images/main/icon/insta_ico.png)no-repeat center/100%;
-		}
-		& .blog_link{
-			background: url(../images/main/icon/blog_ico.png)no-repeat center/100%;
+			height: 100%;
+			width: auto;
+			object-fit: contain;
+			object-position: left;
 		}
 	}
 
-	&__txt {
-		position: relative;
-		overflow: hidden;
-		left: -0.5em;
+	&__info {
 		display: flex;
+		flex-direction: column;
+		gap: rem(4);
+
+		&-row {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: rem(16);
+			font-size: rem(14);
+			font-weight: 500;
+			color: #999;
+			letter-spacing: -0.35px;
+			line-height: 20px;
+		}
+
+		&-addr {
+			font-size: rem(14);
+			font-weight: 500;
+			color: #999;
+			letter-spacing: -0.35px;
+			line-height: 20px;
+		}
+	}
+
+	&__sns {
+		display: flex;
+		align-items: center;
+		gap: rem(8);
+
+		&-item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 48px;
+			height: 48px;
+			background: rgba(255, 255, 255, 0.1);
+			border-radius: 999px;
+
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.15);
+			}
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
 		justify-content: space-between;
-		align-items: end;
 		@include mdq-max(md){
 			flex-direction: column;
-			align-items: start;
-			justify-self: unset;
+			align-items: flex-start;
+			gap: rem(20);
 		}
-		.txt {
-			&.txt_1{
-				font-weight: 600;
-				@include mdq-max(md){
-					font-size: 15px;
-					display: flex;
-					align-items: center;
-					gap: rem(20);
-				}
-			}
-			&.txt_2{
-				@include mdq-max(md){
-					display: flex;
-					align-items: center;
-					gap: rem(20);
-					.txt_2 span{
-						display: flex;
-						gap: rem(4);
-					}
-				}
-			}
-			span {
-				position: relative;
-				display: inline-block;
-				padding: 0 0.5em;
-				@include mdq-max(md){
-					padding: 0;
-				}
-				& em{
-					opacity: 0.4;
-					font-style: normal;
-				}
-			}
-			+ .txt{
-				margin-top: 10px;
-			}
-		}
-		& .right_txt{
-			text-align: right;
-			@include mdq-max(md){
-				width: 100%;
-				text-align: left;
-				margin-top: rem(40);
-			}
-			& .txt{
-				margin-bottom: 10px;
-				@include mdq-max(md){
-					display: flex;
-					align-items: center;
-					gap: rem(30);
-					font-size: 15px;
-				}
-				& span:last-child{
-					padding-right: 0;
-				}
-			}
-			.footer-copyright{
-				opacity: 0.4;
+	}
+
+	&__copyright {
+		font-size: rem(14);
+		font-weight: 500;
+		color: #666;
+		letter-spacing: -0.35px;
+		line-height: 20px;
+		max-width: 329px;
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+		gap: rem(16);
+		font-size: rem(14);
+		font-weight: 500;
+		color: $white;
+		letter-spacing: -0.35px;
+		line-height: 20px;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 	}

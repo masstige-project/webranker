@@ -8,41 +8,41 @@
 
 <!-- 사이트 기본설정 영역 START -->
 <!-- SEO -->
-<meta name="title" content="<?=$SS[sitename]?>" />
-<meta name="keywords" content="<?=$SS[sitekeyword]?>" />
+<meta name="title" content="<?=$SS['sitename']?>" />
+<meta name="keywords" content="<?=$SS['sitekeyword']?>" />
 <meta name="author" content="Masstige" />
-<meta name="description" content="<?=$SS[sitedescription]?>" />
+<meta name="description" content="<?=$SS['sitedescription']?>" />
 <!-- 최대 155자 이내 -->
 <meta name="Robots" content="index, follow" />
 <!-- 검색 제외 페이지인 경우 noindex, nofollow -->
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="<?=$SS[sitename]?>" />
-<meta property="og:image" content="<?=$SS[siteimg]?>" />
-<meta property="og:site_name" content="<?=$SS[sitename]?>" />
-<meta property="og:url" content="<?=$SS[siteurl]?>" />
-<meta property="og:description" content="<?=$SS[sitedescription]?>" />
+<meta property="og:title" content="<?=$SS['sitename']?>" />
+<meta property="og:image" content="<?=$SS['siteimg']?>" />
+<meta property="og:site_name" content="<?=$SS['sitename']?>" />
+<meta property="og:url" content="<?=$SS['siteurl']?>" />
+<meta property="og:description" content="<?=$SS['sitedescription']?>" />
 
 <!-- Twitter -->
-<meta name="twitter:image" content="<?=$SS[siteimg]?>" />
-<meta name="twitter:description" content="<?=$SS[sitedescription]?>" />
-<meta name="twitter:title" content="<?=$SS[sitename]?>" />
+<meta name="twitter:image" content="<?=$SS['siteimg']?>" />
+<meta name="twitter:description" content="<?=$SS['sitedescription']?>" />
+<meta name="twitter:title" content="<?=$SS['sitename']?>" />
 
 <!-- Naver Webmaster Tool -->
-<meta name="naver-site-verification" content="<?=$SS[sitesignature1]?>" />
+<meta name="naver-site-verification" content="<?=$SS['sitesignature1']?>" />
 <!-- Google Search Console -->
-<meta name="google-site-verification" content="<?=$SS[sitesignature2]?>" />
+<meta name="google-site-verification" content="<?=$SS['sitesignature2']?>" />
 
-<link rel="image_src" href="<?=$SS[siteimg]?>" />
+<link rel="image_src" href="<?=$SS['siteimg']?>" />
 <!-- 대표 이미지 -->
-<link rel="shortcut icon" href="<?= ($SS[sitefavicon]) ? $SS[sitefavicon] : ''; ?>" />
+<link rel="shortcut icon" href="<?= ($SS['sitefavicon']) ? $SS['sitefavicon'] : ''; ?>" />
 <!-- 파비콘 -->
-<link rel="canonical" href="<?=$SS[siteurl]?>" />
+<link rel="canonical" href="<?=$SS['siteurl']?>" />
 <!-- 대표 URL -->
 
-<?=$SS[tracking_code1]?>
-<?=$SS[tracking_code2]?>
+<!-- <?=$SS['tracking_code1']?>
+<?=$SS['tracking_code2']?> -->
 <!-- 사이트 기본설정 영역 END -->
 
 <!-- XEIcon -->
@@ -80,4 +80,4 @@
 	}
 </script>
 
-<title><? if($P_dp0!='main'){?> <? if($P_dp3!=null){?> <?=${nav_.$P_dp1._.$P_dp2._.$P_dp3}?> | <? }?> <? if($P_dp2!=null){?> <?=${nav_.$P_dp1._.$P_dp2}?> | <? }?> <?=${nav_.$P_dp1}?> | <? }?> <?=$SS[sitename]?></title>
+<title><? if($P_dp0!='main'){?> <? if($P_dp3!=null){?> <?=${nav_.$P_dp1._.$P_dp2._.$P_dp3}?> | <? }?> <? if($P_dp2!=null){?> <?=${nav_.$P_dp1._.$P_dp2}?> | <? }?> <?=${nav_.$P_dp1}?> | <? }?> <?=$SS['sitename']?></title>

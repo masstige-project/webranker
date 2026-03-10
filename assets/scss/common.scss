@@ -65,6 +65,21 @@ html {
 
 .main {
     overflow: hidden;
+    width: calc(100% - 80px);
+    margin-left: auto;
+
+    > .lg-container {
+        padding-top: 20px;
+        padding-bottom: 120px;
+
+        @include mdq-max(md) {
+            padding-bottom: 80px;
+        }
+    }
+
+    @include mdq-max(md) {
+        width: 100%;
+    }
 }
 
 .mobile-body {
@@ -3125,4 +3140,41 @@ html {
     .swiper-wrapper {
         height: auto;
     }
+}
+
+
+
+.al-center {
+    align-items: center;
+}
+
+.al-end {
+    align-items: flex-end;
+}
+
+.jc-between {
+    justify-content: space-between;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-end {
+    justify-content: flex-end;
+}
+
+.gap-6 {
+    gap: 6px;
+}
+.gap-8 {
+    gap: 8px;
+}
+
+.gap-12 {
+    gap: 12px;
+}
+
+.gap-16 {
+    gap: 16px;
 }

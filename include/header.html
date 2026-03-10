@@ -4,86 +4,157 @@
 	<li><a class="link" href="#footer">푸터 바로가기</a></li>
 </ul>
 
-<header id="header" class="header">
+
+
+<header class="header" id="header">
 	<div class="lg-container header__wrap">
 		<div class="header__left">
-			<a href="../main/main.html" class="logo" title="메인으로">
-				<img src="../assets/images/main/logo.png" alt="<?=$SS[sitename]?>" />
-			</a>
-			<!-- nav -->
-			<nav class="nav">
-				<? include "../include/nav.html" ?>
-			</nav>
-			<!-- mobile-nav -->
+			<form class="header-search" action="#" method="get" role="search">
+				<div class="header-search__inner">
+					<input type="search" name="q" class="header-search__input" placeholder="웹 사이트명, 앱 서비스명 등의 검색어를 입력해주세요." autocomplete="off">
+					<button type="submit" class="header-search__btn" aria-label="검색">
+						<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+							<path d="M14.1944 14.28L16.7992 16.8M15.9592 10.08C15.9592 13.3274 13.3267 15.96 10.0792 15.96C6.83178 15.96 4.19922 13.3274 4.19922 10.08C4.19922 6.83252 6.83178 4.19995 10.0792 4.19995C13.3267 4.19995 15.9592 6.83252 15.9592 10.08Z" stroke="white" stroke-width="1.75" stroke-linecap="round"></path>
+						  </svg>
+					</button>
+				</div>
+			</form>
+
 			<div class="btn-wrap">
-				<!-- 알림설정 d-block:노출, d-none:비노출 -->
-				<a href="../include/alert.html">
-					<span class="blind">알림</span>
-					<img src="../assets/images/main/icon/alert_off.png" alt="alert_off">
-					<img src="../assets/images/main/icon/alret_on.png" alt="alert_on" class="d-none">
-				</a>
 				<button class="nav-mobile__btn" type="button">
-					<i class="xi-bars"></i>
-				</button>
-			</div>
+							<i class="xi-bars"></i>
+						</button>
+					</div>
 		</div>
 
-		<div class="header__right"> 
-			<p class="header__txt">당신의 웹과 앱을 선보여보세요.</p>
-			<!-- 로그인 전 -->
-			<ul class="login_off d-none">
-				<li class="alert">
-					<a href="../include/alert.html">
-						<span class="blind">알림</span>
-						<img src="../assets/images/main/icon/alert_off.png" alt="alert_off">
+		<div class="header__right">
+			<ul class="header__login header__login--off">
+				<li class="header__alert">
+					<a href="../include/alert.html" class="header__alert__btn active" aria-label="알림">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+							<path d="M9.33333 20.0909C10.041 20.6562 10.9755 21 12 21C13.0245 21 13.959 20.6562 14.6667 20.0909M4.50763 17.1818C4.08602 17.1818 3.85054 16.5194 4.10557 16.1514C4.69736 15.2975 5.26855 14.0451 5.26855 12.537L5.29296 10.3517C5.29296 6.29145 8.29581 3 12 3C15.7588 3 18.8058 6.33993 18.8058 10.4599L18.7814 12.537C18.7814 14.0555 19.3329 15.3147 19.9006 16.169C20.1458 16.5379 19.9097 17.1818 19.4933 17.1818H4.50763Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<circle cx="17" cy="5" r="3" fill="#FB483D"/>
+						  </svg>
 					</a>
 				</li>
-				<li class="membership">
-					<a href="../membership/login__intro.html" class="login">로그인</a>
-					<a href="../membership/join__intro.html" class="join">회원가입</a>
-				</li>
-			</ul>
-			<!-- 로그인 후 d-none 해제 -->
-			<ul class="login_on">
-				<li class="alert">
-					<a href="../include/alert.html">
-						<span class="blind">알림</span>
-						<img src="../assets/images/main/icon/alret_on.png" alt="alert_on">
-					</a>
-				</li>
-				<li class="membership">
-					<a href="./general__profile.html" class="profile">
-						<img src="../assets/images/main/icon/gnb_profile_img.png" alt="login_img">
-					</a>
-					<div class="dropdown">
-						<div class="name-bx">
-							<p class="name">홍길동님</p>
-							<i class="xi-angle-up"></i>
-						</div>
-						<ul class="dropmenu">
-							<li>
-								<a href="../include/general__profile.html" class="active">
-									<p>프로필</p>
-								</a>
-							</li>
-							<li>
-								<a href="../include/alert_setting.html">
-									<p>알림 설정</p>
-								</a>
-							</li>
-							<li>
-								<a href="">
-									<p>로그아웃</p>
-								</a>
-							</li>
-						</ul>
-					</div>
+				<li class="header__account">
+					<a href="../membership/login__intro.html" class="header__btn header__btn--login">로그인</a>
+					<a href="../membership/join__intro.html" class="header__btn header__btn--join">회원가입</a>
 				</li>
 			</ul>
 		</div>
 	</div>
 </header>
 
+<aside class="gnb" id="gnb">
+	<div class="gnb_inner">
+		<div class="gnb_logo">
+			<svg xmlns="http://www.w3.org/2000/svg" width="22" height="26" viewBox="0 0 22 26" fill="none">
+				<path d="M0.928711 1.70801C6.43463 5.59132 9.89571 12.032 10.0625 18.9746L0.928711 24.3721V1.70801Z" stroke="#7D67FF" stroke-width="1.85714"/>
+				<path d="M21.0713 24.3721L11.9365 18.9746C12.1033 12.032 15.5654 5.59133 21.0713 1.70801V24.3721Z" stroke="#7D67FF" stroke-width="1.85714"/>
+			  </svg>
+		</div>
+		<ul class="gnb_menu">
+			<li class="gnb_menu_item">
+				<a href="<?=$nav_1_href?>" class="gnb_menu_link">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+						<path d="M10.5 22.1874H21.5M15.15 5.25798L5.6167 11.705C5.2298 11.9667 5 12.3902 5 12.8417V24.9077C5 26.0632 5.98497 26.9999 7.2 26.9999H24.8C26.015 26.9999 27 26.0632 27 24.9077V12.8417C27 12.3902 26.7702 11.9667 26.3833 11.705L16.85 5.25798C16.3411 4.91385 15.6589 4.91384 15.15 5.25798Z" stroke="#ACB6BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+				</a>
+			</li>
+			<li class="gnb_menu_item">
+				<a href="<?=$nav_2_href?>" class="gnb_menu_link">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+						<g clip-path="url(#clip0_158_3239)">
+							<path d="M22.875 29.5999C23.3028 29.5999 23.6504 29.9474 23.6504 30.3752C23.6504 30.8031 23.3028 31.1506 22.875 31.1506H1.625C1.19716 31.1506 0.849609 30.8031 0.849609 30.3752C0.849612 29.9474 1.19716 29.5999 1.625 29.5999H22.875Z" fill="#ACB6BC" stroke="#ACB6BC" stroke-width="0.3"/>
+							<path d="M20.9023 1.30615C21.6963 0.658229 22.873 0.704272 23.6123 1.44482L30.5576 8.38818C31.3474 9.17797 31.3473 10.4636 30.5576 11.2534L29.1426 12.6685H29.1416C28.7587 13.0487 28.251 13.2592 27.71 13.2593H27.7031C27.2284 13.2581 26.7794 13.0938 26.4189 12.7954L26.2695 12.6587L19.3643 5.67529C18.5838 4.88536 18.5881 3.60443 19.374 2.81982L20.749 1.44482L20.9023 1.30615ZM22.1797 2.3999C22.0573 2.39993 21.9366 2.44576 21.8438 2.53857L20.4688 3.91357C20.2847 4.09762 20.2833 4.39743 20.4648 4.58252L27.3701 11.5669C27.4559 11.6536 27.5692 11.7016 27.6904 11.7056C27.7636 11.6878 27.8254 11.6765 27.8896 11.6548C27.9561 11.6323 28.0064 11.6048 28.043 11.5679L28.0439 11.5669L29.459 10.1538C29.6438 9.96894 29.6442 9.66762 29.459 9.48096L22.5137 2.53662C22.4231 2.44619 22.3017 2.3999 22.1797 2.3999Z" fill="#ACB6BC" stroke="#ACB6BC" stroke-width="0.3"/>
+							<path d="M20.0381 4.69348C20.4592 4.58136 20.8757 4.84158 20.9805 5.25305C21.0857 5.66668 20.8354 6.09026 20.4209 6.19446V6.19348L13.583 7.93079L13.584 7.93176C11.7857 8.3911 10.2838 9.59782 9.46094 11.2423C9.02494 12.1256 8.79304 13.1035 8.79297 14.0695C8.79297 14.6847 8.88169 15.2954 9.05859 15.8849C9.18273 16.2945 8.94996 16.7267 8.54004 16.8507L8.53516 16.8527C8.46417 16.8718 8.39081 16.882 8.31738 16.882C7.98443 16.8819 7.67605 16.6653 7.5752 16.3302C7.3548 15.5975 7.24219 14.8365 7.24219 14.0695C7.24226 12.8648 7.53116 11.6494 8.07227 10.5519L8.27441 10.174C9.33326 8.31729 11.1073 6.96464 13.2021 6.43079L20.0381 4.69446V4.69348Z" fill="#ACB6BC" stroke="#ACB6BC" stroke-width="0.3"/>
+							<path d="M25.8271 11.3479C26.0609 10.9887 26.5404 10.8878 26.8975 11.1204L26.8984 11.1194C27.2562 11.3518 27.3574 11.8314 27.124 12.1897L27.125 12.1907L22.7393 18.9465C22.7102 18.9933 22.6774 19.0352 22.6416 19.0725L22.6406 19.0735L17.167 24.6331L17.166 24.634C16.6002 25.2024 15.8453 25.5149 15.042 25.5149C13.984 25.5147 13.0275 24.9691 12.4844 24.0579C11.7878 22.8867 12.0167 21.3618 13.0234 20.3499L17.3369 16.0276C16.8464 15.5009 16.1613 15.2164 15.4111 15.2542C14.5711 15.2979 13.8195 15.7607 13.4023 16.4924V16.4934C13.1872 16.8661 12.7117 16.9917 12.3438 16.7805C11.9738 16.5682 11.844 16.0957 12.0547 15.7239L12.1885 15.5061C12.8885 14.4419 14.0451 13.7746 15.3291 13.7063C16.694 13.6323 17.9966 14.2567 18.7988 15.3704L18.9941 15.6418L19.0645 15.76C19.2009 16.0455 19.1511 16.393 18.9258 16.6292L18.9238 16.6321L14.1182 21.4426L14.1191 21.4436C13.6101 21.9561 13.4924 22.725 13.8135 23.2639L13.9082 23.4016C14.417 24.0526 15.4735 24.132 16.0664 23.5413L21.4834 18.0393L25.8271 11.3479Z" fill="#ACB6BC" stroke="#ACB6BC" stroke-width="0.3"/>
+							<path d="M17.8389 15.8495C18.2667 15.8495 18.6143 16.197 18.6143 16.6249C18.6143 17.0527 18.2667 17.4003 17.8389 17.4003H4.90039V29.6005H19.6211V20.2528C19.6211 19.825 19.9686 19.4774 20.3965 19.4774C20.8243 19.4775 21.1719 19.825 21.1719 20.2528V30.3749C21.1719 30.8027 20.8243 31.1502 20.3965 31.1503H4.125C3.69716 31.1503 3.34961 30.8027 3.34961 30.3749V16.6249C3.34961 16.197 3.69716 15.8495 4.125 15.8495H17.8389Z" fill="#ACB6BC" stroke="#ACB6BC" stroke-width="0.3"/>
+						</g>
+						<defs>
+							<clipPath id="clip0_158_3239">
+							<rect width="32" height="32" fill="white"/>
+							</clipPath>
+						</defs>
+						</svg>
+				</a>
+			</li>
+			<li class="gnb_menu_item gnb_menu_item--has-sub">
+				<a href="<?=$nav_3_href?>" class="gnb_menu_link">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+						<g clip-path="url(#clip0_128_875)">
+							<mask id="mask0_128_875" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+							<path d="M32 0H0V32H32V0Z" fill="white"/>
+							</mask>
+							<g mask="url(#mask0_128_875)">
+							<path d="M11.5993 18.6674H4.66602C3.59935 18.6674 2.66602 19.6007 2.66602 20.6674V29.334H11.5993V18.6674Z" stroke="#ACB6BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M18.4001 13.3341H13.4668C12.4001 13.3341 11.4668 14.2674 11.4668 15.3341V29.3341H20.4001V15.3341C20.4001 14.2674 19.4668 13.3341 18.4001 13.3341Z" stroke="#ACB6BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M27.3337 22.6674H20.4004V29.334H29.3337V24.6674C29.3337 23.6007 28.4004 22.6674 27.3337 22.6674Z" stroke="#ACB6BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M15.7993 2.12549C15.8814 1.95915 16.1186 1.95915 16.2007 2.12549L17.2634 4.27874C17.296 4.34479 17.359 4.39057 17.4319 4.40116L19.8081 4.74645C19.9917 4.77313 20.065 4.99871 19.9322 5.12818L18.2127 6.80425C18.16 6.85567 18.1359 6.92975 18.1483 7.00235L18.5542 9.369C18.5856 9.55182 18.3937 9.69124 18.2295 9.60492L16.1041 8.48754C16.0389 8.45326 15.9611 8.45326 15.8959 8.48754L13.7705 9.60492C13.6063 9.69124 13.4144 9.55182 13.4458 9.369L13.8517 7.00235C13.8641 6.92975 13.84 6.85567 13.7873 6.80425L12.0678 5.12818C11.935 4.99871 12.0083 4.77313 12.1919 4.74645L14.5681 4.40116C14.641 4.39057 14.704 4.34479 14.7366 4.27874L15.7993 2.12549Z" stroke="#ACB6BC" stroke-width="2" stroke-linejoin="round"/>
+							</g>
+						</g>
+						<defs>
+							<clipPath id="clip0_128_875">
+							<rect width="32" height="32" fill="white"/>
+							</clipPath>
+						</defs>
+						</svg>
+				</a>
+				<div class="gnb_submenu">
+					<p class="gnb_submenu__title"><?=$nav_3?></p>
+					<ul class="gnb_submenu__list">
+						<li><a href="<?=$nav_3_1_href?>"><?=$nav_3_1?></a></li>
+						<li><a href="<?=$nav_3_2_href?>"><?=$nav_3_2?></a></li>
+						<li><a href="<?=$nav_3_3_href?>"><?=$nav_3_3?></a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="gnb_menu_item gnb_menu_item--has-sub">
+				<a href="<?=$nav_4_href?>" class="gnb_menu_link">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+						<path d="M25.3333 14V8.00004C25.3333 6.52728 24.1394 5.33337 22.6667 5.33337H6.66667C5.19391 5.33337 4 6.52728 4 8.00004V18.4348C4 19.9076 5.19391 21.1015 6.66667 21.1015H8.75362V26.6667L14.3188 21.1015H14.6667M21.5507 24.5218L25.029 28V24.5218H25.3333C26.8061 24.5218 28 23.3279 28 21.8551V17.3334C28 15.8606 26.8061 14.6667 25.3333 14.6667H17.3333C15.8606 14.6667 14.6667 15.8606 14.6667 17.3334V21.8551C14.6667 23.3279 15.8606 24.5218 17.3333 24.5218H21.5507Z" stroke="#ACB6BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+				</a>
+				<div class="gnb_submenu">
+					<p class="gnb_submenu__title"><?=$nav_4?></p>
+					<ul class="gnb_submenu__list">
+						<li><a href="<?=$nav_4_1_href?>"><?=$nav_4_1?></a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="gnb_menu_item gnb_menu_item--has-sub">
+				<a href="<?=$nav_5_href?>" class="gnb_menu_link">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+						<g clip-path="url(#clip0_128_879)">
+							<mask id="mask0_128_879" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+							<path d="M32 0H0V32H32V0Z" fill="white"/>
+							</mask>
+							<g mask="url(#mask0_128_879)">
+							<path d="M11.1992 15.9987L14.3992 19.1987L20.7992 12.7987" stroke="#ACB6BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M14.3991 3.3323C15.3324 2.5323 16.7991 2.5323 17.7324 3.3323L19.8658 5.19897C20.2658 5.59897 21.0658 5.86563 21.5991 5.86563H23.8658C25.3324 5.86563 26.3991 7.06563 26.3991 8.39897V10.6656C26.3991 11.199 26.6658 11.999 27.0658 12.399L28.9324 14.5323C29.7324 15.4656 29.7324 16.9323 28.9324 17.8656L27.0658 19.999C26.6658 20.399 26.3991 21.199 26.3991 21.7323V23.999C26.3991 25.4656 25.1991 26.5323 23.8658 26.5323H21.5991C21.0658 26.5323 20.2658 26.799 19.8658 27.199L17.7324 29.0656C16.7991 29.8656 15.3324 29.8656 14.3991 29.0656L12.2658 27.199C11.8658 26.799 11.0658 26.5323 10.5324 26.5323H8.26575C6.79909 26.5323 5.73242 25.3323 5.73242 23.999V21.7323C5.73242 21.199 5.46576 20.5323 5.06576 20.1323L3.33242 17.999C2.53242 17.0656 2.53242 15.599 3.33242 14.6656L5.06576 12.5323C5.33242 12.1323 5.73242 11.3323 5.73242 10.9323V8.66563C5.73242 7.19897 6.93242 6.1323 8.26575 6.1323H10.5324C11.0658 6.1323 11.8658 5.86563 12.2658 5.46563L14.3991 3.7323V3.3323Z" stroke="#ACB6BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</g>
+						</g>
+						<defs>
+							<clipPath id="clip0_128_879">
+							<rect width="32" height="32" fill="white"/>
+							</clipPath>
+						</defs>
+						</svg>
+				</a>
+				<div class="gnb_submenu">
+					<p class="gnb_submenu__title"><?=$nav_5?></p>
+					<ul class="gnb_submenu__list">
+						<li><a href="<?=$nav_5_1_href?>"><?=$nav_5_1?></a></li>
+						<li><a href="<?=$nav_5_2_href?>"><?=$nav_5_2?></a></li>
+						<li><a href="<?=$nav_5_3_href?>"><?=$nav_5_3?></a></li>
+						<li><a href="<?=$nav_5_4_href?>"><?=$nav_5_4?></a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+</aside>
 <!-- S : mobile navigation -->
 <? include "../include/aside.html" ?>
 <!-- E : mobile navigation -->

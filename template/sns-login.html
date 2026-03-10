@@ -7,7 +7,7 @@
     $P_dp2 = '1';
     include "../include/meta.html";
 
-    $Memberinfo[kakaoid] = '1'; //연동된 경우 노출을 위한 변수입니다
+    $Memberinfo['kakaoid'] = '1'; //연동된 경우 노출을 위한 변수입니다
 
 		?>
     <link rel="stylesheet" href="../assets/css/main.min.css" />
@@ -80,15 +80,15 @@
                 </i>
               </dt>
               <dd class="sns-login-management__state">
-                <?if(!$Memberinfo[facebookid]){?>
+                <?if(!$Memberinfo['facebookid']){?>
                 연결된 정보가 없습니다.
                 <?}else{?>
-                <?=$Memberinfo[facebookid_regdate]?>
+                <?=$Memberinfo['facebookid_regdate']?>
                 <span class="d-block d-sm-inline"> 연결 완료 되었습니다.</span>
                 <?}?>
               </dd>
               <dd class="sns-login-management__btn">
-                <?if($Memberinfo[facebookid]){?>
+                <?if($Memberinfo['facebookid']){?>
                 <button type="button" class="btn bg-gray-6 text-white" onclick="snsdelete('Facebook','<?=$passwordinput?>');">연결해제</button>
                 <?}else{?>
                 <button type="button" class="btn bg-color-1" onClick="window.open('<?=$kakaoLoginUrl1;?>', 'login_popup', 'width=430,height=590,scrollbar=yes');">연결하기</button>
@@ -103,15 +103,15 @@
                 </i>
               </dt>
               <dd class="sns-login-management__state">
-                <?if(!$Memberinfo[naverid]){?>
+                <?if(!$Memberinfo['naverid']){?>
                 연결된 정보가 없습니다.
                 <?}else{?>
-                <?=$Memberinfo[naverid_regdate]?>
+                <?=$Memberinfo['naverid_regdate']?>
                 <span class="d-block d-sm-inline"> 연결 완료 되었습니다.</span>
                 <?}?>
               </dd>
               <dd class="sns-login-management__btn">
-                <?if($Memberinfo[naverid]){?>
+                <?if($Memberinfo['naverid']){?>
                 <button type="button" class="btn bg-gray-6 text-white" onclick="snsdelete('Kakao','<?=$passwordinput?>');">연결해제</button>
                 <?}else{?>
                 <button type="button" class="btn bg-color-1" onclick="alert('네아로 신청해서 정보를 알려주세요.')" onClick="window.open('<?=$naverLoginUrl1;?>', 'login_popup', 'width=430,height=590,scrollbar=yes');">연결하기</button>
@@ -125,15 +125,15 @@
                 </i>
               </dt>
               <dd class="sns-login-management__state">
-                <?if(!$Memberinfo[kakaoid]){?>
+                <?if(!$Memberinfo['kakaoid']){?>
                 연결된 정보가 없습니다.
                 <?}else{?>
-                <?=$Memberinfo[kakaoid_regdate]?>
+                <?=$Memberinfo['kakaoid_regdate']?>
                 <span class="d-block d-sm-inline"> 연결 완료 되었습니다.</span>
                 <?}?>
               </dd>
               <dd class="sns-login-management__btn">
-                <?if($Memberinfo[kakaoid]){?>
+                <?if($Memberinfo['kakaoid']){?>
                 <button type="button" class="btn bg-dark" onclick="snsdelete('Kakao','<?=$passwordinput?>');">연결해제</button>
                 <?}else{?>
                 <button type="button" class="btn bg-color-1" onClick="window.open('<?=$kakaoLoginUrl1;?>', 'login_popup', 'width=430,height=590,scrollbar=yes');">연결하기</button>
