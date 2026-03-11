@@ -3,18 +3,41 @@
   <div class="nav-mobile__head">
     <div class="logo-bx">
       <a href="../main/main.html" class="logo" title="메인으로">
-        <img src="../assets/images/main/logo.png" alt="<?=$SS['sitename']?>" loading="lazy"/>
+        <img src="../assets/images/main/logo-area.png" alt="<?=$SS['sitename']?>" loading="lazy"/>
       </a>
-      <button class="nav-mobile__btn" type="button">
-        <i class="xi-close"></i>
-      </button>
+      <div class="d-flex">
+        <button class="nav-mobile__btn" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M17.6922 17.8L21 21M19.9333 12.4667C19.9333 16.5904 16.5904 19.9333 12.4667 19.9333C8.34294 19.9333 5 16.5904 5 12.4667C5 8.34294 8.34294 5 12.4667 5C16.5904 5 19.9333 8.34294 19.9333 12.4667Z" stroke="#404345" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="nav-mobile__btn" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M12.125 21H24M4 14H24M4 7H24" stroke="#404345" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
-  <div class="mobile-login-bx">
-    <a href="../membership/login__intro.html" class="login">로그인</a>
-    <a href="../membership/join__intro.html" class="join">회원가입</a>
-    <!-- 로그인 후 -->
-    <a href="../include/general__profile.html" class="profile">프로필</a>
+  <div class="mobile-login-bx mobile-login-bx--<?= isset($is_logged_in) && $is_logged_in ? 'on' : 'off' ?>">
+    <div class="mobile-login-bx__guest">
+      <a href="../membership/login__intro.html" class="login">로그인</a>
+      <a href="../membership/join__intro.html" class="join">회원가입</a>
+    </div>
+    <div class="mobile-login-bx__user">
+      <div class="mobile-login-bx__account">
+        <div class="mobile-login-bx__avatar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="26" viewBox="0 0 22 26" fill="none">
+            <path d="M0.928711 1.70801C6.43463 5.59132 9.89571 12.032 10.0625 18.9746L0.928711 24.3721V1.70801Z" stroke="#7D67FF" stroke-width="1.85714" />
+            <path d="M21.0713 24.3721L11.9365 18.9746C12.1033 12.032 15.5654 5.59133 21.0713 1.70801V24.3721Z" stroke="#7D67FF" stroke-width="1.85714" />
+          </svg>
+        </div>
+        <div class="mobile-login-bx__info">
+          <p class="mobile-login-bx__label">현재 로그인 계정</p>
+          <p class="mobile-login-bx__email"><?= isset($user_email) ? $user_email : 'webranker@gmail.com' ?></p>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="nav-mobile__body">
     <? include "../include/nav.html" ?>

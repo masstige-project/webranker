@@ -95,6 +95,7 @@ $(function() {
 
 	function applyState(isLoggedIn) {
 		$headerLogin.removeClass("header__login--on header__login--off").addClass("header__login--" + (isLoggedIn ? "on" : "off"));
+		$(".mobile-login-bx").removeClass("mobile-login-bx--on mobile-login-bx--off").addClass("mobile-login-bx--" + (isLoggedIn ? "on" : "off"));
 		$btn.text(isLoggedIn ? "로그아웃" : "로그인").attr("data-logged-in", isLoggedIn ? "1" : "0");
 	}
 

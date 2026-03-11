@@ -322,19 +322,15 @@ section + section {
                     color: #404345;
                     line-height: 25px;
                     letter-spacing: -0.4px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    word-break: break-word;
 
                     @include mdq-max(xl) {
                         font-size: rem(16);
-                        line-height: 20px;
-                    }
-
-                    @include mdq-max(md) {
-                        display: -webkit-box;
-                        -webkit-line-clamp: 1;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        word-break: break-word;
                         line-height: 1;
                     }
                 }
