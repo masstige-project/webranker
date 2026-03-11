@@ -74,6 +74,9 @@
 
 <ul class="quick-menu">
 	<li class="wow fadeInUp">
+		<button type="button" class="login-toggle-btn" data-logged-in="<?= isset($is_logged_in) && $is_logged_in ? '1' : '0' ?>"><?= isset($is_logged_in) && $is_logged_in ? '로그아웃' : '로그인' ?></button>
+	</li>
+	<li class="wow fadeInUp">
 		<button class="chat-btn">
 			<p class="blind">채팅 문의하기 버튼</p>
 		</button>
@@ -84,3 +87,25 @@
 		</button>
 	</li>
 </ul>
+<script>
+$(function() {
+	var $btn = $(".login-toggle-btn");
+	var $headerLogin = $(".header__login");
+	if (!$btn.length || !$headerLogin.length) return;
+
+	function applyState(isLoggedIn) {
+		$headerLogin.removeClass("header__login--on header__login--off").addClass("header__login--" + (isLoggedIn ? "on" : "off"));
+		$btn.text(isLoggedIn ? "로그아웃" : "로그인").attr("data-logged-in", isLoggedIn ? "1" : "0");
+	}
+
+	var stored = localStorage.getItem("debug_login");
+	var isLoggedIn = stored !== null ? stored === "1" : $btn.attr("data-logged-in") === "1";
+	applyState(isLoggedIn);
+
+	$btn.on("click", function() {
+		isLoggedIn = !$headerLogin.hasClass("header__login--on");
+		localStorage.setItem("debug_login", isLoggedIn ? "1" : "0");
+		applyState(isLoggedIn);
+	});
+});
+</script>

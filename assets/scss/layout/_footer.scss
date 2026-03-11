@@ -161,6 +161,18 @@
 	bottom: rem(40);
 	z-index: 99;
 	color: $white;
+
+	.login-toggle-btn {
+		padding: rem(10) rem(16);
+		font-size: rem(14);
+		font-weight: 600;
+		color: #333;
+		background: #f0f0f0;
+		border: 1px solid #ddd;
+		border-radius: rem(8);
+		cursor: pointer;
+		white-space: nowrap;
+	}
 	@include mdq-max(xl){
 		right: rem(20);
 	}

@@ -10,9 +10,8 @@
     </head>
 
     <body class="main-body">
+        <? $is_logged_in = false; ?>
         <? include "../include/header.html" ?>
-        <!--권장 이미지 사이즈 360 x 202 -->
-        <!--실제 적용 될 이미지는 background-image 경로에 연결 부탁드립니다.-->
 
         <main class="main" id="contents">
             <div class="lg-container">
@@ -326,7 +325,7 @@
                                 <img src="../assets/images/main/list_thumb.jpg" alt="썸네일" />
                             </div>
                             <div class="card_content">
-                                <div class="d-flex al-center jc-between">
+                                <div class="d-flex al-center jc-between card_top_content">
                                     <div class="content_title_wrap">
                                         <p class="content_label"><?= $item['label'] ?></p>
                                         <h3 class="content_title"><?= $item['title'] ?></h3>
@@ -472,6 +471,139 @@
                     </div>
                 </section>
                 <!-- E : WebRanker -->
+
+                <!-- S : WebRanker -->
+                <section class="card_section">
+                    <div class="section_header">
+                        <div class="title_wrap">
+                            <p class="section_label">WebRanker</p>
+                            <h2 class="section_title">디자이너가 선정한 주간 모바일 랭킹</h2>
+                        </div>
+                        <div class="filter_wrap">
+                            <a href="#" class="filter_tab is-active" data-filter="all">전체</a>
+                            <a href="#" class="filter_tab" data-filter="agency">에이전시</a>
+                            <a href="#" class="filter_tab" data-filter="freelancer">프리랜서</a>
+                        </div>
+                    </div>
+
+                    <?php $card_list = [ ['title' => '와이피얼라이언스', 'type' => 'agency', 'name' => '매스티지', 'view' => 123, 'comment' => 123], ['title' => '예손커뮤니케이션', 'type' =>
+                    'freelancer', 'name' => '예손커뮤니케이션', 'view' => 123, 'comment' => 123], ['title' => '웰랑', 'type' => 'agency', 'name' => '거인소프트', 'view' => 123, 'comment' => 123],
+                    ['title' => '톰 thome', 'type' => 'freelancer', 'name' => '매스티지', 'view' => 123, 'comment' => 123], ['title' => '오늘의인테리어디자인', 'type' => 'agency', 'name' =>
+                    '오늘의인테리어디자인', 'view' => 123, 'comment' => 123], ['title' => '오늘의인테리어디자인', 'type' => 'agency', 'name' => '오늘의인테리어디자인', 'view' => 123, 'comment' =>
+                    123], ['title' => '오늘의인테리어디자인', 'type' => 'agency', 'name' => '오늘의인테리어디자인', 'view' => 123, 'comment' => 123], ['title' => '오늘의인테리어디자인', 'type' =>
+                    'freelancer', 'name' => '오늘의인테리어디자인', 'view' => 123, 'comment' => 123], ['title' => '오늘의인테리어디자인', 'type' => 'agency', 'name' => '오늘의인테리어디자인', 'view'
+                    => 123, 'comment' => 123], ['title' => '오늘의인테리어디자인', 'type' => 'agency', 'name' => '오늘의인테리어디자인', 'view' => 123, 'comment' => 123], ['title' =>
+                    '오늘의인테리어디자인', 'type' => 'freelancer', 'name' => '오늘의인테리어디자인', 'view' => 123, 'comment' => 123], ['title' => '오늘의인테리어디자인', 'type' => 'agency', 'name'
+                    => '오늘의인테리어디자인', 'view' => 123, 'comment' => 123], ['title' => '오늘의인테리어디자인', 'type' => 'agency', 'name' => '오늘의인테리어디자인', 'view' => 123, 'comment' =>
+                    123], ['title' => '오늘의인테리어디자인', 'type' => 'freelancer', 'name' => '오늘의인테리어디자인', 'view' => 123, 'comment' => 123], ['title' => '오늘의인테리어디자인', 'type' =>
+                    'agency', 'name' => '오늘의인테리어디자인', 'view' => 123, 'comment' => 123], ]; ?>
+                    <div class="card_grid">
+                        <?php foreach ($card_list as $i => $item) : ?>
+                        <a href="" class="card_item" data-type="<?= $item['type'] ?>">
+                            <div class="card_thumb mobile_thumb">
+                                <img src="../assets/images/main/mobile_thumb.png" alt="썸네일" />
+                            </div>
+                            <div class="card_content">
+                                <div class="content_title_wrap">
+                                    <h3 class="content_title">와이피얼라이언스</h3>
+                                    <p class="content_desc">브랜드 아이덴티티와 사용자 경험을 중심으로 기획된 프로젝트로, 전체 구조와 디자인의 완성도를 균형 있게 구현한 웹 디자인 작업입니다.</p>
+                                </div>
+                                <ul class="meta_list">
+                                    <li class="meta_item">
+                                        <img src="../assets/images/main/icon/instagram.png" alt="인스타그램" />
+                                    </li>
+                                    <li class="meta_item">
+                                        <img src="../assets/images/main/icon/youtube.png" alt="유튜브" />
+                                    </li>
+                                    <li class="meta_item">
+                                        <img src="../assets/images/main/icon/linkedin.png" alt="링크드인" />
+                                    </li>
+                                    <li class="meta_item">
+                                        <img src="../assets/images/main/icon/home.png" alt="홈페이지" />
+                                    </li>
+                                    <li class="meta_item">
+                                        <img src="../assets/images/main/icon/link-external.png" alt="외부링크" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                        <?php endforeach; ?>
+                    </div>
+
+                    <div class="card_more">
+                        <a href="#" class="btn_more">더보기</a>
+                    </div>
+                </section>
+                <!-- E : WebRanker -->
+
+                <!-- S : UIUX Article -->
+                <section class="card_section">
+                    <div class="section_header">
+                        <div class="title_wrap">
+                            <p class="section_label">UIUX Article</p>
+                            <h2 class="section_title">디자이너들이 주목한 디자인 인사이트</h2>
+                        </div>
+                        <div class="filter_wrap">
+                            <a href="#" class="filter_tab is-active" data-filter="all">전체</a>
+                            <a href="#" class="filter_tab" data-filter="uiux">UI/UX</a>
+                            <a href="#" class="filter_tab" data-filter="design">디자인</a>
+                        </div>
+                    </div>
+
+                    <?php
+                    $insight_card_list = [
+                        ['title' => '디자인 시스템 속도 1000% 올려주는 피그마 플러그인', 'desc' => 'AI로 디자인 시스템 만드는 법, Figma 플러그인 모음집', 'name' => '매스티지', 'date' => '2026.01.01', 'tag' => 'uiux'],
+                        ['title' => '사용자 리서치 기초 가이드', 'desc' => '효과적인 UX 리서치를 위한 실무 팁', 'name' => '예손커뮤니케이션', 'date' => '2026.01.02', 'tag' => 'design'],
+                        ['title' => '인터랙션 디자인 트렌드', 'desc' => '2026년 주목해야 할 모션 디자인', 'name' => '거인소프트', 'date' => '2026.01.03', 'tag' => 'uiux'],
+                        ['title' => '타이포그래피 선택 가이드', 'desc' => '웹/앱에 맞는 폰트 선정 방법', 'name' => '매스티지', 'date' => '2026.01.04', 'tag' => 'design'],
+                        ['title' => '접근성 디자인 체크리스트', 'desc' => 'WCAG 2.1 기준 실전 적용법', 'name' => '오늘의인테리어디자인', 'date' => '2026.01.05', 'tag' => 'uiux'],
+                        ['title' => '컬러 시스템 구축하기', 'desc' => '일관된 브랜드 컬러 설계', 'name' => '매스티지', 'date' => '2026.01.06', 'tag' => 'design'],
+                        ['title' => 'Figma 협업 워크플로우', 'desc' => '팀원과 효율적으로 디자인하기', 'name' => '예손커뮤니케이션', 'date' => '2026.01.07', 'tag' => 'uiux'],
+                        ['title' => 'UI 컴포넌트 라이브러리', 'desc' => '재사용 가능한 디자인 시스템', 'name' => '거인소프트', 'date' => '2026.01.08', 'tag' => 'design'],
+                        ['title' => '프로토타이핑 best practice', 'desc' => '개발자와 소통하는 프로토타입', 'name' => '오늘의인테리어디자인', 'date' => '2026.01.09', 'tag' => 'uiux'],
+                        ['title' => '반응형 디자인 핵심 원칙', 'desc' => '모든 기기에서 완성도 높은 UI', 'name' => '매스티지', 'date' => '2026.01.10', 'tag' => 'design'],
+                    ];
+                    foreach ($insight_card_list as &$item) {
+                        $item['tag'] = ['uiux', 'design'][mt_rand(0, 1)];
+                    }
+                    unset($item);
+                    shuffle($insight_card_list);
+                    $tag_labels = ['uiux' => 'UI/UX', 'design' => '디자인'];
+                    ?>
+                    <div class="card_grid insight_grid">
+                        <?php foreach ($insight_card_list as $item) : ?>
+                        <a href="" class="card_item" data-type="<?= $item['tag'] ?>">
+                            <div class="card_thumb">
+                                <img src="../assets/images/main/insight_thumb.png" alt="썸네일" />
+                            </div>
+                            <div class="card_content">
+                                <div class="tag_wrap">
+                                    <span class="tag"><?= $tag_labels[$item['tag']] ?></span>
+                                </div>
+                                <div class="content_user_wrap">
+                                    <div class="thumb">
+                                        <img src="../assets/images/main/user_thumb.png" alt="썸네일" />
+                                    </div>
+                                    <div class="user_info">
+                                        <p class="user_name"><?= $item['name'] ?></p>
+                                        <span class="bullet"></span>
+                                        <p class="date"><?= $item['date'] ?></p>
+                                    </div>
+                                </div>
+                                <div class="content_title_wrap">
+                                    <h3 class="content_title"><?= $item['title'] ?></h3>
+                                    <p class="content_desc"><?= $item['desc'] ?></p>
+                                </div>
+                            </div>
+                        </a>
+                        <?php endforeach; ?>
+                    </div>
+
+                    <div class="card_more">
+                        <a href="#" class="btn_more">더보기</a>
+                    </div>
+                </section>
+                <!-- E : UIUX Article -->
             </div>
         </main>
 
@@ -480,10 +612,12 @@
             $(document).ready(function () {
                 $(".filter_tab").on("click", function (e) {
                     e.preventDefault();
-                    var filter = $(this).data("filter");
-                    $(".filter_tab").removeClass("is-active");
-                    $(this).addClass("is-active");
-                    $(".card_grid .card_item").each(function () {
+                    var $tab = $(this);
+                    var filter = $tab.data("filter");
+                    var $section = $tab.closest(".card_section");
+                    $section.find(".filter_tab").removeClass("is-active");
+                    $tab.addClass("is-active");
+                    $section.find(".card_item").each(function () {
                         var type = $(this).data("type");
                         var show = filter === "all" || type === filter;
                         $(this).toggle(show);
