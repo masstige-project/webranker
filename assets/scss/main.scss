@@ -153,6 +153,12 @@ section + section {
         overflow: hidden;
         background: $white;
         box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+        transition: all 0.4s;
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.1);
+        }
 
         .card_thumb {
             width: 100%;
@@ -407,6 +413,7 @@ section + section {
             }
 
             .postheader {
+                width: 100%;
                 @include mdq-max(md) {
                     gap: 6px;
                 }
@@ -418,6 +425,7 @@ section + section {
                     height: 48px;
                     border-radius: 8px;
                     background-color: #f7f7fb;
+                    flex: 0 0 auto;
 
                     @include mdq-max(xl) {
                         width: 40px;
@@ -431,6 +439,7 @@ section + section {
                 }
 
                 .info {
+                    width: 100%;
                     .name {
                         font-size: 16px;
                         font-weight: 600;
@@ -447,6 +456,9 @@ section + section {
                         }
                     }
                     .desc {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
                         font-size: 14px;
                         font-weight: 500;
                         line-height: 20px;
@@ -536,5 +548,60 @@ section + section {
             color: $white;
             border-color: #7d67ff;
         }
+    }
+}
+
+// 검색 결과 페이지
+.search-results-page {
+    padding-top: rem(32);
+    padding-bottom: rem(80);
+
+    @include mdq-max(md) {
+        padding-top: rem(20);
+        padding-bottom: rem(60);
+    }
+
+    .card_item--search-extra {
+        display: none !important;
+    }
+
+    .card_section.search-show-all .card_item--search-extra {
+        display: block !important;
+    }
+}
+
+.search-result-head {
+    margin-bottom: rem(48);
+
+    @include mdq-max(md) {
+        margin-bottom: rem(32);
+    }
+
+    .search-result-title {
+        font-size: rem(22);
+        font-weight: 700;
+        color: #404345;
+
+        @include mdq-max(md) {
+            font-size: rem(18);
+        }
+
+        .q {
+            color: #7d67ff;
+        }
+    }
+}
+
+.search-category-empty {
+    text-align: center;
+    padding: rem(48) rem(20);
+    color: #acb6bc;
+    font-size: rem(16);
+    font-weight: 500;
+    margin: 0;
+
+    @include mdq-max(md) {
+        padding: rem(32) rem(16);
+        font-size: rem(15);
     }
 }

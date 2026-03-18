@@ -1,0 +1,308 @@
+<? include "../include/head.html" ?>
+<!doctype html>
+<html lang="<?=$P_lang?>">
+<head>
+    <? $P_dp0 = 'main'; include "../include/meta.html" ?>
+    <link rel="stylesheet" href="../assets/css/main.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+</head>
+<body class="main-body">
+    <? $is_logged_in = false; ?>
+    <? include "../include/header.html" ?>
+
+    <?php
+    $search_q = isset($_GET['q']) ? trim($_GET['q']) : '';
+    $q_lower = $search_q !== ''
+        ? (function_exists('mb_strtolower') ? mb_strtolower($search_q, 'UTF-8') : strtolower($search_q))
+        : '';
+
+    $search_match = function ($fields) use ($q_lower) {
+        if ($q_lower === '') {
+            return true;
+        }
+        $h = implode(' ', array_map('strval', $fields));
+        $hl = function_exists('mb_strtolower') ? mb_strtolower($h, 'UTF-8') : strtolower($h);
+        return strpos($hl, $q_lower) !== false;
+    };
+
+    $res_web = array_values(array_filter($search_web_ranking_cards, function ($i) use ($search_match) {
+        return $search_match([$i['label'], $i['title'], $i['name'], isset($i['desc']) ? $i['desc'] : '']);
+    }));
+    $res_monthly = array_values(array_filter($search_web_ranker_monthly_cards, function ($i) use ($search_match) {
+        return $search_match([$i['title'], $i['desc']]);
+    }));
+    $res_mobile = array_values(array_filter($search_mobile_ranking_cards, function ($i) use ($search_match) {
+        return $search_match([$i['title'], $i['desc']]);
+    }));
+    $res_insight = array_values(array_filter($search_insight_cards, function ($i) use ($search_match) {
+        return $search_match([$i['title'], $i['desc'], $i['name'], $i['tag']]);
+    }));
+
+    $tag_labels = ['uiux' => 'UI/UX', 'design' => '디자인'];
+    $total_count = count($res_web) + count($res_monthly) + count($res_mobile) + count($res_insight);
+    ?>
+
+    <main class="main search-results-page" id="contents">
+        <div class="lg-container">
+            <div class="search-result-head" data-aos="fade-up">
+                <h1 class="sr-only">검색 결과</h1>
+                <?php if ($search_q !== '') : ?>
+                <p class="search-result-title">‘<span class="q"><?= htmlspecialchars($search_q, ENT_QUOTES, 'UTF-8') ?></span>’에 대한 검색 결과 <strong><?= (int) $total_count ?></strong>건</p>
+                <?php else : ?>
+                <p class="search-result-title">검색어를 입력하면 카테고리별로 결과가 표시됩니다.</p>
+                <?php endif; ?>
+            </div>
+
+            <!-- S : 사용자가 선정한 웹 랭킹 -->
+            <section class="card_section">
+                <div class="section_header">
+                    <div class="title_wrap" data-aos="fade-up">
+                        <p class="section_label">WebRanking</p>
+                        <h2 class="section_title">사용자가 선정한 웹 랭킹</h2>
+                    </div>
+                </div>
+                <?php if (count($res_web) > 0) :
+                    $cnt_web = count($res_web);
+                    $web_show_more = $cnt_web >= 5;
+                    $web_has_extra = $cnt_web > 5;
+                ?>
+                <div class="card_grid" data-aos="fade-up">
+                    <?php foreach ($res_web as $i => $item) :
+                        $web_extra = $web_has_extra && $i >= 5;
+                    ?>
+                    <a href="../ranking/ranking__view.html" class="card_item<?= $web_extra ? ' card_item--search-extra' : '' ?>">
+                        <div class="card_thumb">
+                            <img src="../assets/images/main/list_thumb.jpg" alt="" />
+                        </div>
+                        <div class="card_content">
+                            <div class="d-flex al-center jc-between card_top_content">
+                                <div class="content_title_wrap">
+                                    <p class="content_label"><?= htmlspecialchars($item['label'], ENT_QUOTES, 'UTF-8') ?></p>
+                                    <h3 class="content_title"><?= htmlspecialchars($item['title'], ENT_QUOTES, 'UTF-8') ?></h3>
+                                </div>
+                                <button type="button" class="vote_btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+                                        <g clip-path="url(#clip0_search_w_<?= (int) $i ?>)">
+                                            <path d="M32.0833 44.0003H0.916667C0.410667 44.0003 0 43.5897 0 43.0837C0 42.5777 0.410667 42.167 0.916667 42.167H32.0833C32.5893 42.167 33 42.5777 33 43.0837C33 43.5897 32.5893 44.0003 32.0833 44.0003Z" fill="#ACB6BC" />
+                                            <path d="M39.1754 17.7611C39.1717 17.7611 39.1699 17.7611 39.1662 17.7611C38.4292 17.7593 37.738 17.4678 37.2192 16.9453L27.0919 6.70245C26.0322 5.62995 26.0377 3.89011 27.1047 2.82495L29.1214 0.808281C30.192 -0.264219 31.9392 -0.264219 33.0099 0.808281L43.1959 10.9924C44.2684 12.0649 44.2684 13.8103 43.1959 14.8828L41.1205 16.9581C40.5999 17.4751 39.9105 17.7611 39.1754 17.7611ZM31.0647 1.83311C30.83 1.83311 30.5954 1.92111 30.4157 2.10078L28.399 4.11745C28.0434 4.47311 28.0415 5.05245 28.3935 5.40995L38.5209 15.6528C38.6932 15.827 38.9242 15.9241 39.1699 15.9241C39.3825 15.8709 39.6465 15.8306 39.8207 15.6546L41.896 13.5811C42.2535 13.2236 42.2535 12.6424 41.896 12.2831L31.71 2.09895C31.534 1.92295 31.2994 1.83311 31.0647 1.83311Z" fill="#ACB6BC" />
+                                            <path d="M10.7317 23.0739C10.3375 23.0739 9.97267 22.8173 9.8535 22.4213C9.53633 21.3671 9.375 20.2726 9.375 19.1689C9.375 17.4364 9.78933 15.6874 10.5685 14.1071C12.0443 11.1573 14.7338 8.99759 17.9495 8.17809L27.9778 5.62976C28.4728 5.49776 28.966 5.80209 29.0907 6.29159C29.2153 6.78109 28.9183 7.28159 28.4288 7.40442L18.4005 9.95276C15.7018 10.6421 13.4468 12.4534 12.2112 14.9229C11.5567 16.2484 11.2083 17.7169 11.2083 19.1689C11.2083 20.0929 11.3422 21.0096 11.608 21.8951C11.7547 22.3791 11.4797 22.8906 10.9938 23.0373C10.9058 23.0611 10.8178 23.0739 10.7317 23.0739Z" fill="#ACB6BC" />
+                                            <path d="M20.5955 35.7357C19.1215 35.7357 17.7905 34.9767 17.0334 33.7062C16.0672 32.0819 16.3789 29.9552 17.7905 28.5362L24.264 22.0517C23.494 21.1296 22.3647 20.6254 21.1254 20.6877C19.8182 20.7556 18.6485 21.4761 17.9995 22.6146C17.7447 23.0564 17.1819 23.2049 16.7474 22.9556C16.3092 22.7044 16.1552 22.1452 16.4045 21.7052C17.3652 20.0241 19.094 18.9589 21.0282 18.8562C22.955 18.7517 24.7939 19.6336 25.9269 21.2066L26.2129 21.6044C26.4695 21.9619 26.4365 22.4532 26.1322 22.7722L19.0849 29.8306C18.2782 30.6427 18.0747 31.8784 18.6045 32.7676C19.3544 34.0307 21.228 34.2416 22.2547 33.2167L30.215 25.1317L36.5969 15.2977C36.8737 14.8724 37.442 14.7532 37.8637 15.0282C38.2872 15.3032 38.4082 15.8716 38.1314 16.2951L31.6982 26.2079C31.6652 26.2611 31.6267 26.3087 31.5827 26.3546L23.5545 34.5092C22.7662 35.3012 21.7157 35.7357 20.5955 35.7357Z" fill="#ACB6BC" />
+                                            <path d="M28.4472 44H4.58268C4.07668 44 3.66602 43.5893 3.66602 43.0833V22.9167C3.66602 22.4107 4.07668 22 4.58268 22H24.6962C25.2022 22 25.6128 22.4107 25.6128 22.9167C25.6128 23.4227 25.2022 23.8333 24.6962 23.8333H5.49935V42.1667H27.5305V28.237C27.5305 27.731 27.9412 27.3203 28.4472 27.3203C28.9532 27.3203 29.3638 27.731 29.3638 28.237V43.0833C29.3638 43.5893 28.9532 44 28.4472 44Z" fill="#ACB6BC" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_search_w_<?= (int) $i ?>"><rect width="44" height="44" fill="white" /></clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="d-flex al-end jc-between divider postheader_wrap">
+                                <div class="postheader d-flex al-center gap-12">
+                                    <div class="logo">
+                                        <img src="../assets/images/main/logo-sm.jpg" alt="" />
+                                    </div>
+                                    <div class="info">
+                                        <p class="name"><?= htmlspecialchars($item['name'], ENT_QUOTES, 'UTF-8') ?></p>
+                                        <div class="desc">
+                                            <?= $item['type'] === 'agency' ? '에이전시' : '프리랜서' ?>
+                                            <div class="meta d-flex gap-8">
+                                                <span class="d-flex al-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9.00078 14.142C14.4931 14.2318 16.2008 9.08952 16.2008 9.08952C16.2008 9.08952 14.5623 3.85742 9.00078 3.85742C3.43924 3.85742 1.80078 9.08952 1.80078 9.08952C1.80078 9.08952 3.50847 14.0522 9.00078 14.142Z" fill="#CED5DB" /><path d="M11 8.94564C11 10.0205 10.1046 10.8918 9 10.8918C7.89543 10.8918 7 10.0205 7 8.94564C7 7.87082 7.89543 6.99951 9 6.99951C10.1046 6.99951 11 7.87082 11 8.94564Z" fill="white" /></svg>
+                                                    <?= (int) $item['view'] ?>
+                                                </span>
+                                                <span class="d-flex al-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5.67391 15.001L8.80435 11.8705H13.75C14.4404 11.8705 15 11.3109 15 10.6205V4.25098C15 3.56062 14.4404 3.00098 13.75 3.00098H4.25C3.55964 3.00098 3 3.56062 3 4.25098V10.6205C3 11.3109 3.55964 11.8705 4.25 11.8705H5.67391V15.001Z" fill="#CED5DB" /></svg>
+                                                    <?= (int) $item['comment'] ?>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <?php endforeach; ?>
+                </div>
+                <?php if ($web_show_more) : ?>
+                <div class="card_more">
+                    <a href="<?= $web_has_extra ? '#' : '../ranking/ranking__list.html' ?>" class="btn_more<?= $web_has_extra ? ' js-search-show-more' : '' ?>">더보기</a>
+                </div>
+                <?php endif; ?>
+                <?php else : ?>
+                <p class="search-category-empty" role="status">프로젝트가 없다</p>
+                <?php endif; ?>
+            </section>
+            <!-- E : 사용자가 선정한 웹 랭킹 -->
+
+            <!-- S : 월간 웹 랭커 순위 -->
+            <section class="card_section">
+                <div class="section_header">
+                    <div class="title_wrap" data-aos="fade-up">
+                        <p class="section_label">WebRanker</p>
+                        <h2 class="section_title">월간 웹 랭커 순위</h2>
+                    </div>
+                </div>
+                <?php if (count($res_monthly) > 0) :
+                    $cnt_m = count($res_monthly);
+                    $m_show_more = $cnt_m >= 5;
+                    $m_has_extra = $cnt_m > 5;
+                ?>
+                <div class="card_grid" data-aos="fade-up">
+                    <?php foreach ($res_monthly as $mi => $item) :
+                        $m_extra = $m_has_extra && $mi >= 5;
+                    ?>
+                    <a href="../ranking/ranking__view.html" class="card_item<?= $m_extra ? ' card_item--search-extra' : '' ?>">
+                        <div class="card_thumb">
+                            <img src="../assets/images/main/list_thumb.jpg" alt="" />
+                        </div>
+                        <div class="card_content">
+                            <div class="content_title_wrap">
+                                <h3 class="content_title"><?= htmlspecialchars($item['title'], ENT_QUOTES, 'UTF-8') ?></h3>
+                                <p class="content_desc"><?= htmlspecialchars($item['desc'], ENT_QUOTES, 'UTF-8') ?></p>
+                            </div>
+                            <ul class="meta_list">
+                                <li class="meta_item"><img src="../assets/images/main/icon/instagram.png" alt="" /></li>
+                                <li class="meta_item"><img src="../assets/images/main/icon/youtube.png" alt="" /></li>
+                                <li class="meta_item"><img src="../assets/images/main/icon/linkedin.png" alt="" /></li>
+                                <li class="meta_item"><img src="../assets/images/main/icon/home.png" alt="" /></li>
+                                <li class="meta_item"><img src="../assets/images/main/icon/link-external.png" alt="" /></li>
+                            </ul>
+                        </div>
+                    </a>
+                    <?php endforeach; ?>
+                </div>
+                <?php if ($m_show_more) : ?>
+                <div class="card_more">
+                    <a href="<?= $m_has_extra ? '#' : '../ranking/ranking__list.html' ?>" class="btn_more<?= $m_has_extra ? ' js-search-show-more' : '' ?>">더보기</a>
+                </div>
+                <?php endif; ?>
+                <?php else : ?>
+                <p class="search-category-empty" role="status">프로젝트가 없다</p>
+                <?php endif; ?>
+            </section>
+            <!-- E : 월간 웹 랭커 순위 -->
+
+            <!-- S : 주간 모바일 랭킹 -->
+            <section class="card_section">
+                <div class="section_header">
+                    <div class="title_wrap" data-aos="fade-up">
+                        <p class="section_label">WebRanker</p>
+                        <h2 class="section_title">디자이너가 선정한 주간 모바일 랭킹</h2>
+                    </div>
+                </div>
+                <?php if (count($res_mobile) > 0) :
+                    $cnt_mb = count($res_mobile);
+                    $mb_show_more = $cnt_mb >= 5;
+                    $mb_has_extra = $cnt_mb > 5;
+                ?>
+                <div class="card_grid" data-aos="fade-up">
+                    <?php foreach ($res_mobile as $mbi => $item) :
+                        $mb_extra = $mb_has_extra && $mbi >= 5;
+                    ?>
+                    <a href="../ranking/ranking__view.html" class="card_item<?= $mb_extra ? ' card_item--search-extra' : '' ?>">
+                        <div class="card_thumb mobile_thumb">
+                            <img src="../assets/images/main/mobile_thumb.png" alt="" />
+                        </div>
+                        <div class="card_content">
+                            <div class="content_title_wrap">
+                                <h3 class="content_title"><?= htmlspecialchars($item['title'], ENT_QUOTES, 'UTF-8') ?></h3>
+                                <p class="content_desc"><?= htmlspecialchars($item['desc'], ENT_QUOTES, 'UTF-8') ?></p>
+                            </div>
+                            <ul class="meta_list">
+                                <li class="meta_item"><img src="../assets/images/main/icon/instagram.png" alt="" /></li>
+                                <li class="meta_item"><img src="../assets/images/main/icon/youtube.png" alt="" /></li>
+                                <li class="meta_item"><img src="../assets/images/main/icon/linkedin.png" alt="" /></li>
+                                <li class="meta_item"><img src="../assets/images/main/icon/home.png" alt="" /></li>
+                                <li class="meta_item"><img src="../assets/images/main/icon/link-external.png" alt="" /></li>
+                            </ul>
+                        </div>
+                    </a>
+                    <?php endforeach; ?>
+                </div>
+                <?php if ($mb_show_more) : ?>
+                <div class="card_more">
+                    <a href="<?= $mb_has_extra ? '#' : '../ranking/ranking__list.html' ?>" class="btn_more<?= $mb_has_extra ? ' js-search-show-more' : '' ?>">더보기</a>
+                </div>
+                <?php endif; ?>
+                <?php else : ?>
+                <p class="search-category-empty" role="status">프로젝트가 없다</p>
+                <?php endif; ?>
+            </section>
+            <!-- E : 주간 모바일 랭킹 -->
+
+            <!-- S : 디자인 인사이트 -->
+            <section class="card_section">
+                <div class="section_header">
+                    <div class="title_wrap" data-aos="fade-up">
+                        <p class="section_label">UIUX Article</p>
+                        <h2 class="section_title">디자이너들이 주목한 디자인 인사이트</h2>
+                    </div>
+                </div>
+                <?php if (count($res_insight) > 0) :
+                    $cnt_in = count($res_insight);
+                    $in_show_more = $cnt_in >= 5;
+                    $in_has_extra = $cnt_in > 5;
+                ?>
+                <div class="card_grid insight_grid" data-aos="fade-up">
+                    <?php foreach ($res_insight as $ini => $item) :
+                        $in_extra = $in_has_extra && $ini >= 5;
+                    ?>
+                    <a href="#" class="card_item<?= $in_extra ? ' card_item--search-extra' : '' ?>">
+                        <div class="card_thumb">
+                            <img src="../assets/images/main/insight_thumb.png" alt="" />
+                        </div>
+                        <div class="card_content">
+                            <div class="tag_wrap">
+                                <span class="tag"><?= htmlspecialchars($tag_labels[$item['tag']], ENT_QUOTES, 'UTF-8') ?></span>
+                            </div>
+                            <div class="content_user_wrap">
+                                <div class="thumb">
+                                    <img src="../assets/images/main/user_thumb.png" alt="" />
+                                </div>
+                                <div class="user_info">
+                                    <p class="user_name"><?= htmlspecialchars($item['name'], ENT_QUOTES, 'UTF-8') ?></p>
+                                    <span class="bullet"></span>
+                                    <p class="date"><?= htmlspecialchars($item['date'], ENT_QUOTES, 'UTF-8') ?></p>
+                                </div>
+                            </div>
+                            <div class="content_title_wrap">
+                                <h3 class="content_title"><?= htmlspecialchars($item['title'], ENT_QUOTES, 'UTF-8') ?></h3>
+                                <p class="content_desc"><?= htmlspecialchars($item['desc'], ENT_QUOTES, 'UTF-8') ?></p>
+                            </div>
+                        </div>
+                    </a>
+                    <?php endforeach; ?>
+                </div>
+                <?php if ($in_show_more) : ?>
+                <div class="card_more">
+                    <a href="<?= $in_has_extra ? '#' : '../ranking/ranking__list.html' ?>" class="btn_more<?= $in_has_extra ? ' js-search-show-more' : '' ?>">더보기</a>
+                </div>
+                <?php endif; ?>
+                <?php else : ?>
+                <p class="search-category-empty" role="status">프로젝트가 없다</p>
+                <?php endif; ?>
+            </section>
+            <!-- E : 디자인 인사이트 -->
+        </div>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+    <script>
+        $(document).ready(function () {
+            $(".vote_btn").on("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                $(this).toggleClass("active");
+            });
+            $(document).on("click", ".search-results-page .js-search-show-more", function (e) {
+                e.preventDefault();
+                var $sec = $(this).closest(".card_section");
+                $sec.addClass("search-show-all");
+                $(this).closest(".card_more").fadeOut(200);
+            });
+        });
+    </script>
+</body>
+</html>

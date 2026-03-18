@@ -294,11 +294,11 @@
                 <!-- S : WebRanking -->
                 <section class="card_section">
                     <div class="section_header">
-                        <div class="title_wrap">
+                        <div class="title_wrap" data-aos="fade-right">
                             <p class="section_label">WebRanking</p>
-                            <h2 class="section_title">디자이너들이 직접 선정한 웹 랭킹</h2>
+                            <h2 class="section_title">사용자가 선정한 웹 랭킹</h2>
                         </div>
-                        <div class="filter_wrap">
+                        <div class="filter_wrap" data-aos="fade-left">
                             <a href="#" class="filter_tab is-active" data-filter="all">전체</a>
                             <a href="#" class="filter_tab" data-filter="agency">에이전시</a>
                             <a href="#" class="filter_tab" data-filter="freelancer">프리랜서</a>
@@ -318,7 +318,7 @@
                     '오늘의인테리어디자인', 'type' => 'agency', 'name' => '오늘의인테리어디자인', 'view' => 123, 'comment' => 123], ['label' => '건축/건설', 'title' => '오늘의인테리어디자인', 'type'
                     => 'freelancer', 'name' => '오늘의인테리어디자인', 'view' => 123, 'comment' => 123], ['label' => '건축/건설', 'title' => '오늘의인테리어디자인', 'type' => 'agency', 'name' =>
                     '오늘의인테리어디자인', 'view' => 123, 'comment' => 123], ]; ?>
-                    <div class="card_grid">
+                    <div class="card_grid" data-aos="fade-up">
                         <?php foreach ($card_list as $i => $item) : ?>
                         <a href="" class="card_item" data-type="<?= $item['type'] ?>">
                             <div class="card_thumb">
@@ -369,33 +369,36 @@
                                         </div>
                                         <div class="info">
                                             <p class="name"><?= $item['name'] ?></p>
-                                            <p class="desc"><?= $item['type'] === 'agency' ? '에이전시' : '프리랜서' ?></p>
+                                            <div class="desc">
+                                                <?= $item['type'] === 'agency' ? '에이전시' : '프리랜서' ?>
+                                                <div class="meta d-flex gap-8">
+                                                    <span class="d-flex al-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                            <path
+                                                                d="M9.00078 14.142C14.4931 14.2318 16.2008 9.08952 16.2008 9.08952C16.2008 9.08952 14.5623 3.85742 9.00078 3.85742C3.43924 3.85742 1.80078 9.08952 1.80078 9.08952C1.80078 9.08952 3.50847 14.0522 9.00078 14.142Z"
+                                                                fill="#CED5DB"
+                                                            />
+                                                            <path
+                                                                d="M11 8.94564C11 10.0205 10.1046 10.8918 9 10.8918C7.89543 10.8918 7 10.0205 7 8.94564C7 7.87082 7.89543 6.99951 9 6.99951C10.1046 6.99951 11 7.87082 11 8.94564Z"
+                                                                fill="white"
+                                                            />
+                                                        </svg>
+                                                        <?= $item['view'] ?>
+                                                    </span>
+                                                    <span class="d-flex al-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                            <path
+                                                                d="M5.67391 15.001L8.80435 11.8705H13.75C14.4404 11.8705 15 11.3109 15 10.6205V4.25098C15 3.56062 14.4404 3.00098 13.75 3.00098H4.25C3.55964 3.00098 3 3.56062 3 4.25098V10.6205C3 11.3109 3.55964 11.8705 4.25 11.8705H5.67391V15.001Z"
+                                                                fill="#CED5DB"
+                                                            />
+                                                        </svg>
+                                                        <?= $item['comment'] ?>
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="meta d-flex gap-8">
-                                        <span class="d-flex al-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                <path
-                                                    d="M9.00078 14.142C14.4931 14.2318 16.2008 9.08952 16.2008 9.08952C16.2008 9.08952 14.5623 3.85742 9.00078 3.85742C3.43924 3.85742 1.80078 9.08952 1.80078 9.08952C1.80078 9.08952 3.50847 14.0522 9.00078 14.142Z"
-                                                    fill="#CED5DB"
-                                                />
-                                                <path
-                                                    d="M11 8.94564C11 10.0205 10.1046 10.8918 9 10.8918C7.89543 10.8918 7 10.0205 7 8.94564C7 7.87082 7.89543 6.99951 9 6.99951C10.1046 6.99951 11 7.87082 11 8.94564Z"
-                                                    fill="white"
-                                                />
-                                            </svg>
-                                            <?= $item['view'] ?>
-                                        </span>
-                                        <span class="d-flex al-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                <path
-                                                    d="M5.67391 15.001L8.80435 11.8705H13.75C14.4404 11.8705 15 11.3109 15 10.6205V4.25098C15 3.56062 14.4404 3.00098 13.75 3.00098H4.25C3.55964 3.00098 3 3.56062 3 4.25098V10.6205C3 11.3109 3.55964 11.8705 4.25 11.8705H5.67391V15.001Z"
-                                                    fill="#CED5DB"
-                                                />
-                                            </svg>
-                                            <?= $item['comment'] ?>
-                                        </span>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </a>
@@ -411,11 +414,11 @@
                 <!-- S : WebRanker -->
                 <section class="card_section">
                     <div class="section_header">
-                        <div class="title_wrap">
+                        <div class="title_wrap" data-aos="fade-right">
                             <p class="section_label">WebRanker</p>
-                            <h2 class="section_title">디자이너가 선정한 주간 웹 랭킹</h2>
+                            <h2 class="section_title">월간 웹 랭커 순위</h2>
                         </div>
-                        <div class="filter_wrap">
+                        <div class="filter_wrap" data-aos="fade-left">
                             <a href="#" class="filter_tab is-active" data-filter="all">전체</a>
                             <a href="#" class="filter_tab" data-filter="agency">에이전시</a>
                             <a href="#" class="filter_tab" data-filter="freelancer">프리랜서</a>
@@ -433,7 +436,7 @@
                     => '오늘의인테리어디자인', 'view' => 123, 'comment' => 123], ['title' => '오늘의인테리어디자인', 'type' => 'agency', 'name' => '오늘의인테리어디자인', 'view' => 123, 'comment' =>
                     123], ['title' => '오늘의인테리어디자인', 'type' => 'freelancer', 'name' => '오늘의인테리어디자인', 'view' => 123, 'comment' => 123], ['title' => '오늘의인테리어디자인', 'type' =>
                     'agency', 'name' => '오늘의인테리어디자인', 'view' => 123, 'comment' => 123], ]; ?>
-                    <div class="card_grid">
+                    <div class="card_grid" data-aos="fade-up">
                         <?php foreach ($card_list as $i => $item) : ?>
                         <a href="" class="card_item" data-type="<?= $item['type'] ?>">
                             <div class="card_thumb">
@@ -475,11 +478,11 @@
                 <!-- S : WebRanker -->
                 <section class="card_section">
                     <div class="section_header">
-                        <div class="title_wrap">
+                        <div class="title_wrap" data-aos="fade-right">
                             <p class="section_label">WebRanker</p>
                             <h2 class="section_title">디자이너가 선정한 주간 모바일 랭킹</h2>
                         </div>
-                        <div class="filter_wrap">
+                        <div class="filter_wrap" data-aos="fade-left">
                             <a href="#" class="filter_tab is-active" data-filter="all">전체</a>
                             <a href="#" class="filter_tab" data-filter="agency">에이전시</a>
                             <a href="#" class="filter_tab" data-filter="freelancer">프리랜서</a>
@@ -497,7 +500,7 @@
                     => '오늘의인테리어디자인', 'view' => 123, 'comment' => 123], ['title' => '오늘의인테리어디자인', 'type' => 'agency', 'name' => '오늘의인테리어디자인', 'view' => 123, 'comment' =>
                     123], ['title' => '오늘의인테리어디자인', 'type' => 'freelancer', 'name' => '오늘의인테리어디자인', 'view' => 123, 'comment' => 123], ['title' => '오늘의인테리어디자인', 'type' =>
                     'agency', 'name' => '오늘의인테리어디자인', 'view' => 123, 'comment' => 123], ]; ?>
-                    <div class="card_grid">
+                    <div class="card_grid" data-aos="fade-up">
                         <?php foreach ($card_list as $i => $item) : ?>
                         <a href="" class="card_item" data-type="<?= $item['type'] ?>">
                             <div class="card_thumb mobile_thumb">
@@ -539,11 +542,11 @@
                 <!-- S : UIUX Article -->
                 <section class="card_section">
                     <div class="section_header">
-                        <div class="title_wrap">
+                        <div class="title_wrap" data-aos="fade-right">
                             <p class="section_label">UIUX Article</p>
                             <h2 class="section_title">디자이너들이 주목한 디자인 인사이트</h2>
                         </div>
-                        <div class="filter_wrap">
+                        <div class="filter_wrap" data-aos="fade-left">
                             <a href="#" class="filter_tab is-active" data-filter="all">전체</a>
                             <a href="#" class="filter_tab" data-filter="uiux">UI/UX</a>
                             <a href="#" class="filter_tab" data-filter="design">디자인</a>
@@ -570,7 +573,7 @@
                     shuffle($insight_card_list);
                     $tag_labels = ['uiux' => 'UI/UX', 'design' => '디자인'];
                     ?>
-                    <div class="card_grid insight_grid">
+                    <div class="card_grid insight_grid" data-aos="fade-up">
                         <?php foreach ($insight_card_list as $item) : ?>
                         <a href="" class="card_item" data-type="<?= $item['tag'] ?>">
                             <div class="card_thumb">
@@ -661,7 +664,7 @@
                         1200: {
                             slidesPerView: 4,
                             slidesPerGroup: 4,
-                            spaceBetween: 0,
+                            spaceBetween: 20,
                         },
                     },
                 });

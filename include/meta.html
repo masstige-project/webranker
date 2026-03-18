@@ -80,4 +80,10 @@
 	}
 </script>
 
-<title><? if($P_dp0!='main'){?> <? if($P_dp3!=null){?> <?=${nav_.$P_dp1._.$P_dp2._.$P_dp3}?> | <? }?> <? if($P_dp2!=null){?> <?=${nav_.$P_dp1._.$P_dp2}?> | <? }?> <?=${nav_.$P_dp1}?> | <? }?> <?=$SS['sitename']?></title>
+<?php
+$meta_dp0 = isset($P_dp0) ? $P_dp0 : '';
+$meta_dp1 = isset($P_dp1) ? $P_dp1 : '';
+$meta_dp2 = isset($P_dp2) ? $P_dp2 : null;
+$meta_dp3 = isset($P_dp3) ? $P_dp3 : null;
+?>
+<title><? if ($meta_dp0 != 'main') { ?><? if ($meta_dp3 != null) { ?><?= ${'nav_' . $meta_dp1 . '_' . $meta_dp2 . '_' . $meta_dp3} ?> | <? } ?><? if ($meta_dp2 != null) { ?><?= ${'nav_' . $meta_dp1 . '_' . $meta_dp2} ?> | <? } ?><?= ${'nav_' . $meta_dp1} ?> | <? } ?><?=$SS['sitename']?></title>
