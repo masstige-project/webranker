@@ -2376,7 +2376,7 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: rem(16) rem(20);
+        gap: rem(16);
         padding-top: rem(40);
     }
 
@@ -2391,12 +2391,16 @@
             font-size: rem(28);
             letter-spacing: rem(-0.5);
         }
+
+        @include mdq-max(md) {
+            font-size: 18px;
+            letter-spacing: normal;
+        }
     }
 
     .view_head_action {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
         flex-shrink: 0;
         gap: rem(8);
     }
@@ -2407,7 +2411,7 @@
         flex-wrap: wrap;
         gap: rem(4);
         font-size: rem(14);
-        color: $gray-9;
+        color: #82898E;
     }
 
     .view_trail_home {
@@ -2454,6 +2458,11 @@
         border: 1px solid #404345;
         border-radius: rem(8);
         background: $white;
+
+        @include mdq-max(md) {
+            padding: 10px 12px;
+            width: auto;
+        }
     }
 
     .view_link_share {
@@ -2466,6 +2475,10 @@
         border-radius: rem(8);
         background: $white;
         color: #404345;
+
+        @include mdq-max(md) {
+            padding: 5px;
+        }
     }
 
     .view_body_split {
@@ -2475,7 +2488,7 @@
         max-width: 100%;
 
         @include mdq-max(xl) {
-            flex-direction: column;
+            flex-direction: column-reverse;
             gap: rem(40);
         }
     }
@@ -2498,13 +2511,25 @@
     .view_body_aside {
         flex: 1;
         align-self: flex-start;
-        padding: 40px;
         border-radius: 16px;
         border: 1px solid #dfe5ea;
         background: linear-gradient(0deg, #fff 0%, #fff 100%), linear-gradient(159deg, rgba(255, 255, 255, 0.72) 1.72%, rgba(255, 255, 255, 0.56) 96.26%);
-
+        
         position: sticky;
         top: rem(100);
+
+        @include mdq-max(md) {
+            position: initial;
+        }
+    }
+    
+    .view_body_inner {
+        padding: 40px;
+        overflow: auto;
+
+        @include mdq-max(md) {
+            padding: 12px;
+        }
     }
 
     .view_side_profile {
@@ -2515,7 +2540,7 @@
         margin-bottom: rem(32);
 
         @include mdq-max(md) {
-            flex-wrap: wrap;
+            gap: 8px;
         }
     }
 
@@ -2562,28 +2587,27 @@
             font-weight: 600;
             color: $gray-4;
         }
+
+        @include mdq-max(md) {
+            gap: 4px;
+        }
     }
 
     .view_profile_follow {
         flex-shrink: 0;
-        height: rem(36);
-        padding: 0 rem(18);
-        font-size: rem(14);
+        padding: 8px 24px;
+        font-size: rem(16);
         font-weight: 600;
-        color: $gray-3;
-        background: $white;
-        border: 1px solid $gray-e;
-        border-radius: rem(8);
+        line-height: 22px;
+        letter-spacing: -0.4px;
+        color: #404345;
+        background: #f7f7fb;
+        border-radius: 999px;
         cursor: pointer;
-        transition:
-            border-color 0.2s,
-            color 0.2s;
 
-        @include mdq-min(md) {
-            &:hover {
-                border-color: $color-1;
-                color: $color-1;
-            }
+        @include mdq-max(md) {
+            padding: 6px 12px;
+            font-size: 12px;
         }
     }
 
@@ -2596,20 +2620,20 @@
     }
 
     .view_section_title {
-        font-size: rem(16);
+        font-size: rem(20);
         font-weight: 700;
-        color: $gray-2;
-        margin: 0 0 rem(10);
+        line-height: 28px;
+        letter-spacing: -0.4px;
+        color: #404345;
+        margin: 0 0 rem(12);
     }
 
     .view_section_content {
-        font-size: rem(15);
-        line-height: 1.65;
-        color: $gray-6;
-
-        p {
-            margin: 0;
-        }
+        font-size: rem(16);
+        line-height: 26px;
+        color: #82898E;
+        max-height: 500px;
+        overflow: auto;
     }
 
     .view_section_value {
@@ -2619,12 +2643,9 @@
     }
 
     .view_color_palette {
-        list-style: none;
-        margin: 0;
-        padding: 0;
         display: flex;
-        flex-direction: column;
-        gap: rem(12);
+        align-items: center;
+        gap: rem(24);
     }
 
     .view_palette_row {
@@ -2634,17 +2655,16 @@
     }
 
     .view_palette_swatch {
-        width: rem(28);
-        height: rem(28);
-        border-radius: rem(6);
+        width: rem(22);
+        height: rem(22);
+        border-radius: rem(4);
         flex-shrink: 0;
-        border: 1px solid rgba(0, 0, 0, 0.06);
     }
 
     .view_palette_value {
-        font-size: rem(15);
+        font-size: rem(16);
         font-weight: 500;
-        color: $gray-4;
-        font-family: monospace, monospace;
+        line-height: 22px;
+        color: #404345;
     }
 }
