@@ -1,0 +1,167 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+
+<head>
+  <?
+  $P_dp1 = 'login';
+    include "../include/meta.html"
+		?>
+  <link rel="stylesheet" href="../assets/css/sub.min.css" />
+</head>
+
+<body class="sub-body">
+  <!-- S : Header -->
+  <? include "../include/header.html" ?>
+  <!-- E : Header -->
+
+  <!-- S : Main -->
+  <main class="main" id="contents">
+    <section class="section section--membership login email-login">
+      <div class="membership-container">
+        <div class="email_login_sect wow fadeInUp">
+          <h1 class="email_login_title">로그인</h1>
+          <div class="email_login_area">
+            <form class="email_login_form" action="" method="post" novalidate>
+              <div class="email_login_block">
+                <div class="email_login_fields">
+                  <div class="email_login_field_wrap">
+                    <label class="blind" for="email_login_email">이메일</label>
+                    <input
+                      id="email_login_email"
+                      type="email"
+                      name="uemail"
+                      class="login_field email-input"
+                      placeholder="이메일"
+                      maxlength="100"
+                      autocomplete="email"
+                    />
+                    <span class="message email_login_message text_left" data-error="email">이메일 형식이 올바르지 않습니다.</span>
+                  </div>
+                  <div class="email_login_field_wrap">
+                    <label class="blind" for="email_login_pw">비밀번호</label>
+                    <input
+                      id="email_login_pw"
+                      type="password"
+                      name="upassword"
+                      class="login_field"
+                      placeholder="비밀번호"
+                      maxlength="100"
+                      autocomplete="current-password"
+                    />
+                    <span class="message email_login_message text_left" data-error="password-required">비밀번호를 입력해주세요.</span>
+                    <span class="message email_login_message text_left" data-error="auth-fail">등록되지 않은 아이디거나, 아이디 또는 비밀번호가 회원정보와 일치하지 않습니다.</span>
+                  </div>
+                </div>
+                <div class="email_login_remember">
+                  <label class="email_login_remember_label">
+                    <input type="checkbox" name="remember_email" class="email_login_check" value="1" />
+                    <span class="email_login_remember_txt">이메일 기억하기</span>
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="email_login_submit">로그인</button>
+            </form>
+            <div class="login_intro_guide">
+              <div class="login_intro_guide_row">
+                <span class="login_intro_guide_txt">아직 웹랭커의 회원이 아니신가요?</span>
+                <a href="./join__intro.html" class="login_intro_guide_link">회원가입</a>
+              </div>
+              <div class="login_intro_guide_row">
+                <span class="login_intro_guide_txt">로그인 계정을 잊으셨나요?</span>
+                <a href="./find__id.html" class="login_intro_guide_link">계정찾기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- E : Main -->
+
+  <? include "../include/footer.html" ?>
+  <? include "../include/js.html" ?>
+  <script>
+    $(function () {
+      var $form = $(".email_login_form");
+      if (!$form.length) return;
+
+      var $email = $("#email_login_email");
+      var $password = $("#email_login_pw");
+      var $emailMsg = $form.find('[data-error="email"]');
+      var $pwRequiredMsg = $form.find('[data-error="password-required"]');
+      var $authFailMsg = $form.find('[data-error="auth-fail"]');
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+      function hideEmailError() {
+        $email.removeClass("bd-red");
+        $emailMsg.removeClass("is-visible");
+      }
+
+      function hidePasswordError() {
+        $password.removeClass("bd-red");
+        $pwRequiredMsg.removeClass("is-visible");
+      }
+
+      function hideAuthFailError() {
+        $authFailMsg.removeClass("is-visible");
+      }
+
+      function validateEmail() {
+        var value = ($email.val() || "").trim();
+        if (!value || !emailRegex.test(value)) {
+          $email.addClass("bd-red");
+          $emailMsg.addClass("is-visible");
+          return false;
+        }
+        hideEmailError();
+        return true;
+      }
+
+      function validatePassword() {
+        var value = ($password.val() || "").trim();
+        if (!value) {
+          $password.addClass("bd-red");
+          $pwRequiredMsg.addClass("is-visible");
+          return false;
+        }
+        hidePasswordError();
+        return true;
+      }
+
+      $email.on("input blur", function () {
+        hideAuthFailError();
+        if (($email.val() || "").trim()) validateEmail();
+        else hideEmailError();
+      });
+
+      $password.on("input blur", function () {
+        hideAuthFailError();
+        if (($password.val() || "").trim()) hidePasswordError();
+      });
+
+      $form.on("submit", function (e) {
+        hideAuthFailError();
+        var emailOk = validateEmail();
+        var passwordOk = validatePassword();
+
+        if (!emailOk || !passwordOk) {
+          e.preventDefault();
+          if (!emailOk) $email.focus();
+          else $password.focus();
+        }
+      });
+
+      // 서버 인증 실패시 이 훅을 호출해 메시지를 노출하세요.
+      window.showEmailLoginAuthFail = function () {
+        hideEmailError();
+        hidePasswordError();
+        $email.addClass("bd-red");
+        $password.addClass("bd-red");
+        $authFailMsg.addClass("is-visible");
+      };
+    });
+  </script>
+</body>
+
+</html>
